@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal - Kimangu Day Secondary School</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div id="nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8 md:mb-12">
+      <!-- Page Title -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-green-800">School Portal</h1>
+        <p class="text-lg text-gray-600 mt-2">
+          Access your personalized dashboard
+        </p>
+      </div>
+
+      <!-- Portal Cards -->
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Student Portal -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"
+        >
+          <div class="h-16 bg-green-700 flex items-center justify-center">
+            <i class="fas fa-user-graduate text-white text-3xl"></i>
+          </div>
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold text-green-800 mb-4">
+              Student Portal
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Access your assignments, grades, and course materials
+            </p>
+            <a
+              href="#"
+              id="student-login-btn"
+              class="block w-full bg-green-700 text-white py-2 rounded-md hover:bg-green-800 transition"
+              >Login</a
+            >
+          </div>
+        </div>
+
+        <!-- Teacher Portal -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"
+        >
+          <div class="h-16 bg-green-700 flex items-center justify-center">
+            <i class="fas fa-chalkboard-teacher text-white text-3xl"></i>
+          </div>
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold text-green-800 mb-4">
+              Teacher Portal
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Manage classes, grades, and student information
+            </p>
+            <a
+              href="#"
+              id="teacher-login-btn"
+              class="block w-full bg-green-700 text-white py-2 rounded-md hover:bg-green-800 transition"
+              >Login</a
+            >
+          </div>
+        </div>
+
+        <!-- Parent Portal -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"
+        >
+          <div class="h-16 bg-green-700 flex items-center justify-center">
+            <i class="fas fa-users text-white text-3xl"></i>
+          </div>
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold text-green-800 mb-4">Parent Portal</h2>
+            <p class="text-gray-600 mb-6">
+              Track your child's progress, attendance, and fees
+            </p>
+            <a
+              href="#"
+              id="parent-login-btn"
+              class="block w-full bg-green-700 text-white py-2 rounded-md hover:bg-green-800 transition"
+              >Login</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Modal -->
+      <div
+        id="login-modal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+      >
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md relative">
+          <!-- Close Button -->
+          <button
+            id="close-modal"
+            class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+
+          <!-- Modal Content -->
+          <div class="text-center mb-6">
+            <div
+              class="h-16 w-16 bg-green-700 rounded-full flex items-center justify-center mx-auto"
+            >
+              <i
+                id="modal-icon"
+                class="fas fa-user-graduate text-white text-2xl"
+              ></i>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-bold text-green-800 mt-4">
+              Student Login
+            </h3>
+          </div>
+
+          <!-- Login Form -->
+          <form id="login-form" class="space-y-4">
+            <div>
+              <label for="username" class="block text-gray-700 font-medium mb-1"
+                >Username/ID</label
+              >
+              <input
+                type="text"
+                id="username"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div>
+              <label for="password" class="block text-gray-700 font-medium mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div class="flex items-center">
+              <input
+                type="checkbox"
+                id="remember-me"
+                class="rounded text-green-700 focus:ring-green-500"
+              />
+              <label for="remember-me" class="ml-2 text-gray-700"
+                >Remember me</label
+              >
+              <a href="#" class="text-green-700 hover:underline ml-auto"
+                >Forgot password?</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-green-700 text-white py-2 rounded-md hover:bg-green-800 transition"
+            >
+              Login
+            </button>
+          </form>
+
+          <!-- Help Text -->
+          <p class="text-gray-500 text-sm mt-4 text-center">
+            Having trouble logging in? Contact IT support at
+            <a
+              href="mailto:support@kimangu.sc.ke"
+              class="text-green-700 hover:underline"
+              >support@kimangu.sc.ke</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="include.js"></script>
+  </body>
+</html>
