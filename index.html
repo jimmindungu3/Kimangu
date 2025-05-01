@@ -16,32 +16,39 @@
     <!-- Div to hold NAV -->
     <div id="nav-placeholder"></div>
 
-    <!-- Hero Section with background image -->
-    <section class="relative bg-green-100 text-center">
-      <!-- Background Image (placeholder using a color gradient instead) -->
+    <!-- Hero Section with background image and overlay -->
+    <section class="relative flex items-center justify-center text-center">
+      <!-- Background Image (using a placeholder) -->
       <div
-        class="absolute inset-0 bg-gradient-to-r from-green-600 to-green-800 opacity-80"
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('/assets/hero-img.jpg'); z-index: 1"
       ></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 py-28 text-white">
-        <h2 class="text-5xl font-bold mb-4">
+      <!-- Content positioned on top of both background and overlay -->
+      <div
+        class="relative max-w-7xl mx-auto px-4 py-16 md:py-28"
+        style="z-index: 3"
+      >
+        <h2 class="text-3xl md:text-5xl font-bold text-white bg-gray-600 bg-opacity-50 rounded-md px-2">
           Welcome to Kimangu Day Secondary School
         </h2>
-        <p class="text-xl mb-8 max-w-3xl mx-auto">
+        <p
+          class="text-lg md:text-xl text-white font-semibold mb-8 max-w-3xl mx-auto bg-gray-600 bg-opacity-50 rounded-md px-2"
+        >
           Nurturing Tomorrow's Leaders Through Excellence in Education,
           Character Formation, and Holistic Development
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a
             href="admissions.html"
-            class="inline-block bg-white text-green-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
-            >Apply Now</a
+            class="inline-block bg-white text-blue-500 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
+            >Join Us Today</a
           >
-          <a
+          <!-- <a
             href="about.html"
             class="inline-block bg-transparent text-white border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:bg-opacity-20 transition"
             >Learn More</a
-          >
+          > -->
         </div>
       </div>
     </section>
@@ -59,15 +66,15 @@
             class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
           >
             <div
-              class="h-40 bg-green-700 flex items-center justify-center text-white"
+              class="h-40 bg-blue-200 flex items-center justify-center text-blue-500"
             >
-              <i class="fas fa-book-open text-5xl"></i>
+              <i class="fa-solid fa-user-graduate text-5xl"></i>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Academic Excellence</h3>
               <p class="text-gray-600">
-                Consistently top-performing school in KCSE exams with qualified
-                and dedicated teachers.
+                Consistently top-performing school within our region in KCSE
+                exams. We have a team of qualified and dedicated teachers.
               </p>
             </div>
           </div>
@@ -77,15 +84,15 @@
             class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
           >
             <div
-              class="h-40 bg-green-700 flex items-center justify-center text-white"
+              class="h-40 bg-blue-200 flex items-center justify-center text-blue-500"
             >
-              <i class="fas fa-flask text-5xl"></i>
+              <i class="fa-solid fa-building-columns text-5xl"></i>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Modern Facilities</h3>
               <p class="text-gray-600">
-                Well-equipped laboratories, digital library, computer labs, and
-                sports amenities.
+                We have a well-equipped science laboratory, a digital library,
+                computer lab with internet access, and sports amenities.
               </p>
             </div>
           </div>
@@ -95,9 +102,9 @@
             class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
           >
             <div
-              class="h-40 bg-green-700 flex items-center justify-center text-white"
+              class="h-40 bg-blue-200 flex items-center justify-center text-blue-500"
             >
-              <i class="fas fa-users text-5xl"></i>
+              <i class="fa-solid fa-star text-5xl"></i>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Character Formation</h3>
@@ -113,9 +120,9 @@
             class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
           >
             <div
-              class="h-40 bg-green-700 flex items-center justify-center text-white"
+              class="h-40 bg-blue-200 flex items-center justify-center text-blue-500"
             >
-              <i class="fas fa-music text-5xl"></i>
+              <i class="fa-solid fa-person-running text-5xl"></i>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Diverse Co-Curriculars</h3>
@@ -130,7 +137,7 @@
     </section>
 
     <!-- Mission, Vision, Motto in nice layout -->
-    <section class="bg-green-50 py-16">
+    <section class="bg-blue-50 py-16">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold">Our Core Values</h2>
@@ -144,7 +151,7 @@
           <!-- Mission -->
           <div class="bg-white p-8 rounded-lg shadow text-center">
             <div
-              class="inline-block p-4 rounded-full bg-green-100 text-green-700 mb-4"
+              class="inline-block p-4 rounded-full bg-blue-100 text-blue-500 mb-4"
             >
               <i class="fas fa-bullseye text-3xl"></i>
             </div>
@@ -159,7 +166,7 @@
           <!-- Vision -->
           <div class="bg-white p-8 rounded-lg shadow text-center">
             <div
-              class="inline-block p-4 rounded-full bg-green-100 text-green-700 mb-4"
+              class="inline-block p-4 rounded-full bg-blue-100 text-blue-500 mb-4"
             >
               <i class="fas fa-eye text-3xl"></i>
             </div>
@@ -174,7 +181,7 @@
           <!-- Motto -->
           <div class="bg-white p-8 rounded-lg shadow text-center">
             <div
-              class="inline-block p-4 rounded-full bg-green-100 text-green-700 mb-4"
+              class="inline-block p-4 rounded-full bg-blue-100 text-blue-500 mb-4"
             >
               <i class="fas fa-star text-3xl"></i>
             </div>
@@ -194,7 +201,7 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center mb-8">
           <h2 class="text-3xl font-bold">Latest News & Events</h2>
-          <a href="news.html" class="text-green-700 hover:underline font-medium"
+          <a href="news.html" class="text-blue-500 hover:underline font-medium"
             >View All News</a
           >
         </div>
@@ -204,12 +211,12 @@
           <div class="bg-white rounded-lg shadow overflow-hidden">
             <!-- Placeholder image using colored div -->
             <div
-              class="h-48 bg-green-200 flex items-center justify-center text-green-700"
+              class="h-48 bg-blue-200 flex items-center justify-center text-blue-500"
             >
-              <i class="fas fa-users-class text-4xl"></i>
+              <i class="fas fa-users text-4xl"></i>
             </div>
             <div class="p-6">
-              <p class="text-green-700 text-sm mb-2">May 1, 2025</p>
+              <p class="text-blue-500 text-sm mb-2">Jan 1, 2025</p>
               <h3 class="text-xl font-semibold mb-2">
                 Form One Admissions Open
               </h3>
@@ -219,7 +226,7 @@
               </p>
               <a
                 href="news/admissions.html"
-                class="text-green-700 hover:underline font-medium"
+                class="text-blue-500 hover:underline font-medium"
                 >Read More</a
               >
             </div>
@@ -229,37 +236,12 @@
           <div class="bg-white rounded-lg shadow overflow-hidden">
             <!-- Placeholder image using colored div -->
             <div
-              class="h-48 bg-green-200 flex items-center justify-center text-green-700"
-            >
-              <i class="fas fa-book text-4xl"></i>
-            </div>
-            <div class="p-6">
-              <p class="text-green-700 text-sm mb-2">March 15, 2025</p>
-              <h3 class="text-xl font-semibold mb-2">
-                New Digital Library Launch
-              </h3>
-              <p class="text-gray-600 mb-4">
-                Our new state-of-the-art digital library was officially opened
-                this March by the County Education Director.
-              </p>
-              <a
-                href="news/library.html"
-                class="text-green-700 hover:underline font-medium"
-                >Read More</a
-              >
-            </div>
-          </div>
-
-          <!-- News Item 3 -->
-          <div class="bg-white rounded-lg shadow overflow-hidden">
-            <!-- Placeholder image using colored div -->
-            <div
-              class="h-48 bg-green-200 flex items-center justify-center text-green-700"
+              class="h-48 bg-blue-200 flex items-center justify-center text-blue-500"
             >
               <i class="fas fa-trophy text-4xl"></i>
             </div>
             <div class="p-6">
-              <p class="text-green-700 text-sm mb-2">February 20, 2025</p>
+              <p class="text-blue-500 text-sm mb-2">February 20, 2025</p>
               <h3 class="text-xl font-semibold mb-2">
                 KCSE Results Celebration
               </h3>
@@ -269,7 +251,34 @@
               </p>
               <a
                 href="news/results.html"
-                class="text-green-700 hover:underline font-medium"
+                class="text-blue-500 hover:underline font-medium"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- News Item 3 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden">
+            <!-- Placeholder image using colored div -->
+            <div
+              class="h-48 bg-blue-200 flex items-center justify-center text-blue-500"
+            >
+              <i class="fas fa-book text-4xl"></i>
+            </div>
+            <div class="p-6">
+              <p class="text-blue-500 text-sm font-semibold mb-2">
+                Coming Up Soon!
+              </p>
+              <h3 class="text-xl font-semibold mb-2">
+                New Digital Library Launch
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Our new state-of-the-art digital library was officially opened
+                this March by the County Education Director.
+              </p>
+              <a
+                href="news/library.html"
+                class="text-blue-500 hover:underline font-medium"
                 >Read More</a
               >
             </div>
@@ -287,7 +296,7 @@
           <!-- Event 1 -->
           <div class="bg-gray-50 p-4 rounded-lg flex flex-wrap gap-4">
             <div
-              class="bg-green-700 text-white rounded p-3 text-center min-w-24"
+              class="bg-blue-500 text-white rounded p-3 text-center min-w-24"
             >
               <div class="text-xl font-bold">15</div>
               <div class="text-sm">May</div>
@@ -298,7 +307,7 @@
                 Annual general meeting for all parents and guardians at the
                 school grounds.
               </p>
-              <p class="text-sm text-green-700 mt-1">
+              <p class="text-sm text-blue-500 mt-1">
                 <i class="fas fa-clock mr-1"></i> 9:00 AM - 1:00 PM
               </p>
             </div>
@@ -307,7 +316,7 @@
           <!-- Event 2 -->
           <div class="bg-gray-50 p-4 rounded-lg flex flex-wrap gap-4">
             <div
-              class="bg-green-700 text-white rounded p-3 text-center min-w-24"
+              class="bg-blue-500 text-white rounded p-3 text-center min-w-24"
             >
               <div class="text-xl font-bold">22</div>
               <div class="text-sm">May</div>
@@ -320,7 +329,7 @@
                 Annual sports day featuring athletics, football, volleyball, and
                 basketball tournaments.
               </p>
-              <p class="text-sm text-green-700 mt-1">
+              <p class="text-sm text-blue-500 mt-1">
                 <i class="fas fa-clock mr-1"></i> 8:00 AM - 5:00 PM
               </p>
             </div>
@@ -329,7 +338,7 @@
           <!-- Event 3 -->
           <div class="bg-gray-50 p-4 rounded-lg flex flex-wrap gap-4">
             <div
-              class="bg-green-700 text-white rounded p-3 text-center min-w-24"
+              class="bg-blue-500 text-white rounded p-3 text-center min-w-24"
             >
               <div class="text-xl font-bold">05</div>
               <div class="text-sm">June</div>
@@ -340,7 +349,7 @@
                 Professionals from various fields will visit to guide students
                 on career choices.
               </p>
-              <p class="text-sm text-green-700 mt-1">
+              <p class="text-sm text-blue-500 mt-1">
                 <i class="fas fa-clock mr-1"></i> 10:00 AM - 3:00 PM
               </p>
             </div>
@@ -350,7 +359,7 @@
         <div class="text-center mt-8">
           <a
             href="calendar.html"
-            class="inline-block bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition"
+            class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-800 transition"
             >View Full Calendar</a
           >
         </div>
@@ -358,7 +367,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="bg-green-700 text-white py-16">
+    <section class="bg-blue-500 text-white py-16">
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">
           What People Say About Us
@@ -366,8 +375,8 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Testimonial 1 -->
-          <div class="bg-white bg-opacity-10 p-6 rounded-lg relative">
-            <div class="text-green-300 text-5xl absolute -top-4 left-2">"</div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg relative">
+            <div class="text-blue-300 text-5xl absolute -top-4 left-2">"</div>
             <p class="mt-4 mb-6">
               Kimangu Day Secondary School provided my daughter with an
               excellent education foundation. The teachers are dedicated and the
@@ -375,20 +384,20 @@
             </p>
             <div class="flex items-center">
               <div
-                class="h-10 w-10 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold"
+                class="h-10 w-10 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center font-bold"
               >
                 PM
               </div>
               <div class="ml-3">
                 <p class="font-semibold">Peter Mwangi</p>
-                <p class="text-sm text-green-200">Parent</p>
+                <p class="text-sm text-blue-200">Parent</p>
               </div>
             </div>
           </div>
 
           <!-- Testimonial 2 -->
           <div class="bg-white bg-opacity-10 p-6 rounded-lg relative">
-            <div class="text-green-300 text-5xl absolute -top-4 left-2">"</div>
+            <div class="text-blue-300 text-5xl absolute -top-4 left-2">"</div>
             <p class="mt-4 mb-6">
               As a former student, I can confidently say that Kimangu equipped
               me with both academic knowledge and life skills that have been
@@ -396,20 +405,20 @@
             </p>
             <div class="flex items-center">
               <div
-                class="h-10 w-10 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold"
+                class="h-10 w-10 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center font-bold"
               >
                 JK
               </div>
               <div class="ml-3">
                 <p class="font-semibold">Jane Kamau</p>
-                <p class="text-sm text-green-200">Alumnus</p>
+                <p class="text-sm text-blue-200">Alumnus</p>
               </div>
             </div>
           </div>
 
           <!-- Testimonial 3 -->
-          <div class="bg-white bg-opacity-10 p-6 rounded-lg relative">
-            <div class="text-green-300 text-5xl absolute -top-4 left-2">"</div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg relative">
+            <div class="text-blue-300 text-5xl absolute -top-4 left-2">"</div>
             <p class="mt-4 mb-6">
               The holistic education approach at Kimangu Day Secondary School
               ensures students develop not just academically but also in
@@ -417,13 +426,13 @@
             </p>
             <div class="flex items-center">
               <div
-                class="h-10 w-10 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold"
+                class="h-10 w-10 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center font-bold"
               >
                 DO
               </div>
               <div class="ml-3">
                 <p class="font-semibold">Dr. Omondi</p>
-                <p class="text-sm text-green-200">Education Officer</p>
+                <p class="text-sm text-blue-200">Education Officer</p>
               </div>
             </div>
           </div>
@@ -438,29 +447,79 @@
           <h2 class="text-3xl font-bold">School Gallery</h2>
           <a
             href="gallery.html"
-            class="text-green-700 hover:underline font-medium"
+            class="text-blue-500 hover:underline font-medium"
             >View All Photos</a
           >
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <!-- Using placeholder colored divs instead of images -->
-          <div class="h-48 bg-green-200 rounded"></div>
-          <div class="h-48 bg-green-300 rounded"></div>
-          <div class="h-48 bg-green-400 rounded"></div>
-          <div class="h-48 bg-green-500 rounded"></div>
+          <!-- Image with inset label -->
+          <div
+            class="relative aspect-w-4 aspect-h-3 bg-blue-200 rounded overflow-hidden"
+          >
+            <img
+              src="assets/principal-with-top-performing-student.jpg"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-sm p-2"
+            >
+              Principal & Teachers With KCSE Top Performing Students
+            </div>
+          </div>
+          <div
+            class="relative aspect-w-4 aspect-h-3 bg-blue-300 rounded overflow-hidden"
+          >
+            <img
+              src="assets/ksef-nationals.jpg"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-sm p-2"
+            >
+              Mr. Osore With Students Receiving Award at KSEF Nationals
+            </div>
+          </div>
+          <div
+            class="relative aspect-w-4 aspect-h-3 bg-blue-400 rounded overflow-hidden"
+          >
+            <img
+              src="assets/students-in-computer-lab.jpg"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-sm p-2"
+            >
+              Students Studying in Computer Lab
+            </div>
+          </div>
+          <div
+            class="relative aspect-w-4 aspect-h-3 bg-blue-500 rounded overflow-hidden"
+          >
+            <img
+              src="assets/teaching-staff.jpg"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-sm p-2"
+            >
+              Members of The Teaching Staff
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Call to Action -->
     <section
-      class="bg-gradient-to-r from-green-600 to-green-800 text-white text-center py-16"
+      class="bg-gradient-to-r from-blue-400 to-blue-600 text-white text-center py-16"
     >
       <div class="max-w-3xl mx-auto px-4">
-        <h3 class="text-3xl font-bold mb-4">
-          Join Kimangu Day Secondary School Today
-        </h3>
+        <h3 class="text-3xl font-bold mb-4">Join Kimangu Today</h3>
         <p class="text-xl mb-8">
           Enroll your child in a school that cares for their academic excellence
           and personal growth. Limited spaces available for the 2025 academic
@@ -469,40 +528,42 @@
         <div class="flex flex-wrap justify-center gap-4">
           <a
             href="admissions.html"
-            class="bg-white text-green-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
+            class="bg-white text-blue-500 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
             >Apply Now</a
           >
           <a
             href="contact.html"
-            class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-700 transition"
+            class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-500 transition"
             >Contact Us</a
           >
         </div>
       </div>
     </section>
-
     <!-- Location Map -->
     <section class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Visit Our Campus</h2>
+        <h2 class="text-3xl font-bold text-center mb-8">Visit Our School</h2>
         <div class="grid md:grid-cols-2 gap-8 items-center">
+          <!-- Contact Info -->
           <div>
             <h3 class="text-xl font-semibold mb-4">Our Location</h3>
             <p class="mb-4">
               Kimangu Day Secondary School is located in Rongai, Nakuru County,
-              Kenya. We are approximately 2km from Rongai town center.
+              Kenya. We are approximately 7 km from Rongai Town on
+              Rongai-Kandutura Road.
             </p>
 
             <div class="space-y-2 mb-6">
               <p>
-                <i class="fas fa-map-marker-alt text-green-700 mr-2"></i>
+                <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
                 Kimangu, Rongai, Nakuru County
               </p>
               <p>
-                <i class="fas fa-phone text-green-700 mr-2"></i> +254 712 345678
+                <i class="fas fa-phone text-blue-500 mr-2"></i> +254 721 415
+                851
               </p>
               <p>
-                <i class="fas fa-envelope text-green-700 mr-2"></i>
+                <i class="fas fa-envelope text-blue-500 mr-2"></i>
                 info@kimangu.sc.ke
               </p>
             </div>
@@ -513,14 +574,19 @@
             <p>Sunday: Closed</p>
           </div>
 
-          <!-- Map placeholder (would be a real map in implementation) -->
+          <!-- Google Map -->
           <div
-            class="h-64 bg-green-100 rounded-lg flex items-center justify-center text-green-700 border border-green-300"
+            class="h-64 md:h-80 rounded-lg overflow-hidden border border-blue-300"
           >
-            <div class="text-center">
-              <i class="fas fa-map-marked-alt text-4xl mb-2"></i>
-              <p class="font-medium">Interactive Map</p>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.088416399905!2d35.8277776!3d-0.1401104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a85d1b2740001%3A0x123456789abcdef!2sKimangu%20Day%20Secondary%20School!5e0!3m2!1sen!2ske!4v1714572500000!5m2!1sen!2ske"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -543,7 +609,7 @@
           />
           <button
             type="submit"
-            class="bg-green-700 text-white px-6 py-2 rounded-lg hover:bg-green-800 transition"
+            class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition"
           >
             Subscribe
           </button>
