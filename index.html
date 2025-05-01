@@ -18,18 +18,21 @@
 
     <!-- Hero Section with background image and overlay -->
     <section class="relative flex items-center justify-center text-center">
-      <!-- Background Image (using a placeholder) -->
+      <!-- Background Image with alternating images -->
       <div
         class="absolute inset-0 bg-cover bg-center"
         style="background-image: url('/assets/hero-img.jpg'); z-index: 1"
-      ></div>
+      >
+      </div>
 
       <!-- Content positioned on top of both background and overlay -->
       <div
         class="relative max-w-7xl mx-auto px-4 py-16 md:py-28"
         style="z-index: 3"
       >
-        <h2 class="text-3xl md:text-5xl font-bold text-white bg-gray-600 bg-opacity-50 rounded-md px-2">
+        <h2
+          class="text-3xl md:text-5xl font-bold text-white bg-gray-600 bg-opacity-50 rounded-md px-2"
+        >
           Welcome to Kimangu Day Secondary School
         </h2>
         <p
@@ -559,8 +562,7 @@
                 Kimangu, Rongai, Nakuru County
               </p>
               <p>
-                <i class="fas fa-phone text-blue-500 mr-2"></i> +254 721 415
-                851
+                <i class="fas fa-phone text-blue-500 mr-2"></i> +254 721 415 851
               </p>
               <p>
                 <i class="fas fa-envelope text-blue-500 mr-2"></i>
@@ -622,5 +624,45 @@
 
     <!-- script -->
     <script src="include.js"></script>
+    
+    <!-- Hero Image Slideshow Script -->
+    <script>
+      // This script will alternate between two hero images every 7 seconds
+      document.addEventListener('DOMContentLoaded', function() {
+        // Array of image paths
+        const heroImages = [
+          '/assets/hero-img.jpg',
+          '/assets/hero-staff-members.jpg',
+          '/assets/hero-students.jpg'
+        ];
+        
+        // Get the hero background div
+        const heroBg = document.querySelector('.bg-cover.bg-center');
+        
+        // Starting with the first image
+        let currentImageIndex = 0;
+        
+        // Function to change the background image
+        function changeHeroImage() {
+          // Move to the next image
+          currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+          
+          // Apply fade effect
+          heroBg.style.opacity = '0';
+          
+          // After the fade out completes, change the image and fade back in
+          setTimeout(() => {
+            heroBg.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+            heroBg.style.opacity = '1';
+          }, 500);
+        }
+        
+        // Add transition effect to the hero background
+        heroBg.style.transition = 'opacity 0.5s ease-in-out';
+        
+        // Change the image every 7 seconds
+        setInterval(changeHeroImage, 10000);
+      });
+    </script>
   </body>
 </html>
