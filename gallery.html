@@ -9,13 +9,79 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <style>
+      /* Lightbox styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      
+      .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 80%;
+      }
+      
+      .lightbox-img {
+        display: block;
+        max-width: 100%;
+        max-height: 80vh;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
+      
+      .lightbox-caption {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 10px;
+      }
+      
+      .lightbox-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      
+      .gallery-item {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      
+      .gallery-item:hover {
+        transform: scale(1.02);
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-900 font-sans">
+  <body class="text-gray-900 font-sans">
     <div id="nav-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="bg-blue-400 text-white text-center py-20">
-      <div class="max-w-4xl mx-auto px-4">
+    <section class="bg-blue-500 text-white text-center py-20 relative">
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="w-full h-full"
+          style="
+            background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');
+          "
+        ></div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 relative z-10">
         <h1 class="text-4xl font-bold mb-4">School Gallery</h1>
         <p class="text-lg">
           A glimpse into life at Kimangu Day Secondary School – events,
@@ -24,25 +90,235 @@
       </div>
     </section>
 
-    <!-- Gallery Grid -->
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-content">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded view">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- Gallery Grid - Masonry Style -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Recent Highlights</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <!-- Placeholder divs for images -->
-          <div class="bg-blue-200 h-48 rounded-lg"></div>
-          <div class="bg-blue-300 h-48 rounded-lg"></div>
-          <div class="bg-blue-400 h-48 rounded-lg"></div>
-          <div class="bg-blue-500 h-48 rounded-lg"></div>
-          <div class="bg-blue-300 h-48 rounded-lg"></div>
-          <div class="bg-blue-200 h-48 rounded-lg"></div>
-          <div class="bg-blue-400 h-48 rounded-lg"></div>
-          <div class="bg-blue-500 h-48 rounded-lg"></div>
+
+        <!-- Photo Gallery with Masonry-like Layout -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          <!-- Each image is in a card with proper aspect ratio -->
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Computer lab sponsors with school secretary">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/computer-lab-sponsors.jpg"
+                alt="Computer lab sponsors"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Computer lab sponsors with school secretary
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Minister of God preaching In a Christian Union fellowship">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/christian-union-fellowship.jpg"
+                alt="Christian Union fellowship"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Minister of God preaching In a Christian Union fellowship
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Teachers attentive in school closing ceremony">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/teachers-attentive-in-school-closong-ceremony.jpg"
+                alt="Teachers at school closing ceremony"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Teachers attentive in school closing ceremony
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Parents during AGM">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/parents-during-afm.jpg"
+                alt="Parents during AGM"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Parents during AGM
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Teachers have a light moment on a day out">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/teachers-have-a-light-moment-on-sports-day.jpg"
+                alt="Teachers on sports day"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Teachers have a light moment on a day out
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Teaching staff pose for a team photo during an AGM">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/teaching-staff.jpg"
+                alt="Teaching staff"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Teaching staff pose for a team photo during an AGM
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Teaching staff in their new looks. They are happy!">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/teaching-staff-in-lab-coats.jpg"
+                alt="Teaching staff in lab coats"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Teaching staff in their new looks. They are happy!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Mada Repha wishing her class success">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/repha-wishing-success.jpg"
+                alt="Repha wishing success"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Mada Repha wishing her class success
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Students democratically electing a new student council body">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/student-council-elections.jpg"
+                alt="Student council elections"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Students democratically electing a new student council body
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Parents exchange words with their children during an academic clinic">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/parents-with-students-during-academic-clinic.jpg"
+                alt="Parents with students"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Parents exchange words with their children during an academic
+                  clinic
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="We love taking care of our stomachs">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/stomachs-matter.jpg"
+                alt="Taking care of stomachs"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  We love taking care of our stomachs
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded shadow-md overflow-hidden gallery-item" data-caption="Agriculture students pose in front of their agriculture project">
+            <div class="relative aspect-w-4 aspect-h-3">
+              <img
+                src="assets/agriculture-students.jpg"
+                alt="Agriculture students"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 flex items-end">
+                <div
+                  class="bg-black bg-opacity-60 text-white text-sm p-2 w-full"
+                >
+                  Agriculture students pose in front of their agriculture
+                  project
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Event Photos -->
+    <!-- Event Photos - Improved Layout -->
     <section class="bg-blue-50 py-16">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Events & Activities</h2>
@@ -53,28 +329,48 @@
               Celebrating our top students and staff achievements in a colorful
               ceremony.
             </p>
-            <div class="h-48 bg-blue-200 rounded"></div>
+            <div class="aspect-w-16 aspect-h-9 bg-blue-200 rounded">
+              <!-- Replace with actual image when available -->
+              <div class="flex items-center justify-center text-blue-600">
+                <span class="text-sm">Image Placeholder</span>
+              </div>
+            </div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow">
             <h3 class="text-xl font-semibold mb-2">Science Congress</h3>
             <p class="text-gray-600 mb-4">
               Showcasing innovation and research by our budding scientists.
             </p>
-            <div class="h-48 bg-blue-300 rounded"></div>
+            <div class="aspect-w-16 aspect-h-9 bg-blue-300 rounded">
+              <!-- Replace with actual image when available -->
+              <div class="flex items-center justify-center text-blue-700">
+                <span class="text-sm">Image Placeholder</span>
+              </div>
+            </div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow">
             <h3 class="text-xl font-semibold mb-2">Inter-House Games</h3>
             <p class="text-gray-600 mb-4">
               Fun-filled day of sports, teamwork, and house spirit.
             </p>
-            <div class="h-48 bg-blue-400 rounded"></div>
+            <div class="aspect-w-16 aspect-h-9 bg-blue-400 rounded">
+              <!-- Replace with actual image when available -->
+              <div class="flex items-center justify-center text-white">
+                <span class="text-sm">Image Placeholder</span>
+              </div>
+            </div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow">
             <h3 class="text-xl font-semibold mb-2">Drama & Music Festival</h3>
             <p class="text-gray-600 mb-4">
               Talented students performing plays, songs, and cultural pieces.
             </p>
-            <div class="h-48 bg-blue-500 rounded"></div>
+            <div class="aspect-w-16 aspect-h-9 bg-blue-500 rounded">
+              <!-- Replace with actual image when available -->
+              <div class="flex items-center justify-center text-white">
+                <span class="text-sm">Image Placeholder</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -102,5 +398,94 @@
     <div id="footer-placeholder"></div>
 
     <script src="include.js"></script>
+    <script>
+      // Add Tailwind aspect ratio plugin utility classes
+      tailwind.config = {
+        theme: {
+          extend: {
+            aspectRatio: {
+              "w-4": 4,
+              "h-3": 3,
+              "w-16": 16,
+              "h-9": 9,
+            },
+          },
+        },
+        plugins: [
+          function ({ addUtilities }) {
+            const newUtilities = {
+              ".aspect-w-4": {
+                aspectRatio: "4 / 3",
+              },
+              ".aspect-h-3": {
+                aspectRatio: "4 / 3",
+              },
+              ".aspect-w-16": {
+                aspectRatio: "16 / 9",
+              },
+              ".aspect-h-9": {
+                aspectRatio: "16 / 9",
+              },
+            };
+            addUtilities(newUtilities, ["responsive"]);
+          },
+        ],
+      };
+      
+      // Lightbox functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get the lightbox elements
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        
+        // Get all gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        // Add click event to each gallery item
+        galleryItems.forEach(item => {
+          item.addEventListener('click', function() {
+            // Get the image source from the clicked item
+            const imgSrc = this.querySelector('img').src;
+            
+            // Get the caption from data attribute
+            const caption = this.getAttribute('data-caption');
+            
+            // Set the lightbox image source and caption
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = caption;
+            
+            // Display the lightbox
+            lightbox.style.display = 'flex';
+            
+            // Prevent scrolling on the background
+            document.body.style.overflow = 'hidden';
+          });
+        });
+        
+        // Close lightbox when clicking on the close button or outside the image
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          // Close only if clicking outside the image
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+        
+        // Function to close the lightbox
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    </script>
   </body>
 </html>

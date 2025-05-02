@@ -10,11 +10,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
-  <body class="bg-gray-50 text-gray-900 font-sans">
+  <body class="text-gray-900 font-sans">
     <div id="nav-placeholder"></div>
 
     <!-- Hero -->
-    <section class="bg-blue-400 text-white text-center py-20">
+    <section class="bg-blue-500 text-white text-center py-20">
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="w-full h-full"
+          style="
+            background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');
+          "
+        ></div>
+      </div>
       <div class="max-w-4xl mx-auto px-4">
         <h1 class="text-4xl font-bold mb-4">Admissions</h1>
         <p class="text-lg">
@@ -66,11 +74,12 @@
         <h2 class="text-3xl font-bold text-center mb-6">
           Admission Requirements
         </h2>
-        <ul class="list-disc list-inside text-gray-400 space-y-2">
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
           <li>KCPE Result Slip</li>
           <li>Copy of Birth Certificate</li>
           <li>Two Passport Size Photos</li>
           <li>Filled Application Form</li>
+          <li>Previous school release letter (if applicable)</li>
           <li>Previous school report form (if applicable)</li>
         </ul>
       </div>
@@ -83,13 +92,17 @@
           Fees Structure Summary
         </h2>
         <div class="bg-white shadow rounded-lg p-6">
-          <p class="text-gray-400 mb-4">
-            The average termly fee is approximately <strong>KES 15,000</strong>.
-            This includes tuition, activities, and exam fees.
+          <p class="text-gray-600 mb-4">
+            The average termly fee is approximately <strong>KES 3,000</strong>.
           </p>
-          <p class="text-sm text-gray-500">
-            Full breakdown available at the office or upon request.
-          </p>
+          <a
+            href="/assets/Fee_Structure_2025.pdf"
+            download
+            class="bg-blue-500 text-white p-2 rounded-md inline-flex items-center"
+          >
+            <i class="fa-solid fa-file-arrow-down mr-2"></i>
+            Download Fees Structure
+          </a>
         </div>
       </div>
     </section>
@@ -102,19 +115,19 @@
         </h2>
         <div class="space-y-6">
           <div>
-            <h3 class="font-semibold text-blue-400">
+            <h3 class="font-semibold text-blue-500">
               Q: When is the next intake?
             </h3>
-            <p class="text-gray-600">A: January and May every year.</p>
+            <p class="text-gray-600">A: January every year.</p>
           </div>
           <div>
-            <h3 class="font-semibold text-blue-400">Q: Is there boarding?</h3>
+            <h3 class="font-semibold text-blue-500">Q: Is there boarding?</h3>
             <p class="text-gray-600">
-              A: No, we are a day school but support transport arrangements.
+              A: No, we are a day school.
             </p>
           </div>
           <div>
-            <h3 class="font-semibold text-blue-400">Q: Can I apply online?</h3>
+            <h3 class="font-semibold text-blue-500">Q: Can I apply online?</h3>
             <p class="text-gray-600">
               A: Not yet. Forms are collected physically from the school office.
             </p>
