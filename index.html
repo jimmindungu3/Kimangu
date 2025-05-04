@@ -12,7 +12,7 @@
     />
   </head>
 
-  <body class=" text-gray-900 font-sans">
+  <body class="text-gray-900 font-sans">
     <!-- Div to hold NAV -->
     <div id="nav-placeholder"></div>
 
@@ -536,13 +536,14 @@
         </div>
       </div>
     </section>
+
     <!-- Location Map -->
     <section class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Visit Our School</h2>
-        <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
           <!-- Contact Info -->
-          <div>
+          <div class="md:col-span-4">
             <h3 class="text-xl font-semibold mb-4">Our Location</h3>
             <p class="mb-4">
               Kimangu Day Secondary School is located in Rongai, Nakuru County,
@@ -572,14 +573,15 @@
 
           <!-- Google Map -->
           <div
-            class="h-64 md:h-80 rounded-lg overflow-hidden border border-blue-300"
+            class="md:col-span-8 h-64 md:h-80 rounded-lg overflow-hidden border border-blue-300"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.395344009998!2d35.827693!3d-0.1399802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a1b61fe542971%3A0x2fa037acfb8a959f!2sKimangu%20Secondary%20School!5e0!3m2!1sen!2ske!4v1714644000000!5m2!1sen!2ske"
-              width="600"
+              width="100%"
               height="450"
+              frameborder="0"
               style="border: 0"
-              allowfullscreen=""
+              src="https://maps.google.com/maps?q=-0.150096,35.838525&z=17&output=embed"
+              allowfullscreen
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             >
