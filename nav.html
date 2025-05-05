@@ -34,16 +34,17 @@
     <div class="flex justify-between items-center py-3">
       <!-- Logo -->
       <a href="index.html" class="flex items-center space-x-3">
-        <div
+        <!-- <div
           class="h-12 w-12 bg-blue-500 rounded-full text-white flex items-center justify-center text-lg font-bold"
         >
           KDSS
-        </div>
+        </div> -->
+        <img src="assets/logo.png" alt="school logo" class="h-12">
         <div>
           <h1 class="text-xl sm:text-2xl font-bold text-blue-500">
             Kimangu Day Secondary School
           </h1>
-          <p class="text-xs text-gray-600">Aim High</p>
+          <p class="text-xs text-gray-600 font-medium">Aim High</p>
         </div>
       </a>
 
@@ -52,7 +53,7 @@
         <li>
           <a
             href="index.html"
-            class="text-blue-500 font-bold border-b-2 border-blue-500 py-1"
+            class="hover:text-blue-500 hover:border-b-2 border-blue-500 py-1"
             >Home</a
           >
         </li>
@@ -127,173 +128,6 @@
               >
             </li>
           </ul>
-        </li>
-      </ul>
-
-      <!-- Tablet Menu - Simplified -->
-      <ul class="hidden md:flex lg:hidden space-x-3 font-medium items-center">
-        <li>
-          <a href="index.html" class="text-blue-500 font-bold px-2 py-1"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a href="about.html" class="hover:text-blue-500 px-2 py-1">About</a>
-        </li>
-        <li>
-          <a href="academics.html" class="hover:text-blue-500 px-2 py-1"
-            >Academics</a
-          >
-        </li>
-        <li class="relative group">
-          <button class="hover:text-blue-500 flex items-center px-2 py-1">
-            More <i class="fas fa-chevron-down ml-1 text-xs"></i>
-          </button>
-          <ul
-            class="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md hidden group-hover:block transition-all duration-200 z-50"
-          >
-            <li>
-              <a
-                href="admissions.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
-                >Admissions</a
-              >
-            </li>
-            <li>
-              <a
-                href="gallery.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
-                >Gallery</a
-              >
-            </li>
-            <li>
-              <a
-                href="contact.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="careers.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
-                >Careers</a
-              >
-            </li>
-            <li>
-              <a
-                href="events.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
-                >Events</a
-              >
-            </li>
-            <li>
-              <a
-                href="news.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
-                >News</a
-              >
-            </li>
-            <li>
-              <a
-                href="alumni.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
-                >Alumni</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <!-- Mobile Menu Button -->
-      <button
-        id="mobile-menu-button"
-        aria-expanded="false"
-        class="md:hidden text-blue-500 focus:outline-none"
-      >
-        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-          <path
-            fill-rule="evenodd"
-            d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
-          />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="md:hidden hidden" id="mobile-menu">
-      <ul
-        class="px-2 pt-2 pb-3 space-y-1 text-base font-medium border-t border-gray-200"
-      >
-        <li>
-          <a
-            href="index.html"
-            class="block bg-blue-500 text-white py-2 px-3 rounded-md"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="about.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="academics.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >Academics</a
-          >
-        </li>
-        <li>
-          <a
-            href="admissions.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >Admissions</a
-          >
-        </li>
-        <li>
-          <a
-            href="gallery.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >Gallery</a
-          >
-        </li>
-        <li>
-          <a
-            href="contact.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >Contact</a
-          >
-        </li>
-        <li>
-          <a
-            href="careers.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >Careers</a
-          >
-        </li>
-        <li>
-          <a
-            href="events.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >Events</a
-          >
-        </li>
-        <li>
-          <a
-            href="news.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >News</a
-          >
-        </li>
-        <li>
-          <a
-            href="alumni.html"
-            class="block text-blue-500 hover:bg-blue-100 py-2 px-3 rounded-md"
-            >Alumni</a
-          >
         </li>
       </ul>
     </div>
