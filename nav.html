@@ -28,14 +28,14 @@
   </div>
 </div>
 
-<!-- Main Navigation -->
+<!-- Main Navigation - Changed from fixed to sticky -->
 <nav class="bg-white shadow sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex justify-between items-center py-3">
       <!-- Logo -->
       <a href="index.html" class="flex items-center space-x-3">
-        <img src="assets/logo.png" alt="school logo" class="h-12">
-        <div class="hidden sm:block">
+        <img src="assets/logo.png" alt="school logo" class="h-12" />
+        <div>
           <h1 class="text-xl sm:text-2xl font-bold text-blue-500">
             Kimangu Day Secondary School
           </h1>
@@ -44,9 +44,24 @@
       </a>
 
       <!-- Mobile Menu Button -->
-      <button id="menu-toggle" class="lg:hidden focus:outline-none" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      <button
+        id="menu-toggle"
+        class="lg:hidden focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
         </svg>
       </button>
 
@@ -99,13 +114,20 @@
             More <i class="fas fa-chevron-down ml-1 text-xs"></i>
           </button>
           <ul
-            class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md hidden group-hover:block transition-all duration-200 z-50"
+            class="absolute left-0 mt-2 w-48 bg-white shadow-md hidden group-hover:block transition-all duration-200 z-50"
           >
             <li>
               <a
                 href="careers.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
                 >Careers</a
+              >
+            </li>
+            <li>
+              <a
+                href="tenders.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-blue-100"
+                >Tenders</a
               >
             </li>
             <li>
@@ -133,83 +155,67 @@
         </li>
       </ul>
     </div>
-    
+
     <!-- Mobile Menu (Hidden by default) -->
     <div id="mobile-menu" class="lg:hidden hidden pb-4">
       <ul class="flex flex-col space-y-2 font-medium">
         <li>
-          <a
-            href="index.html"
-            class="block py-2 hover:text-blue-500"
-            >Home</a
-          >
+          <a href="index.html" class="block py-2 hover:text-blue-500">Home</a>
         </li>
         <li>
-          <a
-            href="about.html"
-            class="block py-2 hover:text-blue-500"
-            >About</a
-          >
+          <a href="about.html" class="block py-2 hover:text-blue-500">About</a>
         </li>
         <li>
-          <a
-            href="academics.html"
-            class="block py-2 hover:text-blue-500"
+          <a href="academics.html" class="block py-2 hover:text-blue-500"
             >Academics</a
           >
         </li>
         <li>
-          <a
-            href="admissions.html"
-            class="block py-2 hover:text-blue-500"
+          <a href="admissions.html" class="block py-2 hover:text-blue-500"
             >Admissions</a
           >
         </li>
         <li>
-          <a
-            href="gallery.html"
-            class="block py-2 hover:text-blue-500"
+          <a href="gallery.html" class="block py-2 hover:text-blue-500"
             >Gallery</a
           >
         </li>
         <li>
-          <a
-            href="contact.html"
-            class="block py-2 hover:text-blue-500"
+          <a href="contact.html" class="block py-2 hover:text-blue-500"
             >Contact</a
           >
         </li>
         <!-- Mobile "More" Dropdown -->
         <li class="py-2">
-          <button id="more-toggle" class="flex items-center justify-between w-full hover:text-blue-500">
+          <button
+            id="more-toggle"
+            class="flex items-center justify-between w-full hover:text-blue-500"
+          >
             More <i id="more-icon" class="fas fa-chevron-down ml-1 text-xs"></i>
           </button>
           <ul id="more-dropdown" class="hidden pl-4 mt-2 space-y-2">
             <li>
-              <a
-                href="careers.html"
-                class="block py-2 hover:text-blue-500"
+              <a href="careers.html" class="block py-2 hover:text-blue-500"
                 >Careers</a
               >
             </li>
             <li>
-              <a
-                href="events.html"
-                class="block py-2 hover:text-blue-500"
+              <a href="tenderss.html" class="block py-2 hover:text-blue-500"
+                >Tenders</a
+              >
+            </li>
+            <li>
+              <a href="events.html" class="block py-2 hover:text-blue-500"
                 >Events</a
               >
             </li>
             <li>
-              <a
-                href="news.html"
-                class="block py-2 hover:text-blue-500"
+              <a href="news.html" class="block py-2 hover:text-blue-500"
                 >News</a
               >
             </li>
             <li>
-              <a
-                href="alumni.html"
-                class="block py-2 hover:text-blue-500"
+              <a href="alumni.html" class="block py-2 hover:text-blue-500"
                 >Alumni</a
               >
             </li>
@@ -219,4 +225,3 @@
     </div>
   </div>
 </nav>
-

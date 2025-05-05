@@ -1,18 +1,23 @@
+// This is my updated includes.js
+
 function loadHTML(id, file) {
   fetch(file)
     .then((res) => res.text())
     .then((data) => {
-      document.getElementById(id).innerHTML = data;
+      const element = document.getElementById(id);
+      element.innerHTML = data;
       
       // If this is the navigation being loaded, initialize its functionality
       if (id === "nav-placeholder") {
+        // Make sure the nav-placeholder doesn't have styles that interfere with sticky nav
+        element.style.display = "contents";
         initNavigation();
       }
     });
 }
 
 function initNavigation() {
-  // Get DOM elements
+  // Get DOM elements for mobile menu
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const moreToggle = document.getElementById('more-toggle');
