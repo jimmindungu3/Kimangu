@@ -3,9 +3,387 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>News - Kimangu Day Secondary School</title>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Simple custom styles -->
+    <style>
+      .news-card:hover {
+        transform: translateY(-8px);
+        transition: transform 0.3s ease;
+      }
+      .featured-news {
+        background-image: linear-gradient(to right, #3b82f6, #1e40af);
+      }
+    </style>
   </head>
-  <body>
-    <h1>Coming Upmv</h1>
+  <body class="bg-blue-50 font-sans">
+    <!-- Navigation placeholder - will be replaced by include.js -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero -->
+    <section class="relative bg-blue-500 text-white text-center py-20">
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="w-full h-full"
+          style="
+            background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');
+          "
+        ></div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">School News</h1>
+        <p class="text-lg md:text-xl">
+          Stay informed about the latest happenings, achievements, and announcements
+          at Kimangu Day Secondary School.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="py-12 container mx-auto max-w-7xl px-4">
+      <div class="featured-news rounded-xl overflow-hidden shadow-lg text-white">
+        <div class="md:flex">
+          <div class="md:w-1/3 h-56 md:h-auto relative">
+            <img 
+              src="/api/placeholder/800/500" 
+              alt="National Science Competition Winners" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 left-4 bg-blue-600 text-white py-1 px-3 rounded-full text-sm font-medium">
+              Featured News
+            </div>
+          </div>
+          <div class="md:w-2/3 p-6 md:p-8">
+            <div class="flex items-center mb-2">
+              <i class="far fa-calendar-alt mr-2"></i>
+              <span class="text-blue-100">May 5, 2025</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">Kimangu Students Win National Science Competition</h2>
+            <p class="text-blue-50 mb-4">
+              Our Form 4 students have made history by winning the prestigious National Science Competition 
+              hosted at the University of Nairobi. Their innovative project on sustainable energy solutions 
+              impressed the judges and earned the school national recognition.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-700 py-1 px-3 rounded-full text-sm">Academic Success</span>
+              <span class="bg-blue-700 py-1 px-3 rounded-full text-sm">Science</span>
+              <span class="bg-blue-700 py-1 px-3 rounded-full text-sm">Achievement</span>
+            </div>
+            <button class="bg-white text-blue-600 hover:bg-blue-50 font-medium py-2 px-6 rounded-md transition">
+              Read Full Story
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-12 container mx-auto max-w-7xl px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">
+        Latest News
+      </h2>
+      <p class="text-center text-gray-600 mb-12">Catch up with the most recent stories and announcements</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- News Card 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden news-card">
+          <div class="h-48 bg-blue-100 relative">
+            <img 
+              src="/api/placeholder/400/300" 
+              alt="New Computer Lab" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-0 left-0 bg-blue-500 text-white py-2 px-4">
+              <span class="text-sm">May 3, 2025</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">Facilities</span>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">New Computer Lab Opens for Students</h3>
+            <p class="text-gray-600 mb-4">
+              Thanks to a generous donation from our alumni association, we've opened a state-of-the-art computer lab with 30 new computers.
+            </p>
+            <button class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
+              Continue Reading
+              <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden news-card">
+          <div class="h-48 bg-blue-100 relative">
+            <img 
+              src="/api/placeholder/400/300" 
+              alt="Teacher Award" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-0 left-0 bg-blue-500 text-white py-2 px-4">
+              <span class="text-sm">April 28, 2025</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">Staff Achievement</span>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Mrs. Kamau Named Teacher of the Year</h3>
+            <p class="text-gray-600 mb-4">
+              Our Chemistry teacher Mrs. Kamau has been recognized as Teacher of the Year by the County Education Board for her dedication.
+            </p>
+            <button class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
+              Continue Reading
+              <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden news-card">
+          <div class="h-48 bg-blue-100 relative">
+            <img 
+              src="/api/placeholder/400/300" 
+              alt="School Choir" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-0 left-0 bg-blue-500 text-white py-2 px-4">
+              <span class="text-sm">April 20, 2025</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">Arts & Culture</span>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">School Choir Advances to National Finals</h3>
+            <p class="text-gray-600 mb-4">
+              Our school choir's exceptional performance at the regional competition has earned them a spot in the national finals.
+            </p>
+            <button class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
+              Continue Reading
+              <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- News Card 4 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden news-card">
+          <div class="h-48 bg-blue-100 relative">
+            <img 
+              src="/api/placeholder/400/300" 
+              alt="Sports Team" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-0 left-0 bg-blue-500 text-white py-2 px-4">
+              <span class="text-sm">April 15, 2025</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">Sports</span>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Girls' Basketball Team Wins County Championship</h3>
+            <p class="text-gray-600 mb-4">
+              Congratulations to our girls' basketball team for their outstanding victory in the county championship finals.
+            </p>
+            <button class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
+              Continue Reading
+              <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- News Card 5 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden news-card">
+          <div class="h-48 bg-blue-100 relative">
+            <img 
+              src="/api/placeholder/400/300" 
+              alt="Library Renovation" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-0 left-0 bg-blue-500 text-white py-2 px-4">
+              <span class="text-sm">April 8, 2025</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">Facilities</span>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Library Renovation Project Completed</h3>
+            <p class="text-gray-600 mb-4">
+              The school library has been completely renovated with new shelving, seating areas, and over 500 new books added to the collection.
+            </p>
+            <button class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
+              Continue Reading
+              <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- News Card 6 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden news-card">
+          <div class="h-48 bg-blue-100 relative">
+            <img 
+              src="/api/placeholder/400/300" 
+              alt="Community Service" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-0 left-0 bg-blue-500 text-white py-2 px-4">
+              <span class="text-sm">April 1, 2025</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">Community</span>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Students Lead Community Clean-up Initiative</h3>
+            <p class="text-gray-600 mb-4">
+              Form 3 students organized a successful community clean-up project as part of their environmental awareness program.
+            </p>
+            <button class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
+              Continue Reading
+              <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="mt-12 flex justify-center">
+        <nav class="inline-flex rounded-md shadow">
+          <a href="#" class="py-2 px-4 bg-white border border-r-0 border-gray-300 rounded-l-md hover:bg-gray-50">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+          <a href="#" class="py-2 px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-600">1</a>
+          <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">2</a>
+          <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">3</a>
+          <a href="#" class="py-2 px-4 bg-white border border-l-0 border-gray-300 rounded-r-md hover:bg-gray-50">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- News Categories -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">
+          News Categories
+        </h2>
+        <p class="text-center text-gray-600 mb-12">Browse news by category</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Category 1 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-graduation-cap text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Academic</h3>
+            <p class="text-gray-600 text-sm mt-2">24 articles</p>
+          </a>
+          
+          <!-- Category 2 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-running text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Sports</h3>
+            <p class="text-gray-600 text-sm mt-2">18 articles</p>
+          </a>
+          
+          <!-- Category 3 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-music text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Arts & Culture</h3>
+            <p class="text-gray-600 text-sm mt-2">15 articles</p>
+          </a>
+          
+          <!-- Category 4 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-users text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Community</h3>
+            <p class="text-gray-600 text-sm mt-2">12 articles</p>
+          </a>
+          
+          <!-- Category 5 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-chalkboard-teacher text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Staff</h3>
+            <p class="text-gray-600 text-sm mt-2">8 articles</p>
+          </a>
+          
+          <!-- Category 6 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-building text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Facilities</h3>
+            <p class="text-gray-600 text-sm mt-2">7 articles</p>
+          </a>
+          
+          <!-- Category 7 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-trophy text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Achievements</h3>
+            <p class="text-gray-600 text-sm mt-2">16 articles</p>
+          </a>
+          
+          <!-- Category 8 -->
+          <a href="#" class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+            <div class="bg-blue-500 text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4">
+              <i class="fas fa-bullhorn text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Announcements</h3>
+            <p class="text-gray-600 text-sm mt-2">20 articles</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">
+            Subscribe to Our Newsletter
+          </h2>
+          <p class="text-center text-gray-600 mb-8">
+            Stay updated with the latest news and announcements from Kimangu Day Secondary School
+          </p>
+          
+          <form class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="md:col-span-2">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div class="md:col-span-1">
+              <button
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-md transition"
+              >
+                Subscribe
+              </button>
+            </div>
+            <div class="md:col-span-3 text-sm text-gray-500 mt-2">
+              <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox text-blue-500 mr-2" />
+                <span>I agree to receive email updates from Kimangu Day Secondary School</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer placeholder - will be replaced by include.js -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load nav and footer -->
+    <script src="include.js"></script>
   </body>
 </html>
