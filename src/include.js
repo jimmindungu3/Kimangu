@@ -43,6 +43,6 @@ function initNavigation() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadHTML("nav-placeholder", "nav.html");
-  loadHTML("footer-placeholder", "footer.html");
+  loadHTML("nav-placeholder", "/components/nav.html");
+  loadHTML("footer-placeholder", "/components/footer.html");
 });
