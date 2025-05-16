@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Kimangu Day Secondary School</title>
-    <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="/assets/images/logo.png"
+      type="image/x-icon"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -27,7 +31,7 @@
       <div class="max-w-4xl px-4 mx-auto">
         <h1 class="mb-4 text-4xl font-bold md:text-5xl">Contact Us</h1>
         <p class="text-lg md:text-xl">
-          We'd love tp hear from you. Get in touch for inquiries, visits or
+          We'd love to hear from you. Get in touch for inquiries, visits or
           support.
         </p>
       </div>
@@ -37,9 +41,9 @@
     <section class="py-16 bg-white">
       <div class="grid gap-12 px-4 mx-auto max-w-7xl md:grid-cols-2">
         <!-- Contact Details -->
-        <div>
-          <h2 class="mb-6 text-2xl font-bold">Get in Touch</h2>
-          <ul class="space-y-4 text-gray-600">
+        <div class="p-6 rounded-2xl">
+          <h2 class="mb-6 text-2xl font-bold text-gray-800">Get in Touch</h2>
+          <ul class="space-y-4 text-gray-700">
             <li>
               <i class="mr-2 text-blue-500 fas fa-map-marker-alt"></i>
               Kimangu, Rongai, Nakuru County
@@ -49,16 +53,22 @@
               +254 721 415 851
             </li>
             <li>
-              <i class="mr-2 text-blue-500 fas fa-phone-alt"></i>
-              +254 712 345678
-            </li>
+            <i class="mr-2 text-blue-500 fa-solid fa-signs-post"></i> P.O. Box
+            79, Rongai, Nakuru
+          </li>
             <li>
               <i class="mr-2 text-blue-500 fas fa-envelope"></i>
               info@kimangu.sc.ke
             </li>
-            <li>
-              <i class="mr-2 text-blue-500 fas fa-clock"></i>
-              Mon–Fri: 8am – 5pm, Sat: 8am – 12pm
+            <li class="flex items-start">
+              <i class="mr-2 mt-1 text-blue-500 fas fa-clock"></i>
+              <div>
+                <ul class="space-y-1 ml-1">
+                  <li>Weekdays: Open 8:00 AM – 5:00 PM</li>
+                  <li>Saturday: Open 8:00 AM – 12:00 PM</li>
+                  <li>Sunday and Public Holidays: Closed</li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -76,6 +86,12 @@
             <input
               type="email"
               placeholder="Email Address"
+              class="w-full px-4 py-2 border rounded-lg"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Subject"
               class="w-full px-4 py-2 border rounded-lg"
               required
             />
