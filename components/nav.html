@@ -81,7 +81,7 @@
       <!-- Mobile Menu Button -->
       <button
         id="menu-toggle"
-        class="md:hidden focus:outline-none"
+        class="md:hidden focus:outline-none z-50"
         aria-label="Toggle menu"
       >
         <svg
@@ -125,13 +125,6 @@
         </li>
         <li>
           <a
-            href="/admissions.html"
-            class="py-1 border-blue-500 hover:text-blue-500 hover:border-b-2"
-            >Admissions</a
-          >
-        </li>
-        <li>
-          <a
             href="/gallery.html"
             class="py-1 border-blue-500 hover:text-blue-500 hover:border-b-2"
             >Gallery</a
@@ -144,6 +137,38 @@
             >Contact</a
           >
         </li>
+        <!-- Portals Dropdown -->
+        <li class="relative group">
+          <button class="flex items-center py-1 hover:text-blue-500">
+            Portals <i class="ml-1 text-xs fas fa-chevron-down"></i>
+          </button>
+          <ul
+            class="absolute right-0 z-50 hidden w-32 overflow-hidden transition-all duration-200 bg-white border border-gray-300 rounded-md shadow-md group-hover:block"
+          >
+            <li>
+              <a
+                href="/parents-portal.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
+                >Parents</a
+              >
+            </li>
+            <li>
+              <a
+                href="/student-portal.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
+                >Students</a
+              >
+            </li>
+            <li>
+              <a
+                href="/teacher-portal.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
+                >Teachers</a
+              >
+            </li>
+          </ul>
+        </li>
+        <!-- More Dropdown -->
         <li class="relative group">
           <button class="flex items-center py-1 hover:text-blue-500">
             More <i class="ml-1 text-xs fas fa-chevron-down"></i>
@@ -153,8 +178,15 @@
           >
             <li>
               <a
+                href="/admissions.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
+                >Admissions</a
+              >
+            </li>
+            <li>
+              <a
                 href="/careers.html"
-                class="block px-0 py-2 pl-4 text-gray-800 hover:bg-blue-200"
+                class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
                 >Careers</a
               >
             </li>
@@ -183,68 +215,146 @@
         </li>
       </ul>
     </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden pb-4">
-      <ul class="flex flex-col space-y-2 font-medium">
-        <li>
-          <a href="/index.html" class="block py-2 hover:text-blue-500">Home</a>
-        </li>
-        <li>
-          <a href="about.html" class="block py-2 hover:text-blue-500">About</a>
-        </li>
-        <li>
-          <a href="/academics.html" class="block py-2 hover:text-blue-500"
-            >Academics</a
-          >
-        </li>
-        <li>
-          <a href="/admissions.html" class="block py-2 hover:text-blue-500"
-            >Admissions</a
-          >
-        </li>
-        <li>
-          <a href="/gallery.html" class="block py-2 hover:text-blue-500"
-            >Gallery</a
-          >
-        </li>
-        <li>
-          <a href="/contact.html" class="block py-2 hover:text-blue-500"
-            >Contact</a
-          >
-        </li>
-        <!-- Mobile "More" Dropdown -->
-        <li class="py-2">
-          <button
-            id="more-toggle"
-            class="flex items-center justify-between w-full hover:text-blue-500"
-          >
-            More <i id="more-icon" class="ml-1 text-xs fas fa-chevron-down"></i>
-          </button>
-          <ul id="more-dropdown" class="hidden pl-4 mt-2 space-y-2">
-            <li>
-              <a href="/careers.html" class="block py-2 hover:text-blue-500"
-                >Careers</a
-              >
-            </li>
-            <li>
-              <a href="/tenders.html" class="block py-2 hover:text-blue-500"
-                >Tenders</a
-              >
-            </li>
-            <li>
-              <a href="/events.html" class="block py-2 hover:text-blue-500"
-                >Events</a
-              >
-            </li>
-            <li>
-              <a href="/news.html" class="block py-2 hover:text-blue-500"
-                >News</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
   </div>
 </nav>
+
+<!-- Mobile Menu - Now slides in from right -->
+<div id="mobile-menu" class="md:hidden">
+  <div class="px-4 py-6">
+    <!-- School Name in Mobile Menu -->
+    <div class="flex items-center justify-center mb-6">
+      <img src="/assets/images/logo.png" alt="school logo" class="h-10 mr-2" />
+      <h2 class="text-xl font-bold text-blue-500">Kimangu Secondary</h2>
+    </div>
+
+    <ul class="flex flex-col space-y-4 font-medium">
+      <li>
+        <a href="/index.html" class="block py-2 hover:text-blue-500">Home</a>
+      </li>
+      <li>
+        <a href="about.html" class="block py-2 hover:text-blue-500">About</a>
+      </li>
+      <li>
+        <a href="/academics.html" class="block py-2 hover:text-blue-500"
+          >Academics</a
+        >
+      </li>
+      <li>
+        <a href="/gallery.html" class="block py-2 hover:text-blue-500"
+          >Gallery</a
+        >
+      </li>
+      <li>
+        <a href="/contact.html" class="block py-2 hover:text-blue-500"
+          >Contact</a
+        >
+      </li>
+      <!-- Mobile Portals Dropdown -->
+      <li class="py-2">
+        <button
+          id="portals-toggle"
+          class="flex items-center justify-between w-full hover:text-blue-500"
+        >
+          Portals
+          <i id="portals-icon" class="ml-1 text-xs fas fa-chevron-down"></i>
+        </button>
+        <ul id="portals-dropdown" class="hidden pl-4 mt-2 space-y-2">
+          <li>
+            <a
+              href="/parents-portal.html"
+              class="block py-2 hover:text-blue-500"
+              >Parents</a
+            >
+          </li>
+          <li>
+            <a
+              href="/student-portal.html"
+              class="block py-2 hover:text-blue-500"
+              >Students</a
+            >
+          </li>
+          <li>
+            <a
+              href="/teacher-portal.html"
+              class="block py-2 hover:text-blue-500"
+              >Teachers</a
+            >
+          </li>
+        </ul>
+      </li>
+      <!-- Mobile "More" Dropdown -->
+      <li class="py-2">
+        <button
+          id="more-toggle"
+          class="flex items-center justify-between w-full hover:text-blue-500"
+        >
+          More <i id="more-icon" class="ml-1 text-xs fas fa-chevron-down"></i>
+        </button>
+        <ul id="more-dropdown" class="hidden pl-4 mt-2 space-y-2">
+          <li>
+            <a href="/admissions.html" class="block py-2 hover:text-blue-500"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a href="/careers.html" class="block py-2 hover:text-blue-500"
+              >Careers</a
+            >
+          </li>
+          <li>
+            <a href="/tenders.html" class="block py-2 hover:text-blue-500"
+              >Tenders</a
+            >
+          </li>
+          <li>
+            <a href="/events.html" class="block py-2 hover:text-blue-500"
+              >Events</a
+            >
+          </li>
+          <li>
+            <a href="/news.html" class="block py-2 hover:text-blue-500">News</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Contact Info in Mobile Menu -->
+    <div class="mt-8 pt-6 border-t border-gray-200">
+      <h3 class="mb-3 text-sm font-semibold text-gray-500">Contact Us</h3>
+      <div class="space-y-2">
+        <a
+          href="tel:+254721415851"
+          class="flex items-center text-sm text-gray-600 hover:text-blue-500"
+        >
+          <i class="mr-2 fas fa-phone"></i> +254 721 415 851
+        </a>
+        <a
+          href="mailto:info@kimangusecondary.sc.ke"
+          class="flex items-center text-sm text-gray-600 hover:text-blue-500"
+        >
+          <i class="mr-2 fas fa-envelope"></i> info@kimangusecondary.sc.ke
+        </a>
+      </div>
+
+      <!-- Social Media Links in Mobile Menu -->
+      <div class="flex mt-4 space-x-4">
+        <a
+          href="https://www.facebook.com/groups/616158830286938/"
+          class="text-gray-500 hover:text-blue-500"
+          target="_blank"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="text-gray-400 cursor-not-allowed">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="#" class="text-gray-400 cursor-not-allowed">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-gray-400 cursor-not-allowed">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
