@@ -293,7 +293,7 @@
               </p>
 
               <div
-                class="text-sm grid gap-6 text-center grid-cols-3 text-gray-600 mb-4"
+                class="text-sm grid gap-2 sm:gap-6 text-center grid-cols-3 text-gray-600 mb-4"
               >
                 <!-- Date -->
                 <div>
@@ -326,76 +326,70 @@
       </div>
     </section>
 
-    <!-- Upcoming Events Calendar -->
-    <section class="py-16 bg-white">
-      <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-8 text-3xl font-bold">Upcoming Events</h2>
-
-        <div class="space-y-4">
-          <!-- Event 1 -->
-          <div class="flex flex-wrap gap-4 p-4 rounded-lg bg-gray-50">
-            <div
-              class="p-3 text-center text-white bg-blue-500 rounded min-w-24"
-            >
-              <div class="text-xl font-bold">15</div>
-              <div class="text-sm">May</div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold">Parents' Meeting</h3>
-              <p class="text-gray-600">
-                Annual general meeting for all parents and guardians at the
-                school grounds.
-              </p>
-              <p class="mt-1 text-sm text-blue-500">
-                <i class="mr-1 fas fa-clock"></i> 9:00 AM - 1:00 PM
-              </p>
-            </div>
-          </div>
-
-          <!-- Event 2 -->
-          <div class="flex flex-wrap gap-4 p-4 rounded-lg bg-gray-50">
-            <div
-              class="p-3 text-center text-white bg-blue-500 rounded min-w-24"
-            >
-              <div class="text-xl font-bold">22</div>
-              <div class="text-sm">May</div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold">
-                Inter-House Sports Competition
-              </h3>
-              <p class="text-gray-600">
-                Annual sports day featuring athletics, football, volleyball, and
-                basketball tournaments.
-              </p>
-              <p class="mt-1 text-sm text-blue-500">
-                <i class="mr-1 fas fa-clock"></i> 8:00 AM - 5:00 PM
-              </p>
-            </div>
-          </div>
-
-          <!-- Event 3 -->
-          <div class="flex flex-wrap gap-4 p-4 rounded-lg bg-gray-50">
-            <div
-              class="p-3 text-center text-white bg-blue-500 rounded min-w-24"
-            >
-              <div class="text-xl font-bold">05</div>
-              <div class="text-sm">June</div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold">Career Day</h3>
-              <p class="text-gray-600">
-                Professionals from various fields will visit to guide students
-                on career choices.
-              </p>
-              <p class="mt-1 text-sm text-blue-500">
-                <i class="mr-1 fas fa-clock"></i> 10:00 AM - 3:00 PM
-              </p>
-            </div>
-          </div>
+<!-- Upcoming Events Calendar -->
+<section class="py-16 bg-white">
+  <div class="px-4 mx-auto max-w-7xl">
+    <h2 class="mb-8 text-3xl font-bold">Upcoming Events</h2>
+    <div class="space-y-4">
+      <!-- Event 1 -->
+      <div class="flex items-start gap-4 p-4 rounded-lg bg-gray-50">
+        <!-- Date box - fixed width to maintain consistency -->
+        <div class="flex-shrink-0 p-2 text-center text-white bg-blue-500 rounded w-16 md:w-20 md:p-3">
+          <div class="text-lg font-bold md:text-xl">15</div>
+          <div class="text-xs md:text-sm">May</div>
+        </div>
+        <!-- Event details -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-xl font-semibold">Parents' Meeting</h3>
+          <p class="text-gray-600">
+            Annual general meeting for all parents and guardians at the school grounds.
+          </p>
+          <p class="mt-1 text-sm text-blue-500">
+            <i class="mr-1 fas fa-clock"></i> 9:00 AM - 1:00 PM
+          </p>
         </div>
       </div>
-    </section>
+
+      <!-- Event 2 -->
+      <div class="flex items-start gap-4 p-4 rounded-lg bg-gray-50">
+        <!-- Date box - fixed width to maintain consistency -->
+        <div class="flex-shrink-0 p-2 text-center text-white bg-blue-500 rounded w-16 md:w-20 md:p-3">
+          <div class="text-lg font-bold md:text-xl">22</div>
+          <div class="text-xs md:text-sm">May</div>
+        </div>
+        <!-- Event details -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-xl font-semibold">Inter-House Sports Competition</h3>
+          <p class="text-gray-600">
+            Annual sports day featuring athletics, football, volleyball, and basketball tournaments.
+          </p>
+          <p class="mt-1 text-sm text-blue-500">
+            <i class="mr-1 fas fa-clock"></i> 8:00 AM - 5:00 PM
+          </p>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="flex items-start gap-4 p-4 rounded-lg bg-gray-50">
+        <!-- Date box - fixed width to maintain consistency -->
+        <div class="flex-shrink-0 p-2 text-center text-white bg-blue-500 rounded w-16 md:w-20 md:p-3">
+          <div class="text-lg font-bold md:text-xl">05</div>
+          <div class="text-xs md:text-sm">June</div>
+        </div>
+        <!-- Event details -->
+        <div class="flex-1 min-w-0">
+          <h3 class="text-xl font-semibold">Career Day</h3>
+          <p class="text-gray-600">
+            Professionals from various fields will visit to guide students on career choices.
+          </p>
+          <p class="mt-1 text-sm text-blue-500">
+            <i class="mr-1 fas fa-clock"></i> 10:00 AM - 3:00 PM
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Testimonials -->
     <section class="py-16 text-white bg-blue-500">
