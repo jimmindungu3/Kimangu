@@ -26,7 +26,7 @@
     <section class="relative flex items-center justify-center text-center">
       <!-- Background Image with alternating images -->
       <div
-        class="absolute inset-0 bg-center bg-cover"
+        class="absolute inset-0 bg-center bg-cover hero-background-images"
         style="background-image: url('/assets/images/hero-img.jpg'); z-index: 1"
       ></div>
 
@@ -367,16 +367,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="mt-8 text-center">
-          <a
-            href="#"
-            class="inline-block px-6 py-2 font-medium text-white transition bg-blue-500 rounded pointer-events-none hover:cursor-not-allowed hover:bg-blue-800"
-            aria-disabled="true"
-            tabindex="-1"
-            >View Full Calendar</a
-          >
-        </div> -->
       </div>
     </section>
 
@@ -651,7 +641,7 @@
         ];
 
         // Get the hero background div
-        const heroBg = document.querySelector(".bg-cover.bg-center");
+        const heroBg = document.querySelector(".hero-background-images");
 
         // Starting with the first image
         let currentImageIndex = 0;
