@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent Dashboard - Kimangu Day Secondary School</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="font-sans text-gray-900 bg-gray-50">
+    <!-- Header with Navigation -->
+    <header class="bg-white shadow-sm">
+      <div class="px-4 mx-auto max-w-7xl">
+        <div class="flex items-center justify-between py-4">
+          <!-- Logo and School Name -->
+          <div class="flex items-center">
+            <img
+              src="/assets/images/logo.png"
+              alt="School Logo"
+              class="w-10 h-10 mr-3"
+            />
+            <div>
+              <h1 class="text-lg font-bold text-blue-600">
+                Kimangu Day Secondary
+              </h1>
+              <p class="text-sm text-gray-600">Parent Portal</p>
+            </div>
+          </div>
+
+          <!-- User Info and Logout -->
+          <div class="flex items-center gap-4">
+            <div class="text-right">
+              <p class="font-medium">John Kamau</p>
+              <p class="text-sm text-gray-600">Parent ID: P2024001</p>
+            </div>
+            <button
+              class="px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-600"
+            >
+              <i class="mr-2 fas fa-sign-out-alt"></i>Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main class="px-4 py-8 mx-auto max-w-7xl">
+      <!-- Welcome Section -->
+      <div class="mb-8">
+        <h2 class="mb-2 text-2xl font-bold">Welcome back, Mr. Kamau</h2>
+        <p class="text-gray-600">
+          Here's an overview of your child's progress at Kimangu Day Secondary
+          School
+        </p>
+      </div>
+
+      <!-- Student Info Card -->
+      <div class="p-6 mb-8 bg-white rounded-lg shadow">
+        <h3 class="mb-4 text-xl font-semibold">
+          <i class="mr-2 text-blue-500 fas fa-user-graduate"></i>Student
+          Information
+        </h3>
+        <div class="grid gap-4 md:grid-cols-3">
+          <div>
+            <p class="text-sm text-gray-600">Student Name</p>
+            <p class="font-medium">Grace Wanjiku Kamau</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Admission Number</p>
+            <p class="font-medium">KIM/2023/089</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Class</p>
+            <p class="font-medium">Form 2 Blue</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Class Teacher</p>
+            <p class="font-medium">Mrs. Sarah Ndung'u</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Term</p>
+            <p class="font-medium">Term 2, 2025</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">House</p>
+            <p class="font-medium">Nyayo House</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats Cards -->
+      <div class="grid gap-6 mb-8 md:grid-cols-4">
+        <!-- Attendance Card -->
+        <div class="p-6 bg-white rounded-lg shadow">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-gray-600">Attendance Rate</p>
+              <p class="text-2xl font-bold text-green-600">96%</p>
+              <p class="text-xs text-gray-500">This Term</p>
+            </div>
+            <div class="text-3xl text-green-500">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Performance Card -->
+        <div class="p-6 bg-white rounded-lg shadow">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-gray-600">Overall Grade</p>
+              <p class="text-2xl font-bold text-blue-600">B+</p>
+              <p class="text-xs text-gray-500">Latest Exam</p>
+            </div>
+            <div class="text-3xl text-blue-500">
+              <i class="fas fa-chart-line"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fee Balance Card -->
+        <div class="p-6 bg-white rounded-lg shadow">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-gray-600">Fee Balance</p>
+              <p class="text-2xl font-bold text-orange-600">KES 12,500</p>
+              <p class="text-xs text-gray-500">Remaining</p>
+            </div>
+            <div class="text-3xl text-orange-500">
+              <i class="fas fa-receipt"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discipline Record Card -->
+        <div class="p-6 bg-white rounded-lg shadow">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-gray-600">Discipline</p>
+              <p class="text-2xl font-bold text-green-600">Excellent</p>
+              <p class="text-xs text-gray-500">No Issues</p>
+            </div>
+            <div class="text-3xl text-green-500">
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Left Column - Recent Activities & Academic Progress -->
+        <div class="lg:col-span-2">
+          <!-- Recent Academic Performance -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">
+                <i class="mr-2 text-blue-500 fas fa-chart-bar"></i>Recent
+                Academic Performance
+              </h3>
+              <button class="text-sm text-blue-500 hover:underline">
+                View All
+              </button>
+            </div>
+
+            <!-- Subject Performance Table -->
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b">
+                    <th class="py-2 text-left">Subject</th>
+                    <th class="py-2 text-center">Mid-Term</th>
+                    <th class="py-2 text-center">Assignment</th>
+                    <th class="py-2 text-center">Grade</th>
+                    <th class="py-2 text-center">Trend</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b">
+                    <td class="py-2 font-medium">Mathematics</td>
+                    <td class="py-2 text-center">78</td>
+                    <td class="py-2 text-center">85</td>
+                    <td class="py-2 text-center">
+                      <span
+                        class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
+                        >B+</span
+                      >
+                    </td>
+                    <td class="py-2 text-center text-green-500">
+                      <i class="fas fa-arrow-up"></i>
+                    </td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-2 font-medium">English</td>
+                    <td class="py-2 text-center">82</td>
+                    <td class="py-2 text-center">79</td>
+                    <td class="py-2 text-center">
+                      <span
+                        class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                        >A-</span
+                      >
+                    </td>
+                    <td class="py-2 text-center text-green-500">
+                      <i class="fas fa-arrow-up"></i>
+                    </td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-2 font-medium">Chemistry</td>
+                    <td class="py-2 text-center">71</td>
+                    <td class="py-2 text-center">74</td>
+                    <td class="py-2 text-center">
+                      <span
+                        class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
+                        >B</span
+                      >
+                    </td>
+                    <td class="py-2 text-center text-yellow-500">
+                      <i class="fas fa-minus"></i>
+                    </td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-2 font-medium">Biology</td>
+                    <td class="py-2 text-center">88</td>
+                    <td class="py-2 text-center">91</td>
+                    <td class="py-2 text-center">
+                      <span
+                        class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                        >A</span
+                      >
+                    </td>
+                    <td class="py-2 text-center text-green-500">
+                      <i class="fas fa-arrow-up"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 font-medium">Physics</td>
+                    <td class="py-2 text-center">69</td>
+                    <td class="py-2 text-center">72</td>
+                    <td class="py-2 text-center">
+                      <span
+                        class="px-2 py-1 text-xs text-yellow-800 bg-yellow-100 rounded"
+                        >B-</span
+                      >
+                    </td>
+                    <td class="py-2 text-center text-green-500">
+                      <i class="fas fa-arrow-up"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Attendance Summary -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">
+                <i class="mr-2 text-green-500 fas fa-calendar-alt"></i
+                >Attendance Summary
+              </h3>
+              <button class="text-sm text-blue-500 hover:underline">
+                View Details
+              </button>
+            </div>
+
+            <div class="grid gap-4 md:grid-cols-3">
+              <div class="p-4 rounded-lg bg-green-50">
+                <p class="text-2xl font-bold text-green-600">48</p>
+                <p class="text-sm text-gray-600">Days Present</p>
+              </div>
+              <div class="p-4 rounded-lg bg-red-50">
+                <p class="text-2xl font-bold text-red-600">2</p>
+                <p class="text-sm text-gray-600">Days Absent</p>
+              </div>
+              <div class="p-4 rounded-lg bg-yellow-50">
+                <p class="text-2xl font-bold text-yellow-600">1</p>
+                <p class="text-sm text-gray-600">Late Arrivals</p>
+              </div>
+            </div>
+
+            <!-- Recent Attendance -->
+            <div class="mt-4">
+              <p class="mb-2 text-sm font-medium text-gray-700">
+                Recent Attendance (Last 5 Days)
+              </p>
+              <div class="flex gap-2">
+                <div
+                  class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-green-500 rounded"
+                >
+                  P
+                </div>
+                <div
+                  class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-green-500 rounded"
+                >
+                  P
+                </div>
+                <div
+                  class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-red-500 rounded"
+                >
+                  A
+                </div>
+                <div
+                  class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-green-500 rounded"
+                >
+                  P
+                </div>
+                <div
+                  class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-green-500 rounded"
+                >
+                  P
+                </div>
+              </div>
+              <p class="mt-1 text-xs text-gray-500">
+                P = Present, A = Absent, L = Late
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Notifications & Quick Actions -->
+        <div>
+          <!-- Recent Notifications -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold">
+              <i class="mr-2 text-yellow-500 fas fa-bell"></i>Recent
+              Notifications
+            </h3>
+
+            <div class="space-y-4">
+              <div class="p-3 border-l-4 border-blue-500 bg-blue-50">
+                <p class="text-sm font-medium">Parent Meeting Reminder</p>
+                <p class="text-xs text-gray-600">May 15, 2025 at 9:00 AM</p>
+                <p class="text-xs text-gray-500">2 hours ago</p>
+              </div>
+
+              <div class="p-3 border-l-4 border-green-500 bg-green-50">
+                <p class="text-sm font-medium">Excellent Biology Test Result</p>
+                <p class="text-xs text-gray-600">
+                  Grace scored 91% in Biology test
+                </p>
+                <p class="text-xs text-gray-500">1 day ago</p>
+              </div>
+
+              <div class="p-3 border-l-4 border-orange-500 bg-orange-50">
+                <p class="text-sm font-medium">Fee Payment Reminder</p>
+                <p class="text-xs text-gray-600">
+                  Balance: KES 12,500 due May 30
+                </p>
+                <p class="text-xs text-gray-500">3 days ago</p>
+              </div>
+
+              <div class="p-3 border-l-4 border-purple-500 bg-purple-50">
+                <p class="text-sm font-medium">Career Day Event</p>
+                <p class="text-xs text-gray-600">
+                  June 5, 2025 - Professionals visit
+                </p>
+                <p class="text-xs text-gray-500">1 week ago</p>
+              </div>
+            </div>
+
+            <button class="w-full mt-4 text-sm text-blue-500 hover:underline">
+              View All Notifications
+            </button>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold">
+              <i class="mr-2 text-purple-500 fas fa-bolt"></i>Quick Actions
+            </h3>
+
+            <div class="space-y-3">
+              <button
+                class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50"
+              >
+                <i class="mr-3 text-blue-500 fas fa-credit-card"></i>
+                <div>
+                  <p class="font-medium">Pay School Fees</p>
+                  <p class="text-xs text-gray-600">
+                    Make secure online payment
+                  </p>
+                </div>
+              </button>
+
+              <button
+                class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50"
+              >
+                <i class="mr-3 text-green-500 fas fa-comment"></i>
+                <div>
+                  <p class="font-medium">Message Teacher</p>
+                  <p class="text-xs text-gray-600">
+                    Contact your child's teacher
+                  </p>
+                </div>
+              </button>
+
+              <button
+                class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50"
+              >
+                <i class="mr-3 text-orange-500 fas fa-download"></i>
+                <div>
+                  <p class="font-medium">Download Report</p>
+                  <p class="text-xs text-gray-600">
+                    Get latest academic report
+                  </p>
+                </div>
+              </button>
+
+              <button
+                class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50"
+              >
+                <i class="mr-3 text-purple-500 fas fa-calendar"></i>
+                <div>
+                  <p class="font-medium">View School Calendar</p>
+                  <p class="text-xs text-gray-600">
+                    Upcoming events and holidays
+                  </p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Upcoming Events -->
+          <div class="p-6 bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold">
+              <i class="mr-2 text-red-500 fas fa-calendar-alt"></i>Upcoming
+              Events
+            </h3>
+
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <div
+                  class="flex-shrink-0 w-12 p-2 text-center text-white bg-blue-500 rounded"
+                >
+                  <div class="text-xs">May</div>
+                  <div class="font-bold">15</div>
+                </div>
+                <div>
+                  <p class="font-medium">Parents Meeting</p>
+                  <p class="text-sm text-gray-600">9:00 AM - 1:00 PM</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="flex-shrink-0 w-12 p-2 text-center text-white bg-green-500 rounded"
+                >
+                  <div class="text-xs">May</div>
+                  <div class="font-bold">22</div>
+                </div>
+                <div>
+                  <p class="font-medium">Sports Day</p>
+                  <p class="text-sm text-gray-600">8:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="flex-shrink-0 w-12 p-2 text-center text-white bg-purple-500 rounded"
+                >
+                  <div class="text-xs">Jun</div>
+                  <div class="font-bold">05</div>
+                </div>
+                <div>
+                  <p class="font-medium">Career Day</p>
+                  <p class="text-sm text-gray-600">10:00 AM - 3:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+      // Simple logout functionality
+      document
+        .querySelector('button[class*="bg-red-500"]')
+        .addEventListener("click", function () {
+          if (confirm("Are you sure you want to logout?")) {
+            // In a real application, this would clear the session and redirect
+            alert(
+              "Logging out... In a real app, you would be redirected to the login page."
+            );
+            // window.location.href = 'parents-portal.html';
+          }
+        });
+
+      // Quick action buttons functionality
+      document
+        .querySelectorAll('button[class*="hover:bg-gray-50"]')
+        .forEach((button) => {
+          button.addEventListener("click", function () {
+            const action = this.querySelector("p").textContent;
+            alert(`${action} feature would be implemented in the full system.`);
+          });
+        });
+
+      // View all buttons functionality
+      document
+        .querySelectorAll('button[class*="text-blue-500"]')
+        .forEach((button) => {
+          if (button.textContent.includes("View")) {
+            button.addEventListener("click", function () {
+              alert("This would navigate to a detailed view page.");
+            });
+          }
+        });
+
+      // Notification click handling
+      document
+        .querySelectorAll('div[class*="border-l-4"]')
+        .forEach((notification) => {
+          notification.style.cursor = "pointer";
+          notification.addEventListener("click", function () {
+            alert("Opening notification details...");
+          });
+        });
+    </script>
+  </body>
+</html>
