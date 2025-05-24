@@ -57,7 +57,7 @@
     <main class="px-4 py-8 mx-auto max-w-7xl">
       <!-- Welcome Section -->
       <div class="mb-8">
-        <h2 class="mb-2 text-2xl font-bold">Welcome back, Mr. Kamau</h2>
+        <h2 class="mb-2 text-2xl font-bold">Welcome, Mr. Kamau</h2>
         <p class="text-gray-600">
           Here's an overview of your child's progress at Kimangu Day Secondary
           School
@@ -77,7 +77,7 @@
           </div>
           <div>
             <p class="text-sm text-gray-600">Admission Number</p>
-            <p class="font-medium">KIM/2023/089</p>
+            <p class="font-medium">KDSS/2024/089</p>
           </div>
           <div>
             <p class="text-sm text-gray-600">Class</p>
@@ -85,7 +85,7 @@
           </div>
           <div>
             <p class="text-sm text-gray-600">Class Teacher</p>
-            <p class="font-medium">Mrs. Sarah Ndung'u</p>
+            <p class="font-medium">Md. Judy Nwenda</p>
           </div>
           <div>
             <p class="text-sm text-gray-600">Term</p>
@@ -93,7 +93,7 @@
           </div>
           <div>
             <p class="text-sm text-gray-600">House</p>
-            <p class="font-medium">Nyayo House</p>
+            <p class="font-medium">Mt. Elgon</p>
           </div>
         </div>
       </div>
@@ -174,99 +174,207 @@
             </div>
 
             <!-- Subject Performance Table -->
-            <div class="overflow-x-auto">
-              <table class="w-full text-sm">
-                <thead>
-                  <tr class="border-b">
-                    <th class="py-2 text-left">Subject</th>
-                    <th class="py-2 text-center">Mid-Term</th>
-                    <th class="py-2 text-center">Assignment</th>
-                    <th class="py-2 text-center">Grade</th>
-                    <th class="py-2 text-center">Trend</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="border-b">
-                    <td class="py-2 font-medium">Mathematics</td>
-                    <td class="py-2 text-center">78</td>
-                    <td class="py-2 text-center">85</td>
-                    <td class="py-2 text-center">
-                      <span
-                        class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
-                        >B+</span
-                      >
-                    </td>
-                    <td class="py-2 text-center text-green-500">
-                      <i class="fas fa-arrow-up"></i>
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="py-2 font-medium">English</td>
-                    <td class="py-2 text-center">82</td>
-                    <td class="py-2 text-center">79</td>
-                    <td class="py-2 text-center">
-                      <span
-                        class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
-                        >A-</span
-                      >
-                    </td>
-                    <td class="py-2 text-center text-green-500">
-                      <i class="fas fa-arrow-up"></i>
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="py-2 font-medium">Chemistry</td>
-                    <td class="py-2 text-center">71</td>
-                    <td class="py-2 text-center">74</td>
-                    <td class="py-2 text-center">
-                      <span
-                        class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
-                        >B</span
-                      >
-                    </td>
-                    <td class="py-2 text-center text-yellow-500">
-                      <i class="fas fa-minus"></i>
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="py-2 font-medium">Biology</td>
-                    <td class="py-2 text-center">88</td>
-                    <td class="py-2 text-center">91</td>
-                    <td class="py-2 text-center">
-                      <span
-                        class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
-                        >A</span
-                      >
-                    </td>
-                    <td class="py-2 text-center text-green-500">
-                      <i class="fas fa-arrow-up"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="py-2 font-medium">Physics</td>
-                    <td class="py-2 text-center">69</td>
-                    <td class="py-2 text-center">72</td>
-                    <td class="py-2 text-center">
-                      <span
-                        class="px-2 py-1 text-xs text-yellow-800 bg-yellow-100 rounded"
-                        >B-</span
-                      >
-                    </td>
-                    <td class="py-2 text-center text-green-500">
-                      <i class="fas fa-arrow-up"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+
+            <table class="w-full overflow-auto text-xs sm:text-sm">
+              <thead>
+                <tr class="border-b border-gray-400 bg-gray-50">
+                  <th class="px-4 py-3 font-semibold text-left">Subject</th>
+                  <th class="px-4 py-3 font-semibold text-center">Mid-Term</th>
+                  <th class="px-4 py-3 font-semibold text-center">
+                    Assignment
+                  </th>
+                  <th class="px-4 py-3 font-semibold text-center">Grade</th>
+                  <th class="px-4 py-3 font-semibold text-center">Trend</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row 1 - Light background (odd row) -->
+                <tr class="transition-colors bg-white hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">101 English</td>
+                  <td class="px-4 py-3 text-center">74</td>
+                  <td class="px-4 py-3 text-center">70</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
+                      >B</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-red-500">
+                    <i class="fas fa-arrow-down"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 2 - Gray background (even row) -->
+                <tr class="transition-colors bg-gray-50 hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">102 Kiswahili</td>
+                  <td class="px-4 py-3 text-center">67</td>
+                  <td class="px-4 py-3 text-center">78</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
+                      >B+</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-green-500">
+                    <i class="fas fa-arrow-up"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 3 - Light background (odd row) -->
+                <tr class="transition-colors bg-white hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">121 Mathematics</td>
+                  <td class="px-4 py-3 text-center">80</td>
+                  <td class="px-4 py-3 text-center">80</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
+                      >B+</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-yellow-500">
+                    <i class="fas fa-minus"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 4 - Gray background (even row) -->
+                <tr class="transition-colors bg-gray-50 hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">231 Biology</td>
+                  <td class="px-4 py-3 text-center">91</td>
+                  <td class="px-4 py-3 text-center">87</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                      >A</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-red-500">
+                    <i class="fas fa-arrow-down"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 5 - Light background (odd row) -->
+                <tr class="transition-colors bg-white hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">232 Physics</td>
+                  <td class="px-4 py-3 text-center">81</td>
+                  <td class="px-4 py-3 text-center">84</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                      >A-</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-green-500">
+                    <i class="fas fa-arrow-up"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 6 - Gray background (even row) -->
+                <tr class="transition-colors bg-gray-50 hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">233 Chemistry</td>
+                  <td class="px-4 py-3 text-center">73</td>
+                  <td class="px-4 py-3 text-center">88</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                      >A-</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-green-500">
+                    <i class="fas fa-arrow-up"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 7 - Light background (odd row) -->
+                <tr class="transition-colors bg-white hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">
+                    311 History & Government
+                  </td>
+                  <td class="px-4 py-3 text-center">75</td>
+                  <td class="px-4 py-3 text-center">75</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
+                      >B</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-yellow-500">
+                    <i class="fas fa-minus"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 8 - Gray background (even row) -->
+                <tr class="transition-colors bg-gray-50 hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">312 Geography</td>
+                  <td class="px-4 py-3 text-center">69</td>
+                  <td class="px-4 py-3 text-center">79</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded"
+                      >B</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-green-500">
+                    <i class="fas fa-arrow-up"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 9 - Light background (odd row) -->
+                <tr class="transition-colors bg-white hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">313 CRE</td>
+                  <td class="px-4 py-3 text-center">92</td>
+                  <td class="px-4 py-3 text-center">90</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                      >A</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-red-500">
+                    <i class="fas fa-arrow-down"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 10 - Gray background (even row) -->
+                <tr class="transition-colors bg-gray-50 hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">443 Agriculture</td>
+                  <td class="px-4 py-3 text-center">87</td>
+                  <td class="px-4 py-3 text-center">85</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                      >A</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-red-500">
+                    <i class="fas fa-arrow-down"></i>
+                  </td>
+                </tr>
+
+                <!-- Row 11 - Light background (odd row) -->
+                <tr class="transition-colors bg-white hover:bg-gray-100">
+                  <td class="px-4 py-3 font-medium">565 Business Studies</td>
+                  <td class="px-4 py-3 text-center">83</td>
+                  <td class="px-4 py-3 text-center">89</td>
+                  <td class="px-4 py-3 text-center">
+                    <span
+                      class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded"
+                      >A-</span
+                    >
+                  </td>
+                  <td class="px-4 py-3 text-center text-green-500">
+                    <i class="fas fa-arrow-up"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <!-- Attendance Summary -->
           <div class="p-6 mb-8 bg-white rounded-lg shadow">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-semibold">
-                <i class="mr-2 text-green-500 fas fa-calendar-alt"></i
-                >Attendance Summary
+                <i class="mr-2 text-green-500 fas fa-calendar-alt"></i>Term
+                Attendance Summary
               </h3>
               <button class="text-sm text-blue-500 hover:underline">
                 View Details

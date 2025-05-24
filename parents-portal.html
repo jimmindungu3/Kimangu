@@ -53,7 +53,6 @@
                   id="parentId"
                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your Parent ID"
-                  required
                 />
               </div>
 
@@ -68,7 +67,6 @@
                   id="parentPassword"
                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your password"
-                  required
                 />
                 <div class="mt-1 text-right">
                   <a href="#" class="text-sm text-blue-500 hover:underline"
@@ -81,7 +79,7 @@
                 type="submit"
                 class="w-full px-4 py-2 font-medium text-white transition bg-blue-500 rounded-md hover:bg-blue-600"
               >
-                Login
+                <a href="/parent.html">Login</a>
               </button>
             </form>
 
@@ -169,47 +167,5 @@
 
     <!-- Scripts -->
     <script src="/src/include.js"></script>
-    <script>
-      // Simple form submission handling
-      document
-        .getElementById("parentLoginForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // You would normally send this data to a server for authentication
-          const parentId = document.getElementById("parentId").value;
-          const password = document.getElementById("parentPassword").value;
-
-          // For demo purposes, show an alert
-          alert("Login functionality would be implemented on the server side.");
-
-          // Reset form
-          this.reset();
-        });
-
-      // Simple FAQ accordion functionality
-      document
-        .querySelectorAll(".bg-white.rounded-lg.shadow button")
-        .forEach((button) => {
-          button.addEventListener("click", () => {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector("i");
-
-            // Toggle content visibility
-            if (
-              content.style.display === "none" ||
-              content.style.display === ""
-            ) {
-              content.style.display = "block";
-              icon.classList.remove("fa-chevron-down");
-              icon.classList.add("fa-chevron-up");
-            } else {
-              content.style.display = "none";
-              icon.classList.remove("fa-chevron-up");
-              icon.classList.add("fa-chevron-down");
-            }
-          });
-        });
-    </script>
   </body>
 </html>

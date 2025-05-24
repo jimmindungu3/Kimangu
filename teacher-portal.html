@@ -54,7 +54,6 @@
                   id="teacherId"
                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your Teacher ID"
-                  required
                 />
               </div>
 
@@ -69,7 +68,6 @@
                   id="teacherPassword"
                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your password"
-                  required
                 />
                 <div class="mt-1 text-right">
                   <a href="#" class="text-sm text-blue-500 hover:underline"
@@ -82,7 +80,7 @@
                 type="submit"
                 class="w-full px-4 py-2 font-medium text-white transition bg-blue-500 rounded-md hover:bg-blue-600"
               >
-                Login
+                <a href="/teacher.html">Login</a>
               </button>
             </form>
 
@@ -170,36 +168,5 @@
 
     <!-- Scripts -->
     <script src="/src/include.js"></script>
-    <script>
-      // Simple form submission handling
-      document
-        .getElementById("teacherLoginForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // You would normally send this data to a server for authentication
-          const teacherId = document.getElementById("teacherId").value;
-          const password = document.getElementById("teacherPassword").value;
-
-          // For demo purposes, show an alert
-          alert("Login functionality would be implemented on the server side.");
-
-          // Reset form
-          this.reset();
-        });
-
-      // Make quick access tools clickable
-      document.querySelectorAll(".grid.gap-4.mt-12 > div").forEach((item) => {
-        item.classList.add("cursor-pointer", "hover:bg-gray-50", "transition");
-        item.addEventListener("click", function () {
-          // This would navigate to the respective page in a real application
-          alert(
-            "This would navigate to the " +
-              this.querySelector("h3").textContent +
-              " page."
-          );
-        });
-      });
-    </script>
   </body>
 </html>
