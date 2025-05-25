@@ -8,7 +8,7 @@ const app = express();
 // Enable CORS for frontend connection
 app.use(
   cors({
-    origin: "http://localhost:8000", // Your frontend URL
+    origin: ["http://localhost:8000", "https://kimangu.onrender.com"], // Your frontend URL
     methods: ["POST", "GET"],
     credentials: false,
   })
