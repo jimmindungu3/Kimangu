@@ -8,7 +8,7 @@ const app = express();
 // Enable CORS for frontend connection
 app.use(
   cors({
-    origin: ["http://localhost:8000", "https://kimangu.onrender.com"], // Your frontend URL
+    origin: ["http://localhost:8000", "https://kimangu.vercel.app"], // DEV and PROD URLs
     methods: ["POST", "GET"],
     credentials: false,
   })
