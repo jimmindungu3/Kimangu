@@ -31,135 +31,446 @@
       <div class="max-w-4xl px-4 mx-auto">
         <h1 class="mb-4 text-4xl font-bold md:text-5xl">Admissions</h1>
         <p class="text-lg md:text-xl">
-          Enroll your child in our narturing, disciplined and academically
+          Enroll your child in our nurturing, disciplined and academically
           vibrant environment.
         </p>
       </div>
     </section>
 
-    <!-- Admission Steps -->
-    <section class="py-16 bg-white">
-      <div class="max-w-6xl px-4 mx-auto">
-        <h2 class="mb-12 text-3xl font-bold text-center">How to Apply</h2>
-        <div class="grid gap-8 text-center md:grid-cols-3">
-          <div>
-            <div class="mb-4 text-4xl text-blue-600">
-              <i class="fas fa-file-alt"></i>
+    <!-- Application Form -->
+    <section class="pt-16 pb-6 bg-gray-100">
+      <div class="max-w-5xl px-4 mx-auto">
+        <h2 class="mb-6 text-3xl font-bold text-center">Apply Now</h2>
+        <form id="admissionForm" class="space-y-6">
+          <!-- Student Information -->
+          <div class="p-6 bg-white rounded-lg shadow-sm">
+            <h3 class="mb-4 text-xl font-semibold text-blue-500">
+              Student Information
+            </h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Student's Full Name
+                  <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="text"
+                  name="studentName"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Date of Birth <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="date"
+                  name="dateOfBirth"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Gender <span class="text-orange-600">*</span></label
+                >
+                <select
+                  name="gender"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                >
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >KCPE Index Number
+                  <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="text"
+                  name="kcpeIndex"
+                  required
+                  placeholder="e.g., 12345678009"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >KCPE Marks <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="number"
+                  name="kcpeMarks"
+                  required
+                  min="200"
+                  max="500"
+                  placeholder="e.g., 350"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Year of KCPE <span class="text-orange-600">*</span></label
+                >
+                <select
+                  name="kcpeYear"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                >
+                  <option value="">Select Year</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2021">2020</option>
+                  <option value="2021">2019</option>
+                </select>
+              </div>
+              <div class="mt-4">
+                <label class="block mb-1 font-semibold">
+                  Previous School Name <span class="text-orange-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="previousSchool"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+
+              <div class="mt-4">
+                <label class="block mb-1 font-semibold">
+                  NEMIS Number <span class="text-orange-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="nemis"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
             </div>
-            <h3 class="mb-2 text-xl font-semibold">1. Get Application Form</h3>
-            <p class="text-gray-600">
-              Download or collect the form at our school office.
-            </p>
           </div>
-          <div>
-            <div class="mb-4 text-4xl text-blue-600">
-              <i class="fas fa-user-check"></i>
+
+          <!-- Parent/Guardian Information -->
+          <div class="p-6 bg-white rounded-lg shadow-sm">
+            <h3 class="mb-4 text-xl font-semibold text-blue-500">
+              Parent/Guardian Information
+            </h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Parent/Guardian Name
+                  <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="text"
+                  name="parentName"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Relationship to Student
+                  <span class="text-orange-600">*</span></label
+                >
+                <select
+                  name="relationship"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                >
+                  <option value="">Select Relationship</option>
+                  <option value="Father">Father</option>
+                  <option value="Mother">Mother</option>
+                  <option value="Guardian">Guardian</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Phone Number <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="e.g., 0712345678"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Email Address <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold">Occupation</label>
+                <input
+                  type="text"
+                  name="occupation"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >ID Number <span class="text-orange-600">*</span></label
+                >
+                <input
+                  type="text"
+                  name="idNumber"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
+              <div class="mt-4">
+                <label class="block mb-1 font-semibold">
+                  Home Address <span class="text-orange-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="address"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                />
+              </div>
             </div>
-            <h3 class="mb-2 text-xl font-semibold">2. Submit Documents</h3>
-            <p class="text-gray-600">
-              Attach KCPE results, birth certificate, and recent passport photo.
-            </p>
           </div>
-          <div>
-            <div class="mb-4 text-4xl text-blue-600">
-              <i class="fas fa-school"></i>
+
+          <!-- Additional Information -->
+          <div class="p-6 bg-white rounded-lg shadow-sm">
+            <h3 class="mb-4 text-xl font-semibold text-blue-500">
+              Additional Information
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Medical Conditions/Allergies (if any)</label
+                >
+                <textarea
+                  name="medicalConditions"
+                  rows="2"
+                  placeholder="Please specify any medical conditions or allergies"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                ></textarea>
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Special Needs/Requirements</label
+                >
+                <textarea
+                  name="specialNeeds"
+                  rows="2"
+                  placeholder="Any special learning needs or requirements"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                ></textarea>
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >How did you hear about our school?</label
+                >
+                <select
+                  name="hearAboutUs"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                >
+                  <option value="">Select Option</option>
+                  <option value="Friend/Family">Friend/Family</option>
+                  <option value="Website">Website</option>
+                  <option value="Social Media">Social Media</option>
+                  <option value="Newspaper">Newspaper</option>
+                  <option value="School Visit">School Visit</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold"
+                  >Additional Comments/Questions</label
+                >
+                <textarea
+                  name="comments"
+                  rows="4"
+                  placeholder="Any additional information you'd like to share"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                ></textarea>
+              </div>
             </div>
-            <h3 class="mb-2 text-xl font-semibold">3. Interview & Admission</h3>
-            <p class="text-gray-600">
-              Successful applicants are invited for interview and orientation.
-            </p>
           </div>
-        </div>
+
+          <!-- Requirements and Declaration Combined -->
+          <div
+            class="p-6 bg-white border-l-4 border-blue-500 rounded-lg shadow-sm"
+          >
+            <h3 class="mb-4 text-xl font-semibold text-blue-500">
+              Required Documents & Declaration
+            </h3>
+
+            <!-- Requirements List -->
+            <div class="mb-6">
+              <p class="mb-3 font-medium text-gray-700">
+                Please prepare these documents for submission at our office:
+              </p>
+              <ul class="ml-4 space-y-1 text-gray-600 list-disc list-inside">
+                <li>KCPE Result Slip</li>
+                <li>Copy of Birth Certificate</li>
+                <li>Two Passport Size Photos</li>
+                <li>Previous school release letter (if applicable)</li>
+                <li>Previous school report form (if applicable)</li>
+              </ul>
+            </div>
+
+            <!-- Declaration -->
+            <div class="p-4 rounded-md bg-blue-50">
+              <div class="flex items-start space-x-3">
+                <input
+                  type="checkbox"
+                  name="declaration"
+                  id="declaration"
+                  required
+                  class="mt-1"
+                />
+                <label for="declaration" class="text-sm text-gray-700">
+                  I declare that the information provided above is true and
+                  accurate to the best of my knowledge. I understand that
+                  providing false information may result in the rejection of
+                  this application or cancellation of admission if discovered
+                  later.
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="block px-4 py-3 mx-auto text-lg font-bold text-white transition-colors bg-blue-500 rounded-md hover:bg-blue-500"
+          >
+            <i class="mr-2 fas fa-paper-plane"></i>
+            Submit Application
+          </button>
+
+          <p id="formStatus" class="mt-2 text-sm text-center"></p>
+        </form>
       </div>
     </section>
 
-    <!-- Requirements -->
-    <section class="py-16 bg-blue-50">
-      <div class="max-w-4xl px-4 mx-auto">
-        <h2 class="mb-6 text-3xl font-bold text-center">
-          Admission Requirements
-        </h2>
-        <ul class="space-y-2 text-gray-600 list-disc list-inside">
-          <li>KCPE Result Slip</li>
-          <li>Copy of Birth Certificate</li>
-          <li>Two Passport Size Photos</li>
-          <li>Filled Application Form</li>
-          <li>Previous school release letter (if applicable)</li>
-          <li>Previous school report form (if applicable)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Fee Structure Preview -->
+    <!-- Combined Info Section -->
     <section class="py-16 bg-white">
       <div class="max-w-5xl px-4 mx-auto">
-        <h2 class="mb-6 text-3xl font-bold text-center">
-          Fees Structure Summary
-        </h2>
-        <div class="p-6 bg-white rounded-lg shadow">
-          <p class="mb-4 text-gray-600">
-            The average termly fee is approximately <strong>KES 3,000</strong>.
-          </p>
-          <a
-            href="/assets/forms/Fee_Structure_2025.pdf"
-            download
-            class="inline-flex items-center p-2 text-white bg-blue-500 rounded-md"
-          >
-            <i class="mr-2 fa-solid fa-file-arrow-down"></i>
-            Download Fees Structure
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-16 bg-blue-50">
-      <div class="max-w-4xl px-4 mx-auto">
-        <h2 class="mb-8 text-3xl font-bold text-center">
-          Frequently Asked Questions
-        </h2>
-        <div class="space-y-6">
-          <div>
-            <h3 class="font-semibold text-blue-500">
-              Q: When is the next intake?
-            </h3>
-            <p class="text-gray-600">A: January every year.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-blue-500">Q: Is there boarding?</h3>
-            <p class="text-gray-600">A: No, we are a day school.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-blue-500">Q: Can I apply online?</h3>
-            <p class="text-gray-600">
-              A: Not yet. Forms are collected physically from the school office.
+        <div class="grid gap-8 lg:grid-cols-2">
+          <!-- Fee Structure -->
+          <div class="p-8 rounded-lg bg-blue-50">
+            <h2 class="mb-4 text-2xl font-bold text-blue-500">
+              <i class="mr-2 fas fa-money-bill-wave"></i>
+              Fees Structure
+            </h2>
+            <p class="mb-4 text-gray-600">
+              The average termly fee is approximately
+              <strong>KES 3,000</strong>.
             </p>
+            <a
+              href="/assets/forms/Fee_Structure_2025.pdf"
+              download
+              class="inline-flex items-center px-4 py-2 text-white transition-colors bg-blue-500 rounded-md hover:bg-blue-500"
+            >
+              <i class="mr-2 fa-solid fa-file-arrow-down"></i>
+              Download Full Fee Structure
+            </a>
+          </div>
+
+          <!-- FAQ -->
+          <div class="p-8 rounded-lg bg-gray-50">
+            <h2 class="mb-4 text-2xl font-bold text-blue-500">
+              <i class="mr-2 fas fa-question-circle"></i>
+              Quick Answers
+            </h2>
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-blue-500">
+                  Q: When is the next intake?
+                </h3>
+                <p class="text-gray-600">A: We're always admitting.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-blue-500">
+                  Q: Is there boarding?
+                </h3>
+                <p class="text-gray-600">A: No, we are a day school.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-blue-500">
+                  Q: Can I apply online?
+                </h3>
+                <p class="text-gray-600">
+                  A: Yes! You can submit your initial application online using
+                  the form above.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section
-      class="py-20 text-center text-white bg-gradient-to-r from-blue-400 to-blue-600"
-    >
-      <div class="max-w-2xl px-4 mx-auto">
-        <h2 class="mb-4 text-3xl font-bold">Secure a Place for Your Child</h2>
-        <p class="mb-6">
-          Limited slots available for the 2025 academic year. Apply early to
-          avoid disappointment.
-        </p>
-        <a
-          href="contact.html"
-          class="px-8 py-3 font-bold text-blue-400 transition bg-white rounded-lg hover:bg-gray-100"
-        >
-          Contact Admissions Office
-        </a>
       </div>
     </section>
 
     <div id="footer-placeholder"></div>
 
     <script src="/src/include.js"></script>
+    <script>
+      // Form submission handler - keeping original logic intact
+      document
+        .getElementById("admissionForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          const status = document.getElementById("formStatus");
+
+          // Show loading state
+          status.textContent = "Sending application...";
+          status.className = "mt-2 text-sm text-center text-blue-500";
+
+          // Collect all form data
+          const formData = new FormData(form);
+          const applicationData = {};
+
+          // Convert FormData to regular object
+          for (let [key, value] of formData.entries()) {
+            applicationData[key] = value;
+          }
+
+          try {
+            const response = await fetch("http://localhost:5000/send-email", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(applicationData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+              status.textContent =
+                "✅ Application submitted successfully! We'll contact you soon.";
+              status.className = "mt-2 text-sm text-center text-green-600";
+              form.reset(); // Clear the form
+            } else {
+              status.textContent =
+                "❌ Failed to submit application. Please try again.";
+              status.className = "mt-2 text-sm text-center text-red-600";
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            status.textContent =
+              "❌ Network error. Please check your connection and try again.";
+            status.className = "mt-2 text-sm text-center text-red-600";
+          }
+        });
+    </script>
   </body>
 </html>
