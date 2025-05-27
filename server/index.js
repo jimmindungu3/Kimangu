@@ -820,7 +820,7 @@ app.post("/send-contact-message", async (req, res) => {
     const schoolEmailOptions = {
       from: `"Website Contact Form" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER, // School's email
-      subject: `🌐 Website Contact: ${contactData.subject}`,
+      subject: `Website Contact: ${contactData.subject}`,
       html: contactEmailHTML,
       // Reply-to the person who sent the message
       replyTo: contactData.email,
