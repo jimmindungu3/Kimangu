@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const contactForm = require("./routes/contactForm");
 const admissionForm = require("./routes/admissionForm");
+const jobForm = require("./routes/jobForm");
 
 const app = express();
 app.use(express.json());
@@ -12,7 +13,11 @@ app.use(express.json());
 // Enable CORS for frontend connection
 app.use(
   cors({
-    origin: ["http://localhost:5500", "https://kimangu.vercel.app"], // DEV and PROD URLs
+    origin: [
+      "http://localhost:5500",
+      "http://127.0.0.1:5500",
+      "https://kimangu.vercel.app",
+    ], // DEV and PROD URLs
     methods: ["POST", "GET"],
     credentials: false,
   })
@@ -20,6 +25,7 @@ app.use(
 
 app.use("/contact", contactForm);
 app.use("/admission", admissionForm);
+app.use("/job", jobForm);
 
 // Health check endpoint
 app.get("/health", (req, res) => {

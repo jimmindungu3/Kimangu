@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Position - Kimangu Day Secondary School</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans bg-gray-50">
+    <div id="nav-placeholder"></div>
+
+    <!-- Application Form -->
+    <section class="container max-w-4xl px-4 py-16 mx-auto">
+      <!-- Success Message (Hidden by default) -->
+      <div
+        id="successMessage"
+        class="hidden p-4 mb-6 bg-green-100 border border-green-400 rounded-lg"
+      >
+        <div class="flex items-center">
+          <i class="mr-3 text-green-600 fas fa-check-circle"></i>
+          <div>
+            <h3 class="font-bold text-green-800">
+              Application Submitted Successfully!
+            </h3>
+            <p class="text-green-700">
+              We have received your application and will get back to you soon.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Message (Hidden by default) -->
+      <div
+        id="errorMessage"
+        class="hidden p-4 mb-6 bg-red-100 border border-red-400 rounded-lg"
+      >
+        <div class="flex items-center">
+          <i class="mr-3 text-red-600 fas fa-exclamation-circle"></i>
+          <div>
+            <h3 class="font-bold text-red-800">Error Submitting Application</h3>
+            <p id="errorText" class="text-red-700">Please try again later.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Spinner (Hidden by default) -->
+      <div id="loadingSpinner" class="hidden text-center">
+        <div
+          class="inline-block w-8 h-8 border-4 border-blue-200 rounded-full border-t-blue-600 animate-spin"
+        ></div>
+        <p class="mt-2 text-gray-600">Submitting your application...</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg">
+        <div class="p-6 border-b border-gray-200">
+          <div class="flex flex-row mb-12 gap-x-4">
+            <img
+              class="h-24"
+              src="./assets/images/logo.png"
+              alt="School logo"
+            />
+            <div class="content-center">
+              <h2 class="text-2xl font-bold text-gray-800 md:text-3xl">
+                Kimangu Day Secondary School
+              </h2>
+              <h3>Aim High</h3>
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-800">Job Application Form</h2>
+          <p class="mt-2 text-gray-600">
+            Please fill out all required fields marked with *
+          </p>
+        </div>
+
+        <form
+          id="applicationForm"
+          class="p-6 space-y-6"
+          enctype="multipart/form-data"
+        >
+          <!-- Personal Information Section -->
+          <div class="space-y-4">
+            <h3
+              class="pb-2 text-lg font-semibold text-gray-800 border-b border-gray-200"
+            >
+              <i class="mr-2 text-blue-500 fas fa-user"></i>
+              Personal Information
+            </h3>
+
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div>
+                <label
+                  for="fullName"
+                  class="block mb-1 text-sm font-medium text-gray-700"
+                >
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block mb-1 text-sm font-medium text-gray-700"
+                >
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="email@example.com"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="phone"
+                  class="block mb-1 text-sm font-medium text-gray-700"
+                >
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="+254 700 000 000"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="availableStartDate"
+                  class="block mb-1 text-sm font-medium text-gray-700"
+                >
+                  Available Start Date *
+                </label>
+                <input
+                  type="date"
+                  id="availableStartDate"
+                  name="availableStartDate"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="address"
+                class="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Address (Optional)
+              </label>
+              <textarea
+                id="address"
+                name="address"
+                rows="2"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your current address"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Professional Information Section -->
+          <div class="space-y-4">
+            <h3
+              class="pb-2 text-lg font-semibold text-gray-800 border-b border-gray-200"
+            >
+              <i class="mr-2 text-blue-500 fas fa-briefcase"></i>
+              Professional Information
+            </h3>
+
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div>
+                <label
+                  for="position"
+                  class="block mb-1 text-sm font-medium text-gray-700"
+                >
+                  Position Applied For *
+                </label>
+                <select
+                  id="position"
+                  name="position"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select a position</option>
+                  <option value="Mathematics/Business Teacher">
+                    Mathematics/Business Teacher
+                  </option>
+                  <option value="Administrative Assistant">
+                    Administrative Assistant
+                  </option>
+                  <option value="School Counselor">School Counselor</option>
+                  <option value="Science Teacher">Science Teacher</option>
+                  <option value="English Teacher">English Teacher</option>
+                  <option value="Computer Studies Teacher">
+                    Computer Studies Teacher
+                  </option>
+                  <option value="Librarian">Librarian</option>
+                  <option value="Sports Coordinator">Sports Coordinator</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="experience"
+                  class="block mb-1 text-sm font-medium text-gray-700"
+                >
+                  Years of Experience *
+                </label>
+                <select
+                  id="experience"
+                  name="experience"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select experience level</option>
+                  <option value="0-1 years">0-1 years (Entry Level)</option>
+                  <option value="2-3 years">2-3 years</option>
+                  <option value="4-5 years">4-5 years</option>
+                  <option value="6-10 years">6-10 years</option>
+                  <option value="10+ years">10+ years</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="education"
+                class="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Education Background *
+              </label>
+              <textarea
+                id="education"
+                name="education"
+                required
+                rows="3"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="e.g., Bachelor's Degree in Education, Master's in Mathematics, etc."
+              ></textarea>
+            </div>
+
+            <div>
+              <label
+                for="previousEmployment"
+                class="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Previous Employment (Optional)
+              </label>
+              <textarea
+                id="previousEmployment"
+                name="previousEmployment"
+                rows="3"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Please list your previous work experience, including job titles, schools/companies, and dates"
+              ></textarea>
+            </div>
+
+            <div>
+              <label
+                for="skills"
+                class="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Key Skills (Optional)
+              </label>
+              <input
+                type="text"
+                id="skills"
+                name="skills"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="e.g., Classroom Management, Computer Skills, Communication, etc."
+              />
+            </div>
+          </div>
+
+          <!-- Cover Letter Section -->
+          <div class="space-y-4">
+            <h3
+              class="pb-2 text-lg font-semibold text-gray-800 border-b border-gray-200"
+            >
+              <i class="mr-2 text-blue-500 fas fa-edit"></i>
+              Cover Letter
+            </h3>
+
+            <div>
+              <label
+                for="coverLetter"
+                class="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Cover Letter (Optional)
+              </label>
+              <textarea
+                id="coverLetter"
+                name="coverLetter"
+                rows="6"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Tell us why you're interested in this position and what makes you a great fit for our school..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Document Upload Section -->
+          <div class="space-y-4">
+            <h3
+              class="pb-2 text-lg font-semibold text-gray-800 border-b border-gray-200"
+            >
+              <i class="mr-2 text-blue-500 fas fa-paperclip"></i>
+              Upload Documents
+            </h3>
+
+            <div>
+              <label
+                for="documents"
+                class="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Upload Resume, CV, Certificates, etc. (Optional)
+              </label>
+              <input
+                type="file"
+                id="documents"
+                name="documents"
+                multiple
+                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+              />
+              <p class="mt-1 text-sm text-gray-500">
+                Accepted formats: PDF, DOC, DOCX, JPG, PNG. Maximum file size:
+                5MB per file. Maximum 10 files.
+              </p>
+            </div>
+
+            <!-- File Preview Area -->
+            <div id="filePreview" class="hidden mt-4">
+              <h4 class="mb-2 text-sm font-medium text-gray-700">
+                Selected Files:
+              </h4>
+              <div id="fileList" class="space-y-2"></div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-6 border-t border-gray-200">
+            <button
+              type="submit"
+              id="submitBtn"
+              class="w-full px-6 py-3 font-medium text-white transition-colors duration-200 bg-blue-500 rounded-md hover:bg-blue-400"
+            >
+              <i class="mr-2 fas fa-paper-plane"></i>
+              Submit Application
+            </button>
+            <p class="mt-2 text-sm text-center text-gray-500">
+              By submitting this form, you agree to our terms and conditions.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Form handling JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("applicationForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const loadingSpinner = document.getElementById("loadingSpinner");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+        const errorText = document.getElementById("errorText");
+        const documentsInput = document.getElementById("documents");
+        const filePreview = document.getElementById("filePreview");
+        const fileList = document.getElementById("fileList");
+
+        // File upload preview functionality
+        documentsInput.addEventListener("change", function (e) {
+          const files = Array.from(e.target.files);
+
+          if (files.length === 0) {
+            filePreview.classList.add("hidden");
+            return;
+          }
+
+          // Show file preview
+          filePreview.classList.remove("hidden");
+          fileList.innerHTML = "";
+
+          files.forEach((file, index) => {
+            const fileItem = document.createElement("div");
+            fileItem.className =
+              "flex items-center justify-between p-2 bg-gray-50 rounded border";
+
+            // File info
+            const fileInfo = document.createElement("div");
+            fileInfo.className = "flex items-center";
+
+            // File icon based on type
+            let iconClass = "fas fa-file";
+            if (file.type.includes("pdf"))
+              iconClass = "fas fa-file-pdf text-red-500";
+            else if (file.type.includes("word"))
+              iconClass = "fas fa-file-word text-blue-500";
+            else if (file.type.includes("image"))
+              iconClass = "fas fa-file-image text-green-500";
+
+            fileInfo.innerHTML = `
+              <i class="${iconClass} mr-2"></i>
+              <div>
+                <p class="text-sm font-medium text-gray-800">${file.name}</p>
+                <p class="text-xs text-gray-500">${(file.size / 1024).toFixed(
+                  1
+                )} KB</p>
+              </div>
+            `;
+
+            // Remove button
+            const removeBtn = document.createElement("button");
+            removeBtn.type = "button";
+            removeBtn.className = "text-red-500 hover:text-red-700 ml-2";
+            removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+            removeBtn.onclick = function () {
+              // Remove file from input
+              const dt = new DataTransfer();
+              const fileArray = Array.from(documentsInput.files);
+              fileArray.splice(index, 1);
+              fileArray.forEach((f) => dt.items.add(f));
+              documentsInput.files = dt.files;
+
+              // Trigger change event to update preview
+              documentsInput.dispatchEvent(new Event("change"));
+            };
+
+            fileItem.appendChild(fileInfo);
+            fileItem.appendChild(removeBtn);
+            fileList.appendChild(fileItem);
+          });
+        });
+
+        // Form submission
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          // Hide any existing messages
+          successMessage.classList.add("hidden");
+          errorMessage.classList.add("hidden");
+
+          // Show loading spinner
+          loadingSpinner.classList.remove("hidden");
+          submitBtn.disabled = true;
+          submitBtn.innerHTML =
+            '<i class="mr-2 fas fa-spinner fa-spin"></i>Submitting...';
+
+          try {
+            // Create FormData object
+            const formData = new FormData(form);
+
+            // Send form data to server
+            const response = await fetch(
+              "http://localhost:5000/job/application-form",
+              {
+                method: "POST",
+                body: formData,
+              }
+            );
+
+            const result = await response.json();
+
+            if (response.ok) {
+              // Success - show success message
+              successMessage.classList.remove("hidden");
+              form.reset();
+              filePreview.classList.add("hidden");
+
+              // Scroll to success message
+              successMessage.scrollIntoView({ behavior: "smooth" });
+            } else {
+              // Error - show error message
+              errorText.textContent =
+                result.message || "Please try again later.";
+              errorMessage.classList.remove("hidden");
+
+              // Scroll to error message
+              errorMessage.scrollIntoView({ behavior: "smooth" });
+            }
+          } catch (error) {
+            console.error("Error submitting form:", error);
+            errorText.textContent =
+              "Network error. Please check your connection and try again.";
+            errorMessage.classList.remove("hidden");
+            errorMessage.scrollIntoView({ behavior: "smooth" });
+          } finally {
+            // Hide loading spinner and reset button
+            loadingSpinner.classList.add("hidden");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML =
+              '<i class="mr-2 fas fa-paper-plane"></i>Submit Application';
+          }
+        });
+
+        // Set minimum date to today for available start date
+        const today = new Date().toISOString().split("T")[0];
+        document
+          .getElementById("availableStartDate")
+          .setAttribute("min", today);
+      });
+
+      // Load navigation and footer (if you have these files)
+      // You can uncomment these lines if you have separate nav.html and footer.html files
+      /*
+      fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('nav-placeholder').innerHTML = data)
+        .catch(error => console.log('Navigation not loaded:', error));
+
+      fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+        .catch(error => console.log('Footer not loaded:', error));
+      */
+    </script>
+  </body>
+</html>
