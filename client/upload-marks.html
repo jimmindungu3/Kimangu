@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Student Results - Kimangu Day Secondary School</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom styles for animations and special effects -->
+    <style>
+      /* Animation for spinning loader */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Custom spinner class */
+      .spinner {
+        border: 3px solid #f3f4f6;
+        border-top: 3px solid #2563eb;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 1s linear infinite;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      /* Smooth transitions for drag and drop */
+      .drag-over {
+        transform: scale(1.02);
+        border-color: #2563eb !important;
+        background-color: #dbeafe !important;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen p-4">
+    <!-- Main Container -->
+    <div
+      class="max-w-7xl mx-auto overflow-hidden bg-white shadow-2xl rounded-2xl"
+    >
+      <!-- Header Section -->
+      <div class="p-8 text-center text-white bg-blue-500">
+        <h1 class="mb-3 text-4xl font-bold">📊 Upload Student Results</h1>
+        <p class="text-lg text-blue-100">
+          Upload Excel file with student marks to generate and send PDF reports
+          to parents
+        </p>
+      </div>
+
+      <!-- Main Content -->
+      <div class="p-10">
+        <!-- Excel Format Guide -->
+        <div class="p-6 mb-8 border border-gray-300 bg-gray-50 rounded-xl">
+          <h3
+            class="flex items-center mb-4 text-xl font-semibold text-gray-800"
+          >
+            📋 Excel File Format Requirements
+          </h3>
+          <p class="mb-4 text-gray-700">
+            Your Excel file should have the following columns (column names must
+            match exactly):
+          </p>
+
+          <!-- Sample Table -->
+          <div class="mb-4 overflow-x-auto">
+            <table
+              class="w-full text-sm border border-collapse border-gray-300"
+            >
+              <thead>
+                <tr class="bg-gray-100">
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    studentName
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    parentEmail
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    class
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    term
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    year
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    Mathematics
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    English
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    Kiswahili
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    totalMarks
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    averageMarks
+                  </th>
+                  <th
+                    class="p-2 font-semibold text-left border border-gray-300"
+                  >
+                    overallGrade
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border border-gray-300">John Doe</td>
+                  <td class="p-2 border border-gray-300">parent@email.com</td>
+                  <td class="p-2 border border-gray-300">Form 1A</td>
+                  <td class="p-2 border border-gray-300">Term 1</td>
+                  <td class="p-2 border border-gray-300">2025</td>
+                  <td class="p-2 border border-gray-300">85</td>
+                  <td class="p-2 border border-gray-300">78</td>
+                  <td class="p-2 border border-gray-300">82</td>
+                  <td class="p-2 border border-gray-300">245</td>
+                  <td class="p-2 border border-gray-300">81.7</td>
+                  <td class="p-2 border border-gray-300">A-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Important Notes -->
+          <div class="p-4 bg-blue-50 rounded-lg">
+            <strong class="text-gray-800">Important Notes:</strong>
+            <ul class="mt-2 space-y-1 text-gray-700 list-disc list-inside">
+              <li>
+                Required fields: <strong>studentName, parentEmail</strong>
+              </li>
+              <li>
+                You can add as many subjects as needed (Mathematics, English,
+                Science, etc.)
+              </li>
+              <li>Parent email must be valid format</li>
+              <li>Marks should be numeric values</li>
+              <li>File size limit: 10MB</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="mb-8 text-center">
+          <!-- Drag & Drop Area -->
+          <div
+            id="uploadArea"
+            class="p-10 transition-all duration-300 border-gray-300 border-dashed cursor-pointer border-3 rounded-xl bg-gray-50 hover:border-blue-500 hover:bg-blue-50"
+          >
+            <div class="mb-5 text-6xl text-gray-400">📁</div>
+            <h3 class="mb-3 text-xl font-semibold text-gray-800">
+              Upload Excel File
+            </h3>
+            <p class="mb-5 text-gray-600">
+              Drag and drop your Excel file here, or click to browse
+            </p>
+            <button
+              type="button"
+              class="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-all duration-300 rounded-lg bg-blue-500 hover:shadow-lg hover:-translate-y-1"
+              onclick="document.getElementById('fileInput').click()"
+            >
+              <span>📂</span> Select Excel File
+            </button>
+          </div>
+
+          <!-- Hidden File Input -->
+          <input
+            type="file"
+            id="fileInput"
+            class="hidden"
+            accept=".xlsx,.xls"
+          />
+
+          <!-- File Info Display (Hidden by default) -->
+          <div
+            id="fileInfo"
+            class="hidden p-4 mt-5 border border-blue-200 rounded-lg bg-blue-50"
+          >
+            <div class="font-semibold text-blue-800">Selected File:</div>
+            <div id="fileName" class="text-gray-700"></div>
+            <div id="fileSize" class="text-sm text-gray-600"></div>
+          </div>
+
+          <!-- Upload Button (Hidden by default) -->
+          <button
+            id="uploadBtn"
+            type="button"
+            class="inline-flex items-center hidden gap-2 px-8 py-4 mt-5 font-semibold text-white transition-all duration-300 rounded-lg bg-blue-600 hover:shadow-lg hover:-translate-y-1"
+            onclick="uploadFile()"
+          >
+            <span>🚀</span> Upload & Send Reports
+          </button>
+        </div>
+
+        <!-- Progress Section (Hidden by default) -->
+        <div
+          id="progressContainer"
+          class="hidden p-6 mb-6 bg-gray-100 rounded-xl"
+        >
+          <h3 class="mb-4 text-lg font-semibold">Processing Results...</h3>
+          <!-- Progress Bar -->
+          <div class="h-5 mb-3 overflow-hidden bg-gray-300 rounded-full">
+            <div
+              id="progressFill"
+              class="w-0 h-full transition-all duration-300 rounded-full bg-gradient-to-r from-green-500 to-green-600"
+            ></div>
+          </div>
+          <div id="progressText" class="text-gray-700">Uploading file...</div>
+        </div>
+
+        <!-- Results Section (Hidden by default) -->
+        <div id="resultsSection" class="hidden p-6 rounded-xl">
+          <h3 id="resultsTitle" class="mb-4 text-xl font-semibold">
+            Upload Results
+          </h3>
+          <div id="resultsContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get all the important elements from the page
+      const uploadArea = document.getElementById("uploadArea");
+      const fileInput = document.getElementById("fileInput");
+      const fileInfo = document.getElementById("fileInfo");
+      const fileName = document.getElementById("fileName");
+      const fileSize = document.getElementById("fileSize");
+      const uploadBtn = document.getElementById("uploadBtn");
+      const progressContainer = document.getElementById("progressContainer");
+      const progressFill = document.getElementById("progressFill");
+      const progressText = document.getElementById("progressText");
+      const resultsSection = document.getElementById("resultsSection");
+      const resultsTitle = document.getElementById("resultsTitle");
+      const resultsContent = document.getElementById("resultsContent");
+
+      // Variable to store the selected file
+      let selectedFile = null;
+
+      // Handle drag and drop events
+      uploadArea.addEventListener("dragover", (e) => {
+        e.preventDefault(); // Prevent default browser behavior
+        uploadArea.classList.add("drag-over");
+      });
+
+      uploadArea.addEventListener("dragleave", (e) => {
+        e.preventDefault();
+        uploadArea.classList.remove("drag-over");
+      });
+
+      uploadArea.addEventListener("drop", (e) => {
+        e.preventDefault();
+        uploadArea.classList.remove("drag-over");
+
+        // Get the dropped files
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+          handleFileSelection(files[0]);
+        }
+      });
+
+      // Handle click to select file
+      uploadArea.addEventListener("click", () => {
+        fileInput.click();
+      });
+
+      // Handle file input change
+      fileInput.addEventListener("change", (e) => {
+        if (e.target.files.length > 0) {
+          handleFileSelection(e.target.files[0]);
+        }
+      });
+
+      // Function to handle when a file is selected
+      function handleFileSelection(file) {
+        // Check if file is Excel format
+        const validTypes = [
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xlsx
+          "application/vnd.ms-excel", // .xls
+        ];
+
+        if (!validTypes.includes(file.type)) {
+          showError(
+            "Invalid file type. Please select an Excel file (.xlsx or .xls)"
+          );
+          return;
+        }
+
+        // Check file size (max 10MB)
+        const maxSize = 10 * 1024 * 1024; // 10MB in bytes
+        if (file.size > maxSize) {
+          showError("File too large. Please select a file smaller than 10MB.");
+          return;
+        }
+
+        // Store the selected file
+        selectedFile = file;
+
+        // Show file information
+        fileName.textContent = file.name;
+        fileSize.textContent = formatFileSize(file.size);
+        fileInfo.classList.remove("hidden");
+        uploadBtn.classList.remove("hidden");
+
+        // Hide any previous results
+        hideResults();
+      }
+
+      // Function to format file size nicely
+      function formatFileSize(bytes) {
+        if (bytes === 0) return "0 Bytes";
+        const k = 1024;
+        const sizes = ["Bytes", "KB", "MB", "GB"];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+      }
+
+      // Function to upload the file
+      async function uploadFile() {
+        if (!selectedFile) {
+          showError("Please select a file first.");
+          return;
+        }
+
+        // Show progress section
+        showProgress();
+        updateProgress(10, "Preparing file upload...");
+
+        try {
+          // Create form data to send file
+          const formData = new FormData();
+          formData.append("resultsFile", selectedFile);
+
+          updateProgress(20, "Uploading file...");
+
+          // Send file to server
+          const response = await fetch(
+            "http://localhost:5000/marks/upload-results",
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+
+          updateProgress(50, "Processing student data...");
+
+          // Get response from server
+          const result = await response.json();
+
+          updateProgress(80, "Generating and sending reports...");
+
+          // Wait a bit to show progress
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+
+          updateProgress(100, "Complete!");
+
+          // Hide progress and show results after a short delay
+          setTimeout(() => {
+            hideProgress();
+            showResults(result, response.ok);
+          }, 1000);
+        } catch (error) {
+          console.error("Upload error:", error);
+          hideProgress();
+          showError(
+            "Upload failed. Please check your connection and try again."
+          );
+        }
+      }
+
+      // Function to show progress section
+      function showProgress() {
+        progressContainer.classList.remove("hidden");
+        uploadBtn.disabled = true;
+        uploadBtn.classList.add("opacity-50", "cursor-not-allowed");
+      }
+
+      // Function to hide progress section
+      function hideProgress() {
+        progressContainer.classList.add("hidden");
+        uploadBtn.disabled = false;
+        uploadBtn.classList.remove("opacity-50", "cursor-not-allowed");
+      }
+
+      // Function to update progress bar
+      function updateProgress(percent, text) {
+        progressFill.style.width = percent + "%";
+        progressText.textContent = text;
+      }
+
+      // Function to show results
+      function showResults(data, isSuccess) {
+        resultsSection.classList.remove("hidden");
+
+        if (isSuccess) {
+          // Success styling
+          resultsSection.className =
+            "bg-green-50 border border-green-200 text-green-800 rounded-xl p-6";
+          resultsTitle.textContent = "✅ Upload Successful!";
+
+          const summary = data.summary;
+          let content = `
+                    <!-- Statistics Grid -->
+                    <div class="grid grid-cols-2 gap-4 mb-6 md:grid-cols-4">
+                        <div class="p-4 text-center bg-white border rounded-lg">
+                            <div class="text-2xl font-bold text-gray-800">${summary.totalProcessed}</div>
+                            <div class="text-sm text-gray-600">Total Students</div>
+                        </div>
+                        <div class="p-4 text-center bg-white border rounded-lg">
+                            <div class="text-2xl font-bold text-green-600">${summary.successful}</div>
+                            <div class="text-sm text-gray-600">Reports Sent</div>
+                        </div>
+                        <div class="p-4 text-center bg-white border rounded-lg">
+                            <div class="text-2xl font-bold text-red-600">${summary.failed}</div>
+                            <div class="text-sm text-gray-600">Failed</div>
+                        </div>
+                        <div class="p-4 text-center bg-white border rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600">${summary.successRate}</div>
+                            <div class="text-sm text-gray-600">Success Rate</div>
+                        </div>
+                    </div>
+                    <p class="text-green-700"><strong>Message:</strong> ${data.message}</p>
+                `;
+
+          // Show errors if any exist
+          if (data.errors && data.errors.length > 0) {
+            content += `
+                        <div class="mt-5">
+                            <h4 class="mb-3 font-semibold text-red-700">⚠️ Errors Encountered:</h4>
+                            <div class="p-4 overflow-y-auto bg-white border rounded-lg max-h-48">
+                    `;
+            data.errors.forEach((error) => {
+              content += `<div class="py-1 text-sm text-red-600 border-b border-gray-200">${error}</div>`;
+            });
+            content += `</div></div>`;
+          }
+
+          resultsContent.innerHTML = content;
+        } else {
+          // Error styling
+          resultsSection.className =
+            "bg-red-50 border border-red-200 text-red-800 rounded-xl p-6";
+          resultsTitle.textContent = "❌ Upload Failed";
+          resultsContent.innerHTML = `
+                    <p class="text-red-700"><strong>Error:</strong> ${
+                      data.message || "Unknown error occurred"
+                    }</p>
+                    <p class="mt-2 text-red-600">Please check your file format and try again.</p>
+                `;
+        }
+      }
+
+      // Function to hide results section
+      function hideResults() {
+        resultsSection.classList.add("hidden");
+      }
+
+      // Function to show error message
+      function showError(message) {
+        resultsSection.className =
+          "bg-red-50 border border-red-200 text-red-800 rounded-xl p-6";
+        resultsSection.classList.remove("hidden");
+        resultsTitle.textContent = "❌ Error";
+        resultsContent.innerHTML = `<p class="text-red-700">${message}</p>`;
+      }
+
+      // Function to reset the form
+      function resetForm() {
+        selectedFile = null;
+        fileInput.value = "";
+        fileInfo.classList.add("hidden");
+        uploadBtn.classList.add("hidden");
+        hideProgress();
+        hideResults();
+      }
+
+      // Initialize when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("Student Results Upload System Initialized");
+      });
+    </script>
+  </body>
+</html>

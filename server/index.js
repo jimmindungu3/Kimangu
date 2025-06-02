@@ -6,6 +6,7 @@ require("dotenv").config();
 const contactForm = require("./routes/contactForm");
 const admissionForm = require("./routes/admissionForm");
 const jobForm = require("./routes/jobForm");
+const studentMarks = require("./routes/studentMarks");
 
 const app = express();
 app.use(express.json());
@@ -26,6 +27,7 @@ app.use(
 app.use("/contact", contactForm);
 app.use("/admission", admissionForm);
 app.use("/job", jobForm);
+app.use("/marks", studentMarks);
 
 // Health check endpoint
 app.get("/health", (req, res) => {
