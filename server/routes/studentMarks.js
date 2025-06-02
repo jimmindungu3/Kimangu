@@ -5,6 +5,7 @@ const multer = require("multer");
 const XLSX = require("xlsx"); // For reading Excel files
 const PDFDocument = require("pdfkit"); // For generating PDFs
 const path = require("path");
+const fs = require("fs");
 
 // Configure multer for Excel file uploads
 const storage = multer.memoryStorage();
@@ -39,7 +40,7 @@ const upload = multer({
   },
 });
 
-// Function to generate PDF report for a student
+// Function to generate PDF report for a student with images
 function generateStudentPDF(studentData) {
   return new Promise((resolve, reject) => {
     try {
@@ -51,18 +52,57 @@ function generateStudentPDF(studentData) {
       doc.on("data", (chunk) => chunks.push(chunk));
       doc.on("end", () => resolve(Buffer.concat(chunks)));
 
-      // Add school header
+      // Add images to header (if available)
+      const headerY = 50; // Starting Y position for header
+
+      try {
+        // Add school logo on the left (replace with your actual image path)
+        const schoolLogoPath = path.join(
+          __dirname,
+          "../assets/images/kenya-coat-of-arms.png"
+        );
+        if (require("fs").existsSync(schoolLogoPath)) {
+          doc.image(schoolLogoPath, 50, headerY, {
+            width: 60,
+            height: 60,
+          });
+        }
+
+        // Add Kenya coat of arms on the right (replace with your actual image path)
+        const kenyaCoatPath = path.join(
+          __dirname,
+          "../assets/images/kimangu-logo.png"
+        );
+        if (require("fs").existsSync(kenyaCoatPath)) {
+          doc.image(kenyaCoatPath, 490, headerY, {
+            width: 60,
+            height: 60,
+          });
+        }
+      } catch (imageError) {
+        // If images fail to load, continue without them
+        console.warn("Could not load header images:", imageError.message);
+      }
+
+      // Add school header text (centered between the images)
       doc
-        .fontSize(20)
+        .fontSize(18)
         .fillColor("#2563eb")
-        .text("KIMANGU DAY SECONDARY SCHOOL", { align: "center" })
-        .moveDown(0.5);
+        .text("KIMANGU DAY SECONDARY SCHOOL", 120, headerY + 10, {
+          width: 360,
+          align: "center",
+        });
 
       doc
-        .fontSize(16)
+        .fontSize(14)
         .fillColor("#1f2937")
-        .text("STUDENT ACADEMIC REPORT", { align: "center" })
-        .moveDown(1);
+        .text("STUDENT ACADEMIC REPORT", 120, headerY + 35, {
+          width: 360,
+          align: "center",
+        });
+
+      // Move down to account for header with images
+      doc.y = headerY + 80;
 
       // Add student information
       doc
@@ -90,7 +130,7 @@ function generateStudentPDF(studentData) {
       // Create table header
       const tableTop = doc.y;
       const tableLeft = 50;
-      const colWidths = [120, 80, 80, 80, 80]; // Column widths
+      const colWidths = [120, 85, 80, 80, 90]; // Column widths
       const rowHeight = 25;
 
       // Table headers
@@ -168,11 +208,11 @@ function generateStudentPDF(studentData) {
 
       // Add summary section
       doc.moveDown(2);
+      doc.y += 20;
       doc
         .fontSize(12)
         .fillColor("#1f2937")
-        .text("PERFORMANCE SUMMARY", { align: "center" })
-        .moveDown(0.5);
+        .text("PERFORMANCE SUMMARY", 50, doc.y);
 
       // Summary box
       const summaryY = doc.y;
@@ -187,7 +227,7 @@ function generateStudentPDF(studentData) {
           summaryY + 15
         )
         .text(
-          `Average Marks: ${studentData.averageMarks || "N/A"}%`,
+          `Average Marks: ${studentData.averageMarks.toFixed(2) || "N/A"}%`,
           300,
           summaryY + 15
         )
@@ -213,7 +253,7 @@ function generateStudentPDF(studentData) {
         .fontSize(8)
         .fillColor("#6b7280")
         .text(
-          "This report was generated electronically by Kimangu Day Secondary School",
+          "This report was generated electronically and therefore neither signed nor stamped. To verify its authenticity, contact the HOS, Kimangu Day Secondary School, via hos@kimangudaysecondary.sc.ke or call +254 721 415 851",
           { align: "center" }
         )
         .text(`Generated on: ${new Date().toLocaleDateString("en-KE")}`, {
