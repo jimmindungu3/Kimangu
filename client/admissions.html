@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admissions - Kimangu Day Secondary School</title>
-    <link
-      rel="shortcut icon"
-      href="/assets/images/logo.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -316,7 +313,7 @@
             </div>
           </div>
 
-          <!-- Requirements and Declaration Combined -->
+          <!-- Requirements and Declaration -->
           <div
             class="p-6 bg-white border-l-4 border-blue-500 rounded-lg shadow-sm"
           >
@@ -324,7 +321,7 @@
               Required Documents & Declaration
             </h3>
 
-            <!-- Requirements List -->
+            <!-- Requirements -->
             <div class="mb-6">
               <p class="mb-3 font-medium text-gray-700">
                 Please prepare these documents for submission at our office:
@@ -372,7 +369,7 @@
       </div>
     </section>
 
-    <!-- Combined Info Section -->
+    <!-- Info Section -->
     <section class="py-16 bg-gray-100">
       <div class="max-w-5xl px-4 mx-auto">
         <div class="grid gap-8 lg:grid-cols-2">
@@ -434,7 +431,6 @@
 
     <script src="/src/include.js"></script>
     <script>
-      // Form submission handler - keeping original logic intact
       document
         .getElementById("admissionForm")
         .addEventListener("submit", async (e) => {
@@ -442,15 +438,12 @@
           const form = e.target;
           const status = document.getElementById("formStatus");
 
-          // Show loading state
           status.textContent = "Sending application...";
           status.className = "mt-2 text-sm text-center text-blue-500";
 
-          // Collect all form data
           const formData = new FormData(form);
           const applicationData = {};
 
-          // Convert FormData to regular object
           for (let [key, value] of formData.entries()) {
             applicationData[key] = value;
           }
@@ -471,7 +464,7 @@
               status.textContent =
                 "✅ Application submitted successfully! We'll contact you soon.";
               status.className = "mt-2 text-sm text-center text-green-600";
-              form.reset(); // Clear the form
+              form.reset();
             } else {
               status.textContent =
                 "❌ Failed to submit application. Please try again.";

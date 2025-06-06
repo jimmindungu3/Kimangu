@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery - Kimangu Day Secondary School</title>
-    <link
-      rel="shortcut icon"
-      href="/assets/images/logo.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -466,10 +463,8 @@
       </h2>
 
       <div class="grid grid-cols-12 gap-2 md:gap-4">
-        <!-- Weekend Challenge - Portrait mode -->
         <div class="flex justify-center col-span-12 md:col-span-4">
           <div class="w-full max-w-[270px]">
-            <!-- Video container with relative positioning -->
             <div class="relative w-full" style="padding-bottom: 177.78%">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fjulius.gachoka%2Fvideos%2F1401788014339214%2F&show_text=false&width=270&controls=true"
@@ -481,15 +476,14 @@
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               ></iframe>
             </div>
-            <!-- Caption directly below the container -->
             <p class="mt-2 font-semibold">Weekend Challenge Vibes 🔥🔥🔥🔥</p>
           </div>
         </div>
 
-        <!-- Scouts raising flag (Landscape Video) -->
+        <!-- Scouts -->
         <div class="col-span-12 md:col-span-8">
           <div class="w-full mt-4">
-            <!-- Video container with relative positioning -->
+            <!-- Video container  -->
             <div class="relative w-full" style="padding-bottom: 56.25%">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fjulius.gachoka%2Fvideos%2F345746777796057%2F&show_text=false&width=480&controls=true"
@@ -501,7 +495,6 @@
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               ></iframe>
             </div>
-            <!-- Caption directly below the container -->
             <p class="mt-2 font-semibold">
               Our Scouts Raising National Flag 🇰🇪🇰🇪🇰🇪🇰🇪
             </p>
@@ -533,7 +526,6 @@
 
     <script src="/src/include.js"></script>
     <script>
-      // Add Tailwind aspect ratio plugin utility classes
       tailwind.config = {
         theme: {
           extend: {
@@ -566,55 +558,42 @@
         ],
       };
 
-      // Lightbox functionality
       document.addEventListener("DOMContentLoaded", function () {
-        // Get the lightbox elements
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
         const lightboxCaption = document.getElementById("lightbox-caption");
         const lightboxClose = document.querySelector(".lightbox-close");
 
-        // Get all gallery items
         const galleryItems = document.querySelectorAll(".gallery-item");
 
-        // Add click event to each gallery item
         galleryItems.forEach((item) => {
           item.addEventListener("click", function () {
-            // Get the image source from the clicked item
             const imgSrc = this.querySelector("img").src;
 
-            // Get the caption from data attribute
             const caption = this.getAttribute("data-caption");
 
-            // Set the lightbox image source and caption
             lightboxImg.src = imgSrc;
             lightboxCaption.textContent = caption;
 
-            // Display the lightbox
             lightbox.style.display = "flex";
 
-            // Prevent scrolling on the background
             document.body.style.overflow = "hidden";
           });
         });
 
-        // Close lightbox when clicking on the close button or outside the image
         lightboxClose.addEventListener("click", closeLightbox);
         lightbox.addEventListener("click", function (e) {
-          // Close only if clicking outside the image
           if (e.target === lightbox) {
             closeLightbox();
           }
         });
 
-        // Close lightbox with Escape key
         document.addEventListener("keydown", function (e) {
           if (e.key === "Escape") {
             closeLightbox();
           }
         });
 
-        // Function to close the lightbox
         function closeLightbox() {
           lightbox.style.display = "none";
           document.body.style.overflow = "auto";
