@@ -12,11 +12,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
-  <body class="font-sans text-gray-900 bg-gray-50">
+  <body class="font-sans text-sm text-gray-900 bg-gray-50 md:text-base">
     <div id="nav-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="relative py-20 text-center text-white bg-blue-500">
+    <section class="relative py-12 text-center text-white bg-blue-500">
       <div class="absolute inset-0 opacity-10">
         <div
           class="w-full h-full"
@@ -25,19 +25,30 @@
           "
         ></div>
       </div>
-      <div class="max-w-4xl px-4 mx-auto">
-        <h1 class="mb-4 text-4xl font-bold md:text-5xl">Academic Life</h1>
-        <p class="text-lg md:text-xl">
-          Empowering students through a rich curriculum, competent faculty, and
-          modern resources.
-        </p>
+      <div class="relative flex flex-col items-center px-4 mx-auto max-w-7xl">
+        <h1 class="mb-4 text-3xl font-bold text-center md:text-5xl">
+          Academic Life
+        </h1>
+        <nav>
+          <ol class="flex items-center space-x-2">
+            <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
+            <li><span class="mx-2">&gt;</span></li>
+            <li class="font-medium">Academics</li>
+          </ol>
+        </nav>
       </div>
     </section>
 
     <!-- Quick Stats Section -->
     <section class="py-12 bg-white shadow-sm">
       <div class="max-w-6xl px-4 mx-auto">
-        <div class="grid gap-6 text-center md:grid-cols-4">
+        <div class="mb-8 text-center">
+          <h2 class="mb-2 text-2xl font-bold text-gray-800">Key Stats</h2>
+          <p class="text-sm text-gray-600">
+            A snapshot of our academic environment and learner outcomes
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-center md:grid-cols-4">
           <div class="p-4">
             <div class="text-3xl font-bold text-blue-500">85%</div>
             <p class="text-sm text-gray-600">
@@ -74,59 +85,59 @@
           </p>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-2">
+        <div class="grid gap-4 lg:gap-8 md:grid-cols-2 justify-items-center">
           <!-- JSS Card -->
-          <div class="overflow-hidden bg-white rounded-lg shadow-lg">
+          <div
+            class="overflow-hidden bg-white rounded-lg shadow-lg max-w-[480px]"
+          >
             <div class="p-6 text-white bg-blue-500">
               <h3 class="flex items-center text-2xl font-bold">
                 <i class="mr-3 fas fa-seedling"></i>
-                Junior Secondary (Grades 7–9)
+                Junior Secondary (Grades 7 &ndash; 9)
               </h3>
-              <p class="mt-2 opacity-90">
-                Foundation in core and optional learning areas
-              </p>
+              <p class="mt-2 opacity-90 font-medium">Foundation laying</p>
             </div>
             <div class="p-6">
               <h4 class="mb-3 font-semibold text-gray-800">Learning Areas:</h4>
               <div class="grid grid-cols-2 gap-2 mb-4">
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Mathematics</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >English</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Kiswahili/Kenyan Sign Language</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Integrated Science</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Social Studies</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Pre-Technical & Pre-Career</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Religious Education</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Creative Arts</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Life Skills</span
                 >
                 <span
-                  class="px-3 py-1 text-sm text-blue-600 rounded-full bg-blue-50"
+                  class="px-3 py-1 text-sm text-blue-600 rounded-md bg-gray-100 font-medium"
                   >Computer Studies</span
                 >
               </div>
@@ -139,13 +150,17 @@
           </div>
 
           <!-- Senior Secondary School Card -->
-          <div class="overflow-hidden bg-white rounded-lg shadow-lg">
+          <div
+            class="overflow-hidden bg-white rounded-lg shadow-lg max-w-[480px]"
+          >
             <div class="p-6 text-white bg-blue-500">
               <h3 class="flex items-center text-2xl font-bold">
                 <i class="mr-3 fas fa-graduation-cap"></i>
                 Senior Secondary (Grades 10–12)
               </h3>
-              <p class="mt-2 opacity-90">Pathway-based specialization</p>
+              <p class="mt-2 opacity-90 font-medium">
+                Pathway-based specialization
+              </p>
             </div>
             <div class="p-6">
               <h4 class="mb-3 font-semibold text-gray-800">
@@ -204,10 +219,10 @@
           systems.
         </p>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Card 1 -->
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
+          <!-- Card -->
           <div
-            class="p-8 transition-shadow shadow-md bg-blue-50 rounded-xl hover:shadow-lg"
+            class="p-8 w-full bg-blue-50 rounded-xl max-w-[480px] shadow-md hover:shadow-lg transition-shadow"
           >
             <div
               class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full"
@@ -220,16 +235,13 @@
               a strong focus on competency development, values, and career
               readiness as guided by the CBC framework.
             </p>
-
             <div class="text-sm font-medium text-blue-500">
-              <i class="mr-1 fas fa-chart-line"></i>
-              Improving every year
+              <i class="mr-1 fas fa-chart-line"></i> Improving every year
             </div>
           </div>
 
-          <!-- Card 2 -->
           <div
-            class="p-8 transition-shadow shadow-md bg-blue-50 rounded-xl hover:shadow-lg"
+            class="p-8 w-full bg-blue-50 rounded-xl max-w-[480px] shadow-md hover:shadow-lg transition-shadow"
           >
             <div
               class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full"
@@ -243,14 +255,12 @@
               development ensures modern teaching methods.
             </p>
             <div class="text-sm font-medium text-blue-500">
-              <i class="mr-1 fas fa-certificate"></i>
-              100% qualified teachers
+              <i class="mr-1 fas fa-certificate"></i> 100% qualified teachers
             </div>
           </div>
 
-          <!-- Card 3 -->
           <div
-            class="p-8 transition-shadow shadow-md bg-blue-50 rounded-xl hover:shadow-lg"
+            class="p-8 w-full bg-blue-50 rounded-xl max-w-[480px] shadow-md hover:shadow-lg transition-shadow"
           >
             <div
               class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full"
@@ -264,14 +274,12 @@
               educational experience.
             </p>
             <div class="text-sm font-medium text-blue-500">
-              <i class="mr-1 fas fa-wifi"></i>
-              Digital-ready campus
+              <i class="mr-1 fas fa-wifi"></i> Digital-ready campus
             </div>
           </div>
 
-          <!-- Card 4 -->
           <div
-            class="p-8 transition-shadow shadow-md bg-blue-50 rounded-xl hover:shadow-lg"
+            class="p-8 w-full bg-blue-50 rounded-xl max-w-[480px] shadow-md hover:shadow-lg transition-shadow"
           >
             <div
               class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full"
@@ -285,14 +293,13 @@
               their potential.
             </p>
             <div class="text-sm font-medium text-blue-500">
-              <i class="mr-1 fas fa-user-friends"></i>
-              1:25 teacher-student ratio
+              <i class="mr-1 fas fa-user-friends"></i> 1:25 teacher-student
+              ratio
             </div>
           </div>
 
-          <!-- Card 5 -->
           <div
-            class="p-8 transition-shadow shadow-md bg-blue-50 rounded-xl hover:shadow-lg"
+            class="p-8 w-full bg-blue-50 rounded-xl max-w-[480px] shadow-md hover:shadow-lg transition-shadow"
           >
             <div
               class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full"
@@ -305,14 +312,12 @@
               preparation workshops ensure no student is left behind.
             </p>
             <div class="text-sm font-medium text-blue-500">
-              <i class="mr-1 fas fa-clock"></i>
-              Continuous assessment
+              <i class="mr-1 fas fa-clock"></i> Continuous assessment
             </div>
           </div>
 
-          <!-- Card 6 -->
           <div
-            class="p-8 transition-shadow shadow-md bg-blue-50 rounded-xl hover:shadow-lg"
+            class="p-8 w-full bg-blue-50 rounded-xl max-w-[480px] shadow-md hover:shadow-lg transition-shadow"
           >
             <div
               class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full"
@@ -325,8 +330,7 @@
               through clubs, competitions, and community service programs.
             </p>
             <div class="text-sm font-medium text-blue-500">
-              <i class="mr-1 fas fa-star"></i>
-              Well-rounded education
+              <i class="mr-1 fas fa-star"></i> Well-rounded education
             </div>
           </div>
         </div>
@@ -345,9 +349,13 @@
           </p>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-3">
+        <div
+          class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center"
+        >
           <!-- Science Learning Area -->
-          <div class="overflow-hidden bg-white rounded-lg shadow-lg">
+          <div
+            class="overflow-hidden bg-white rounded-lg shadow-lg max-w-[480px]"
+          >
             <div class="p-6 text-white bg-blue-500">
               <h3 class="flex items-center text-xl font-bold">
                 <i class="mr-3 fas fa-atom"></i>
@@ -396,7 +404,9 @@
           </div>
 
           <!-- Communication & Language Area -->
-          <div class="overflow-hidden bg-white rounded-lg shadow-lg">
+          <div
+            class="overflow-hidden bg-white rounded-lg shadow-lg max-w-[480px]"
+          >
             <div class="p-6 text-white bg-blue-500">
               <h3 class="flex items-center text-xl font-bold">
                 <i class="mr-3 fas fa-comments"></i>
@@ -440,7 +450,9 @@
           </div>
 
           <!-- Humanities, Technical & Vocational -->
-          <div class="overflow-hidden bg-white rounded-lg shadow-lg">
+          <div
+            class="overflow-hidden bg-white rounded-lg shadow-lg max-w-[480px]"
+          >
             <div class="p-6 text-white bg-blue-500">
               <h3 class="flex items-center text-xl font-bold">
                 <i class="mr-3 fas fa-globe-africa"></i>
@@ -511,7 +523,7 @@
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
           <!-- KSEF -->
           <div
             class="p-6 text-center transition-all rounded-lg bg-blue-50 group hover:shadow-lg"
@@ -641,7 +653,7 @@
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-3">
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           <!-- Term 1 -->
           <div class="p-6 bg-white rounded-lg shadow-md">
             <div class="flex items-center mb-4">
@@ -656,7 +668,8 @@
               </div>
             </div>
             <ul class="space-y-1 text-sm text-gray-600">
-              <li>• Opening day & orientation</li>
+              <li>• New admissions & orientation</li>
+              <li>• Intra-school competitions</li>
               <li>• Mid-term assessments</li>
               <li>• Science fair preparations</li>
               <li>• Career guidance sessions</li>
