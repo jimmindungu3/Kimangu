@@ -7,14 +7,12 @@
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
-  <body class="font-sans bg-blue-50">
-    <!-- Navigation placeholder -->
+  <body class="font-sans">
     <div id="nav-placeholder"></div>
 
     <!-- Hero -->
@@ -37,453 +35,421 @@
     </section>
 
     <!-- Featured Content Section -->
-    <section class="container px-4 py-12 mx-auto max-w-7xl">
-      <!-- Featured News -->
-      <div class="overflow-hidden shadow-md rounded-xl">
-        <div class="md:flex">
-          <div class="relative h-56 md:w-1/3 md:h-auto">
-            <img
-              src="/assets/images/bursary-news.jpg"
-              loading="lazy"
-              alt="Bursary Award"
-              class="object-cover w-full h-full"
-            />
-            <div
-              class="absolute px-3 py-1 text-sm font-medium text-white bg-blue-500 rounded-full top-4 left-4"
-            >
-              Featured
+    <section class="bg-gray-50">
+      <div class="container px-4 py-12 mx-auto max-w-7xl">
+        <div class="overflow-hidden shadow-md rounded-xl">
+          <div class="md:flex">
+            <div class="relative h-56 md:w-1/3 md:h-auto">
+              <img
+                src="/assets/images/bursary-news.jpg"
+                loading="lazy"
+                alt="Bursary Award"
+                class="object-cover w-full h-full"
+              />
+              <div
+                class="absolute px-3 py-1 text-sm font-medium text-white bg-blue-500 rounded-full top-4 left-4"
+              >
+                Featured
+              </div>
             </div>
-          </div>
-          <div class="p-6 md:w-2/3 md:p-8">
-            <div class="flex items-center mb-2 text-gray-500">
-              <i class="mr-2 far fa-calendar-alt"></i>
-              <span>May 8, 2025</span>
+            <div class="p-6 md:w-2/3 md:p-8">
+              <div class="flex items-center mb-2 text-gray-500">
+                <i class="mr-2 far fa-calendar-alt"></i>
+                <span>May 8, 2025</span>
+              </div>
+              <h2 class="mb-3 text-2xl font-bold text-gray-700 md:text-3xl">
+                Area MP, Hon. Chebor Paul Kibet, awards bursary to students.
+              </h2>
+              <p class="mb-4 text-gray-600">
+                The Member of Parliament for Rongai Constituency has awarded
+                bursaries to deserving students in a bid to support education
+                and ease the financial burden on families.
+              </p>
+              <button
+                class="flex items-center font-medium text-blue-500 hover:text-blue-700"
+              >
+                Read Full Story
+                <i class="ml-2 fas fa-arrow-right"></i>
+              </button>
             </div>
-            <h2 class="mb-3 text-2xl font-bold text-gray-700 md:text-3xl">
-              Area MP, Hon. Chebor Paul Kibet, awards bursary to students.
-            </h2>
-            <p class="mb-4 text-gray-600">
-              The Member of Parliament for Rongai Constituency has awarded
-              bursaries to deserving students in a bid to support education and
-              ease the financial burden on families.
-            </p>
-            <button
-              class="flex items-center font-medium text-blue-500 hover:text-blue-700"
-            >
-              Read Full Story
-              <i class="ml-2 fas fa-arrow-right"></i>
-            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Latest News Section -->
-    <section class="container px-4 py-12 mx-auto max-w-7xl">
-      <h2 class="mb-2 text-3xl font-bold text-center text-gray-800">
-        Latest News
-      </h2>
-      <p class="mb-12 text-center text-gray-600">
-        Catch up with the most recent stories and announcements
-      </p>
+    <section class="bg-white">
+      <div class="container px-4 py-12 mx-auto max-w-7xl">
+        <h2 class="mb-2 text-3xl font-bold text-center text-gray-800">
+          Latest News
+        </h2>
+        <p class="mb-12 text-center text-gray-600">
+          Catch up with the most recent stories and announcements
+        </p>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- News Card 1 -->
-        <div class="overflow-hidden bg-white rounded-lg shadow-md">
-          <div class="relative h-48 bg-blue-100">
-            <img
-              src="/assets/images/computer-lab.jpg"
-              loading="lazy"
-              alt="New Computer Lab"
-              class="object-cover w-full h-full"
-            />
-            <div class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500">
-              <span class="text-sm">May 3, 2025</span>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- News Card 1 -->
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <div class="relative h-48 bg-blue-100">
+              <img
+                src="/assets/images/computer-lab.jpg"
+                loading="lazy"
+                alt="New Computer Lab"
+                class="object-cover w-full h-full"
+              />
+              <div
+                class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500"
+              >
+                <span class="text-sm">May 3, 2025</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 mb-3 text-sm font-medium text-blue-600 bg-blue-100 rounded-full"
+                >Facilities</span
+              >
+              <h3 class="mb-2 text-xl font-bold text-gray-800">
+                New Computer Lab Opens for Students
+              </h3>
+              <p class="mb-4 text-gray-600">
+                Thanks to a generous donation from our alumni association, we've
+                opened a state-of-the-art computer lab with 30 new computers.
+              </p>
+              <button
+                class="flex items-center font-medium text-blue-500 hover:text-blue-700"
+              >
+                Continue Reading
+                <i class="ml-2 fas fa-arrow-right"></i>
+              </button>
             </div>
           </div>
-          <div class="p-6">
-            <span
-              class="inline-block px-3 py-1 mb-3 text-sm font-medium text-blue-600 bg-blue-100 rounded-full"
-              >Facilities</span
-            >
-            <h3 class="mb-2 text-xl font-bold text-gray-800">
-              New Computer Lab Opens for Students
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Thanks to a generous donation from our alumni association, we've
-              opened a state-of-the-art computer lab with 30 new computers.
-            </p>
-            <button
-              class="flex items-center font-medium text-blue-500 hover:text-blue-700"
-            >
-              Continue Reading
-              <i class="ml-2 fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
 
-        <!-- News Card 2 -->
-        <div class="overflow-hidden bg-white rounded-lg shadow-md">
-          <div class="relative h-48 bg-blue-100">
-            <img
-              src="https://placehold.co/600x400/3B82F6/FFFFFF/png"
-              loading="lazy"
-              alt="Teacher Award"
-              class="object-cover w-full h-full"
-            />
-            <div class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500">
-              <span class="text-sm">April 28, 2025</span>
+          <!-- News Card 2 -->
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <div class="relative h-48 bg-blue-100">
+              <img
+                src="https://placehold.co/600x400/3B82F6/FFFFFF/png"
+                loading="lazy"
+                alt="Teacher Award"
+                class="object-cover w-full h-full"
+              />
+              <div
+                class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500"
+              >
+                <span class="text-sm">April 28, 2025</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 mb-3 text-sm font-medium text-blue-600 bg-blue-100 rounded-full"
+                >Staff Achievement</span
+              >
+              <h3 class="mb-2 text-xl font-bold text-gray-800">
+                Mrs. Kamau Named Teacher of the Year
+              </h3>
+              <p class="mb-4 text-gray-600">
+                Our Chemistry teacher Mrs. Kamau has been recognized as Teacher
+                of the Year by the County Education Board for her dedication.
+              </p>
+              <button
+                class="flex items-center font-medium text-blue-500 hover:text-blue-700"
+              >
+                Continue Reading
+                <i class="ml-2 fas fa-arrow-right"></i>
+              </button>
             </div>
           </div>
-          <div class="p-6">
-            <span
-              class="inline-block px-3 py-1 mb-3 text-sm font-medium text-blue-600 bg-blue-100 rounded-full"
-              >Staff Achievement</span
-            >
-            <h3 class="mb-2 text-xl font-bold text-gray-800">
-              Mrs. Kamau Named Teacher of the Year
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Our Chemistry teacher Mrs. Kamau has been recognized as Teacher of
-              the Year by the County Education Board for her dedication.
-            </p>
-            <button
-              class="flex items-center font-medium text-blue-500 hover:text-blue-700"
-            >
-              Continue Reading
-              <i class="ml-2 fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
 
-        <!-- News Card 3 -->
-        <div class="overflow-hidden bg-white rounded-lg shadow-md">
-          <div class="relative h-48 bg-blue-100">
-            <img
-              src="https://placehold.co/600x400/3B82F6/FFFFFF/png"
-              loading="lazy"
-              alt="School Choir"
-              class="object-cover w-full h-full"
-            />
-            <div class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500">
-              <span class="text-sm">April 20, 2025</span>
+          <!-- News Card 3 -->
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <div class="relative h-48 bg-blue-100">
+              <img
+                src="https://placehold.co/600x400/3B82F6/FFFFFF/png"
+                loading="lazy"
+                alt="School Choir"
+                class="object-cover w-full h-full"
+              />
+              <div
+                class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500"
+              >
+                <span class="text-sm">April 20, 2025</span>
+              </div>
             </div>
-          </div>
-          <div class="p-6">
-            <span
-              class="inline-block px-3 py-1 mb-3 text-sm font-medium text-blue-600 bg-blue-100 rounded-full"
-              >Arts & Culture</span
-            >
-            <h3 class="mb-2 text-xl font-bold text-gray-800">
-              School Choir Advances to National Finals
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Our school choir's exceptional performance at the regional
-              competition has earned them a spot in the national finals.
-            </p>
-            <button
-              class="flex items-center font-medium text-blue-500 hover:text-blue-700"
-            >
-              Continue Reading
-              <i class="ml-2 fas fa-arrow-right"></i>
-            </button>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 mb-3 text-sm font-medium text-blue-600 bg-blue-100 rounded-full"
+                >Arts & Culture</span
+              >
+              <h3 class="mb-2 text-xl font-bold text-gray-800">
+                School Choir Advances to National Finals
+              </h3>
+              <p class="mb-4 text-gray-600">
+                Our school choir's exceptional performance at the regional
+                competition has earned them a spot in the national finals.
+              </p>
+              <button
+                class="flex items-center font-medium text-blue-500 hover:text-blue-700"
+              >
+                Continue Reading
+                <i class="ml-2 fas fa-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Upcoming Events Section -->
-    <section class="container px-4 py-12 mx-auto max-w-7xl">
-      <h2 class="mb-2 text-3xl font-bold text-center text-gray-800">
-        Upcoming Events
-      </h2>
-      <p class="mb-12 text-center text-gray-600">
-        Mark your calendar for these important dates
-      </p>
+    <section class="bg-gray-50">
+      <div class="container px-4 py-12 mx-auto max-w-7xl">
+        <h2 class="mb-2 text-3xl font-bold text-center text-gray-800">
+          Upcoming Events
+        </h2>
+        <p class="mb-12 text-center text-gray-600">
+          Mark your calendar for these important dates
+        </p>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Event Card 1 -->
-        <div class="overflow-hidden bg-white rounded-lg shadow-md">
-          <div class="relative h-48 bg-blue-100">
-            <img
-              src="/assets/images/parents-during-afm.jpg"
-              loading="lazy"
-              alt="Parent-Teacher Conference"
-              class="object-cover w-full h-full"
-            />
-            <div
-              class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500 rounded-br-lg"
-            >
-              <span class="block text-xl font-bold">12</span>
-              <span class="text-sm">May</span>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Event Card 1 -->
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <div class="relative h-48 bg-blue-100">
+              <img
+                src="/assets/images/parents-during-afm.jpg"
+                loading="lazy"
+                alt="Parent-Teacher Conference"
+                class="object-cover w-full h-full"
+              />
+              <div
+                class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500 rounded-br-lg"
+              >
+                <span class="block text-xl font-bold">12</span>
+                <span class="text-sm">May</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-2 text-sm text-gray-500">
+                <i class="mr-2 far fa-clock"></i>
+                <span>2:00 PM - 6:00 PM</span>
+                <span class="mx-2">•</span>
+                <i class="mr-2 fas fa-map-marker-alt"></i>
+                <span>Main Hall</span>
+              </div>
+              <h3 class="mb-2 text-xl font-bold text-gray-800">
+                Annual General Meeting
+              </h3>
+              <p class="mb-4 text-gray-600">
+                Parents, teachers, and BOM meet for the Annual General Meeting
+                to discuss the school&#39;s progress, challenges, and future
+                plans. Your presence and input are valued as we work together to
+                enhance the academic and developmental success of our students.
+              </p>
             </div>
           </div>
-          <div class="p-6">
-            <div class="flex items-center mb-2 text-sm text-gray-500">
-              <i class="mr-2 far fa-clock"></i>
-              <span>2:00 PM - 6:00 PM</span>
-              <span class="mx-2">•</span>
-              <i class="mr-2 fas fa-map-marker-alt"></i>
-              <span>Main Hall</span>
-            </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-800">
-              Annual General Meeting
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Parents, teachers, and BOM meet for the Annual General Meeting to
-              discuss the school’s progress, challenges, and future plans. Your
-              presence and input are valued as we work together to enhance the
-              academic and developmental success of our students.
-            </p>
-          </div>
-        </div>
 
-        <!-- Event Card 2 -->
-        <div class="overflow-hidden bg-white rounded-lg shadow-md">
-          <div class="relative h-48 bg-blue-100">
-            <img
-              src="/assets/images/students-performing-on-agm.jpg"
-              loading="lazy"
-              alt="Inter-School Sports Competition"
-              class="object-cover w-full h-full"
-            />
-            <div
-              class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500 rounded-br-lg"
-            >
-              <span class="block text-xl font-bold">20</span>
-              <span class="text-sm">May</span>
+          <!-- Event Card 2 -->
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <div class="relative h-48 bg-blue-100">
+              <img
+                src="/assets/images/students-performing-on-agm.jpg"
+                loading="lazy"
+                alt="Inter-School Sports Competition"
+                class="object-cover w-full h-full"
+              />
+              <div
+                class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500 rounded-br-lg"
+              >
+                <span class="block text-xl font-bold">20</span>
+                <span class="text-sm">May</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-2 text-sm text-gray-500">
+                <i class="mr-2 far fa-clock"></i>
+                <span>8:00 AM - 5:00 PM</span>
+                <span class="mx-2">•</span>
+                <i class="mr-2 fas fa-map-marker-alt"></i>
+                <span>School Grounds</span>
+              </div>
+              <h3 class="mb-2 text-xl font-bold text-gray-800">Talent Show</h3>
+              <p class="mb-4 text-gray-600">
+                Students meet at the Talent Show to showcase their creativity
+                through music, dance, poetry, and drama. The event highlights
+                diverse talents, builds confidence, and fosters a spirit of
+                expression and community. It&#39;s a platform where students
+                shine, support each other, and celebrate the arts in a vibrant
+                school setting.
+              </p>
             </div>
           </div>
-          <div class="p-6">
-            <div class="flex items-center mb-2 text-sm text-gray-500">
-              <i class="mr-2 far fa-clock"></i>
-              <span>8:00 AM - 5:00 PM</span>
-              <span class="mx-2">•</span>
-              <i class="mr-2 fas fa-map-marker-alt"></i>
-              <span>School Grounds</span>
-            </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-800">Talent Show</h3>
-            <p class="mb-4 text-gray-600">
-              Students meet at the Talent Show to showcase their creativity
-              through music, dance, poetry, and drama. The event highlights
-              diverse talents, builds confidence, and fosters a spirit of
-              expression and community. It’s a platform where students shine,
-              support each other, and celebrate the arts in a vibrant school
-              setting.
-            </p>
-          </div>
-        </div>
 
-        <!-- Event Card 3 -->
-        <div class="overflow-hidden bg-white rounded-lg shadow-md">
-          <div class="relative h-48 bg-blue-100">
-            <img
-              src="/assets/images/academic-clininc.jpg"
-              loading="lazy"
-              alt="Career Day"
-              class="object-cover w-full h-full"
-            />
-            <div
-              class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500 rounded-br-lg"
-            >
-              <span class="block text-xl font-bold">2</span>
-              <span class="text-sm">June</span>
+          <!-- Event Card 3 -->
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <div class="relative h-48 bg-blue-100">
+              <img
+                src="/assets/images/academic-clininc.jpg"
+                loading="lazy"
+                alt="Career Day"
+                class="object-cover w-full h-full"
+              />
+              <div
+                class="absolute top-0 left-0 px-4 py-2 text-white bg-blue-500 rounded-br-lg"
+              >
+                <span class="block text-xl font-bold">2</span>
+                <span class="text-sm">June</span>
+              </div>
             </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center mb-2 text-sm text-gray-500">
-              <i class="mr-2 far fa-clock"></i>
-              <span>9:00 AM - 3:00 PM</span>
-              <span class="mx-2">•</span>
-              <i class="mr-2 fas fa-map-marker-alt"></i>
-              <span>Assembly Hall</span>
+            <div class="p-6">
+              <div class="flex items-center mb-2 text-sm text-gray-500">
+                <i class="mr-2 far fa-clock"></i>
+                <span>9:00 AM - 3:00 PM</span>
+                <span class="mx-2">•</span>
+                <i class="mr-2 fas fa-map-marker-alt"></i>
+                <span>Assembly Hall</span>
+              </div>
+              <h3 class="mb-2 text-xl font-bold text-gray-800">Career Day</h3>
+              <p class="mb-4 text-gray-600">
+                Students meet on Career Day to interact with professionals from
+                various fields, gaining insight into career paths, academic
+                requirements, and real-world experiences. The event guides
+                learners in making informed decisions about their futures,
+                inspiring ambition and broadening their understanding of
+                opportunities beyond school.
+              </p>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-800">Career Day</h3>
-            <p class="mb-4 text-gray-600">
-              Students meet on Career Day to interact with professionals from
-              various fields, gaining insight into career paths, academic
-              requirements, and real-world experiences. The event guides
-              learners in making informed decisions about their futures,
-              inspiring ambition and broadening their understanding of
-              opportunities beyond school.
-            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Signature Events Section -->
-    <section class="container px-4 py-12 mx-auto max-w-7xl">
-      <h2 class="mb-4 text-2xl font-bold text-center text-gray-800 md:text-3xl">
-        Our Signature Events
-      </h2>
-      <p class="mb-8 text-center text-gray-600 md:mb-12">
-        Highlights that define our vibrant school culture
-      </p>
-
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        <!-- Event 1 -->
-        <div
-          class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
+    <section class="bg-gray-50">
+      <div class="container px-4 py-12 mx-auto max-w-7xl">
+        <h2
+          class="mb-4 text-2xl font-bold text-center text-gray-800 md:text-3xl"
         >
-          <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
-            <img
-              src="/assets/images/sports.jpg"
-              loading="lazy"
-              alt="Sports Day"
-              class="object-cover w-full h-full"
-            />
-          </div>
-          <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
-            <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
-              Sports Day
-            </h3>
-            <p
-              class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
-            >
-              A thrilling day of athletics that promotes fitness, fun, and
-              teamwork across the school.
-            </p>
-            <p class="text-xs text-gray-500 sm:text-sm">
-              <i class="mr-1 far fa-calendar-alt"></i>Once every term
-            </p>
-          </div>
-        </div>
+          Our Signature Events
+        </h2>
+        <p class="mb-8 text-center text-gray-600 md:mb-12">
+          Highlights that define our vibrant school culture
+        </p>
 
-        <!-- Event 2 -->
-        <div
-          class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
-        >
-          <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
-            <img
-              src="/assets/images/principal-with-top-performing-student.jpg"
-              loading="lazy"
-              alt="Prize Giving Day"
-              class="object-cover w-full h-full"
-            />
-          </div>
-          <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
-            <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
-              Prize Giving Day
-            </h3>
-            <p
-              class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
-            >
-              A proud tradition that honors academic brilliance, artistic
-              talent, leadership, and exemplary discipline.
-            </p>
-            <p class="text-xs text-gray-500 sm:text-sm">
-              <i class="mr-1 far fa-calendar-alt"></i>February every year
-            </p>
-          </div>
-        </div>
-
-        <!-- Event 3 -->
-        <div
-          class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
-        >
-          <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
-            <img
-              src="/assets/images/ksef-nationals.jpg"
-              loading="lazy"
-              alt="Science Fair"
-              class="object-cover w-full h-full"
-            />
-          </div>
-          <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
-            <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
-              Science & Technology Fair
-            </h3>
-            <p
-              class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
-            >
-              Learners present groundbreaking projects in STEM, pushing
-              boundaries and solving real-world problems.
-            </p>
-            <p class="text-xs text-gray-500 sm:text-sm">
-              <i class="mr-1 far fa-calendar-alt"></i>May every year
-            </p>
-          </div>
-        </div>
-
-        <!-- Event 4 -->
-        <div
-          class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
-        >
-          <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
-            <img
-              src="/assets/images/students-performing-on-agm.jpg"
-              loading="lazy"
-              alt="Cultural Day"
-              class="object-cover w-full h-full"
-            />
-          </div>
-          <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
-            <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
-              Talent & Culture Festival
-            </h3>
-            <p
-              class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
-            >
-              A rich celebration of music, drama, art, and heritage bringing
-              student creativity to life.
-            </p>
-            <p class="text-xs text-gray-500 sm:text-sm">
-              <i class="mr-1 far fa-calendar-alt"></i>July every year
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Subscription -->
-    <section class="py-16 bg-gray-100">
-      <div class="container px-4 mx-auto">
-        <div class="max-w-7xl p-8 mx-auto bg-white rounded-lg shadow-md">
-          <h2 class="mb-4 text-3xl font-bold text-center text-gray-800">
-            Stay Updated
-          </h2>
-          <p class="mb-8 text-center text-gray-600">
-            Subscribe to our newsletter for the latest news and event updates
-          </p>
-
-          <form class="grid grid-cols-1 gap-4 md:grid-cols-3">
-            <div class="md:col-span-2">
-              <input
-                type="email"
-                placeholder="Your email address"
-                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <!-- Event 1 -->
+          <div
+            class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
+          >
+            <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
+              <img
+                src="/assets/images/sports.jpg"
+                loading="lazy"
+                alt="Sports Day"
+                class="object-cover w-full h-full"
               />
             </div>
-            <div class="md:col-span-1">
-              <button
-                type="submit"
-                class="w-full px-6 py-3 font-medium text-white transition bg-blue-500 rounded-md hover:bg-blue-600"
+            <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
+              <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
+                Sports Day
+              </h3>
+              <p
+                class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
               >
-                Subscribe
-              </button>
+                A thrilling day of athletics that promotes fitness, fun, and
+                teamwork across the school.
+              </p>
+              <p class="text-xs text-gray-500 sm:text-sm">
+                <i class="mr-1 far fa-calendar-alt"></i>Once every term
+              </p>
             </div>
-            <div class="mt-2 text-sm text-gray-500 md:col-span-3">
-              <label class="flex items-center">
-                <input
-                  type="checkbox"
-                  class="mr-2 text-blue-500 form-checkbox"
-                />
-                <span
-                  >I agree to receive email updates from Kimangu Day Secondary
-                  School</span
-                >
-              </label>
+          </div>
+
+          <!-- Event 2 -->
+          <div
+            class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
+          >
+            <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
+              <img
+                src="/assets/images/principal-with-top-performing-student.jpg"
+                loading="lazy"
+                alt="Prize Giving Day"
+                class="object-cover w-full h-full"
+              />
             </div>
-          </form>
+            <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
+              <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
+                Prize Giving Day
+              </h3>
+              <p
+                class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
+              >
+                A proud tradition that honors academic brilliance, artistic
+                talent, leadership, and exemplary discipline.
+              </p>
+              <p class="text-xs text-gray-500 sm:text-sm">
+                <i class="mr-1 far fa-calendar-alt"></i>February every year
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div
+            class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
+          >
+            <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
+              <img
+                src="/assets/images/ksef-nationals.jpg"
+                loading="lazy"
+                alt="Science Fair"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
+              <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
+                Science & Technology Fair
+              </h3>
+              <p
+                class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
+              >
+                Learners present groundbreaking projects in STEM, pushing
+                boundaries and solving real-world problems.
+              </p>
+              <p class="text-xs text-gray-500 sm:text-sm">
+                <i class="mr-1 far fa-calendar-alt"></i>May every year
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div
+            class="flex flex-col overflow-hidden bg-white rounded-lg shadow-md sm:flex-row sm:h-44"
+          >
+            <div class="h-40 bg-blue-100 sm:w-1/3 sm:h-auto">
+              <img
+                src="/assets/images/students-performing-on-agm.jpg"
+                loading="lazy"
+                alt="Cultural Day"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="flex-1 p-4 sm:w-2/3 sm:p-6">
+              <h3 class="mb-2 text-lg font-bold text-blue-500 sm:text-xl">
+                Talent & Culture Festival
+              </h3>
+              <p
+                class="mb-2 text-sm text-gray-600 sm:mb-3 sm:text-base line-clamp-3"
+              >
+                A rich celebration of music, drama, art, and heritage bringing
+                student creativity to life.
+              </p>
+              <p class="text-xs text-gray-500 sm:text-sm">
+                <i class="mr-1 far fa-calendar-alt"></i>July every year
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer placeholder -->
     <div id="footer-placeholder"></div>
-
-    <!-- JavaScript to load nav and footer -->
     <script src="/src/include.js"></script>
   </body>
 </html>
