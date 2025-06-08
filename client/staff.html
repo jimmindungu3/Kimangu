@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Staff - Kimangu Day Secondary School</title>
-    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -15,12 +13,9 @@
   </head>
 
   <body class="font-sans text-gray-900">
-    <!-- div for NAV -->
     <div id="nav-placeholder"></div>
 
-    <!-- Page Header Banner -->
     <section class="relative py-16 text-white bg-blue-500">
-      <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
         <div
           class="w-full h-full"
@@ -37,21 +32,20 @@
         <nav class="text-sm md:text-base">
           <ol class="flex items-center space-x-2">
             <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
-            <li><span class="mx-2">›</span></li>
+            <li><span class="mx-2">&gt;</span></li>
             <li>
               <a href="about.html" class="hover:text-blue-200">About Us</a>
             </li>
-            <li><span class="mx-2">›</span></li>
+            <li><span class="mx-2">&gt;</span></li>
             <li class="font-medium">Our Staff</li>
           </ol>
         </nav>
       </div>
     </section>
 
-    <!-- Introduction -->
     <section class="pt-12 pb-8">
       <div class="max-w-4xl px-4 mx-auto text-center">
-        <h2 class="mb-6 text-3xl font-bold text-blue-500">
+        <h2 class="mb-6 text-3xl font-bold text-gray-800">
           Our Dedicated Team
         </h2>
         <p class="mb-4">
@@ -67,18 +61,17 @@
       </div>
     </section>
 
-    <!-- Staff Categories Tabs -->
     <section class="py-2">
       <div class="px-4 mx-auto max-w-7xl">
         <div class="mb-8 border-b border-gray-200">
           <ul
-            class="flex flex-wrap -mb-px text-sm font-medium text-center"
+            class="flex -mb-px text-sm font-medium text-center"
             id="staffTabs"
             role="tablist"
           >
             <li class="mr-2 text-base" role="presentation">
               <button
-                class="inline-block p-4 border-b-2 border-blue-500 rounded-t-lg active"
+                class="inline-block px-2 py-4 border-b-2 border-blue-500 rounded-t-lg active"
                 id="administration-tab"
                 data-tab="administration"
                 type="button"
@@ -90,39 +83,38 @@
             </li>
             <li class="mr-2 text-base" role="presentation">
               <button
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                class="inline-block px-2 py-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                 id="teaching-tab"
                 data-tab="teaching"
                 type="button"
                 role="tab"
                 aria-selected="false"
               >
-                Teaching Staff
+                Teaching
               </button>
             </li>
             <li class="mr-2 text-base" role="presentation">
               <button
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                class="inline-block px-2 py-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                 id="support-tab"
                 data-tab="support"
                 type="button"
                 role="tab"
                 aria-selected="false"
               >
-                Support Staff
+                Support
               </button>
             </li>
           </ul>
         </div>
 
-        <!-- Administration Staff Section -->
+        <!-- Administration  -->
         <div class="tab-content" id="administration">
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- Principal -->
             <div
               class="p-6 overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl"
             >
-              <!-- First row: Image and title -->
               <div class="flex items-center mb-4 space-x-4">
                 <div
                   class="w-20 h-20 overflow-hidden border-2 border-blue-500 rounded-full"
@@ -131,7 +123,7 @@
                     src="/assets/images/principal.jpg"
                     loading="lazy"
                     alt="Principal"
-                    class="object-cover w-full h-full"
+                    class="w-full h-full object-fit"
                   />
                 </div>
                 <div>
@@ -141,8 +133,6 @@
                   <p class="font-medium text-gray-700">Principal</p>
                 </div>
               </div>
-
-              <!-- Second row: Details -->
               <div class="mb-4 border-t border-gray-200"></div>
               <h5 class="mb-2 font-medium">Responsibilities:</h5>
               <ul class="mb-4 ml-5 space-y-1 text-sm list-disc">
@@ -177,17 +167,15 @@
                   <img
                     src="/assets/images/bom-chair.jpg"
                     loading="lazy"
-                    alt="BOM Chair"
-                    class="object-cover w-full h-full"
+                    alt="Principal"
+                    class="w-full h-full object-fit"
                   />
                 </div>
                 <div>
                   <h4 class="text-lg font-bold text-blue-500">
                     Mr. Paul Gathenya
                   </h4>
-                  <p class="font-medium text-gray-700">
-                    Board of Management Chairperson
-                  </p>
+                  <p class="font-medium text-gray-700">BOM Chairperson</p>
                 </div>
               </div>
 
@@ -216,7 +204,6 @@
             <div
               class="p-6 overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl"
             >
-              <!-- First row: Image and title -->
               <div class="flex items-center mb-4 space-x-4">
                 <div
                   class="w-20 h-20 overflow-hidden border-2 border-blue-500 rounded-full"
@@ -233,8 +220,6 @@
                   <p class="font-medium text-gray-700">Deputy Principal</p>
                 </div>
               </div>
-
-              <!-- Second row: Details -->
               <div class="mb-4 border-t border-gray-200"></div>
               <h5 class="mb-2 font-medium">Responsibilities:</h5>
               <ul class="mb-4 ml-5 space-y-1 text-sm list-disc">
@@ -258,14 +243,10 @@
 
         <!-- Teaching Staff Section -->
         <div class="hidden tab-content" id="teaching">
-          <!-- <h3 class="mb-8 text-2xl font-bold text-center">Teaching Staff</h3> -->
-
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Head of Studies -->
             <div
               class="p-6 overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl"
             >
-              <!-- First row: Image and title -->
               <div class="flex items-center mb-4 space-x-4">
                 <div
                   class="w-20 h-20 overflow-hidden border-2 border-blue-500 rounded-full"
@@ -284,8 +265,6 @@
                   <p class="font-medium text-gray-700">H.O.S</p>
                 </div>
               </div>
-
-              <!-- Second row: Details -->
               <div class="mb-4 border-t border-gray-200"></div>
               <h5 class="mb-2 font-medium">Responsibilities:</h5>
               <ul class="mb-4 ml-5 space-y-1 text-sm list-disc">
@@ -785,22 +764,14 @@
 
     <script src="/src/include.js"></script>
 
-    <!-- Tab switching script -->
     <script>
-      // Simple tab switching functionality
       document.addEventListener("DOMContentLoaded", function () {
-        // Get all tab buttons
         const tabButtons = document.querySelectorAll("#staffTabs button");
-        // Get all tab content containers
         const tabContents = document.querySelectorAll(".tab-content");
 
-        // Add click event to each button
         tabButtons.forEach((button) => {
           button.addEventListener("click", function () {
-            // Get the tab ID from the data-tab attribute
             const tabId = this.getAttribute("data-tab");
-
-            // Remove active class from all buttons
             tabButtons.forEach((btn) => {
               btn.classList.remove("border-blue-500");
               btn.classList.add(
@@ -810,8 +781,6 @@
               );
               btn.setAttribute("aria-selected", "false");
             });
-
-            // Add active class to clicked button
             this.classList.add("border-blue-500");
             this.classList.remove(
               "border-transparent",
@@ -819,13 +788,9 @@
               "hover:border-gray-300"
             );
             this.setAttribute("aria-selected", "true");
-
-            // Hide all tab content
             tabContents.forEach((content) => {
               content.classList.add("hidden");
             });
-
-            // Show the selected tab content
             document.getElementById(tabId).classList.remove("hidden");
           });
         });
