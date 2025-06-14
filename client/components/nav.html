@@ -52,13 +52,19 @@
   </div>
 </div>
 
-<!-- Main Navigation - Changed from fixed to sticky -->
+<!-- Main Navigation -->
 <nav class="sticky top-0 z-50 bg-white shadow">
   <div class="px-4 mx-auto max-w-7xl">
-    <div class="flex items-center justify-between py-3">
+    <div class="flex justify-between py-3">
       <!-- Logo -->
       <a href="index.html" class="flex items-center space-x-3">
+        <img
+          src="/assets/images/coat-of-arms.png"
+          alt="school logo"
+          class="h-12 mr-2 md:hidden"
+        />
         <img src="/assets/images/logo.png" alt="school logo" class="h-12" />
+
         <div>
           <!-- Large screens -->
           <h1 class="hidden font-bold text-blue-500 lg:block sm:text-2xl">
@@ -78,27 +84,29 @@
         </div>
       </a>
 
-      <!-- Mobile Menu Button -->
-      <button
-        id="menu-toggle"
-        class="z-50 md:hidden focus:outline-none"
-        aria-label="Toggle menu"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+      <div class="flex space-x-4">
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          class="z-50 md:hidden focus:outline-none"
+          aria-label="Toggle menu"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
-        </svg>
-      </button>
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
 
       <!-- Desktop Menu -->
       <ul class="items-center hidden space-x-6 font-medium md:flex">
@@ -149,14 +157,14 @@
               <a
                 href="/parent-login.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
-                ><i class="fas fa-user-friends mr-2 text-blue-500"></i>Parent</a
+                ><i class="mr-2 text-blue-500 fas fa-user-friends"></i>Parent</a
               >
             </li>
             <li>
               <a
                 href="/student-login.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
-                ><i class="fas fa-graduation-cap mr-2 text-blue-500"></i
+                ><i class="mr-2 text-blue-500 fas fa-graduation-cap"></i
                 >Student</a
               >
             </li>
@@ -164,7 +172,7 @@
               <a
                 href="/teacher-login.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
-                ><i class="fas fa-chalkboard-teacher mr-2 text-blue-500"></i
+                ><i class="mr-2 text-blue-500 fas fa-chalkboard-teacher"></i
                 >Teacher</a
               >
             </li>
@@ -176,13 +184,13 @@
             More <i class="ml-1 text-xs fas fa-chevron-down"></i>
           </button>
           <ul
-            class="absolute right-0 z-50 hidden w-44 overflow-hidden transition-all duration-200 bg-white border border-gray-300 rounded-md shadow-md group-hover:block"
+            class="absolute right-0 z-50 hidden overflow-hidden transition-all duration-200 bg-white border border-gray-300 rounded-md shadow-md w-44 group-hover:block"
           >
             <li>
               <a
                 href="/careers.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
-                ><i class="fa-solid fa-briefcase mr-2 text-blue-500"></i
+                ><i class="mr-2 text-blue-500 fa-solid fa-briefcase"></i
                 >Careers</a
               >
             </li>
@@ -190,7 +198,7 @@
               <a
                 href="/tenders.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
-                ><i class="fa-solid fa-file-signature mr-2 text-blue-500"></i
+                ><i class="mr-2 text-blue-500 fa-solid fa-file-signature"></i
                 >Tenders</a
               >
             </li>
@@ -198,7 +206,7 @@
               <a
                 href="/gallery.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
-                ><i class="fa-solid fa-photo-film mr-2 text-blue-500"></i
+                ><i class="mr-2 text-blue-500 fa-solid fa-photo-film"></i
                 >Gallery</a
               >
             </li>
@@ -206,24 +214,30 @@
               <a
                 href="/news-and-events.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-blue-200"
-                ><i class="fa-solid fa-newspaper mr-2 text-blue-500"></i>News &
+                ><i class="mr-2 text-blue-500 fa-solid fa-newspaper"></i>News &
                 Events</a
               >
             </li>
           </ul>
         </li>
+        <!-- Coat of Arms -->
+        <img
+          src="../assets/images/coat-of-arms.png"
+          alt="Kenya Coat of Arms"
+          class="h-12"
+        />
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Mobile Menu - Now slides in from right -->
+<!-- Mobile Menu -->
 <div id="mobile-menu" class="md:hidden">
-  <div class="px-4 py-6">
-    <!-- School Name in Mobile Menu -->
-    <div class="flex items-center justify-center mb-8 md:mb-6">
-      <img src="/assets/images/logo.png" alt="school logo" class="h-10 mr-2" />
-      <h2 class="text-xl font-bold text-blue-500">Kimangu Secondary</h2>
+  <div class="px-4">
+    <div class="mb-8 md:mb-6 flex flex-col items-center">
+      <img src="/assets/images/logo.png" alt="school logo" class="h-20 mb-2" />
+      <h2 class="text-xl font-bold text-blue-500">Kimangu Day Sec</h2>
+      <p class="text-xs font-medium text-gray-600">Aim High</p>
     </div>
 
     <ul class="flex flex-col space-y-4 font-medium">
@@ -260,16 +274,18 @@
         <ul id="portals-dropdown" class="hidden pl-4 mt-2 space-y-2">
           <li>
             <a href="/parent-login.html" class="block py-2 hover:text-blue-500"
-              >Parent</a
+              ><i class="mr-2 text-blue-500 fas fa-user-friends"></i>Parent</a
             >
           </li>
           <li>
             <a href="/student-login.html" class="block py-2 hover:text-blue-500"
+              ><i class="mr-2 text-blue-500 fas fa-graduation-cap"></i
               >Student</a
             >
           </li>
           <li>
             <a href="/teacher-login.html" class="block py-2 hover:text-blue-500"
+              ><i class="mr-2 text-blue-500 fas fa-chalkboard-teacher"></i
               >Teacher</a
             >
           </li>
@@ -286,16 +302,19 @@
         <ul id="more-dropdown" class="hidden pl-4 mt-2 space-y-2">
           <li>
             <a href="/careers.html" class="block py-2 hover:text-blue-500"
+              ><i class="mr-2 text-blue-500 fa-solid fa-briefcase"></i
               >Careers</a
             >
           </li>
           <li>
             <a href="/tenders.html" class="block py-2 hover:text-blue-500"
+              ><i class="mr-2 text-blue-500 fa-solid fa-file-signature"></i
               >Tenders</a
             >
           </li>
           <li>
             <a href="/gallery.html" class="block py-2 hover:text-blue-500"
+              ><i class="mr-2 text-blue-500 fa-solid fa-photo-film"></i
               >Gallery</a
             >
           </li>
@@ -303,7 +322,8 @@
             <a
               href="/news-and-events.html"
               class="block py-2 hover:text-blue-500"
-              >News & Events</a
+              ><i class="mr-2 text-blue-500 fa-solid fa-newspaper"></i>News &
+              Events</a
             >
           </li>
         </ul>
