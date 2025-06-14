@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Resources - Kimangu Day Secondary School</title>
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="font-sans text-gray-900 bg-gray-50">
+    <!-- Header with Navigation -->
+    <header class="bg-white shadow-sm">
+      <div class="px-4 mx-auto max-w-7xl">
+        <div class="flex items-center justify-between py-4">
+          <!-- Logo and School Name -->
+          <div class="flex items-center">
+            <img
+              src="/assets/images/logo.png"
+              alt="School Logo"
+              class="w-10 h-10 mr-3"
+            />
+            <div>
+              <h1 class="text-xl font-bold text-blue-600">
+                K.D.S.S.
+              </h1>
+              <p class="text-sm text-gray-600">Student Resources</p>
+            </div>
+          </div>
+
+          <!-- Navigation and User Info -->
+          <div class="flex items-center gap-4">
+            <button
+              id="backBtn"
+              class="px-4 py-2 text-blue-600 bg-blue-100 rounded-md hover:bg-blue-200"
+            >
+              <i class="mr-2 fas fa-arrow-left"></i>Back to Dashboard
+            </button>
+            <div class="text-right">
+              <p class="font-medium">Grace Wanjiku</p>
+              <p class="text-sm text-gray-600">KIM/2023/089</p>
+            </div>
+            <button
+              id="logoutBtn"
+              class="px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-600"
+            >
+              <i class="mr-2 fas fa-sign-out-alt"></i>Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-4 py-8 mx-auto max-w-7xl">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h2 class="mb-2 text-3xl font-bold">Student Resources</h2>
+        <p class="text-gray-600">
+          Access learning materials, study tools, and academic support resources
+        </p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="mb-8">
+        <div class="relative max-w-md">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search resources..."
+            class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+          <i class="absolute text-gray-400 transform -translate-y-1/2 fas fa-search left-3 top-1/2"></i>
+        </div>
+      </div>
+
+      <!-- Resource Categories Grid -->
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Left Column - Main Resources -->
+        <div class="lg:col-span-2">
+          <!-- Digital Library -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-xl font-semibold">
+                <i class="mr-2 text-blue-500 fas fa-book"></i>Digital Library
+              </h3>
+              <button class="text-sm text-blue-500 hover:underline">
+                Browse All Books
+              </button>
+            </div>
+
+            <div class="grid gap-4 md:grid-cols-2">
+              <!-- Textbook 1 -->
+              <div class="p-4 transition-shadow border rounded-lg cursor-pointer hover:shadow-md resource-item">
+                <div class="flex items-start">
+                  <div class="flex items-center justify-center w-12 h-16 mr-3 bg-blue-100 rounded">
+                    <i class="text-blue-600 fas fa-book"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Mathematics Textbook</h4>
+                    <p class="text-sm text-gray-600">Form 2 - Advanced Topics</p>
+                    <p class="mt-1 text-xs text-green-600">
+                      <i class="fas fa-check-circle"></i> Available
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Textbook 2 -->
+              <div class="p-4 transition-shadow border rounded-lg cursor-pointer hover:shadow-md resource-item">
+                <div class="flex items-start">
+                  <div class="flex items-center justify-center w-12 h-16 mr-3 bg-green-100 rounded">
+                    <i class="text-green-600 fas fa-leaf"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Biology Reference</h4>
+                    <p class="text-sm text-gray-600">Cell Biology & Genetics</p>
+                    <p class="mt-1 text-xs text-green-600">
+                      <i class="fas fa-check-circle"></i> Available
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Textbook 3 -->
+              <div class="p-4 transition-shadow border rounded-lg cursor-pointer hover:shadow-md resource-item">
+                <div class="flex items-start">
+                  <div class="flex items-center justify-center w-12 h-16 mr-3 bg-purple-100 rounded">
+                    <i class="text-purple-600 fas fa-flask"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Chemistry Guide</h4>
+                    <p class="text-sm text-gray-600">Organic & Inorganic</p>
+                    <p class="mt-1 text-xs text-green-600">
+                      <i class="fas fa-check-circle"></i> Available
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Textbook 4 -->
+              <div class="p-4 transition-shadow border rounded-lg cursor-pointer hover:shadow-md resource-item">
+                <div class="flex items-start">
+                  <div class="flex items-center justify-center w-12 h-16 mr-3 bg-yellow-100 rounded">
+                    <i class="text-yellow-600 fas fa-pen-fancy"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">English Literature</h4>
+                    <p class="text-sm text-gray-600">Poetry & Prose Analysis</p>
+                    <p class="mt-1 text-xs text-orange-600">
+                      <i class="fas fa-clock"></i> 2 copies left
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Study Materials -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-xl font-semibold">
+                <i class="mr-2 text-green-500 fas fa-file-alt"></i>Study Materials
+              </h3>
+              <button class="text-sm text-blue-500 hover:underline">
+                View All Materials
+              </button>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Study Material 1 -->
+              <div class="p-4 border-l-4 border-blue-500 cursor-pointer bg-blue-50 resource-item">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-medium text-blue-800">Mathematics Revision Notes</h4>
+                    <p class="text-sm text-gray-600">Calculus, Algebra, and Geometry summaries</p>
+                    <div class="flex items-center mt-2 space-x-4 text-xs text-gray-500">
+                      <span><i class="fas fa-file-pdf"></i> PDF</span>
+                      <span><i class="fas fa-download"></i> 234 downloads</span>
+                      <span><i class="fas fa-star"></i> 4.8/5</span>
+                    </div>
+                  </div>
+                  <button class="px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded hover:bg-blue-200">
+                    Download
+                  </button>
+                </div>
+              </div>
+
+              <!-- Study Material 2 -->
+              <div class="p-4 border-l-4 border-green-500 cursor-pointer bg-green-50 resource-item">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-medium text-green-800">Biology Lab Manual</h4>
+                    <p class="text-sm text-gray-600">Practical experiments and procedures</p>
+                    <div class="flex items-center mt-2 space-x-4 text-xs text-gray-500">
+                      <span><i class="fas fa-file-pdf"></i> PDF</span>
+                      <span><i class="fas fa-download"></i> 156 downloads</span>
+                      <span><i class="fas fa-star"></i> 4.9/5</span>
+                    </div>
+                  </div>
+                  <button class="px-3 py-1 text-sm text-green-600 bg-green-100 rounded hover:bg-green-200">
+                    Download
+                  </button>
+                </div>
+              </div>
+
+              <!-- Study Material 3 -->
+              <div class="p-4 border-l-4 border-purple-500 cursor-pointer bg-purple-50 resource-item">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-medium text-purple-800">Chemistry Formula Sheet</h4>
+                    <p class="text-sm text-gray-600">Essential formulas and constants</p>
+                    <div class="flex items-center mt-2 space-x-4 text-xs text-gray-500">
+                      <span><i class="fas fa-file-pdf"></i> PDF</span>
+                      <span><i class="fas fa-download"></i> 298 downloads</span>
+                      <span><i class="fas fa-star"></i> 4.7/5</span>
+                    </div>
+                  </div>
+                  <button class="px-3 py-1 text-sm text-purple-600 bg-purple-100 rounded hover:bg-purple-200">
+                    Download
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Practice Tests -->
+          <div class="p-6 bg-white rounded-lg shadow">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-xl font-semibold">
+                <i class="mr-2 text-orange-500 fas fa-clipboard-check"></i>Practice Tests
+              </h3>
+              <button class="text-sm text-blue-500 hover:underline">
+                View All Tests
+              </button>
+            </div>
+
+            <div class="grid gap-4 md:grid-cols-2">
+              <!-- Test 1 -->
+              <div class="p-4 transition-shadow border rounded-lg cursor-pointer hover:shadow-md resource-item">
+                <div class="flex items-center justify-between mb-2">
+                  <h4 class="font-medium">Mathematics Mock Exam</h4>
+                  <span class="px-2 py-1 text-xs text-orange-800 bg-orange-100 rounded">
+                    45 mins
+                  </span>
+                </div>
+                <p class="mb-3 text-sm text-gray-600">Form 2 Term 2 Practice</p>
+                <div class="flex items-center justify-between text-xs text-gray-500">
+                  <span><i class="fas fa-questions"></i> 30 questions</span>
+                  <span><i class="fas fa-users"></i> 89 attempts</span>
+                </div>
+                <button class="w-full px-3 py-2 mt-3 text-sm text-white bg-orange-500 rounded hover:bg-orange-600">
+                  Start Test
+                </button>
+              </div>
+
+              <!-- Test 2 -->
+              <div class="p-4 transition-shadow border rounded-lg cursor-pointer hover:shadow-md resource-item">
+                <div class="flex items-center justify-between mb-2">
+                  <h4 class="font-medium">Biology Quiz</h4>
+                  <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded">
+                    20 mins
+                  </span>
+                </div>
+                <p class="mb-3 text-sm text-gray-600">Cell Structure & Function</p>
+                <div class="flex items-center justify-between text-xs text-gray-500">
+                  <span><i class="fas fa-questions"></i> 15 questions</span>
+                  <span><i class="fas fa-users"></i> 67 attempts</span>
+                </div>
+                <button class="w-full px-3 py-2 mt-3 text-sm text-white bg-green-500 rounded hover:bg-green-600">
+                  Start Test
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Tools & Support -->
+        <div>
+          <!-- Study Tools -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold">
+              <i class="mr-2 text-purple-500 fas fa-tools"></i>Study Tools
+            </h3>
+
+            <div class="space-y-3">
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 study-tool">
+                <i class="mr-3 text-blue-500 fas fa-calculator"></i>
+                <div>
+                  <p class="font-medium">Scientific Calculator</p>
+                  <p class="text-xs text-gray-600">Advanced math calculations</p>
+                </div>
+              </button>
+
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 study-tool">
+                <i class="mr-3 text-green-500 fas fa-chart-line"></i>
+                <div>
+                  <p class="font-medium">Grade Tracker</p>
+                  <p class="text-xs text-gray-600">Monitor your progress</p>
+                </div>
+              </button>
+
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 study-tool">
+                <i class="mr-3 text-orange-500 fas fa-clock"></i>
+                <div>
+                  <p class="font-medium">Study Timer</p>
+                  <p class="text-xs text-gray-600">Pomodoro technique</p>
+                </div>
+              </button>
+
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 study-tool">
+                <i class="mr-3 text-purple-500 fas fa-sticky-note"></i>
+                <div>
+                  <p class="font-medium">Note Maker</p>
+                  <p class="text-xs text-gray-600">Create digital notes</p>
+                </div>
+              </button>
+
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 study-tool">
+                <i class="mr-3 text-red-500 fas fa-brain"></i>
+                <div>
+                  <p class="font-medium">Flashcards</p>
+                  <p class="text-xs text-gray-600">Memory training</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Recent Downloads -->
+          <div class="p-6 mb-8 bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold">
+              <i class="mr-2 text-blue-500 fas fa-download"></i>Recent Downloads
+            </h3>
+
+            <div class="space-y-3">
+              <div class="flex items-center p-2 rounded-lg bg-gray-50">
+                <i class="mr-3 text-red-500 fas fa-file-pdf"></i>
+                <div class="flex-1">
+                  <p class="text-sm font-medium">Math Formula Sheet</p>
+                  <p class="text-xs text-gray-500">Downloaded 2 hours ago</p>
+                </div>
+              </div>
+
+              <div class="flex items-center p-2 rounded-lg bg-gray-50">
+                <i class="mr-3 text-red-500 fas fa-file-pdf"></i>
+                <div class="flex-1">
+                  <p class="text-sm font-medium">Biology Notes Ch.5</p>
+                  <p class="text-xs text-gray-500">Downloaded yesterday</p>
+                </div>
+              </div>
+
+              <div class="flex items-center p-2 rounded-lg bg-gray-50">
+                <i class="mr-3 text-red-500 fas fa-file-pdf"></i>
+                <div class="flex-1">
+                  <p class="text-sm font-medium">Chemistry Lab Guide</p>
+                  <p class="text-xs text-gray-500">Downloaded 3 days ago</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="w-full mt-4 text-sm text-blue-500 hover:underline">
+              View All Downloads
+            </button>
+          </div>
+
+          <!-- Help & Support -->
+          <div class="p-6 bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold">
+              <i class="mr-2 text-yellow-500 fas fa-question-circle"></i>Help & Support
+            </h3>
+
+            <div class="space-y-3">
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 help-option">
+                <i class="mr-3 text-blue-500 fas fa-book-open"></i>
+                <div>
+                  <p class="font-medium">User Guide</p>
+                  <p class="text-xs text-gray-600">How to use resources</p>
+                </div>
+              </button>
+
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 help-option">
+                <i class="mr-3 text-green-500 fas fa-comments"></i>
+                <div>
+                  <p class="font-medium">Ask Librarian</p>
+                  <p class="text-xs text-gray-600">Get help finding resources</p>
+                </div>
+              </button>
+
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 help-option">
+                <i class="mr-3 text-orange-500 fas fa-bug"></i>
+                <div>
+                  <p class="font-medium">Report Issue</p>
+                  <p class="text-xs text-gray-600">Technical problems</p>
+                </div>
+              </div>
+
+              <button class="flex items-center w-full p-3 text-left transition rounded-lg hover:bg-gray-50 help-option">
+                <i class="mr-3 text-purple-500 fas fa-lightbulb"></i>
+                <div>
+                  <p class="font-medium">Study Tips</p>
+                  <p class="text-xs text-gray-600">Improve your learning</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+      // Back to dashboard functionality
+      document.getElementById('backBtn').addEventListener('click', function() {
+        alert('This would navigate back to the student dashboard.');
+      });
+
+      // Logout functionality
+      document.getElementById('logoutBtn').addEventListener('click', function() {
+        if (confirm('Are you sure you want to logout?')) {
+          alert('Logging out... In a real app, you would be redirected to the login page.');
+        }
+      });
+
+      // Search functionality
+      document.getElementById('searchInput').addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        // In a real app, this would filter the resources
+        console.log('Searching for:', searchTerm);
+      });
+
+      // Resource item clicks
+      document.querySelectorAll('.resource-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+          const title = this.querySelector('h4').textContent;
+          alert('Opening: ' + title);
+        });
+      });
+
+      // Download buttons
+      document.querySelectorAll('button').forEach(function(button) {
+        if (button.textContent.includes('Download')) {
+          button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            alert('Downloading file... In a real app, the file would be downloaded.');
+          });
+        }
+        if (button.textContent.includes('Start Test')) {
+          button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const testName = this.closest('.resource-item').querySelector('h4').textContent;
+            alert('Starting test: ' + testName);
+          });
+        }
+      });
+
+      // Study tools
+      document.querySelectorAll('.study-tool').forEach(function(tool) {
+        tool.addEventListener('click', function() {
+          const toolName = this.querySelector('p').textContent;
+          alert('Opening ' + toolName + '... This would launch the study tool.');
+        });
+      });
+
+      // Help options
+      document.querySelectorAll('.help-option').forEach(function(option) {
+        option.addEventListener('click', function() {
+          const optionName = this.querySelector('p').textContent;
+          alert('Opening ' + optionName + '... This would show the help section.');
+        });
+      });
+
+      // View all buttons
+      document.querySelectorAll('button').forEach(function(button) {
+        if (button.textContent.includes('View All') || button.textContent.includes('Browse All')) {
+          button.addEventListener('click', function() {
+            alert('This would show a detailed list view of all items in this category.');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
