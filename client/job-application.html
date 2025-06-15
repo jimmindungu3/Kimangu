@@ -74,7 +74,8 @@
           </div>
           <h2 class="text-2xl font-bold text-gray-800">Job Application Form</h2>
           <p class="mt-2 text-gray-600">
-            Please fill out all required fields marked with *
+            Please fill out all required fields marked with
+            <span class="text-red-600">*</span>
           </p>
         </div>
 
@@ -98,7 +99,7 @@
                   for="fullName"
                   class="block mb-1 text-sm font-medium text-gray-700"
                 >
-                  Full Name *
+                  Full Name <span class="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
@@ -115,7 +116,7 @@
                   for="email"
                   class="block mb-1 text-sm font-medium text-gray-700"
                 >
-                  Email Address *
+                  Email Address <span class="text-red-600">*</span>
                 </label>
                 <input
                   type="email"
@@ -132,7 +133,7 @@
                   for="phone"
                   class="block mb-1 text-sm font-medium text-gray-700"
                 >
-                  Phone Number *
+                  Phone Number <span class="text-red-600">*</span>
                 </label>
                 <input
                   type="tel"
@@ -149,7 +150,7 @@
                   for="availableStartDate"
                   class="block mb-1 text-sm font-medium text-gray-700"
                 >
-                  Available Start Date *
+                  Available Start Date <span class="text-red-600">*</span>
                 </label>
                 <input
                   type="date"
@@ -193,7 +194,7 @@
                   for="position"
                   class="block mb-1 text-sm font-medium text-gray-700"
                 >
-                  Position Applied For *
+                  Position Applied For <span class="text-red-600">*</span>
                 </label>
                 <select
                   id="position"
@@ -225,7 +226,7 @@
                   for="experience"
                   class="block mb-1 text-sm font-medium text-gray-700"
                 >
-                  Years of Experience *
+                  Years of Experience <span class="text-red-600">*</span>
                 </label>
                 <select
                   id="experience"
@@ -248,7 +249,7 @@
                 for="education"
                 class="block mb-1 text-sm font-medium text-gray-700"
               >
-                Education Background *
+                Education Background <span class="text-red-600">*</span>
               </label>
               <textarea
                 id="education"
@@ -329,19 +330,19 @@
             </h3>
 
             <!-- Resume/CV Upload -->
-            <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <div class="p-4 border border-blue-200 rounded-lg bg-blue-50">
               <label
                 for="resumeInput"
                 class="block mb-2 text-sm font-medium text-gray-700"
               >
-                <i class="mr-1 text-blue-600 fas fa-file-alt"></i>
+                <i class="mr-1 text-blue-500 fas fa-file-alt"></i>
                 Resume/CV (Optional)
               </label>
               <input
                 type="file"
                 id="resumeInput"
                 accept=".pdf,.doc,.docx"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-500 hover:file:bg-blue-100"
               />
               <p class="mt-1 text-xs text-gray-600">
                 Upload your resume or CV (PDF, DOC, DOCX - Max 5MB)
@@ -349,12 +350,12 @@
             </div>
 
             <!-- Certificates Upload -->
-            <div class="p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div class="p-4 border border-blue-200 rounded-lg bg-blue-50">
               <label
                 for="certificatesInput"
                 class="block mb-2 text-sm font-medium text-gray-700"
               >
-                <i class="mr-1 text-green-600 fas fa-certificate"></i>
+                <i class="mr-1 text-blue-500 fas fa-certificate"></i>
                 Certificates & Qualifications (Optional)
               </label>
               <input
@@ -362,7 +363,7 @@
                 id="certificatesInput"
                 multiple
                 accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-500 hover:file:bg-blue-100"
               />
               <p class="mt-1 text-xs text-gray-600">
                 Upload educational certificates, teaching licenses, etc.
@@ -371,19 +372,19 @@
             </div>
 
             <!-- Cover Letter Document Upload -->
-            <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <div class="p-4 border border-blue-200 rounded-lg bg-blue-50">
               <label
                 for="coverLetterDocInput"
                 class="block mb-2 text-sm font-medium text-gray-700"
               >
-                <i class="mr-1 text-yellow-600 fas fa-file-word"></i>
+                <i class="mr-1 text-blue-500 fas fa-file-word"></i>
                 Cover Letter Document (Optional)
               </label>
               <input
                 type="file"
                 id="coverLetterDocInput"
                 accept=".pdf,.doc,.docx"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-500 hover:file:bg-blue-100"
               />
               <p class="mt-1 text-xs text-gray-600">
                 Upload a formal cover letter document if you prefer (PDF, DOC,
@@ -392,12 +393,12 @@
             </div>
 
             <!-- Other Documents Upload -->
-            <div class="p-4 bg-purple-50 border border-purple-200 rounded-lg">
+            <div class="p-4 border border-blue-200 rounded-lg bg-blue-50">
               <label
                 for="otherDocsInput"
                 class="block mb-2 text-sm font-medium text-gray-700"
               >
-                <i class="mr-1 text-purple-600 fas fa-folder"></i>
+                <i class="mr-1 text-blue-500 fas fa-folder"></i>
                 Other Documents (Optional)
               </label>
               <input
@@ -405,7 +406,7 @@
                 id="otherDocsInput"
                 multiple
                 accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-500 hover:file:bg-blue-100"
               />
               <p class="mt-1 text-xs text-gray-600">
                 Upload recommendation letters, portfolios, or other relevant
@@ -441,8 +442,15 @@
               <i class="mr-2 fas fa-paper-plane"></i>
               Submit Application
             </button>
-            <p class="mt-2 text-sm text-center text-gray-500">
-              By submitting this form, you agree to our terms and conditions.
+            <p class="mt-4 text-sm text-gray-700">
+              By submitting this form, you agree to our
+              <a href="/terms.html" class="text-blue-600 underline"
+                >terms and conditions</a
+              >
+              and
+              <a href="privacy.html" class="text-blue-600 underline"
+                >privacy policy</a
+              >.
             </p>
           </div>
         </form>
@@ -494,7 +502,7 @@
               allFiles.push({
                 file: file,
                 type: "Certificate",
-                color: "green",
+                color: "blue",
               });
             });
           }
@@ -504,7 +512,7 @@
               allFiles.push({
                 file: file,
                 type: "Cover Letter",
-                color: "yellow",
+                color: "blue",
               });
             });
           }
@@ -514,7 +522,7 @@
               allFiles.push({
                 file: file,
                 type: "Other Document",
-                color: "purple",
+                color: "blue",
               });
             });
           }
