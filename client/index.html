@@ -20,7 +20,10 @@
     <section class="relative flex items-center justify-center text-center">
       <div
         class="absolute inset-0 bg-center bg-cover hero-background-images"
-        style="background-image: url('/assets/images/hero-img.jpg'); z-index: 1"
+        style="
+          background-image: url('/assets/images/hero-staff-members.jpg');
+          z-index: 1;
+        "
       ></div>
 
       <div
@@ -162,7 +165,7 @@
             </div>
             <div class="p-2 text-center md:p-6">
               <h3 class="mb-2 text-lg font-semibold sm:text-xl lg:text-xl">
-                Our Mission
+                Mission
               </h3>
               <p class="text-sm text-gray-600 lg:text-base">
                 To nurture responsible and disciplined students through quality
@@ -181,7 +184,7 @@
             </div>
             <div class="p-2 text-center md:p-6">
               <h3 class="mb-2 text-lg font-semibold sm:text-xl lg:text-xl">
-                Our Motto
+                Motto
               </h3>
               <p class="text-sm text-gray-600 lg:text-base">Aim High</p>
             </div>
@@ -196,7 +199,7 @@
             </div>
             <div class="p-2 text-center md:p-6">
               <h3 class="mb-2 text-lg font-semibold sm:text-xl lg:text-xl">
-                Our Vision
+                Vision
               </h3>
               <p class="text-sm text-gray-600 lg:text-base">
                 To be a center of academic excellence and moral integrity in
@@ -254,7 +257,7 @@
               src="/assets/images/computer-lab.jpg"
               loading="lazy"
               alt="New Computer Lab"
-              class="object-cover object-center w-full h-48"
+              class="object-cover object-center object-top w-full h-48"
             />
             <div class="p-6">
               <p class="mb-2 text-sm text-blue-500">May 3, 2025</p>
@@ -293,7 +296,6 @@
                 Parents, teachers, and BOM met to discuss school progress,
                 challenges, and future plans.
               </p>
-
               <a
                 href="news-and-events.html"
                 class="font-medium text-blue-500 hover:underline"
@@ -402,11 +404,11 @@
               school maintains high standards of discipline.
             </p>
             <div class="flex items-center">
-              <div
-                class="flex items-center justify-center w-10 h-10 font-bold text-blue-500 bg-blue-100 rounded-full"
-              >
-                PM
-              </div>
+              <img
+                src="https://placehold.co/150x150/2563EB/FFF"
+                alt="Dr. Omondi - education Officer"
+                class="w-10 h-10 rounded-full"
+              />
               <div class="ml-3">
                 <p class="text-base font-semibold sm:text-lg">Peter Mwangi</p>
                 <p class="text-sm text-gray-600">Parent</p>
@@ -422,13 +424,15 @@
               crucial to my success in university.
             </p>
             <div class="flex items-center">
-              <div
-                class="flex items-center justify-center w-10 h-10 font-bold text-blue-500 bg-blue-100 rounded-full"
-              >
-                JK
-              </div>
+              <img
+                src="./assets/images/dominic.jpg"
+                alt="Dominic Njoroge - alumnus"
+                class="w-10 h-10 rounded-full"
+              />
               <div class="ml-3">
-                <p class="text-base font-semibold sm:text-lg">Jane Kamau</p>
+                <p class="text-base font-semibold sm:text-lg">
+                  Dominic Njoroge
+                </p>
                 <p class="text-sm text-gray-600">Alumnus</p>
               </div>
             </div>
@@ -442,11 +446,11 @@
               character and leadership.
             </p>
             <div class="flex items-center">
-              <div
-                class="flex items-center justify-center w-10 h-10 font-bold text-blue-500 bg-blue-100 rounded-full"
-              >
-                DO
-              </div>
+              <img
+                src="https://placehold.co/150x150/2563EB/FFF"
+                alt="Dr. Omondi - education Officer"
+                class="w-10 h-10 rounded-full"
+              />
               <div class="ml-3">
                 <p class="text-base font-semibold sm:text-lg">Dr. Omondi</p>
                 <p class="text-sm text-gray-600">Education Officer</p>
@@ -568,18 +572,17 @@
     <section class="py-16 bg-gray-50">
       <div class="px-4 mx-auto max-w-7xl">
         <h2 class="mb-8 text-xl font-bold text-center sm:text-2xl lg:text-3xl">
-          Visit Our School
+          Visit Us
         </h2>
         <div class="grid items-center gap-8 md:grid-cols-12">
           <div class="md:col-span-4">
             <!-- Location -->
             <h3 class="mb-4 text-lg font-semibold sm:text-xl lg:text-xl">
-              Our Location
+              Location
             </h3>
             <p class="mb-4">
-              Kimangu Day Secondary School is located in Rongai, Nakuru County,
-              Kenya. We are approximately 7 km from Rongai Town on
-              Rongai-Kandutura Road.
+              We are located in Rongai, Nakuru County, Kenya, approximately 7 km
+              from Rongai Town along Rongai-Kandutura Road.
             </p>
 
             <div class="mb-6 space-y-2">
@@ -630,9 +633,9 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const heroImages = [
-          "/assets/images/hero-img.jpg",
           "/assets/images/hero-staff-members.jpg",
           "/assets/images/hero-students.jpg",
+          "/assets/images/inspecting-guard-of-honor.jpg",
         ];
         const heroBg = document.querySelector(".hero-background-images");
         let currentImageIndex = 0;
@@ -645,7 +648,7 @@
           }, 500);
         }
         heroBg.style.transition = "opacity 0.5s ease-in-out";
-        setInterval(changeHeroImage, 10000);
+        setInterval(changeHeroImage, 8000);
       });
     </script>
   </body>
