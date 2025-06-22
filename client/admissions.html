@@ -462,13 +462,9 @@
         </div>
 
         <div class="max-w-4xl mx-auto">
-          <!-- Desktop/Tablet: Two columns with flexbox alignment -->
-          <div class="hidden gap-8 mb-12 md:grid md:grid-cols-2">
+          <div class="grid gap-8 mb-12 sm:grid-cols-2">
             <div class="flex flex-col text-center">
               <div class="flex-grow">
-                <div class="mb-4 text-4xl">
-                  <i class="fas fa-edit"></i>
-                </div>
                 <h3 class="mb-4 text-xl font-semibold">
                   Start Your Application
                 </h3>
@@ -486,12 +482,8 @@
                 </a>
               </div>
             </div>
-
             <div class="flex flex-col text-center">
               <div class="flex-grow">
-                <div class="mb-4 text-4xl">
-                  <i class="fas fa-phone"></i>
-                </div>
                 <h3 class="mb-4 text-xl font-semibold">Have Questions?</h3>
                 <p class="mb-6">
                   Contact our admissions office for personalized assistance.
@@ -513,7 +505,6 @@
 
     <div id="footer-placeholder"></div>
     <script>
-      // Smooth scrolling for any anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
