@@ -13,11 +13,13 @@
     />
   </head>
 
-  <body class="font-sans text-sm text-gray-900 md:text-base">
+  <body class="font-sans text-gray-800 bg-gray-50">
     <div id="nav-placeholder"></div>
 
     <!-- About Us Hero -->
-    <section class="relative py-8 mb-8 text-white bg-blue-500">
+    <section
+      class="relative py-12 mb-8 text-white bg-gradient-to-r from-blue-600 to-blue-500"
+    >
       <div class="absolute inset-0 opacity-20">
         <div
           class="w-full h-full"
@@ -27,7 +29,7 @@
         ></div>
       </div>
       <div class="relative flex flex-col items-center px-4 mx-auto max-w-7xl">
-        <h1 class="mb-4 text-3xl font-bold text-center md:text-5xl">
+        <h1 class="mb-4 text-4xl font-bold text-center md:text-5xl">
           About Our School
         </h1>
         <p class="max-w-2xl mb-6 text-lg text-center text-blue-100">
@@ -36,63 +38,66 @@
         <nav>
           <ol class="flex items-center space-x-2 text-sm">
             <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
-            <li><span class="mx-2">•</span></li>
-            <li class="font-medium">About Us</li>
+            <li><span class="mx-2 text-blue-300">•</span></li>
+            <li class="font-medium text-blue-100">About Us</li>
           </ol>
         </nav>
       </div>
     </section>
 
     <!-- Introduction -->
-    <section class="py-8">
+    <section class="py-12 bg-white">
       <div class="mx-auto max-w-7xl">
         <div class="grid items-center gap-12 mx-4 md:grid-cols-12">
           <div class="col-span-8">
-            <h2 class="mb-6 text-3xl font-bold text-gray-800">Our Story</h2>
-            <p class="mb-4">
-              Founded in 2016, Kimangu Day Secondary School began its journey
-              from modest origins, starting with just 33 students and 4
-              dedicated teachers. Since then, it has steadily grown to become
-              one of the most respected and high-performing academic
-              institutions in Rongai Sub County, Nakuru.
-            </p>
-            <p class="mb-4">
-              The school was established with a clear and compelling vision: to
-              offer quality education to the youth of Rongai and its neighboring
-              communities, equipping them with the knowledge, skills, and values
-              needed to become responsible citizens and capable future leaders
-              of our country.
-            </p>
-            <p class="mb-6">
-              Throughout the years, Kimangu Day has consistently upheld strong
-              academic standards, while placing equal emphasis on the holistic
-              development of each learner. We are deeply committed to fostering
-              character, encouraging leadership potential, and nurturing the
-              unique talents of our students. Today, we are proud to serve a
-              vibrant student body of over 500 learners, guided every day by our
-              core values of excellence, integrity, and responsibility, which
-              remain at the heart of everything we do.
-            </p>
+            <h2 class="mb-6 text-3xl font-bold text-gray-900">Our Story</h2>
+            <div class="space-y-4 text-gray-700">
+              <p>
+                Founded in 2016, Kimangu Day Secondary School began its journey
+                from modest origins, starting with just 33 students and 4
+                dedicated teachers. Since then, it has steadily grown to become
+                one of the most respected and high-performing academic
+                institutions in Rongai Sub County, Nakuru.
+              </p>
+              <p>
+                The school was established with a clear and compelling vision:
+                to offer quality education to the youth of Rongai and its
+                neighboring communities, equipping them with the knowledge,
+                skills, and values needed to become responsible citizens and
+                capable future leaders of our country.
+              </p>
+              <p>
+                Throughout the years, Kimangu Day has consistently upheld strong
+                academic standards, while placing equal emphasis on the holistic
+                development of each learner. We are deeply committed to
+                fostering character, encouraging leadership potential, and
+                nurturing the unique talents of our students. Today, we are
+                proud to serve a vibrant student body of over 500 learners,
+                guided every day by our core values of excellence, integrity,
+                and responsibility, which remain at the heart of everything we
+                do.
+              </p>
+            </div>
           </div>
 
           <img
             src="/assets/images/growth.svg"
             loading="lazy"
             alt="Our growth illustration"
-            class="hidden col-span-4 md:block"
+            class="hidden col-span-4 p-8 rounded-lg bg-blue-50 md:block"
           />
         </div>
       </div>
     </section>
 
     <!-- Leadership Team -->
-    <section id="leadership" class="py-20 bg-white">
+    <section id="leadership" class="py-16 bg-gray-100">
       <div class="px-4 mx-auto max-w-7xl">
-        <div class="mb-16 text-center">
-          <h2 class="mb-6 text-3xl font-bold text-center">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 text-3xl font-bold text-gray-900">
             Our Leadership Team
           </h2>
-          <p class="max-w-3xl mx-auto mb-12 text-center text-gray-600">
+          <p class="max-w-3xl mx-auto text-gray-600">
             Dedicated professionals who guide our institution toward excellence
             and ensure our students receive the best education possible.
           </p>
@@ -101,7 +106,7 @@
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <!-- Principal -->
           <div
-            class="overflow-hidden bg-white shadow-lg card-hover rounded-2xl"
+            class="overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
           >
             <div class="relative">
               <img
@@ -110,14 +115,16 @@
                 class="object-cover w-full h-64"
               />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
               ></div>
               <div class="absolute text-white bottom-4 left-4">
                 <div class="text-sm font-medium">Principal</div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="mb-2 text-xl font-bold">Mr. Maigwa Julius</h3>
+              <h3 class="mb-2 text-xl font-bold text-gray-900">
+                Mr. Maigwa Julius
+              </h3>
               <p class="mb-4 text-sm text-gray-600">
                 Visionary leader with 30+ years in education, founding the
                 school and leading it to national recognition.
@@ -131,7 +138,7 @@
 
           <!-- BOM Chair -->
           <div
-            class="overflow-hidden bg-white shadow-lg card-hover rounded-2xl"
+            class="overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
           >
             <div class="relative">
               <img
@@ -140,14 +147,16 @@
                 class="object-cover w-full h-64"
               />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
               ></div>
               <div class="absolute text-white bottom-4 left-4">
                 <div class="text-sm font-medium">BOM Chair</div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="mb-2 text-xl font-bold">Mr. Gathenya Paul</h3>
+              <h3 class="mb-2 text-xl font-bold text-gray-900">
+                Mr. Gathenya Paul
+              </h3>
               <p class="mb-4 text-sm text-gray-600">
                 Strategic governance leader who has strengthened our community
                 ties and secured key funding initiatives.
@@ -161,7 +170,7 @@
 
           <!-- Deputy Principal -->
           <div
-            class="overflow-hidden bg-white shadow-lg card-hover rounded-2xl"
+            class="overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
           >
             <div class="relative">
               <img
@@ -170,14 +179,16 @@
                 class="object-cover w-full h-64"
               />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
               ></div>
               <div class="absolute text-white bottom-4 left-4">
                 <div class="text-sm font-medium">Deputy Principal</div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="mb-2 text-xl font-bold">Md. Deputy Principal</h3>
+              <h3 class="mb-2 text-xl font-bold text-gray-900">
+                Md. Deputy Principal
+              </h3>
               <p class="mb-4 text-sm text-gray-600">
                 Mathematics specialist with expertise in curriculum development
                 and strong disciplinary leadership.
@@ -191,7 +202,7 @@
 
           <!-- Head of Studies -->
           <div
-            class="overflow-hidden bg-white shadow-lg card-hover rounded-2xl"
+            class="overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
           >
             <div class="relative">
               <img
@@ -200,14 +211,16 @@
                 class="object-cover w-full h-64"
               />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
               ></div>
               <div class="absolute text-white bottom-4 left-4">
                 <div class="text-sm font-medium">Head of Studies</div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="mb-2 text-xl font-bold">Mr. Ombogo Isaac</h3>
+              <h3 class="mb-2 text-xl font-bold text-gray-900">
+                Mr. Ombogo Isaac
+              </h3>
               <p class="mb-4 text-sm text-gray-600">
                 Academic programs coordinator ensuring quality teaching and
                 continuous curriculum improvement.
@@ -223,7 +236,7 @@
         <div class="mt-12 text-center">
           <a
             href="/staff.html"
-            class="items-center px-8 py-4 font-semibold text-white transition-all duration-300 transform bg-blue-500 rounded-full hover:bg-blue-600"
+            class="inline-flex items-center px-6 py-3 font-semibold text-white transition-colors duration-300 bg-blue-600 rounded-md hover:bg-blue-700"
           >
             <i class="mr-2 fas fa-users"></i>
             Meet All Our Staff
@@ -235,13 +248,13 @@
     <!-- Timeline History -->
     <section class="py-16 bg-white">
       <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-12 text-3xl font-bold text-center">
+        <h2 class="mb-12 text-3xl font-bold text-center text-gray-900">
           Our Journey Through The Years
         </h2>
 
         <div class="relative">
           <div
-            class="absolute hidden w-1 h-full transform -translate-x-1/2 bg-blue-200 left-1/2 sm:block"
+            class="absolute hidden w-1 h-full transform -translate-x-1/2 bg-gray-200 left-1/2 sm:block"
           ></div>
 
           <div class="space-y-8 sm:space-y-16">
@@ -255,18 +268,18 @@
               </div>
 
               <div
-                class="p-4 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
+                class="p-6 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
               >
                 <div class="flex items-center mb-2">
                   <div class="p-2 mr-3 bg-blue-100 rounded-full">
-                    <i class="text-blue-500 fas fa-seedling"></i>
+                    <i class="text-blue-600 fas fa-seedling"></i>
                   </div>
                   <div>
-                    <h3 class="text-xl font-bold text-blue-500">2016</h3>
-                    <p class="text-lg font-medium">Foundation</p>
+                    <h3 class="text-xl font-bold text-blue-600">2016</h3>
+                    <p class="text-lg font-medium text-gray-900">Foundation</p>
                   </div>
                 </div>
-                <p>
+                <p class="text-gray-700">
                   Kimangu Day Secondary School was established with 33 students
                   and 4 dedicated teachers.
                 </p>
@@ -275,18 +288,18 @@
               <!-- Desktop version -->
               <div class="flex-col items-center hidden sm:flex sm:flex-row">
                 <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <h3 class="text-2xl font-bold text-blue-500">2016</h3>
-                  <p class="text-lg font-medium">Foundation</p>
-                  <p>
+                  <h3 class="text-2xl font-bold text-blue-600">2016</h3>
+                  <p class="text-lg font-medium text-gray-900">Foundation</p>
+                  <p class="text-gray-700">
                     Kimangu Day Secondary School was established with 33
                     students and 4 dedicated teachers.
                   </p>
                 </div>
                 <div class="sm:w-1/2 sm:pl-16">
                   <div
-                    class="flex items-center justify-center h-32 text-blue-500 bg-blue-100 rounded shadow"
+                    class="flex items-center justify-center h-32 text-blue-600 bg-blue-100 rounded-lg shadow"
                   >
-                    <i class="text-3xl fas fa-seedling"></i>
+                    <i class="text-4xl fas fa-seedling"></i>
                   </div>
                 </div>
               </div>
@@ -303,18 +316,20 @@
 
               <!-- Mobile version -->
               <div
-                class="p-4 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
+                class="p-6 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
               >
                 <div class="flex items-center mb-2">
                   <div class="p-2 mr-3 bg-blue-100 rounded-full">
-                    <i class="text-blue-500 fa-solid fa-chart-line"></i>
+                    <i class="text-blue-600 fa-solid fa-chart-line"></i>
                   </div>
                   <div>
-                    <h3 class="text-xl font-bold text-blue-500">2017</h3>
-                    <p class="text-lg font-medium">First Major Expansion</p>
+                    <h3 class="text-xl font-bold text-blue-600">2017</h3>
+                    <p class="text-lg font-medium text-gray-900">
+                      First Major Expansion
+                    </p>
                   </div>
                 </div>
-                <p>
+                <p class="text-gray-700">
                   The school expanded with 2 new classrooms and exponential form
                   one admission of 54 students.
                 </p>
@@ -324,15 +339,17 @@
               <div class="flex-col items-center hidden sm:flex sm:flex-row">
                 <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
                   <div
-                    class="flex items-center justify-center h-32 text-blue-500 bg-blue-100 rounded shadow"
+                    class="flex items-center justify-center h-32 text-blue-600 bg-blue-100 rounded-lg shadow"
                   >
-                    <i class="text-3xl fa-solid fa-chart-line"></i>
+                    <i class="text-4xl fa-solid fa-chart-line"></i>
                   </div>
                 </div>
                 <div class="sm:w-1/2 sm:pl-16">
-                  <h3 class="text-2xl font-bold text-blue-500">2017</h3>
-                  <p class="text-lg font-medium">First Major Expansion</p>
-                  <p>
+                  <h3 class="text-2xl font-bold text-blue-600">2017</h3>
+                  <p class="text-lg font-medium text-gray-900">
+                    First Major Expansion
+                  </p>
+                  <p class="text-gray-700">
                     The school expanded with 2 new classrooms and exponential
                     form one admission of 54 students.
                   </p>
@@ -352,18 +369,20 @@
 
               <!-- Mobile version -->
               <div
-                class="p-4 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
+                class="p-6 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
               >
                 <div class="flex items-center mb-2">
                   <div class="p-2 mr-3 bg-blue-100 rounded-full">
-                    <i class="text-blue-500 fa-solid fa-medal"></i>
+                    <i class="text-blue-600 fa-solid fa-medal"></i>
                   </div>
                   <div>
-                    <h3 class="text-xl font-bold text-blue-500">2019</h3>
-                    <p class="text-lg font-medium">Academic Excellence</p>
+                    <h3 class="text-xl font-bold text-blue-600">2019</h3>
+                    <p class="text-lg font-medium text-gray-900">
+                      Academic Excellence
+                    </p>
                   </div>
                 </div>
-                <p>
+                <p class="text-gray-700">
                   At its first KCSE attempt, Kimangu Day achieved incredible
                   results producing the best student within our locality.
                 </p>
@@ -372,18 +391,20 @@
               <!-- Desktop version -->
               <div class="flex-col items-center hidden sm:flex sm:flex-row">
                 <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <h3 class="text-2xl font-bold text-blue-500">2019</h3>
-                  <p class="text-lg font-medium">Academic Excellence</p>
-                  <p>
+                  <h3 class="text-2xl font-bold text-blue-600">2019</h3>
+                  <p class="text-lg font-medium text-gray-900">
+                    Academic Excellence
+                  </p>
+                  <p class="text-gray-700">
                     At its first KCSE attempt, Kimangu Day achieved incredible
                     results producing the best student within our locality.
                   </p>
                 </div>
                 <div class="sm:w-1/2 sm:pl-16">
                   <div
-                    class="flex items-center justify-center h-32 text-blue-500 bg-blue-100 rounded shadow"
+                    class="flex items-center justify-center h-32 text-blue-600 bg-blue-100 rounded-lg shadow"
                   >
-                    <i class="text-3xl fa-solid fa-medal"></i>
+                    <i class="text-4xl fa-solid fa-medal"></i>
                   </div>
                 </div>
               </div>
@@ -402,18 +423,20 @@
 
               <!-- Mobile version -->
               <div
-                class="p-4 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
+                class="p-6 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
               >
                 <div class="flex items-center mb-2">
                   <div class="p-2 mr-3 bg-blue-100 rounded-full">
-                    <i class="text-blue-500 fa-solid fa-laptop-code"></i>
+                    <i class="text-blue-600 fa-solid fa-laptop-code"></i>
                   </div>
                   <div>
-                    <h3 class="text-xl font-bold text-blue-500">2023</h3>
-                    <p class="text-lg font-medium">Technology Integration</p>
+                    <h3 class="text-xl font-bold text-blue-600">2023</h3>
+                    <p class="text-lg font-medium text-gray-900">
+                      Technology Integration
+                    </p>
                   </div>
                 </div>
-                <p>
+                <p class="text-gray-700">
                   Introduction of computer labs and digital learning resources
                   to enhance education quality.
                 </p>
@@ -423,15 +446,17 @@
               <div class="flex-col items-center hidden sm:flex sm:flex-row">
                 <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
                   <div
-                    class="flex items-center justify-center h-32 text-blue-500 bg-blue-100 rounded shadow"
+                    class="flex items-center justify-center h-32 text-blue-600 bg-blue-100 rounded-lg shadow"
                   >
-                    <i class="text-3xl fa-solid fa-laptop-code"></i>
+                    <i class="text-4xl fa-solid fa-laptop-code"></i>
                   </div>
                 </div>
                 <div class="sm:w-1/2 sm:pl-16">
-                  <h3 class="text-2xl font-bold text-blue-500">2023</h3>
-                  <p class="text-lg font-medium">Technology Integration</p>
-                  <p>
+                  <h3 class="text-2xl font-bold text-blue-600">2023</h3>
+                  <p class="text-lg font-medium text-gray-900">
+                    Technology Integration
+                  </p>
+                  <p class="text-gray-700">
                     Introduction of computer labs and digital learning resources
                     to enhance education quality.
                   </p>
@@ -452,18 +477,20 @@
 
               <!-- Mobile version -->
               <div
-                class="p-4 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
+                class="p-6 bg-white border-l-4 border-blue-500 rounded-lg shadow sm:hidden"
               >
                 <div class="flex items-center mb-2">
                   <div class="p-2 mr-3 bg-blue-100 rounded-full">
-                    <i class="text-blue-500 fa-solid fa-rocket"></i>
+                    <i class="text-blue-600 fa-solid fa-rocket"></i>
                   </div>
                   <div>
-                    <h3 class="text-xl font-bold text-blue-500">2025</h3>
-                    <p class="text-lg font-medium">Today's Excellence</p>
+                    <h3 class="text-xl font-bold text-blue-600">2025</h3>
+                    <p class="text-lg font-medium text-gray-900">
+                      Today's Excellence
+                    </p>
                   </div>
                 </div>
-                <p>
+                <p class="text-gray-700">
                   Now with over 500 students, modern facilities, and consistent
                   academic performance.
                 </p>
@@ -472,18 +499,20 @@
               <!-- Desktop version -->
               <div class="flex-col items-center hidden sm:flex sm:flex-row">
                 <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <h3 class="text-2xl font-bold text-blue-500">2025</h3>
-                  <p class="text-lg font-medium">Today's Excellence</p>
-                  <p>
+                  <h3 class="text-2xl font-bold text-blue-600">2025</h3>
+                  <p class="text-lg font-medium text-gray-900">
+                    Today's Excellence
+                  </p>
+                  <p class="text-gray-700">
                     Now with over 500 students, modern facilities, and
                     consistent academic performance.
                   </p>
                 </div>
                 <div class="sm:w-1/2 sm:pl-16">
                   <div
-                    class="flex items-center justify-center h-32 text-blue-500 bg-blue-100 rounded shadow"
+                    class="flex items-center justify-center h-32 text-blue-600 bg-blue-100 rounded-lg shadow"
                   >
-                    <i class="text-3xl fa-solid fa-rocket"></i>
+                    <i class="text-4xl fa-solid fa-rocket"></i>
                   </div>
                 </div>
               </div>
@@ -493,28 +522,30 @@
       </div>
     </section>
 
-    <section class="py-16 text-gray-900 bg-blue-50">
+    <section class="py-16 bg-gray-100">
       <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-12 text-3xl font-bold text-center">Our Numbers</h2>
+        <h2 class="mb-12 text-3xl font-bold text-center text-gray-900">
+          Our Numbers
+        </h2>
 
         <div class="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
-          <div>
-            <div class="mb-2 text-4xl font-bold text-blue-500">25+</div>
+          <div class="p-6 bg-white rounded-lg shadow">
+            <div class="mb-2 text-4xl font-bold text-blue-600">25+</div>
             <p class="text-gray-600">Dedicated Staff Members</p>
           </div>
 
-          <div>
-            <div class="mb-2 text-4xl font-bold text-blue-500">10</div>
+          <div class="p-6 bg-white rounded-lg shadow">
+            <div class="mb-2 text-4xl font-bold text-blue-600">10</div>
             <p class="text-gray-600">Years of Academic Excellence</p>
           </div>
 
-          <div>
-            <div class="mb-2 text-4xl font-bold text-blue-500">1000+</div>
+          <div class="p-6 bg-white rounded-lg shadow">
+            <div class="mb-2 text-4xl font-bold text-blue-600">1000+</div>
             <p class="text-gray-600">Students Served</p>
           </div>
 
-          <div>
-            <div class="mb-2 text-4xl font-bold text-blue-500">90%</div>
+          <div class="p-6 bg-white rounded-lg shadow">
+            <div class="mb-2 text-4xl font-bold text-blue-600">90%</div>
             <p class="text-gray-600">Client Satisfaction Rate</p>
           </div>
         </div>
@@ -522,145 +553,131 @@
     </section>
 
     <!-- Mission, Vision & Values -->
-    <section class="py-16">
+    <section class="py-16 bg-white">
       <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-12 text-3xl font-bold text-center">Guiding Principles</h2>
+        <h2 class="mb-12 text-3xl font-bold text-center text-gray-900">
+          Our Guiding Principles
+        </h2>
 
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-        >
-          <!-- Mission -->
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Card -->
           <div
-            class="p-8 transition border-b border-b-4 border-l-4 border-blue-300 hover:shadow-lg"
+            class="p-8 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-blue-200"
           >
             <div
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-blue-500 bg-blue-100 rounded-full"
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white bg-blue-600 rounded-full"
             >
-              <i class="text-3xl fas fa-bullseye"></i>
+              <i class="text-2xl fas fa-bullseye"></i>
             </div>
-            <h3 class="mb-4 text-2xl font-bold text-center">Mission</h3>
-            <p class="text-center">
+            <h3 class="mb-4 text-xl font-bold text-center text-gray-900">
+              Mission
+            </h3>
+            <p class="text-center text-gray-700">
               To nurture responsible and disciplined students through quality
               education, fostering critical thinking skills, and promoting
               holistic development to prepare them for future challenges.
             </p>
           </div>
 
-          <!-- Vision -->
           <div
-            class="p-8 transition border-t-4 border-l-4 border-blue-300 hover:shadow-lg"
+            class="p-8 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-blue-200"
           >
             <div
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-blue-500 bg-blue-100 rounded-full"
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white bg-blue-600 rounded-full"
             >
-              <i class="text-3xl fas fa-eye"></i>
+              <i class="text-2xl fas fa-eye"></i>
             </div>
-            <h3 class="mb-4 text-2xl font-bold text-center">Vision</h3>
-            <p class="text-center">
+            <h3 class="mb-4 text-xl font-bold text-center text-gray-900">
+              Vision
+            </h3>
+            <p class="text-center text-gray-700">
               To be a center of academic excellence and moral integrity in Kenya
               and beyond, producing well-rounded graduates who will positively
               impact their communities.
             </p>
           </div>
 
-          <!-- Core Values -->
           <div
-            class="p-8 transition bg-white border-b-4 border-l-4 border-blue-300 hover:shadow-lg"
+            class="p-8 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-blue-200"
           >
             <div
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-blue-500 bg-blue-100 rounded-full"
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white bg-blue-600 rounded-full"
             >
-              <i class="text-3xl fas fa-star"></i>
+              <i class="text-2xl fas fa-star"></i>
             </div>
-            <h3 class="mb-4 text-2xl font-bold text-center">Core Values</h3>
-            <ul class="space-y-2">
-              <li class="flex items-center">
-                <div
-                  class="flex items-center justify-center w-6 h-6 mr-3 text-blue-500"
-                >
-                  <i class="text-sm fas fa-check"></i>
-                </div>
+            <h3 class="mb-4 text-xl font-bold text-center text-gray-900">
+              Core Values
+            </h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
                 <span
-                  ><strong>Excellence:</strong> Striving for the highest
-                  standards in all endeavors</span
+                  ><strong class="text-gray-900">Excellence:</strong> Striving
+                  for the highest standards</span
                 >
               </li>
-              <li class="flex items-center">
-                <div
-                  class="flex items-center justify-center w-6 h-6 mr-3 text-blue-500"
-                >
-                  <i class="text-sm fas fa-check"></i>
-                </div>
+              <li class="flex items-start">
                 <span
-                  ><strong>Integrity:</strong> Upholding honesty and ethical
-                  conduct</span
+                  ><strong class="text-gray-900">Integrity:</strong> Honesty and
+                  ethical conduct</span
                 >
               </li>
-              <li class="flex items-center">
-                <div
-                  class="flex items-center justify-center w-6 h-6 mr-3 text-blue-500"
-                >
-                  <i class="text-sm fas fa-check"></i>
-                </div>
+              <li class="flex items-start">
                 <span
-                  ><strong>Discipline:</strong> Self-control and adherence to
-                  rules</span
+                  ><strong class="text-gray-900">Discipline:</strong>
+                  Self-control and order</span
                 >
               </li>
-              <li class="flex items-center">
-                <div
-                  class="flex items-center justify-center w-6 h-6 mr-3 text-blue-500"
-                >
-                  <i class="text-sm fas fa-check"></i>
-                </div>
+              <li class="flex items-start">
                 <span
-                  ><strong>Responsibility:</strong> Taking ownership of actions
-                  and decisions</span
+                  ><strong class="text-gray-900">Responsibility:</strong> Owning
+                  actions and decisions</span
                 >
               </li>
-              <li class="flex items-center">
-                <div
-                  class="flex items-center justify-center w-6 h-6 mr-3 text-blue-500"
-                >
-                  <i class="text-sm fas fa-check"></i>
-                </div>
+              <li class="flex items-start">
                 <span
-                  ><strong>Innovation:</strong> Embracing creativity and new
-                  ideas</span
+                  ><strong class="text-gray-900">Innovation:</strong> Embracing
+                  creativity</span
                 >
               </li>
             </ul>
           </div>
 
-          <!-- School Anthem -->
           <div
-            class="p-8 transition bg-white border-t-4 border-l-4 border-r-4 border-blue-300 hover:shadow-lg"
+            class="p-8 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-blue-200"
           >
             <div
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-blue-500 bg-blue-100 rounded-full"
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white bg-blue-600 rounded-full"
             >
-              <i class="text-3xl fas fa-music"></i>
+              <i class="text-2xl fas fa-music"></i>
             </div>
-            <h3 class="mb-4 text-2xl font-bold text-center">Anthem</h3>
-            <p class="text-center">
-              Oh Kimangu Day, our pride and light, In knowledge and truth, we
-              take flight. United we stand, with purpose and might, For honor,
-              for growth, our future is bright.
-            </p>
-            <p class="mt-4 text-center">
-              We strive for excellence every day, With courage and hope to guide
-              our way. In service and learning, hand in hand, We build our
-              dreams, strong we stand.
-            </p>
+            <h3 class="mb-4 text-xl font-bold text-center text-gray-900">
+              Anthem
+            </h3>
+            <blockquote
+              class="space-y-3 text-sm italic text-center text-gray-700"
+            >
+              <p>
+                Oh Kimangu Day, our pride and light,<br />In knowledge and
+                truth, we take flight.<br />United we stand, with purpose and
+                might,<br />For honor, for growth, our future is bright.
+              </p>
+              <p>
+                We strive for excellence every day,<br />With courage and hope
+                to guide our way.<br />In service and learning, hand in hand,<br />We
+                build our dreams, strong we stand.
+              </p>
+            </blockquote>
           </div>
         </div>
       </div>
     </section>
 
     <!-- School Facilities -->
-    <section class="py-16">
+    <section class="py-16 bg-gray-50">
       <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-4 text-3xl font-bold text-center">Facilities</h2>
+        <h2 class="mb-4 text-3xl font-bold text-center text-gray-900">
+          Facilities
+        </h2>
         <p class="max-w-3xl mx-auto mb-12 text-center text-gray-600">
           We are equiped with modern facilities designed to enhance the learning
           experience and provide a conducive environment for academic and
@@ -669,33 +686,35 @@
 
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <!-- Academic Facilities -->
-          <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center mb-4">
+          <div
+            class="p-8 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="flex items-center mb-6">
               <div
-                class="flex items-center justify-center w-12 h-12 mr-4 text-blue-500 bg-blue-100 rounded-full"
+                class="flex items-center justify-center w-12 h-12 mr-4 text-white bg-blue-600 rounded-full"
               >
-                <i class="text-2xl fas fa-chalkboard-teacher"></i>
+                <i class="text-xl fas fa-chalkboard-teacher"></i>
               </div>
-              <h3 class="text-xl font-bold">Academic</h3>
+              <h3 class="text-xl font-bold text-gray-900">Academic</h3>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Modern classrooms equipped with digital projectors</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span
                   >Fully equipped science laboratory for Biology, Chemistry, and
                   Physics</span
                 >
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Computer lab with high-speed internet access</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span
                   >Coming up soon - Digital library with extensive collection
                   e-resources</span
@@ -705,84 +724,90 @@
           </div>
 
           <!-- Sports Facilities -->
-          <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center mb-4">
+          <div
+            class="p-8 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="flex items-center mb-6">
               <div
-                class="flex items-center justify-center w-12 h-12 mr-4 text-blue-500 bg-blue-100 rounded-full"
+                class="flex items-center justify-center w-12 h-12 mr-4 text-white bg-blue-600 rounded-full"
               >
-                <i class="text-2xl fas fa-running"></i>
+                <i class="text-xl fas fa-running"></i>
               </div>
-              <h3 class="text-xl font-bold">Sports</h3>
+              <h3 class="text-xl font-bold text-gray-900">Sports</h3>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Standard football pitch</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Basketball and volleyball courts</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Athletics track</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Indoor games facilities</span>
               </li>
             </ul>
           </div>
 
           <!-- Support Facilities -->
-          <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center mb-4">
+          <div
+            class="p-8 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="flex items-center mb-6">
               <div
-                class="flex items-center justify-center w-12 h-12 mr-4 text-blue-500 bg-blue-100 rounded-full"
+                class="flex items-center justify-center w-12 h-12 mr-4 text-white bg-blue-600 rounded-full"
               >
-                <i class="text-2xl fas fa-hands-helping"></i>
+                <i class="text-xl fas fa-hands-helping"></i>
               </div>
-              <h3 class="text-xl font-bold">Support</h3>
+              <h3 class="text-xl font-bold text-gray-900">Support</h3>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Guidance and counseling office</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Assembly hall for school functions</span>
               </li>
             </ul>
           </div>
 
           <!-- Entertainment Facilities -->
-          <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl">
-            <div class="flex items-center mb-4">
+          <div
+            class="p-8 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="flex items-center mb-6">
               <div
-                class="flex items-center justify-center w-12 h-12 mr-4 text-blue-500 bg-blue-100 rounded-full"
+                class="flex items-center justify-center w-12 h-12 mr-4 text-white bg-blue-600 rounded-full"
               >
-                <i class="text-2xl fas fa-film"></i>
+                <i class="text-xl fas fa-film"></i>
               </div>
-              <h3 class="text-xl font-bold">Entertainment</h3>
+              <h3 class="text-xl font-bold text-gray-900">Entertainment</h3>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span
                   >Spacious hall for movie screenings and school events</span
                 >
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Outdoor stage for music, drama, and talent shows</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Access to board games and recreational activities</span>
               </li>
               <li class="flex items-start">
-                <i class="mt-1 mr-2 text-blue-500 fas fa-check-circle"></i>
+                <i class="mt-1 mr-3 text-blue-500 fas fa-check-circle"></i>
                 <span>Fully equipped music and PA system for events</span>
               </li>
             </ul>
