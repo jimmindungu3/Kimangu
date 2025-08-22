@@ -1,0 +1,283 @@
+{
+  "administration": [
+    {
+      "name": "Mr. Maigwa Julius",
+      "position": "Principal",
+      "image": "/assets/images/principal.jpg",
+      "responsibilities": [
+        "Overall leadership and administration of the school",
+        "Strategic planning and implementation of school policies",
+        "Managing school resources and finances",
+        "Leading curriculum development and implementation"
+      ]
+    },
+    {
+      "name": "Mr. Paul Gathenya",
+      "position": "BOM Chairperson",
+      "image": "/assets/images/bom-chair.jpg",
+      "responsibilities": [
+        "Providing leadership and oversight to the Board of Management",
+        "Policy formulation and governance support",
+        "Representing BOM in school strategic planning",
+        "Overseeing effective implementation of BOM decisions"
+      ]
+    },
+    {
+      "name": "Ms. Abc Xyz",
+      "position": "Deputy Principal",
+      "image": "/assets/images/deputy-principal.jpg",
+      "responsibilities": [
+        "Assisting the principal in school administration",
+        "Overseeing student discipline and welfare",
+        "Coordinating teacher performance evaluations",
+        "Managing school operations in principal's absence"
+      ]
+    }
+  ],
+  "teaching": [
+    {
+      "name": "Mr. Ombogo Isaac",
+      "position": "H.O.S, Math/Physics",
+      "image": "/assets/images/head-of-studies.jpg",
+      "responsibilities": [
+        "Overseeing academic planning and implementation",
+        "Coordinating examinations and assessments",
+        "Monitoring syllabus coverage and learning outcomes",
+        "Analyzing and reporting on academic performance"
+      ]
+    },
+    {
+      "name": "Mr. Osore Brian",
+      "position": "H.O.D Sciences, Chem/Phyc",
+      "image": "/assets/images/mr-osore.jpg",
+      "responsibilities": [
+        "Teaching Chemistry and Physics to Forms 3 and 4",
+        "Leading the Science Department",
+        "Coordinating laboratory activities and resources",
+        "Organizing science competitions and exhibitions"
+      ]
+    },
+    {
+      "name": "Md. Florence Kabere",
+      "position": "H.O.D Languages, Eng/Lit",
+      "image": "/assets/images/md-kabere.jpg",
+      "responsibilities": [
+        "Teaching English and Literature to Forms 2 and 4",
+        "Leading the Languages Department",
+        "Organizing language clubs and literacy activities",
+        "Coordinating school journalism and magazine"
+      ]
+    },
+    {
+      "name": "Mr. Kipruto Kipsosion",
+      "position": "H.O.D Technicals, Math/Bus",
+      "image": "/assets/images/maths-teacher.jpg",
+      "responsibilities": [
+        "Teaching Mathematics to Forms 3 and 4",
+        "Providing remedial classes for struggling students",
+        "Coordinating mathematics competitions",
+        "Developing innovative teaching materials"
+      ]
+    },
+    {
+      "name": "Md. Alice Moses",
+      "position": "H.O.D Humanities, Kis/His",
+      "image": "/assets/images/md-alice.jpg",
+      "responsibilities": [
+        "Teaching History and Government to all forms",
+        "Organizing historical trips and excursions",
+        "Coordinating debate club and civic education",
+        "Developing research skills among students"
+      ]
+    },
+    {
+      "name": "Md. Odima Mary",
+      "position": "H.O.D G&C, Math/Bus",
+      "image": "/assets/images/md-odima.jpg",
+      "responsibilities": [
+        "Teaching Business Studies and Mathematics across all forms",
+        "Coordinating guidance and counselling programs",
+        "Leading school-wide drug and substance abuse awareness",
+        "Mentoring students in personal and academic development"
+      ]
+    },
+    {
+      "name": "Mr. John Doe",
+      "position": "Biology and Agriculture Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching Biology and Agriculture to all forms",
+        "Managing the school farm and agricultural projects",
+        "Leading environmental conservation initiatives",
+        "Coordinating health and wellness programs"
+      ]
+    },
+    {
+      "name": "Mr. James Mwangi",
+      "position": "ICT/Computer Studies Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching Computer Studies to all forms",
+        "Coordinating ICT integration across subjects",
+        "Managing school computer lab and resources",
+        "Training students in digital literacy and coding"
+      ]
+    },
+    {
+      "name": "Ms. Ruth Wanjiku",
+      "position": "CRE and Life Skills Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching CRE across all forms",
+        "Supporting student moral and spiritual development",
+        "Coordinating life skills education programs",
+        "Mentoring student peer leaders"
+      ]
+    },
+    {
+      "name": "Mr. Peter Otieno",
+      "position": "Geography Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching Geography to Forms 1–4",
+        "Organizing field trips and geographical studies",
+        "Coordinating Geography club activities",
+        "Supporting environmental awareness programs"
+      ]
+    },
+    {
+      "name": "Ms. Mercy Nduta",
+      "position": "Home Science Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching Home Science to all forms",
+        "Training students in nutrition and textile design",
+        "Supervising practical cooking and tailoring projects",
+        "Organizing interschool exhibitions"
+      ]
+    },
+    {
+      "name": "Mr. Kevin Njoroge",
+      "position": "Physical Education & Sports Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching PE to all forms",
+        "Coordinating school sports activities",
+        "Training school teams for competitions",
+        "Promoting student fitness and wellness"
+      ]
+    },
+    {
+      "name": "Ms. Esther Mumbi",
+      "position": "Music Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching Music across all forms",
+        "Directing the school choir and orchestra",
+        "Coordinating music festivals and competitions",
+        "Integrating music into cultural events"
+      ]
+    },
+    {
+      "name": "Mr. Allan Onyango",
+      "position": "Drama and Performing Arts Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching Drama and Performing Arts",
+        "Directing school drama productions",
+        "Organizing cultural festivals and performances",
+        "Mentoring students in public speaking and acting"
+      ]
+    },
+    {
+      "name": "Ms. Claire Mutheu",
+      "position": "French Teacher",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Teaching French to all forms",
+        "Preparing students for DELF certification",
+        "Organizing French cultural exchange programs",
+        "Running the French club"
+      ]
+    }
+  ],
+  "support": [
+    {
+      "name": "Ms. Milicent",
+      "position": "School Secretary",
+      "image": "/assets/images/deputy-principal.jpg",
+      "responsibilities": [
+        "Managing school administrative records",
+        "Coordinating communication between school and stakeholders",
+        "Assisting with admissions and registrations",
+        "Managing the principal's schedule and appointments"
+      ]
+    },
+    {
+      "name": "Mr. Danson Muhalia",
+      "position": "School Bursar",
+      "image": "/assets/images/bursar.jpg",
+      "responsibilities": [
+        "Managing school finances and accounts",
+        "Processing staff payroll and benefits",
+        "Preparing financial reports and budgets",
+        "Ensuring compliance with financial regulations"
+      ]
+    },
+    {
+      "name": "Mr. Linus Kipchirchir",
+      "position": "Laboratory Technician",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Preparing and maintaining lab equipment and materials",
+        "Assisting in science practical sessions",
+        "Ensuring adherence to safety protocols in the lab",
+        "Inventory management of lab supplies"
+      ]
+    },
+    {
+      "name": "Md. Florence",
+      "position": "School Cateress",
+      "image": "/assets/images/stomachs-matter.jpg",
+      "responsibilities": [
+        "Planning and preparing nutritious meals for students",
+        "Managing kitchen staff and food service operations",
+        "Ensuring food safety and hygiene standards",
+        "Overseeing food inventory and budget management"
+      ]
+    },
+    {
+      "name": "Mr. Peter Chege",
+      "position": "Head of Security",
+      "image": "/assets/images/security-officer.jpg",
+      "responsibilities": [
+        "Ensuring safety and security of the school compound",
+        "Managing the security team and schedules",
+        "Implementing security protocols and procedures",
+        "Conducting regular security assessments"
+      ]
+    },
+    {
+      "name": "Mr. Mariuko",
+      "position": "IT Technician",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Maintaining school ICT infrastructure",
+        "Providing technical support to staff and students",
+        "Managing school network and internet connectivity",
+        "Ensuring cybersecurity and data protection"
+      ]
+    },
+    {
+      "name": "Ms. Jane Achieng",
+      "position": "Librarian",
+      "image": "https://placehold.co/600x400",
+      "responsibilities": [
+        "Managing the school library resources",
+        "Supporting students in research and reading programs",
+        "Organizing literacy and reading campaigns",
+        "Maintaining digital and physical library systems"
+      ]
+    }
+  ]
+}
