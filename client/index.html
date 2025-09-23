@@ -633,28 +633,35 @@
     <div id="footer-placeholder"></div>
     <script src="/src/include.js"></script>
 
-    <script>
-      const heroImages = [
+<script>
+  // Check if screen is small (Tailwind's sm breakpoint ~640px)
+  const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+
+  // Choose images based on screen size
+  const heroImages = isSmallScreen
+    ? [
+        "/assets/images/hero-staff-members-small.png",
+        "/assets/images/hero-students-small.png",
+        "/assets/images/inspecting-guard-of-honor-small.png",
+      ]
+    : [
         "/assets/images/hero-staff-members.webp",
         "/assets/images/hero-students.webp",
         "/assets/images/inspecting-guard-of-honor.webp",
       ];
 
-      let currentImageIndex = 0;
-      const heroBackground = document.getElementById("heroBackground");
+  let currentImageIndex = 0;
+  const heroBackground = document.getElementById("heroBackground");
 
-      heroBackground.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+  heroBackground.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
 
-      function changeHeroImage() {
-        currentImageIndex = (currentImageIndex + 1) % heroImages.length;
-        heroBackground.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
-      }
+  function changeHeroImage() {
+    currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+    heroBackground.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+  }
 
-      setInterval(changeHeroImage, 5000);
+  setInterval(changeHeroImage, 5000);
+</script>
 
-      heroBackground.addEventListener("mouseenter", function () {});
-
-      heroBackground.addEventListener("mouseleave", function () {});
-    </script>
   </body>
 </html>
