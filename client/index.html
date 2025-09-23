@@ -23,19 +23,21 @@
     <section
       class="relative flex items-end justify-center text-center h-[50vh]"
     >
-      <!-- Background image -->
-      <div
-        id="heroBackground"
-        class="absolute inset-0 transition-all duration-1000 ease-in-out bg-center bg-cover"
+      <!-- Hero image (discoverable for LCP) -->
+      <img
+        id="heroImage"
+        src="/assets/images/hero-students.webp"
+        alt="Kimangu Students"
+        fetchpriority="high"
+        class="absolute inset-0 object-cover w-full h-full"
         style="z-index: 1"
-      ></div>
+      />
 
-      <!-- Gradient bar full width -->
+      <!-- Gradient overlay -->
       <div
         class="relative w-full py-4 bg-gradient-to-t from-black/70 via-black/40 via-black/10 to-transparent"
         style="z-index: 3"
       >
-        <!-- Text centered within -->
         <div class="px-4 mx-auto max-w-7xl">
           <h2
             class="px-4 py-1 text-2xl font-bold text-white sm:text-3xl lg:text-5xl"
@@ -633,35 +635,35 @@
     <div id="footer-placeholder"></div>
     <script src="/src/include.js"></script>
 
-<script>
-  // Check if screen is small (Tailwind's sm breakpoint ~640px)
-  const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+    <script>
+      // Check if screen is small (Tailwind's sm breakpoint ~640px)
+      const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
 
-  // Choose images based on screen size
-  const heroImages = isSmallScreen
-    ? [
-        "/assets/images/hero-staff-members-small.webp",
-        "/assets/images/hero-students-small.webp",
-        "/assets/images/inspecting-guard-of-honor-small.webp",
-      ]
-    : [
-        "/assets/images/hero-staff-members.webp",
-        "/assets/images/hero-students.webp",
-        "/assets/images/inspecting-guard-of-honor.webp",
-      ];
+      // Choose images based on screen size
+      const heroImages = isSmallScreen
+        ? [
+            "/assets/images/hero-staff-members-small.webp",
+            "/assets/images/hero-students-small.webp",
+            "/assets/images/inspecting-guard-of-honor-small.webp",
+          ]
+        : [
+            "/assets/images/hero-staff-members.webp",
+            "/assets/images/hero-students.webp",
+            "/assets/images/inspecting-guard-of-honor.webp",
+          ];
 
-  let currentImageIndex = 0;
-  const heroBackground = document.getElementById("heroBackground");
+      let currentImageIndex = 0;
+      const heroImg = document.getElementById("heroImage");
 
-  heroBackground.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+      // Ensure the first image matches the array
+      heroImg.src = heroImages[currentImageIndex];
 
-  function changeHeroImage() {
-    currentImageIndex = (currentImageIndex + 1) % heroImages.length;
-    heroBackground.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
-  }
+      function changeHeroImage() {
+        currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+        heroImg.src = heroImages[currentImageIndex];
+      }
 
-  setInterval(changeHeroImage, 5000);
-</script>
-
+      setInterval(changeHeroImage, 5000);
+    </script>
   </body>
 </html>
