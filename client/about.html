@@ -71,36 +71,54 @@
                 900: "#18181b",
               },
             },
+            fontFamily: {
+              heading: ['"Inter"', "system-ui", "sans-serif"],
+              body: ['"Inter"', "system-ui", "sans-serif"],
+            },
           },
         },
       };
     </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      .text-body {
+        color: #3f3f46;
+      }
+
+      .text-heading {
+        color: #18181b;
+      }
+    </style>
   </head>
 
-  <body class="font-sans text-neutral-800">
+  <body class="text-body">
     <div id="nav-placeholder"></div>
 
-    <!-- About Us Hero -->
+    <!-- Hero Section -->
     <section
-      class="relative py-12 text-white bg-gradient-to-r from-primary-600 to-primary-500"
+      class="relative bg-cover bg-center h-[35vh] flex items-center justify-center text-white"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url('/assets/images/school-bus.png');
+      "
     >
-      <div class="absolute inset-0 opacity-20">
-        <div
-          class="w-full h-full"
-          style="
-            background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-          "
-        ></div>
-      </div>
-      <div class="relative flex flex-col items-center px-4 mx-auto max-w-7xl">
-        <h1 class="mb-4 text-4xl font-bold text-center md:text-5xl">
+      <div class="px-4 text-center text-gray-300">
+        <h1 class="mb-6 text-4xl font-bold font-heading md:text-5xl">
           About Our School
         </h1>
-        <p class="max-w-2xl mb-6 text-lg text-center text-primary-100">
+        <p class="max-w-2xl mb-8 text-xl text-gray-200 font-body">
           Discover our story, values, and commitment to excellence in education
         </p>
-        <nav>
-          <ol class="flex items-center space-x-2 text-sm">
+        <nav class="text-sm">
+          <ol class="flex items-center justify-center space-x-2">
             <li>
               <a href="index.html" class="hover:text-primary-200">Home</a>
             </li>
@@ -111,614 +129,357 @@
       </div>
     </section>
 
-    <!-- Introduction -->
-    <section class="py-12 bg-white">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid items-center gap-12 mx-4 md:grid-cols-12">
-          <div class="col-span-8">
-            <h2 class="mb-6 text-3xl font-bold text-neutral-900">Our Story</h2>
-            <div class="space-y-4 text-neutral-700">
-              <p>
+    <section class="py-16">
+      <div class="px-4 mx-auto max-w-7xl">
+        <div class="grid grid-cols-12 gap-12">
+          <!-- LEFT -->
+          <div class="col-span-12 lg:col-span-8">
+            <h2 class="mb-6 text-3xl font-heading text-heading">Our Story</h2>
+
+            <div class="space-y-4">
+              <p class="text-lg text-gray-600 font-body">
                 Founded in 2016, Kimangu Day Secondary School began its journey
                 from modest origins, starting with just 33 students and 4
                 dedicated teachers. Since then, it has steadily grown to become
                 one of the most respected and high-performing academic
                 institutions in Rongai Sub County, Nakuru.
               </p>
-              <p>
+
+              <p class="text-lg text-gray-600 font-body">
                 The school was established with a clear and compelling vision:
                 to offer quality education to the youth of Rongai and its
                 neighboring communities, equipping them with the knowledge,
                 skills, and values needed to become responsible citizens and
                 capable future leaders of our country.
               </p>
-              <p>
+
+              <p class="text-lg text-gray-600 font-body">
                 Throughout the years, Kimangu Day has consistently upheld strong
                 academic standards, while placing equal emphasis on the holistic
                 development of each learner. We are deeply committed to
                 fostering character, encouraging leadership potential, and
-                nurturing the unique talents of our students. Today, we are
-                proud to serve a vibrant student body of over 500 learners,
-                guided every day by our core values of excellence, integrity,
-                and responsibility, which remain at the heart of everything we
-                do.
+                nurturing the unique talents of our students.
               </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2">
+              <div class="p-6 border border-gray-200 rounded-lg">
+                <h3
+                  class="flex items-center mb-3 text-lg font-semibold font-heading text-heading"
+                >
+                  <i class="mr-3 text-xl text-primary-600 fas fa-eye"></i>
+                  Our Vision
+                </h3>
+                <p class="text-gray-600 font-body">
+                  To be a center of academic excellence and moral integrity in
+                  Kenya and beyond, producing well-rounded graduates who will
+                  positively impact their communities.
+                </p>
+              </div>
+
+              <div class="p-6 border border-gray-200 rounded-lg">
+                <h3
+                  class="flex items-center mb-3 text-lg font-semibold font-heading text-heading"
+                >
+                  <i class="mr-3 text-xl text-primary-600 fas fa-bullseye"></i>
+                  Our Mission
+                </h3>
+                <p class="text-gray-600 font-body">
+                  To nurture responsible and disciplined students through
+                  quality education, fostering critical thinking skills, and
+                  promoting holistic development to prepare them for future
+                  challenges.
+                </p>
+              </div>
             </div>
           </div>
 
-          <img
-            src="/assets/images/growth.svg"
-            loading="lazy"
-            alt="Our growth illustration"
-            class="hidden col-span-4 p-8 rounded-lg md:block"
-          />
+          <!-- RIGHT -->
+          <div class="relative col-span-12 lg:col-span-4">
+            <img
+              src="/assets/images/growth.svg"
+              alt="Kimangu Day Secondary School"
+              class="object-contain w-full h-full rounded-lg shadow-lg"
+            />
+
+            <div
+              class="absolute bottom-0 left-0 max-w-xs p-6 -mb-8 -ml-4 bg-white rounded-lg shadow-lg"
+            >
+              <div class="flex items-center">
+                <div
+                  class="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-primary-600"
+                >
+                  <i class="text-xl fas fa-trophy"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-sm font-semibold tracking-widest font-heading text-primary-600"
+                  >
+                    RECOGNIZED EXCELLENCE
+                  </p>
+                  <h3 class="text-lg font-heading text-heading">
+                    Top Performing School
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Leadership Team -->
-    <section id="leadership" class="py-16 bg-neutral-50">
+    <!-- Leadership Team - Improved with JSX Style -->
+    <section id="leadership" class="py-16 bg-gray-50">
       <div class="px-4 mx-auto max-w-7xl">
-        <!-- Section Heading -->
-        <div class="mb-20 text-center">
-          <h2 class="mb-4 text-3xl font-bold text-neutral-900">
-            Our Leadership Team
-          </h2>
-          <p class="max-w-3xl mx-auto text-neutral-600">
-            Dedicated professionals who guide our institution toward excellence.
-          </p>
-        </div>
-
-        <!-- Cards Grid -->
-        <div
-          class="grid grid-cols-1 gap-y-20 md:gap-x-8 md:grid-cols-2 lg:grid-cols-4"
-        >
+        <h2 class="mb-12 text-3xl text-center font-heading text-heading">
+          Our Leadership Team
+        </h2>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <!-- Principal -->
-          <div
-            class="relative p-6 pt-16 text-center transition bg-white rounded-lg shadow-md hover:shadow-lg"
-          >
-            <!-- Floating Image -->
-            <div class="absolute transform -translate-x-1/2 left-1/2 -top-12">
-              <img
-                src="/assets/images/principal.jpg"
-                alt="Principal"
-                class="object-cover w-24 h-24 border-4 border-white rounded-full shadow-md"
-              />
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <img
+              src="/assets/images/principal.jpg"
+              alt="Principal"
+              class="object-cover w-full h-64"
+            />
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-heading text-heading">
+                Mr. Maigwa Julius
+              </h3>
+              <p class="mb-3 text-sm font-medium text-primary-600 font-body">
+                Founding Principal
+              </p>
+              <p class="text-gray-600 font-body">
+                Visionary leader with 30+ years in education, founding the
+                school and leading it to national recognition.
+              </p>
             </div>
-            <!-- Content -->
-            <h3 class="text-xl font-bold text-neutral-900">
-              Mr. Maigwa Julius
-            </h3>
-            <p class="text-sm font-medium text-primary-600">
-              Founding Principal
-            </p>
-            <p class="mt-3 text-sm md:text-base text-neutral-600">
-              Visionary leader with 30+ years in education, founding the school
-              and leading it to national recognition.
-            </p>
           </div>
 
           <!-- BOM Chair -->
-          <div
-            class="relative p-6 pt-16 text-center transition bg-white rounded-lg shadow-md hover:shadow-lg"
-          >
-            <div class="absolute transform -translate-x-1/2 left-1/2 -top-12">
-              <img
-                src="/assets/images/bom-chair.jpg"
-                alt="BOM Chair"
-                class="object-cover w-24 h-24 border-4 border-white rounded-full shadow-md"
-              />
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <img
+              src="/assets/images/bom-chair.jpg"
+              alt="BOM Chair"
+              class="object-cover w-full h-64"
+            />
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-heading text-heading">
+                Mr. Gathenya Paul
+              </h3>
+              <p class="mb-3 text-sm font-medium text-primary-600 font-body">
+                BOM Chair
+              </p>
+              <p class="text-gray-600 font-body">
+                Strategic governance leader who has strengthened our community
+                ties and secured key funding initiatives.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-neutral-900">
-              Mr. Gathenya Paul
-            </h3>
-            <p class="text-sm font-medium text-primary-600">BOM Chair</p>
-            <p class="mt-3 text-sm md:text-base text-neutral-600">
-              Strategic governance leader who has strengthened our community
-              ties and secured key funding initiatives.
-            </p>
           </div>
 
           <!-- Deputy Principal -->
-          <div
-            class="relative p-6 pt-16 text-center transition bg-white rounded-lg shadow-md hover:shadow-lg"
-          >
-            <div class="absolute transform -translate-x-1/2 left-1/2 -top-12">
-              <img
-                src="/assets/images/deputy-principal.jpg"
-                alt="Deputy Principal"
-                class="object-cover w-24 h-24 border-4 border-white rounded-full shadow-md"
-              />
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <img
+              src="/assets/images/deputy-principal.jpg"
+              alt="Deputy Principal"
+              class="object-cover w-full h-64"
+            />
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-heading text-heading">
+                Md. Deputy Principal
+              </h3>
+              <p class="mb-3 text-sm font-medium text-primary-600 font-body">
+                Deputy Principal
+              </p>
+              <p class="text-gray-600 font-body">
+                Mathematics specialist with expertise in curriculum development
+                and strong disciplinary leadership.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-neutral-900">
-              Md. Deputy Principal
-            </h3>
-            <p class="text-sm font-medium text-primary-600">Deputy Principal</p>
-            <p class="mt-3 text-sm md:text-base text-neutral-600">
-              Mathematics specialist with expertise in curriculum development
-              and strong disciplinary leadership.
-            </p>
           </div>
 
           <!-- Head of Studies -->
-          <div
-            class="relative p-6 pt-16 text-center transition bg-white rounded-lg shadow-md hover:shadow-lg"
-          >
-            <div class="absolute transform -translate-x-1/2 left-1/2 -top-12">
-              <img
-                src="/assets/images/head-of-studies.jpg"
-                alt="Head of Studies"
-                class="object-cover w-24 h-24 border-4 border-white rounded-full shadow-md"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-neutral-900">Mr. Ombogo Isaac</h3>
-            <p class="text-sm font-medium text-primary-600">Head of Studies</p>
-            <p class="mt-3 text-sm md:text-base text-neutral-600">
-              Academic programs coordinator ensuring quality teaching and
-              continuous curriculum improvement.
-            </p>
-          </div>
-        </div>
-
-        <!-- CTA Button -->
-        <div class="mt-12 text-center">
-          <a
-            href="/staff.html"
-            class="inline-flex items-center px-6 py-3 font-semibold text-white transition-colors duration-300 rounded-md bg-primary-600 hover:bg-primary-700"
-          >
-            <i class="mr-2 fas fa-users"></i>
-            Meet All Our Staff
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission & Vision Section -->
-    <section class="py-16">
-      <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-12 text-4xl font-bold text-center text-neutral-900">
-          Our Guiding Principles
-        </h2>
-
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <!-- Mission -->
-          <div
-            class="p-8 shadow-sm bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl card-hover"
-          >
-            <div class="flex items-center mb-6">
-              <h3 class="text-2xl font-bold text-center text-neutral-900">
-                Mission
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <img
+              src="/assets/images/head-of-studies.jpg"
+              alt="Head of Studies"
+              class="object-cover w-full h-64"
+            />
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-heading text-heading">
+                Mr. Ombogo Isaac
               </h3>
-            </div>
-            <p class="text-lg text-neutral-700">
-              To nurture responsible and disciplined students through quality
-              education, fostering critical thinking skills, and promoting
-              holistic development to prepare them for future challenges.
-            </p>
-          </div>
-
-          <!-- Vision -->
-          <div
-            class="p-8 shadow-sm bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl card-hover"
-          >
-            <div class="flex items-center mb-6">
-              <h3 class="text-2xl font-bold text-neutral-900">Vision</h3>
-            </div>
-            <p class="text-lg text-neutral-700">
-              To be a center of academic excellence and moral integrity in Kenya
-              and beyond, producing well-rounded graduates who will positively
-              impact their communities.
-            </p>
-          </div>
-        </div>
-
-        <!-- Values -->
-        <div
-          class="p-8 mt-12 shadow-sm bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl card-hover"
-        >
-          <div class="flex items-center mb-6">
-            <h3 class="text-2xl font-bold text-neutral-900">Our Core Values</h3>
-          </div>
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
-            <div class="text-center">
-              <div
-                class="inline-flex items-center justify-center w-16 h-16 mb-3 bg-white rounded-full shadow text-primary-600"
-              >
-                <i class="text-xl fas fa-trophy"></i>
-              </div>
-              <h4 class="font-bold text-neutral-900">Excellence</h4>
-              <p class="text-sm text-neutral-700">
-                Striving for the highest standards
+              <p class="mb-3 text-sm font-medium text-primary-600 font-body">
+                Head of Studies
               </p>
-            </div>
-            <div class="text-center">
-              <div
-                class="inline-flex items-center justify-center w-16 h-16 mb-3 bg-white rounded-full shadow text-primary-600"
-              >
-                <i class="text-xl fas fa-shield-alt"></i>
-              </div>
-              <h4 class="font-bold text-neutral-900">Integrity</h4>
-              <p class="text-sm text-neutral-700">
-                Honesty and ethical conduct
+              <p class="text-gray-600 font-body">
+                Academic programs coordinator ensuring quality teaching and
+                continuous curriculum improvement.
               </p>
-            </div>
-            <div class="text-center">
-              <div
-                class="inline-flex items-center justify-center w-16 h-16 mb-3 bg-white rounded-full shadow text-primary-600"
-              >
-                <i class="text-xl fas fa-balance-scale"></i>
-              </div>
-              <h4 class="font-bold text-neutral-900">Discipline</h4>
-              <p class="text-sm text-neutral-700">Self-control and order</p>
-            </div>
-            <div class="text-center">
-              <div
-                class="inline-flex items-center justify-center w-16 h-16 mb-3 bg-white rounded-full shadow text-primary-600"
-              >
-                <i class="text-xl fas fa-handshake"></i>
-              </div>
-              <h4 class="font-bold text-neutral-900">Responsibility</h4>
-              <p class="text-sm text-neutral-700">
-                Owning actions and decisions
-              </p>
-            </div>
-            <div class="text-center">
-              <div
-                class="inline-flex items-center justify-center w-16 h-16 mb-3 bg-white rounded-full shadow text-primary-600"
-              >
-                <i class="text-xl fas fa-lightbulb"></i>
-              </div>
-              <h4 class="font-bold text-neutral-900">Innovation</h4>
-              <p class="text-sm text-neutral-700">Embracing creativity</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Timeline History -->
-    <section class="py-16 bg-neutral-50">
+    <!-- Core Values - Improved Design -->
+    <section class="py-16 bg-white">
       <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-12 text-3xl font-bold text-center text-neutral-900">
-          Our Journey Through The Years
+        <h2 class="mb-12 text-3xl text-center font-heading text-heading">
+          Our Core Values
         </h2>
-
-        <div class="relative">
-          <div
-            class="absolute hidden w-1 h-full transform -translate-x-1/2 bg-neutral-200 left-1/2 sm:block"
-          ></div>
-
-          <div class="space-y-8 sm:space-y-16">
-            <div class="relative">
-              <div
-                class="absolute hidden -mt-3 transform -translate-x-1/2 left-1/2 sm:block"
-              >
-                <div
-                  class="w-6 h-6 bg-white border-4 rounded-full border-primary-500"
-                ></div>
-              </div>
-
-              <div
-                class="p-6 bg-white border-l-4 rounded-lg shadow border-primary-500 sm:hidden"
-              >
-                <div class="flex items-center mb-2">
-                  <div class="p-2 mr-3 rounded-full bg-primary-100">
-                    <i class="text-primary-600 fas fa-seedling"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-primary-600">2016</h3>
-                    <p class="text-lg font-medium text-neutral-900">
-                      Foundation
-                    </p>
-                  </div>
-                </div>
-                <p class="text-neutral-700">
-                  Kimangu Day Secondary School was established with 33 students
-                  and 4 dedicated teachers.
-                </p>
-              </div>
-
-              <!-- Desktop version -->
-              <div class="flex-col items-center hidden sm:flex sm:flex-row">
-                <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <h3 class="text-2xl font-bold text-primary-600">2016</h3>
-                  <p class="text-lg font-medium text-neutral-900">Foundation</p>
-                  <p class="text-neutral-700">
-                    Kimangu Day Secondary School was established with 33
-                    students and 4 dedicated teachers.
-                  </p>
-                </div>
-                <div class="sm:w-1/2 sm:pl-16">
-                  <div
-                    class="flex items-center justify-center h-32 rounded-lg shadow text-primary-600 bg-primary-100"
-                  >
-                    <i class="text-4xl fas fa-seedling"></i>
-                  </div>
-                </div>
-              </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
+          <div class="text-center">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-primary-600"
+            >
+              <i class="text-xl fas fa-trophy"></i>
             </div>
-
-            <div class="relative">
-              <div
-                class="absolute hidden -mt-3 transform -translate-x-1/2 left-1/2 sm:block"
-              >
-                <div
-                  class="w-6 h-6 bg-white border-4 rounded-full border-primary-500"
-                ></div>
-              </div>
-
-              <!-- Mobile version -->
-              <div
-                class="p-6 bg-white border-l-4 rounded-lg shadow border-primary-500 sm:hidden"
-              >
-                <div class="flex items-center mb-2">
-                  <div class="p-2 mr-3 rounded-full bg-primary-100">
-                    <i class="text-primary-600 fa-solid fa-chart-line"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-primary-600">2017</h3>
-                    <p class="text-lg font-medium text-neutral-900">
-                      First Major Expansion
-                    </p>
-                  </div>
-                </div>
-                <p class="text-neutral-700">
-                  The school expanded with 2 new classrooms and exponential form
-                  one admission of 54 students.
-                </p>
-              </div>
-
-              <!-- Desktop version -->
-              <div class="flex-col items-center hidden sm:flex sm:flex-row">
-                <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <div
-                    class="flex items-center justify-center h-32 rounded-lg shadow text-primary-600 bg-primary-100"
-                  >
-                    <i class="text-4xl fa-solid fa-chart-line"></i>
-                  </div>
-                </div>
-                <div class="sm:w-1/2 sm:pl-16">
-                  <h3 class="text-2xl font-bold text-primary-600">2017</h3>
-                  <p class="text-lg font-medium text-neutral-900">
-                    First Major Expansion
-                  </p>
-                  <p class="text-neutral-700">
-                    The school expanded with 2 new classrooms and exponential
-                    form one admission of 54 students.
-                  </p>
-                </div>
-              </div>
+            <h4 class="mb-2 text-lg font-bold font-heading text-heading">
+              Excellence
+            </h4>
+            <p class="text-sm text-gray-600 font-body">
+              Striving for the highest standards in everything we do
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-primary-600"
+            >
+              <i class="text-xl fas fa-shield-alt"></i>
             </div>
-
-            <!-- 2019 -->
-            <div class="relative">
-              <div
-                class="absolute hidden -mt-3 transform -translate-x-1/2 left-1/2 sm:block"
-              >
-                <div
-                  class="w-6 h-6 bg-white border-4 rounded-full border-primary-500"
-                ></div>
-              </div>
-
-              <!-- Mobile version -->
-              <div
-                class="p-6 bg-white border-l-4 rounded-lg shadow border-primary-500 sm:hidden"
-              >
-                <div class="flex items-center mb-2">
-                  <div class="p-2 mr-3 rounded-full bg-primary-100">
-                    <i class="text-primary-600 fa-solid fa-medal"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-primary-600">2019</h3>
-                    <p class="text-lg font-medium text-neutral-900">
-                      Academic Excellence
-                    </p>
-                  </div>
-                </div>
-                <p class="text-neutral-700">
-                  At its first KCSE attempt, Kimangu Day achieved incredible
-                  results producing the best student within our locality.
-                </p>
-              </div>
-
-              <!-- Desktop version -->
-              <div class="flex-col items-center hidden sm:flex sm:flex-row">
-                <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <h3 class="text-2xl font-bold text-primary-600">2019</h3>
-                  <p class="text-lg font-medium text-neutral-900">
-                    Academic Excellence
-                  </p>
-                  <p class="text-neutral-700">
-                    At its first KCSE attempt, Kimangu Day achieved incredible
-                    results producing the best student within our locality.
-                  </p>
-                </div>
-                <div class="sm:w-1/2 sm:pl-16">
-                  <div
-                    class="flex items-center justify-center h-32 rounded-lg shadow text-primary-600 bg-primary-100"
-                  >
-                    <i class="text-4xl fa-solid fa-medal"></i>
-                  </div>
-                </div>
-              </div>
+            <h4 class="mb-2 text-lg font-bold font-heading text-heading">
+              Integrity
+            </h4>
+            <p class="text-sm text-gray-600 font-body">
+              Honesty and ethical conduct in all our dealings
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-primary-600"
+            >
+              <i class="text-xl fas fa-balance-scale"></i>
             </div>
-
-            <!-- 2023 -->
-            <div class="relative">
-              <!-- Timeline dot - hidden on mobile -->
-              <div
-                class="absolute hidden -mt-3 transform -translate-x-1/2 left-1/2 sm:block"
-              >
-                <div
-                  class="w-6 h-6 bg-white border-4 rounded-full border-primary-500"
-                ></div>
-              </div>
-
-              <!-- Mobile version -->
-              <div
-                class="p-6 bg-white border-l-4 rounded-lg shadow border-primary-500 sm:hidden"
-              >
-                <div class="flex items-center mb-2">
-                  <div class="p-2 mr-3 rounded-full bg-primary-100">
-                    <i class="text-primary-600 fa-solid fa-laptop-code"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-primary-600">2023</h3>
-                    <p class="text-lg font-medium text-neutral-900">
-                      Technology Integration
-                    </p>
-                  </div>
-                </div>
-                <p class="text-neutral-700">
-                  Introduction of computer labs and digital learning resources
-                  to enhance education quality.
-                </p>
-              </div>
-
-              <!-- Desktop version -->
-              <div class="flex-col items-center hidden sm:flex sm:flex-row">
-                <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <div
-                    class="flex items-center justify-center h-32 rounded-lg shadow text-primary-600 bg-primary-100"
-                  >
-                    <i class="text-4xl fa-solid fa-laptop-code"></i>
-                  </div>
-                </div>
-                <div class="sm:w-1/2 sm:pl-16">
-                  <h3 class="text-2xl font-bold text-primary-600">2023</h3>
-                  <p class="text-lg font-medium text-neutral-900">
-                    Technology Integration
-                  </p>
-                  <p class="text-neutral-700">
-                    Introduction of computer labs and digital learning resources
-                    to enhance education quality.
-                  </p>
-                </div>
-              </div>
+            <h4 class="mb-2 text-lg font-bold font-heading text-heading">
+              Discipline
+            </h4>
+            <p class="text-sm text-gray-600 font-body">
+              Self-control and order in our daily operations
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-primary-600"
+            >
+              <i class="text-xl fas fa-handshake"></i>
             </div>
-
-            <!-- 2025 -->
-            <div class="relative">
-              <!-- Timeline dot - hidden on mobile -->
-              <div
-                class="absolute hidden -mt-3 transform -translate-x-1/2 left-1/2 sm:block"
-              >
-                <div
-                  class="w-6 h-6 bg-white border-4 rounded-full border-primary-500"
-                ></div>
-              </div>
-
-              <!-- Mobile version -->
-              <div
-                class="p-6 bg-white border-l-4 rounded-lg shadow border-primary-500 sm:hidden"
-              >
-                <div class="flex items-center mb-2">
-                  <div class="p-2 mr-3 rounded-full bg-primary-100">
-                    <i class="text-primary-600 fa-solid fa-rocket"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-primary-600">2025</h3>
-                    <p class="text-lg font-medium text-neutral-900">
-                      Today's Excellence
-                    </p>
-                  </div>
-                </div>
-                <p class="text-neutral-700">
-                  Now with over 500 students, modern facilities, and consistent
-                  academic performance.
-                </p>
-              </div>
-
-              <!-- Desktop version -->
-              <div class="flex-col items-center hidden sm:flex sm:flex-row">
-                <div class="pb-8 sm:w-1/2 sm:pr-16 sm:pb-0 sm:text-right">
-                  <h3 class="text-2xl font-bold text-primary-600">2025</h3>
-                  <p class="text-lg font-medium text-neutral-900">
-                    Today's Excellence
-                  </p>
-                  <p class="text-neutral-700">
-                    Now with over 500 students, modern facilities, and
-                    consistent academic performance.
-                  </p>
-                </div>
-                <div class="sm:w-1/2 sm:pl-16">
-                  <div
-                    class="flex items-center justify-center h-32 rounded-lg shadow text-primary-600 bg-primary-100"
-                  >
-                    <i class="text-4xl fa-solid fa-rocket"></i>
-                  </div>
-                </div>
-              </div>
+            <h4 class="mb-2 text-lg font-bold font-heading text-heading">
+              Responsibility
+            </h4>
+            <p class="text-sm text-gray-600 font-body">
+              Owning our actions and decisions
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-primary-600"
+            >
+              <i class="text-xl fas fa-lightbulb"></i>
             </div>
+            <h4 class="mb-2 text-lg font-bold font-heading text-heading">
+              Innovation
+            </h4>
+            <p class="text-sm text-gray-600 font-body">
+              Embracing creativity and new ideas
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- School Facilities -->
-    <section class="py-16">
+    <!-- Stats Section - Inspired by JSX -->
+    <section class="py-12 text-white bg-primary-600">
       <div class="px-4 mx-auto max-w-7xl">
-        <h2 class="mb-4 text-3xl font-bold text-center text-neutral-900">
-          Facilities
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div class="text-center">
+            <p class="text-4xl font-bold font-heading">500+</p>
+            <p class="text-lg font-body">Students</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl font-bold font-heading">30+</p>
+            <p class="text-lg font-body">Dedicated Staff</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl font-bold font-heading">9</p>
+            <p class="text-lg font-body">Years of Excellence</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl font-bold font-heading">100%</p>
+            <p class="text-lg font-body">Commitment to Quality</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section - Improved -->
+    <section class="py-16 bg-gray-50">
+      <div class="px-4 mx-auto max-w-7xl">
+        <h2 class="mb-4 text-3xl text-center font-heading text-heading">
+          Our Facilities
         </h2>
-        <p class="max-w-3xl mx-auto mb-12 text-center text-neutral-600">
-          We are equiped with modern facilities designed to enhance the learning
-          experience and provide a conducive environment for academic and
-          personal growth.
+        <p class="max-w-3xl mx-auto mb-12 text-center text-gray-600 font-body">
+          We are equipped with modern facilities designed to enhance the
+          learning experience and provide a conducive environment for academic
+          and personal growth.
         </p>
 
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Academic Facilities -->
-          <div
-            class="p-8 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
-          >
+          <div class="p-6 bg-white rounded-lg shadow-md">
             <div class="flex items-center mb-6">
               <div
                 class="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-primary-600"
               >
                 <i class="text-xl fas fa-chalkboard-teacher"></i>
               </div>
-              <h3 class="text-xl font-bold text-neutral-900">Academic</h3>
+              <h3 class="text-xl font-bold font-heading text-heading">
+                Academic
+              </h3>
             </div>
-            <ul class="space-y-3 text-neutral-700">
+            <ul class="space-y-3 text-gray-600 font-body">
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span>Modern classrooms equipped with digital projectors</span>
+                <span>Modern classrooms with digital projectors</span>
               </li>
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span
-                  >Fully equipped science laboratory for Biology, Chemistry, and
-                  Physics</span
-                >
+                <span>Fully equipped science laboratories</span>
               </li>
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span>Computer lab with high-speed internet access</span>
+                <span>Computer lab with high-speed internet</span>
               </li>
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span
-                  >Coming up soon - Digital library with extensive collection
-                  e-resources</span
-                >
+                <span>Extensive library resources</span>
               </li>
             </ul>
           </div>
 
           <!-- Sports Facilities -->
-          <div
-            class="p-8 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
-          >
+          <div class="p-6 bg-white rounded-lg shadow-md">
             <div class="flex items-center mb-6">
               <div
                 class="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-primary-600"
               >
                 <i class="text-xl fas fa-running"></i>
               </div>
-              <h3 class="text-xl font-bold text-neutral-900">Sports</h3>
+              <h3 class="text-xl font-bold font-heading text-heading">
+                Sports
+              </h3>
             </div>
-            <ul class="space-y-3 text-neutral-700">
+            <ul class="space-y-3 text-gray-600 font-body">
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
                 <span>Standard football pitch</span>
@@ -733,43 +494,39 @@
               </li>
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span
-                  >Indoor games facilities - table tennis, badminton e.t.c</span
-                >
+                <span>Indoor games facilities</span>
               </li>
             </ul>
           </div>
 
           <!-- Entertainment Facilities -->
-          <div
-            class="p-8 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1"
-          >
+          <div class="p-6 bg-white rounded-lg shadow-md">
             <div class="flex items-center mb-6">
               <div
                 class="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-primary-600"
               >
                 <i class="text-xl fas fa-film"></i>
               </div>
-              <h3 class="text-xl font-bold text-neutral-900">Entertainment</h3>
+              <h3 class="text-xl font-bold font-heading text-heading">
+                Entertainment
+              </h3>
             </div>
-            <ul class="space-y-3 text-neutral-700">
+            <ul class="space-y-3 text-gray-600 font-body">
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span
-                  >Spacious hall for movie screenings and school events</span
-                >
+                <span>Spacious hall for events and screenings</span>
               </li>
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span>Outdoor stage for music, drama, and talent shows</span>
+                <span>Outdoor stage for performances</span>
               </li>
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span>Access to board games and recreational activities</span>
+                <span>Recreational activities area</span>
               </li>
               <li class="flex items-start">
                 <i class="mt-1 mr-3 text-primary-500 fas fa-check-circle"></i>
-                <span>Fully equipped music and PA system for events</span>
+                <span>Music and PA systems</span>
               </li>
             </ul>
           </div>

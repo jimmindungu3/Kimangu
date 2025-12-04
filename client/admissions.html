@@ -3,190 +3,249 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admission Requirements - Kimangu Day Secondary School</title>
+    <title>Admissions - Kimangu Day Secondary School</title>
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Custom Tailwind CSS Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                800: "#1e40af",
+                900: "#1e3a8a",
+              },
+              secondary: {
+                50: "#fefce8",
+                100: "#fef9c3",
+                200: "#fef08a",
+                300: "#fde047",
+                400: "#facc15",
+                500: "#eab308",
+                600: "#ca8a04",
+                700: "#a16207",
+                800: "#854d0e",
+                900: "#713f12",
+              },
+              accent: {
+                50: "#f0fdf4",
+                100: "#dcfce7",
+                200: "#bbf7d0",
+                300: "#86efac",
+                400: "#4ade80",
+                500: "#22c55e",
+                600: "#16a34a",
+                700: "#15803d",
+                800: "#166534",
+                900: "#14532d",
+              },
+              neutral: {
+                50: "#fafafa",
+                100: "#f4f4f5",
+                200: "#e4e4e7",
+                300: "#d4d4d8",
+                400: "#a1a1aa",
+                500: "#71717a",
+                600: "#52525b",
+                700: "#3f3f46",
+                800: "#27272a",
+                900: "#18181b",
+              },
+            },
+            fontFamily: {
+              heading: ['"Inter"', "system-ui", "sans-serif"],
+              body: ['"Inter"', "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      .text-body {
+        color: #3f3f46;
+      }
+
+      .text-heading {
+        color: #18181b;
+      }
+    </style>
   </head>
-  <body class="font-sans text-gray-900 bg-gray-50">
+
+  <body class="text-body">
     <div id="nav-placeholder"></div>
 
-    <section class="relative py-12 text-white bg-blue-500">
-      <div class="absolute inset-0 opacity-10">
-        <div
-          class="w-full h-full"
-          style="
-            background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');
-          "
-        ></div>
-      </div>
-
-      <div class="relative flex flex-col items-center px-4 mx-auto max-w-7xl">
-        <h1 class="mb-4 text-3xl font-bold text-center md:text-5xl">
-          Admissions
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center h-[35vh] flex items-center justify-center text-white"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url('/assets/images/admissions-hero.jpg');
+      "
+    >
+      <div class="px-4 text-center text-gray-300">
+        <h1 class="mb-6 text-4xl font-bold font-heading md:text-5xl">
+          Join Our Academic Community
         </h1>
-        <div class="text-center">
-          Everything you need to know about joining Kimangu Day Secondary
-          School. <br />
-          We welcome students who are ready to excel academically and grow
-          personally.
-        </div>
+        <p class="max-w-2xl mb-8 text-xl text-gray-200 font-body">
+          Begin your journey towards academic excellence and personal growth
+        </p>
+        <nav class="text-sm">
+          <ol class="flex items-center justify-center space-x-2">
+            <li>
+              <a href="index.html" class="hover:text-primary-200">Home</a>
+            </li>
+            <li><span class="mx-2 text-primary-300">•</span></li>
+            <li class="font-medium text-primary-100">Admissions</li>
+          </ol>
+        </nav>
       </div>
     </section>
 
-    <!-- Quick Overview -->
+    <!-- Quick Overview Cards -->
     <section class="py-16 bg-white">
       <div class="max-w-6xl px-4 mx-auto">
         <div class="mb-12 text-center">
-          <h2 class="mb-4 text-3xl font-bold text-gray-800">
-            Requirements at a glance
+          <h2 class="mb-4 text-3xl font-bold font-heading text-heading">
+            Admissions Overview
           </h2>
+          <p class="max-w-2xl mx-auto text-lg text-gray-600 font-body">
+            Everything you need to know about joining our esteemed institution
+          </p>
         </div>
 
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div
-            class="p-6 text-center bg-gray-100 border border-blue-100 rounded-lg"
-          >
-            <div class="mb-3 text-3xl text-blue-500">
-              <i class="fas fa-graduation-cap"></i>
+          <div class="p-6 text-center transition-transform duration-300 bg-white rounded-lg shadow-lg hover:transform hover:scale-105">
+            <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-primary-600">
+              <i class="text-2xl fas fa-graduation-cap"></i>
             </div>
-            <h3 class="mb-2 font-bold text-gray-800">KCPE Score</h3>
-            <p class="text-2xl font-bold text-blue-500">200+</p>
-            <p class="text-sm text-gray-600">Minimum marks required</p>
+            <h3 class="mb-2 text-lg font-bold font-heading text-heading">
+              KCPE Score
+            </h3>
+            <p class="text-2xl font-bold text-primary-600">200+</p>
+            <p class="mt-2 text-sm text-gray-600 font-body">
+              Minimum marks required
+            </p>
           </div>
 
-          <div
-            class="p-6 text-center bg-gray-100 border border-blue-100 rounded-lg"
-          >
-            <div class="mb-3 text-3xl">
-              <i class="text-blue-500 fas fa-calendar-alt"></i>
+          <div class="p-6 text-center transition-transform duration-300 bg-white rounded-lg shadow-lg hover:transform hover:scale-105">
+            <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-primary-600">
+              <i class="text-2xl fas fa-calendar-alt"></i>
             </div>
-            <h3 class="mb-2 font-bold text-gray-800">Age Range</h3>
-            <p class="text-2xl font-bold text-blue-500">14-22</p>
-            <p class="text-sm text-gray-600">Years old (2003-2011 birth)</p>
+            <h3 class="mb-2 text-lg font-bold font-heading text-heading">
+              Age Range
+            </h3>
+            <p class="text-2xl font-bold text-primary-600">14-22</p>
+            <p class="mt-2 text-sm text-gray-600 font-body">
+              Years (2003-2011 birth)
+            </p>
           </div>
 
-          <div
-            class="p-6 text-center bg-gray-100 border border-blue-100 rounded-lg"
-          >
-            <div class="mb-3 text-3xl text-blue-500">
-              <i class="fas fa-clock"></i>
+          <div class="p-6 text-center transition-transform duration-300 bg-white rounded-lg shadow-lg hover:transform hover:scale-105">
+            <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-primary-600">
+              <i class="text-2xl fas fa-school"></i>
             </div>
-            <h3 class="mb-2 font-bold text-gray-800">School Type</h3>
-            <p class="text-xl font-bold text-blue-500">Day School</p>
-            <p class="text-sm text-gray-600">No boarding facilities</p>
+            <h3 class="mb-2 text-lg font-bold font-heading text-heading">
+              School Type
+            </h3>
+            <p class="text-xl font-bold text-primary-600">Day School</p>
+            <p class="mt-2 text-sm text-gray-600 font-body">
+              No boarding facilities
+            </p>
           </div>
 
-          <div
-            class="p-6 text-center bg-gray-100 border border-blue-100 rounded-lg"
-          >
-            <div class="mb-3 text-3xl text-blue-500">
-              <i class="fas fa-money-bill-wave"></i>
+          <div class="p-6 text-center transition-transform duration-300 bg-white rounded-lg shadow-lg hover:transform hover:scale-105">
+            <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-primary-600">
+              <i class="text-2xl fas fa-money-bill-wave"></i>
             </div>
-            <h3 class="mb-2 font-bold text-gray-800">Termly Fees</h3>
-            <p class="text-2xl font-bold text-blue-500">KES 3,000</p>
-            <p class="text-sm text-gray-600">Average per term</p>
+            <h3 class="mb-2 text-lg font-bold font-heading text-heading">
+              Termly Fees
+            </h3>
+            <p class="text-2xl font-bold text-primary-600">KES 3,000</p>
+            <p class="mt-2 text-sm text-gray-600 font-body">
+              Average per term
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Academic Requirements -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16 bg-gray-50">
       <div class="max-w-6xl px-4 mx-auto">
-        <div class="mb-12">
-          <h2 class="mb-4 text-3xl font-bold text-center text-gray-800">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 text-3xl font-bold font-heading text-heading">
             Academic Requirements
           </h2>
+          <p class="max-w-2xl mx-auto text-lg text-gray-600 font-body">
+            Essential criteria for admission to ensure academic readiness
+          </p>
         </div>
 
-        <div>
-          <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-sm">
-            <div class="space-y-6">
-              <div class="flex items-start space-x-4">
-                <div
-                  class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full"
-                >
-                  <i class="text-blue-600 fas fa-certificate"></i>
-                </div>
-                <div>
-                  <h3 class="mb-2 text-xl font-semibold text-gray-800">
-                    KCPE Results
-                  </h3>
-                  <p class="mb-2 text-gray-600">
-                    Students must have completed their Kenya Certificate of
-                    Primary Education (KCPE) with a minimum score of
-                    <strong class="text-blue-600">200 marks</strong>.
-                  </p>
-                  <p class="text-sm text-gray-500">
-                    We accept results from 2019 to 2024. Students with higher
-                    scores will have priority consideration.
-                  </p>
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="p-8 bg-white rounded-lg shadow-lg">
+            <div class="flex items-start space-x-4">
+              <div class="flex items-center justify-center flex-shrink-0 w-14 h-14 bg-primary-100 rounded-full">
+                <i class="text-xl text-primary-600 fas fa-certificate"></i>
+              </div>
+              <div>
+                <h3 class="mb-3 text-xl font-bold font-heading text-heading">
+                  KCPE Results
+                </h3>
+                <p class="mb-4 text-gray-600 font-body">
+                  Completion of Kenya Certificate of Primary Education (KCPE) with a minimum score of 
+                  <strong class="text-primary-600">200 marks</strong>. Higher scores receive priority consideration.
+                </p>
+                <div class="inline-flex items-center px-4 py-2 text-sm rounded-full bg-primary-50 text-primary-600">
+                  <i class="mr-2 fas fa-clock"></i>
+                  Accepts results from 2019-2024
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="flex items-start space-x-4">
-                <div
-                  class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full"
-                >
-                  <i class="text-blue-600 fas fa-id-card"></i>
-                </div>
-                <div>
-                  <h3 class="mb-2 text-xl font-semibold text-gray-800">
-                    KCPE Index Number
-                  </h3>
-                  <p class="mb-2 text-gray-600">
-                    Valid KCPE Index Number is required for verification and
-                    record keeping.
-                  </p>
-                  <p class="text-sm text-gray-500">
-                    This must match the name on the KCPE result slip and birth
-                    certificate.
-                  </p>
-                </div>
+          <div class="p-8 bg-white rounded-lg shadow-lg">
+            <div class="flex items-start space-x-4">
+              <div class="flex items-center justify-center flex-shrink-0 w-14 h-14 bg-primary-100 rounded-full">
+                <i class="text-xl text-primary-600 fas fa-id-card"></i>
               </div>
-
-              <div class="flex items-start space-x-4">
-                <div
-                  class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full"
-                >
-                  <i class="text-blue-600 fas fa-user-check"></i>
-                </div>
-                <div>
-                  <h3 class="mb-2 text-xl font-semibold text-gray-800">
-                    Age Requirement
-                  </h3>
-                  <p class="mb-2 text-gray-600">
-                    Students must be between 14-22 years old (born between
-                    2003-2011).
-                  </p>
-                  <p class="text-sm text-gray-500">
-                    Age verification will be done using the birth certificate.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-4">
-                <div
-                  class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full"
-                >
-                  <i class="text-blue-600 fas fa-school"></i>
-                </div>
-                <div>
-                  <h3 class="mb-2 text-xl font-semibold text-gray-800">
-                    NEMIS Number
-                  </h3>
-                  <p class="mb-2 text-gray-600">
-                    Valid National Education Management Information System
-                    (NEMIS) number from previous school.
-                  </p>
-                  <p class="text-sm text-gray-500">
-                    This is required for official school records and government
-                    reporting.
-                  </p>
+              <div>
+                <h3 class="mb-3 text-xl font-bold font-heading text-heading">
+                  Documentation
+                </h3>
+                <p class="mb-4 text-gray-600 font-body">
+                  Valid KCPE index number, birth certificate for age verification, and NEMIS number from previous school are mandatory for enrollment.
+                </p>
+                <div class="inline-flex items-center px-4 py-2 text-sm rounded-full bg-primary-50 text-primary-600">
+                  <i class="mr-2 fas fa-check-circle"></i>
+                  All documents must be original
                 </div>
               </div>
             </div>
@@ -198,112 +257,121 @@
     <!-- Required Documents -->
     <section class="py-16 bg-white">
       <div class="max-w-6xl px-4 mx-auto">
-        <div class="mb-12">
-          <h2 class="mb-4 text-3xl font-bold text-center text-gray-800">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 text-3xl font-bold font-heading text-heading">
             Required Documents
           </h2>
+          <p class="max-w-2xl mx-auto text-lg text-gray-600 font-body">
+            Complete documentation ensures smooth admission process
+          </p>
         </div>
 
-        <div>
-          <div class="p-8 bg-gray-100 border border-gray-200 rounded-lg">
-            <div class="mb-6">
-              <div class="flex items-center mb-4 space-x-3">
-                <i
-                  class="text-xl text-gray-800 fas fa-exclamation-triangle"
-                ></i>
-                <h3 class="text-xl font-semibold text-gray-800">
-                  Important Note
-                </h3>
-              </div>
-              <p class="text-gray-700">
-                All documents must be submitted physically at our school office.
-                Online application serves as initial registration only.
-                Admission is confirmed after document verification.
-              </p>
+        <div class="p-8 bg-gray-50 rounded-lg shadow-lg">
+          <div class="mb-8 p-6 bg-white rounded-lg">
+            <div class="flex items-center mb-4">
+              <i class="mr-3 text-xl text-amber-500 fas fa-exclamation-triangle"></i>
+              <h3 class="text-xl font-bold font-heading text-heading">
+                Important Note
+              </h3>
+            </div>
+            <p class="text-gray-700 font-body">
+              All documents must be submitted physically at our school office for verification. 
+              Online application serves as initial registration only. Admission is confirmed 
+              after complete document verification and interview.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <!-- Student Documents -->
+            <div class="p-6 bg-white rounded-lg">
+              <h4 class="mb-6 text-xl font-bold font-heading text-heading">
+                <i class="mr-3 text-primary-600 fas fa-user-graduate"></i>
+                Student Documents
+              </h4>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-800 font-body">KCPE Result Slip</p>
+                    <p class="text-sm text-gray-600">Original copy for verification</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-800 font-body">Birth Certificate</p>
+                    <p class="text-sm text-gray-600">Certified copy acceptable</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-800 font-body">Passport Photos</p>
+                    <p class="text-sm text-gray-600">2 recent passport-size photos</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-800 font-body">Previous School Documents</p>
+                    <p class="text-sm text-gray-600">Release letter & report form</p>
+                  </div>
+                </li>
+              </ul>
             </div>
 
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div class="space-y-4">
-                <h4 class="mb-3 text-lg font-semibold text-gray-800">
-                  Student Documents
-                </h4>
-
-                <div class="flex items-start space-x-3">
-                  <i class="mt-1 text-blue-600 fas fa-circle-check"></i>
-                  <div>
-                    <p class="font-medium text-gray-800">KCPE Result Slip</p>
-                    <p class="text-sm text-gray-600">Original copy required</p>
+            <!-- Parent Documents -->
+            <div class="p-6 bg-white rounded-lg">
+              <h4 class="mb-6 text-xl font-bold font-heading text-heading">
+                <i class="mr-3 text-primary-600 fas fa-users"></i>
+                Parent/Guardian Documents
+              </h4>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
                   </div>
-                </div>
-
-                <div class="flex items-start space-x-3">
-                  <i class="mt-1 text-blue-600 fas fa-circle-check"></i>
                   <div>
-                    <p class="font-medium text-gray-800">Birth Certificate</p>
-                    <p class="text-sm text-gray-600">
-                      Certified copy acceptable
-                    </p>
+                    <p class="font-semibold text-gray-800 font-body">ID Copy</p>
+                    <p class="text-sm text-gray-600">Parent/Guardian identification</p>
                   </div>
-                </div>
-
-                <div class="flex items-start space-x-3">
-                  <i class="mt-1 text-blue-600 fas fa-circle-check"></i>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
+                  </div>
                   <div>
-                    <p class="font-medium text-gray-800">Passport Photos</p>
-                    <p class="text-sm text-gray-600">
-                      2 recent passport-size photos
-                    </p>
+                    <p class="font-semibold text-gray-800 font-body">Contact Information</p>
+                    <p class="text-sm text-gray-600">Phone number & email address</p>
                   </div>
-                </div>
-
-                <div class="flex items-start space-x-3">
-                  <i class="mt-1 text-blue-600 fas fa-circle-check"></i>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
+                  </div>
                   <div>
-                    <p class="font-medium text-gray-800">
-                      Previous School Documents
-                    </p>
-                    <p class="text-sm text-gray-600">
-                      Release letter & report form (if applicable)
-                    </p>
+                    <p class="font-semibold text-gray-800 font-body">Home Address</p>
+                    <p class="text-sm text-gray-600">Physical address for correspondence</p>
                   </div>
-                </div>
-              </div>
-
-              <div class="space-y-4">
-                <h4 class="mb-3 text-lg font-semibold text-gray-800">
-                  Parent/Guardian Documents
-                </h4>
-
-                <div class="flex items-start space-x-3">
-                  <i class="mt-1 text-blue-600 fas fa-circle-check"></i>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary-600">
+                    <i class="text-sm fas fa-check"></i>
+                  </div>
                   <div>
-                    <p class="font-medium text-gray-800">ID Copy</p>
-                    <p class="text-sm text-gray-600">
-                      Parent/Guardian identification
-                    </p>
+                    <p class="font-semibold text-gray-800 font-body">Emergency Contacts</p>
+                    <p class="text-sm text-gray-600">Alternative phone numbers</p>
                   </div>
-                </div>
-
-                <div class="flex items-start space-x-3">
-                  <i class="mt-1 text-blue-600 fas fa-circle-check"></i>
-                  <div>
-                    <p class="font-medium text-gray-800">Contact Information</p>
-                    <p class="text-sm text-gray-600">
-                      Phone number & email address
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex items-start space-x-3">
-                  <i class="mt-1 text-blue-600 fas fa-circle-check"></i>
-                  <div>
-                    <p class="font-medium text-gray-800">Home Address</p>
-                    <p class="text-sm text-gray-600">
-                      Physical address for correspondence
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -311,92 +379,134 @@
     </section>
 
     <!-- Admission Process -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16 bg-primary-50">
       <div class="max-w-6xl px-4 mx-auto">
         <div class="mb-12 text-center">
-          <h2 class="mb-4 text-3xl font-bold text-00">Admission Process</h2>
-          <p class="max-w-2xl mx-auto text-gray-600">
-            Simple 3-step process to join our school community
+          <h2 class="mb-4 text-3xl font-bold font-heading text-heading">
+            Admission Process
+          </h2>
+          <p class="max-w-2xl mx-auto text-lg text-gray-600 font-body">
+            Simple 4-step journey to joining our academic family
           </p>
         </div>
 
-        <div class="max-w-6xl mx-auto">
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <!-- Step 1 -->
-            <div>
-              <div
-                class="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-gray-400 rounded-full"
-              >
-                <span class="text-2xl font-bold text-white">1</span>
-              </div>
-              <div
-                class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm"
-              >
-                <h3 class="mb-3 text-xl font-semibold text-gray-800">
-                  Apply Online
-                </h3>
-                <p class="mb-4 text-gray-600">
-                  Complete our online application form with student and parent
-                  information.
-                </p>
-                <ul class="space-y-1 text-sm text-left text-gray-500">
-                  <li>• Fill student details</li>
-                  <li>• Provide KCPE information</li>
-                  <li>• Submit parent/guardian info</li>
-                  <li>• Include medical conditions</li>
-                </ul>
-              </div>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Step 1 -->
+          <div class="relative">
+            <div class="absolute top-0 left-6 w-px h-full bg-primary-200 md:left-1/2 md:-translate-x-1/2"></div>
+            <div class="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-primary-600">
+              <span class="text-2xl font-bold">1</span>
             </div>
-
-            <!-- Step 2 -->
-            <div>
-              <div
-                class="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-gray-500 rounded-full"
-              >
-                <span class="text-2xl font-bold text-white">2</span>
-              </div>
-              <div
-                class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm"
-              >
-                <h3 class="mb-3 text-xl font-semibold text-gray-800">
-                  Submit Documents
-                </h3>
-                <p class="mb-4 text-gray-600">
-                  Visit our school office to submit required documents for
-                  verification.
-                </p>
-                <ul class="space-y-1 text-sm text-left text-gray-500">
-                  <li>• Bring original documents</li>
-                  <li>• Complete verification process</li>
-                  <li>• Meet with admissions officer</li>
-                  <li>• Schedule school orientation</li>
-                </ul>
-              </div>
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+              <h3 class="mb-4 text-xl font-bold font-heading text-heading">
+                Online Application
+              </h3>
+              <p class="mb-4 text-gray-600 font-body">
+                Complete our digital application form with student and guardian details.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-500 font-body">
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Student information
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  KCPE details
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Guardian contacts
+                </li>
+              </ul>
             </div>
+          </div>
 
-            <!-- Step 3 -->
-            <div>
-              <div
-                class="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-gray-600 rounded-full"
-              >
-                <span class="text-2xl font-bold text-white">3</span>
-              </div>
-              <div
-                class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm"
-              >
-                <h3 class="mb-3 text-xl font-semibold text-gray-800">
-                  Get Confirmed
-                </h3>
-                <p class="mb-4 text-gray-600">
-                  Receive admission confirmation and begin your journey with us.
-                </p>
-                <ul class="space-y-1 text-sm text-left text-gray-500">
-                  <li>• Admission approval notification</li>
-                  <li>• Fee payment instructions</li>
-                  <li>• School orientation details</li>
-                  <li>• Class placement information</li>
-                </ul>
-              </div>
+          <!-- Step 2 -->
+          <div class="relative">
+            <div class="absolute top-0 left-6 w-px h-full bg-primary-200 md:left-1/2 md:-translate-x-1/2"></div>
+            <div class="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-primary-600">
+              <span class="text-2xl font-bold">2</span>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+              <h3 class="mb-4 text-xl font-bold font-heading text-heading">
+                Document Submission
+              </h3>
+              <p class="mb-4 text-gray-600 font-body">
+                Visit school office with original documents for verification process.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-500 font-body">
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Original documents
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Verification interview
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Parent meeting
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative">
+            <div class="absolute top-0 left-6 w-px h-full bg-primary-200 md:left-1/2 md:-translate-x-1/2"></div>
+            <div class="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-primary-600">
+              <span class="text-2xl font-bold">3</span>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+              <h3 class="mb-4 text-xl font-bold font-heading text-heading">
+                Interview & Assessment
+              </h3>
+              <p class="mb-4 text-gray-600 font-body">
+                Student and parent interview to assess compatibility with school values.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-500 font-body">
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Student interview
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Academic assessment
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Values alignment
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative">
+            <div class="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-primary-600">
+              <span class="text-2xl font-bold">4</span>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+              <h3 class="mb-4 text-xl font-bold font-heading text-heading">
+                Enrollment & Orientation
+              </h3>
+              <p class="mb-4 text-gray-600 font-body">
+                Complete admission with fee payment and attend orientation program.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-500 font-body">
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Fee payment
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  Uniform & book purchase
+                </li>
+                <li class="flex items-center">
+                  <i class="mr-2 text-primary-500 fas fa-check-circle"></i>
+                  School orientation
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -407,117 +517,125 @@
     <section class="py-16 bg-white">
       <div class="max-w-6xl px-4 mx-auto">
         <div class="mb-12 text-center">
-          <h2 class="mb-4 text-3xl font-bold text-gray-800">
-            Special Considerations
+          <h2 class="mb-4 text-3xl font-bold font-heading text-heading">
+            Inclusive Education
           </h2>
-          <p class="max-w-2xl mx-auto text-gray-600">
-            We welcome students with diverse needs and backgrounds
+          <p class="max-w-2xl mx-auto text-lg text-gray-600 font-body">
+            We welcome and support students with diverse needs and backgrounds
           </p>
         </div>
 
         <div class="grid max-w-6xl grid-cols-1 gap-8 mx-auto md:grid-cols-2">
-          <div class="p-6 border border-blue-100 rounded-lg bg-blue-50">
-            <h3 class="mb-4 text-xl font-semibold text-gray-800">
-              <i class="mr-1 text-blue-600 fa-brands fa-accessible-icon"></i>
-              Students with Special Needs
-            </h3>
-            <p class="mb-3 text-gray-700">
-              We accommodate students with various learning needs and physical
-              challenges. Please indicate any special requirements in your
-              application.
+          <div class="p-8 bg-gradient-to-br from-primary-50 to-white rounded-lg shadow-lg border border-primary-100">
+            <div class="flex items-center mb-6">
+              <div class="flex items-center justify-center w-14 h-14 mr-4 text-white rounded-full bg-primary-600">
+                <i class="text-xl fas fa-wheelchair"></i>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-heading">
+                Students with Special Needs
+              </h3>
+            </div>
+            <p class="mb-6 text-gray-700 font-body">
+              We provide an inclusive environment with accommodations for various learning needs and physical challenges. Our trained staff ensures every student receives appropriate support.
             </p>
-            <ul class="space-y-1 text-sm text-gray-600">
-              <li>• Learning disabilities support</li>
-              <li>• Physical accessibility accommodations</li>
-              <li>• Individual education plans</li>
-              <li>• Specialized teaching approaches</li>
+            <ul class="space-y-3 text-gray-600 font-body">
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Learning disabilities support
+              </li>
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Physical accessibility accommodations
+              </li>
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Individual education plans
+              </li>
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Specialized teaching approaches
+              </li>
             </ul>
           </div>
 
-          <div class="p-6 bg-gray-100 border border-gray-200 rounded-lg">
-            <h3 class="mb-4 text-xl font-semibold text-gray-700">
-              <i class="mr-1 text-blue-600 fa-solid fa-heart-pulse"></i>
-              Medical Conditions
-            </h3>
-            <p class="mb-3 text-gray-700">
-              Students with medical conditions are welcome. We work with parents
-              and healthcare providers to ensure proper care and support.
+          <div class="p-8 bg-gray-50 rounded-lg shadow-lg border border-gray-200">
+            <div class="flex items-center mb-6">
+              <div class="flex items-center justify-center w-14 h-14 mr-4 text-white rounded-full bg-primary-600">
+                <i class="text-xl fas fa-heartbeat"></i>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-heading">
+                Medical & Health Support
+              </h3>
+            </div>
+            <p class="mb-6 text-gray-700 font-body">
+              Students with medical conditions receive proper care through collaboration with parents and healthcare providers. Our school clinic ensures health monitoring and emergency preparedness.
             </p>
-            <ul class="space-y-1 text-sm text-gray-600">
-              <li>• Medication management support</li>
-              <li>• Emergency action plans</li>
-              <li>• Staff training on conditions</li>
-              <li>• Regular health monitoring</li>
+            <ul class="space-y-3 text-gray-600 font-body">
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Medication management support
+              </li>
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Emergency action plans
+              </li>
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Staff training on conditions
+              </li>
+              <li class="flex items-center">
+                <i class="mr-3 text-primary-500 fas fa-check-circle"></i>
+                Regular health monitoring
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-16 text-gray-700 bg-gray-100">
-      <div class="max-w-6xl px-4 mx-auto">
-        <div class="mb-12 text-center">
-          <h2 class="mb-4 text-3xl font-bold text-gray-800">Ready to Apply?</h2>
+    <!-- CTA Section -->
+    <section class="py-16 text-white bg-primary-600">
+      <div class="max-w-4xl px-6 mx-auto text-center">
+        <h2 class="mb-4 text-3xl font-heading">
+          Ready to Begin Your Journey?
+        </h2>
+        <p class="max-w-2xl mx-auto mb-8 text-lg font-body text-primary-100">
+          Join our community of learners and discover your potential. Our admissions team is ready to guide you every step of the way.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a
+            href="/admissions-form.html"
+            class="inline-flex items-center gap-3 px-8 py-3 font-semibold text-primary-600 transition bg-white rounded-lg font-body hover:bg-gray-100 hover:shadow-lg"
+          >
+            <i class="fas fa-file-alt"></i>
+            Start Application
+          </a>
+          <a
+            href="/contact.html"
+            class="inline-flex items-center gap-3 px-8 py-3 font-semibold text-white transition border-2 border-white rounded-lg font-body hover:bg-white/10"
+          >
+            <i class="fas fa-envelope"></i>
+            Contact Admissions
+          </a>
+          <a
+            href="tel:+254712345678"
+            class="inline-flex items-center gap-3 px-8 py-3 font-semibold text-white transition border-2 border-white rounded-lg font-body hover:bg-white/10"
+          >
+            <i class="fas fa-phone"></i>
+            Call +254 712 345 678
+          </a>
         </div>
-
-        <div class="max-w-4xl mx-auto">
-          <div class="grid gap-8 mb-12 sm:grid-cols-2">
-            <div class="flex flex-col text-center">
-              <div class="flex-grow">
-                <h3 class="mb-4 text-xl font-semibold">
-                  Start Your Application
-                </h3>
-                <p class="mb-6">
-                  Complete our online application form to begin the admission
-                  process.
-                </p>
-              </div>
-              <div>
-                <a
-                  href="/admissions-form.html"
-                  class="inline-block px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-500"
-                >
-                  Apply Now
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-col text-center">
-              <div class="flex-grow">
-                <h3 class="mb-4 text-xl font-semibold">Have Questions?</h3>
-                <p class="mb-6">
-                  Contact our admissions office for personalized assistance.
-                </p>
-              </div>
-              <div>
-                <a
-                  href="tel:+254712345678"
-                  class="inline-block px-8 py-3 font-semibold text-white transition-colors bg-gray-600 rounded-lg hover:bg-gray-700"
-                >
-                  Call Us
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="mt-8 text-sm text-primary-200">
+          <p class="flex items-center justify-center gap-2">
+            <i class="fas fa-clock"></i>
+            Admissions Office Hours: Mon-Fri 8:00 AM - 4:00 PM
+          </p>
         </div>
       </div>
     </section>
 
     <div id="footer-placeholder"></div>
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-    </script>
+
     <script src="/src/include.js" defer></script>
   </body>
 </html>
