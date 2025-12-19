@@ -5,7 +5,25 @@ import {
   FaEnvelope,
   FaCheckCircle,
   FaTimesCircle,
+  FaUserGraduate,
+  FaSchool,
+  FaStar,
+  FaTrophy,
+  FaCalendar,
+  FaClock,
+  FaHandsHelping,
+  FaFistRaised, 
+  FaEye,
+  FaRunning,
+  FaAward,
+  FaChartLine,
+  FaUsers,
+  FaHeart,
+  FaBookOpen,
+  FaLightbulb,
+  FaShieldAlt,
 } from "react-icons/fa";
+
 
 const Home = () => {
   const heroImgRef = useRef(null);
@@ -71,7 +89,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Highlights Section */}
+      {/* Highlights Section - We Are The Best */}
       <section className="py-12 bg-gradient-to-br from-primary-light/20 to-secondary-light/20">
         <div className="px-4 mx-auto max-w-7xl">
           <div className="mb-6 text-center md:mb-12">
@@ -81,10 +99,10 @@ const Home = () => {
           </div>
 
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
-            {/* Item 1 */}
+            {/* Item 1 - Academic Performance */}
             <div className="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
-              <div className="flex justify-center text-primary">
-                <i className="text-3xl fa-solid fa-user-graduate md:text-5xl"></i>
+              <div className="flex justify-center">
+                <FaUserGraduate className="text-3xl md:text-5xl text-primary" />
               </div>
               <h3 className="mt-4 mb-2 text-lg font-semibold text-primary sm:text-xl">
                 #1 Academic Performance
@@ -95,10 +113,10 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Item 2 */}
+            {/* Item 2 - State-of-the-Art Facilities */}
             <div className="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
-              <div className="flex justify-center text-primary">
-                <i className="text-3xl fa-solid fa-building-columns md:text-5xl"></i>
+              <div className="flex justify-center">
+                <FaSchool className="text-3xl md:text-5xl text-secondary" />
               </div>
               <h3 className="mt-4 mb-2 text-lg font-semibold text-primary sm:text-xl">
                 State-of-the-Art Facilities
@@ -109,10 +127,10 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Item 3 */}
+            {/* Item 3 - Award-Winning Character Program */}
             <div className="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
-              <div className="flex justify-center text-primary">
-                <i className="text-3xl fa-solid fa-star md:text-5xl"></i>
+              <div className="flex justify-center">
+                <FaStar className="text-3xl md:text-5xl text-tertiary" />
               </div>
               <h3 className="mt-4 mb-2 text-lg font-semibold text-primary sm:text-xl">
                 Award-Winning Character Program
@@ -123,10 +141,10 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Item 4 */}
+            {/* Item 4 - Championship-Level Programs */}
             <div className="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
-              <div className="flex justify-center text-primary">
-                <i className="text-3xl fa-solid fa-person-running md:text-5xl"></i>
+              <div className="flex justify-center">
+                <FaTrophy className="text-3xl md:text-5xl text-secondary-light" />
               </div>
               <h3 className="mt-4 mb-2 text-lg font-semibold text-primary sm:text-xl">
                 Championship-Level Programs
@@ -140,7 +158,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mission, Vision, Motto */}
+      {/* Mission, Vision, Motto - Our Guiding Principles */}
       <section className="py-8 md:py-16 bg-gradient-to-b from-white to-gray-50">
         <div className="px-4 mx-auto max-w-7xl">
           <h2 className="mb-4 text-xl font-bold text-center text-primary sm:text-2xl lg:text-3xl md:mb-12">
@@ -151,7 +169,7 @@ const Home = () => {
             {/* Mission */}
             <div className="w-full pt-6 pb-6 overflow-hidden transition transform bg-white border rounded-lg shadow-lg border-primary/20 max-w-96 sm:w-full hover:scale-105 hover:shadow-xl">
               <div className="flex items-center justify-center text-primary">
-                <i className="text-3xl fa-solid fa-hands-holding-child md:text-5xl"></i>
+                <FaHandsHelping className="text-3xl md:text-5xl" />
               </div>
               <div className="p-2 text-center md:p-6">
                 <h3 className="mb-2 text-lg font-semibold text-primary sm:text-xl lg:text-xl">
@@ -169,7 +187,7 @@ const Home = () => {
             {/* Motto */}
             <div className="w-full pt-6 pb-6 overflow-hidden transition transform bg-white border rounded-lg shadow-lg border-secondary/20 max-w-96 sm:w-full hover:scale-105 hover:shadow-xl">
               <div className="flex items-center justify-center text-secondary">
-                <i className="text-3xl fa-solid fa-hand-fist md:text-5xl"></i>
+                <FaFistRaised className="text-3xl md:text-5xl" />
               </div>
               <div className="p-2 text-center md:p-6">
                 <h3 className="mb-2 text-lg font-semibold text-secondary sm:text-xl lg:text-xl">
@@ -182,7 +200,7 @@ const Home = () => {
             {/* Vision */}
             <div className="w-full pt-6 pb-6 overflow-hidden transition transform bg-white border rounded-lg shadow-lg border-tertiary/20 max-w-96 sm:w-full hover:scale-105 hover:shadow-xl">
               <div className="flex items-center justify-center text-tertiary">
-                <i className="text-3xl fa-duotone fas fa-binoculars md:text-5xl"></i>
+                <FaEye className="text-3xl md:text-5xl" />
               </div>
               <div className="p-2 text-center md:p-6">
                 <h3 className="mb-2 text-lg font-semibold text-tertiary sm:text-xl lg:text-xl">
@@ -323,7 +341,8 @@ const Home = () => {
                   school grounds.
                 </p>
                 <p className="mt-1 text-sm text-primary">
-                  <i className="mr-1 fas fa-clock"></i> 9:00 AM - 1:00 PM
+                  <FaClock className="inline mr-1" />
+                  9:00 AM - 1:00 PM
                 </p>
               </div>
             </div>
@@ -343,7 +362,8 @@ const Home = () => {
                   and basketball tournaments.
                 </p>
                 <p className="mt-1 text-sm text-secondary">
-                  <i className="mr-1 fas fa-clock"></i> 8:00 AM - 5:00 PM
+                  <FaClock className="inline mr-1" />
+                  8:00 AM - 5:00 PM
                 </p>
               </div>
             </div>
@@ -363,7 +383,8 @@ const Home = () => {
                   on career choices.
                 </p>
                 <p className="mt-1 text-sm text-tertiary">
-                  <i className="mr-1 fas fa-clock"></i> 10:00 AM - 3:00 PM
+                  <FaClock className="inline mr-1" />
+                  10:00 AM - 3:00 PM
                 </p>
               </div>
             </div>
@@ -531,7 +552,7 @@ const Home = () => {
               Apply Now
             </a>
             <a
-              href="/contact"
+              href="/contact-us"
               className="px-8 py-3 font-bold transition duration-300 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-primary"
             >
               Contact Us

@@ -1,5 +1,25 @@
 import React, { useState } from "react";
-import { FaPhone, FaEnvelope, FaMailBulk, FaMapMarkerAlt, FaClock, FaHeadset, FaUser, FaTag, FaComment, FaPaperPlane, FaSpinner, FaDirections, FaMapMarkedAlt, FaShieldAlt, FaQuestionCircle, FaCalendarAlt, FaGraduationCap, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMailBulk,
+  FaMapMarkerAlt,
+  FaClock,
+  FaHeadset,
+  FaUser,
+  FaTag,
+  FaComment,
+  FaPaperPlane,
+  FaSpinner,
+  FaDirections,
+  FaMapMarkedAlt,
+  FaShieldAlt,
+  FaQuestionCircle,
+  FaCalendarAlt,
+  FaGraduationCap,
+  FaCheckCircle,
+  FaTimesCircle,
+} from "react-icons/fa";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -124,60 +144,6 @@ const ContactUs = () => {
 
   return (
     <div className="bg-gray-50">
-      <style>{styles.floatAnimation}</style>
-
-      {/* Hero Section with Floating Shapes */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary-light to-primary py-16 md:py-24">
-        <div style={styles.floatingShapes}>
-          <div
-            style={{
-              ...styles.shape,
-              width: "80px",
-              height: "80px",
-              top: "10%",
-              left: "10%",
-              animationDelay: "0s",
-            }}
-          ></div>
-          <div
-            style={{
-              ...styles.shape,
-              width: "120px",
-              height: "120px",
-              top: "60%",
-              right: "15%",
-              animationDelay: "2s",
-            }}
-          ></div>
-          <div
-            style={{
-              ...styles.shape,
-              width: "60px",
-              height: "60px",
-              bottom: "20%",
-              left: "20%",
-              animationDelay: "4s",
-            }}
-          ></div>
-        </div>
-        <div className="relative px-4 mx-auto max-w-7xl">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
-              Get In Touch
-            </h1>
-            <p className="mb-8 text-xl text-blue-100 md:text-2xl">
-              We're here to help and answer any questions you might have
-            </p>
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full">
-              <FaComment className="text-white" />
-              <span className="text-white">
-                We usually respond within 24 hours
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main Content */}
       <section className="px-4 py-16 -mt-8 md:py-24">
         <div className="grid gap-8 mx-auto max-w-7xl md:grid-cols-2 lg:grid-cols-3">
@@ -262,7 +228,7 @@ const ContactUs = () => {
                       <p className="text-gray-600">+254 721 415 851</p>
                     </div>
                   </a>
-                  
+
                   <a
                     href="mailto:info@kimangu.sc.ke"
                     className="flex items-center gap-3 p-3 transition-colors rounded-lg group hover:bg-gray-50"
@@ -275,14 +241,18 @@ const ContactUs = () => {
                       <p className="text-gray-600">info@kimangu.sc.ke</p>
                     </div>
                   </a>
-                  
+
                   <div className="flex items-center gap-3 p-3 transition-colors rounded-lg group hover:bg-gray-50">
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
                       <FaMailBulk className="text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Postal Address</p>
-                      <p className="text-gray-600">P.O. Box 79, Rongai, Nakuru</p>
+                      <p className="font-medium text-gray-900">
+                        Postal Address
+                      </p>
+                      <p className="text-gray-600">
+                        P.O. Box 79, Rongai, Nakuru
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -296,9 +266,9 @@ const ContactUs = () => {
               <div className="mb-8">
                 <h2 className="mb-3 text-3xl font-bold">Send us a message</h2>
                 <p className="text-gray-600">
-                  Have questions about admissions, programs, or anything else?
-                  Fill out the form below and we'll get back to you as soon as
-                  possible.
+                  Have questions about admissions, programs, job, tenders, or
+                  anything else? Fill out the form below and we'll get back to
+                  you as soon as possible.
                 </p>
               </div>
 

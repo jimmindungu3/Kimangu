@@ -1,596 +1,369 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { 
-  FaHome, FaGraduationCap, FaCalendarAlt, FaSchool, 
-  FaMoneyBillWave, FaCertificate, FaIdCard, FaExclamationTriangle, 
-  FaUserGraduate, FaUsers, FaCheck, FaCheckCircle, FaClock, 
-  FaFileAlt, FaEnvelope, FaPhone, FaWheelchair, FaHeartbeat,
-  FaUser, FaBook, FaBuilding, FaListOl, FaHandshake, FaClipboardList
+import {
+  FaGraduationCap,
+  FaCalendarAlt,
+  FaArrowRight,
+  FaQuoteLeft,
+  FaStar,
+  FaChartLine,
+  FaHeart,
+  FaHandshake,
+  FaBook,
+  FaFileAlt,
+  FaEnvelope,
+  FaPhone,
+  FaClock,
+  FaUsers,
 } from "react-icons/fa";
-import { MdGroups, MdSchool, MdDescription } from "react-icons/md";
-import { IoDocumentText } from "react-icons/io5";
 
 const Admissions = () => {
   return (
     <div className="text-gray-600">
-      {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center h-[35vh] flex items-center justify-center text-white"
-        style={{
-          backgroundImage: `linear-gradient(
-            rgba(59, 130, 246, 0.7),
-            rgba(37, 99, 235, 0.8)
-          ),
-          url('/src/assets/images/admissions-hero.jpg')`,
-        }}
+{/* Hero Section */}
+<section
+  className="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
+  style={{
+    backgroundImage: "url('/src/assets/images/admissions-banner.jpg')",
+  }}
+>
+  {/* Overlay using Tailwind colors */}
+  <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/30"></div>
+
+  <div className="relative z-10 px-4 text-center max-w-4xl">
+    <h1 className="mb-4 text-4xl font-bold md:text-6xl animate-fade-in">
+      Your Journey to Excellence Begins Here
+    </h1>
+
+    <p className="max-w-2xl mx-auto mb-8 text-xl font-light">
+      At our school, we don't just educate students — we nurture future
+      leaders, innovators, and changemakers. Your story starts today.
+    </p>
+
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Link
+        to="/admissions-form"
+        className="inline-flex items-center justify-center gap-2 px-8 py-3 font-semibold text-white transition-all duration-300 bg-primary rounded-lg hover:bg-primary-light hover:scale-105 hover:shadow-xl"
       >
-        <div className="px-4 text-center">
-          <h1 className="mb-6 text-4xl font-bold md:text-5xl text-white">
-            Join Our Academic Community
-          </h1>
-          <p className="max-w-2xl mb-8 text-xl text-blue-100">
-            Begin your journey towards academic excellence and personal growth
-          </p>
-          <nav className="text-sm">
-            <ol className="flex items-center justify-center space-x-2">
-              <li>
-                <Link to="/" className="hover:text-white/80 flex items-center text-blue-100">
-                  <FaHome className="mr-1" />
-                  Home
-                </Link>
-              </li>
-              <li>
-                <span className="mx-2 text-blue-200/50">•</span>
-              </li>
-              <li className="font-medium text-white">Admissions</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
+        Start Your Application
+        <FaArrowRight className="animate-pulse" />
+      </Link>
 
-      {/* Quick Overview Cards */}
-      <section className="py-16 bg-white">
+      <Link
+        to="/schedule-visit"
+        className="inline-flex items-center justify-center gap-2 px-8 py-3 font-semibold text-white transition-all duration-300 border-2 border-white rounded-lg hover:bg-secondary/20 hover:shadow-lg"
+      >
+        Schedule a Visit
+        <FaCalendarAlt className="ml-2" />
+      </Link>
+    </div>
+  </div>
+
+  {/* Bottom fade */}
+  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+</section>
+
+      {/* Story Section - The Student Experience */}
+      <section className="py-20 bg-white">
         <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
+          <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-800">
-              Admissions Overview
+              More Than a School—A Community
             </h2>
-            <p className="max-w-2xl mx-auto text-lg text-blue-600">
-              Everything you need to know about joining our esteemed institution
+            <p className="max-w-3xl mx-auto text-lg text-primary">
+              Every student writes their own success story. Here's what makes
+              ours special.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-lg border border-blue-100 hover:transform hover:scale-105 hover:shadow-xl">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
-                <FaGraduationCap className="text-2xl" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-800">
-                KCPE Score
-              </h3>
-              <p className="text-2xl font-bold text-primary">200+</p>
-              <p className="mt-2 text-sm text-gray-600">
-                Minimum marks required
-              </p>
-            </div>
-
-            <div className="p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-lg border border-blue-100 hover:transform hover:scale-105 hover:shadow-xl">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
-                <FaCalendarAlt className="text-2xl" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-800">
-                Age Range
-              </h3>
-              <p className="text-2xl font-bold text-primary">14-22</p>
-              <p className="mt-2 text-sm text-gray-600">
-                Years (2003-2011 birth)
-              </p>
-            </div>
-
-            <div className="p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-lg border border-blue-100 hover:transform hover:scale-105 hover:shadow-xl">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
-                <FaSchool className="text-2xl" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-800">
-                School Type
-              </h3>
-              <p className="text-xl font-bold text-primary">Day School</p>
-              <p className="mt-2 text-sm text-gray-600">
-                No boarding facilities
-              </p>
-            </div>
-
-            <div className="p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-lg border border-blue-100 hover:transform hover:scale-105 hover:shadow-xl">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
-                <FaMoneyBillWave className="text-2xl" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-800">
-                Termly Fees
-              </h3>
-              <p className="text-2xl font-bold text-primary">KES 3,000</p>
-              <p className="mt-2 text-sm text-gray-600">Average per term</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Academic Requirements */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-800">
-              Academic Requirements
-            </h2>
-            <p className="max-w-2xl mx-auto text-lg text-blue-600">
-              Essential criteria for admission to ensure academic readiness
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="p-8 bg-white rounded-lg shadow-lg border border-blue-100">
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center flex-shrink-0 w-14 h-14 rounded-full bg-primary/10">
-                  <FaCertificate className="text-xl text-primary" />
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold text-gray-800">
-                    KCPE Results
-                  </h3>
-                  <p className="mb-4 text-gray-600">
-                    Completion of Kenya Certificate of Primary Education (KCPE)
-                    with a minimum score of
-                    <strong className="text-primary"> 200 marks</strong>. Higher
-                    scores receive priority consideration.
-                  </p>
-                  <div className="inline-flex items-center px-4 py-2 text-sm rounded-full bg-primary/10 text-primary">
-                    <FaClock className="mr-2" />
-                    Accepts results from 2019-2024
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="p-6 bg-gradient-to-r from-blue-50 to-white rounded-2xl border border-blue-100 shadow-lg transform transition-transform hover:scale-[1.02]">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 mr-4 text-white bg-gradient-to-r from-primary to-primary-light rounded-xl">
+                    <FaUsers className="text-2xl" />
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-8 bg-white rounded-lg shadow-lg border border-blue-100">
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center flex-shrink-0 w-14 h-14 rounded-full bg-primary/10">
-                  <FaIdCard className="text-xl text-primary" />
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold text-gray-800">
-                    Documentation
+                  <h3 className="text-2xl font-bold text-gray-800">
+                    A Family That Grows Together
                   </h3>
-                  <p className="mb-4 text-gray-600">
-                    Valid KCPE index number, birth certificate for age
-                    verification, and NEMIS number from previous school are
-                    mandatory for enrollment.
-                  </p>
-                  <div className="inline-flex items-center px-4 py-2 text-sm rounded-full bg-primary/10 text-primary">
-                    <FaCheckCircle className="mr-2" />
-                    All documents must be original
-                  </div>
                 </div>
+                <p className="text-gray-700 text-lg">
+                  Join a community where teachers know your name, peers become
+                  lifelong friends, and every achievement is celebrated
+                  together. Our small class sizes ensure personalized attention
+                  and meaningful connections.
+                </p>
+              </div>
+
+              <div className="p-6 bg-gradient-to-r from-green-50 to-white rounded-2xl border border-green-100 shadow-lg transform transition-transform hover:scale-[1.02]">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 mr-4 text-white bg-gradient-to-r from-tertiary to-tertiary-light rounded-xl">
+                    <FaChartLine className="text-2xl" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">
+                    From Potential to Excellence
+                  </h3>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  Watch your confidence soar as you master new skills, overcome
+                  challenges, and discover talents you never knew you had. Our
+                  graduates consistently outperform national averages by 35%.
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Required Documents */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-800">
-              Required Documents
-            </h2>
-            <p className="max-w-2xl mx-auto text-lg text-blue-600">
-              Complete documentation ensures smooth admission process
-            </p>
-          </div>
-
-          <div className="p-8 rounded-lg shadow-lg bg-blue-50 border border-blue-100">
-            <div className="p-6 mb-8 bg-white rounded-lg border border-amber-200 bg-amber-50">
-              <div className="flex items-center mb-4">
-                <FaExclamationTriangle className="mr-3 text-xl text-amber-500" />
-                <h3 className="text-xl font-bold text-gray-800">
-                  Important Note
-                </h3>
-              </div>
-              <p className="text-gray-700">
-                All documents must be submitted physically at our school office
-                for verification. Online application serves as initial
-                registration only. Admission is confirmed after complete
-                document verification and interview.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {/* Student Documents */}
-              <div className="p-6 bg-white rounded-lg border border-blue-100">
-                <h4 className="flex items-center mb-6 text-xl font-bold text-gray-800">
-                  <FaUserGraduate className="mr-3 text-primary" />
-                  Student Documents
-                </h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">
-                        KCPE Result Slip
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Original copy for verification
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">
-                        Birth Certificate
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Certified copy acceptable
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">
-                        Passport Photos
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        2 recent passport-size photos
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">
-                        Previous School Documents
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Release letter & report form
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Parent Documents */}
-              <div className="p-6 bg-white rounded-lg border border-blue-100">
-                <h4 className="flex items-center mb-6 text-xl font-bold text-gray-800">
-                  <FaUsers className="mr-3 text-primary" />
-                  Parent/Guardian Documents
-                </h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">ID Copy</p>
-                      <p className="text-sm text-gray-600">
-                        Parent/Guardian identification
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">
-                        Contact Information
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Phone number & email address
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">
-                        Home Address
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Physical address for correspondence
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary">
-                      <FaCheck className="text-sm" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800">
-                        Emergency Contacts
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Alternative phone numbers
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Admission Process */}
-      <section className="py-16 bg-primary/10">
-        <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-800">
-              Admission Process
-            </h2>
-            <p className="max-w-2xl mx-auto text-lg text-blue-600">
-              Simple 4-step journey to joining our academic family
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* Step 1 */}
             <div className="relative">
-              <div className="absolute top-0 w-px h-full left-6 bg-primary/20 md:left-1/2 md:-translate-x-1/2"></div>
-              <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
+              <div className="relative z-10 p-8 bg-white rounded-2xl shadow-2xl border border-blue-100">
+                <FaQuoteLeft className="mb-4 text-4xl text-primary" />
+                <blockquote className="mb-6 text-xl italic text-gray-700">
+                  "Coming here was the best decision of my life. The teachers
+                  didn't just teach me—they believed in me. Today, I'm pursuing
+                  my dream career in medicine, all thanks to the foundation
+                  built here."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-16 h-16 mr-4 bg-gradient-to-r from-primary to-primary-light rounded-full"></div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Sarah M.</h4>
+                    <p className="text-primary">Class of 2023</p>
+                    <div className="flex mt-1">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <FaStar key={star} className="text-secondary" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-secondary to-secondary-light rounded-full opacity-20"></div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Opportunity - Why Choose Us */}
+      <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+        <div className="max-w-6xl px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-800">
+              Your Path to Success
+            </h2>
+            <p className="max-w-3xl mx-auto text-lg text-primary">
+              We provide more than education—we provide opportunities that shape
+              futures.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 text-center transition-all duration-300 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 border border-blue-100 group">
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-6 text-white rounded-full bg-gradient-to-r from-primary to-primary-light group-hover:from-primary-light group-hover:to-primary transition-all">
+                <FaHandshake className="text-3xl" />
+              </div>
+              <h3 className="mb-4 text-xl font-bold text-gray-800">
+                Mentorship Program
+              </h3>
+              <p className="text-gray-600">
+                One-on-one guidance from dedicated mentors who help you navigate
+                academic challenges and career choices.
+              </p>
+            </div>
+
+            <div className="p-8 text-center transition-all duration-300 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 border border-blue-100 group">
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-6 text-white rounded-full bg-gradient-to-r from-tertiary to-tertiary-light group-hover:from-tertiary-light group-hover:to-tertiary transition-all">
+                <FaBook className="text-3xl" />
+              </div>
+              <h3 className="mb-4 text-xl font-bold text-gray-800">
+                Innovative Learning
+              </h3>
+              <p className="text-gray-600">
+                Hands-on projects, technology integration, and real-world
+                applications that make learning exciting and relevant.
+              </p>
+            </div>
+
+            <div className="p-8 text-center transition-all duration-300 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 border border-blue-100 group">
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-6 text-white rounded-full bg-gradient-to-r from-secondary to-secondary-light group-hover:from-secondary-light group-hover:to-secondary transition-all">
+                <FaHeart className="text-3xl" />
+              </div>
+              <h3 className="mb-4 text-xl font-bold text-gray-800">
+                Holistic Development
+              </h3>
+              <p className="text-gray-600">
+                Beyond academics—develop leadership, creativity, and character
+                through sports, arts, and community service.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Invitation - Simple Steps */}
+      <section className="py-20 bg-gradient-to-r from-primary to-primary-light text-white">
+        <div className="max-w-6xl px-4 mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="mb-4 text-3xl font-bold">
+              Your Invitation to Excellence
+            </h2>
+            <p className="max-w-3xl mx-auto text-xl text-blue-100">
+              Take the first step toward an extraordinary educational experience
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 text-center bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-white rounded-full bg-white/20">
                 <span className="text-2xl font-bold">1</span>
               </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-blue-100">
-                <h3 className="mb-4 text-xl font-bold text-gray-800">
-                  Online Application
-                </h3>
-                <p className="mb-4 text-gray-600">
-                  Complete our digital application form with student and
-                  guardian details.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Student information
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    KCPE details
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Guardian contacts
-                  </li>
-                </ul>
-              </div>
+              <h3 className="mb-4 text-xl font-bold">Reach Out</h3>
+              <p className="mb-6 text-blue-100">
+                Schedule a visit or virtual meeting. See our campus, meet our
+                teachers, and feel the energy of our community.
+              </p>
+              <Link
+                to="/schedule-visit"
+                className="inline-flex items-center gap-2 px-6 py-2 font-semibold text-primary bg-white rounded-lg hover:bg-gray-100"
+              >
+                Schedule Visit
+              </Link>
             </div>
 
-            {/* Step 2 */}
-            <div className="relative">
-              <div className="absolute top-0 w-px h-full left-6 bg-primary/20 md:left-1/2 md:-translate-x-1/2"></div>
-              <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
+            <div className="p-8 text-center bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-white rounded-full bg-white/20">
                 <span className="text-2xl font-bold">2</span>
               </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-blue-100">
-                <h3 className="mb-4 text-xl font-bold text-gray-800">
-                  Document Submission
-                </h3>
-                <p className="mb-4 text-gray-600">
-                  Visit school office with original documents for verification
-                  process.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Original documents
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Verification interview
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Parent meeting
-                  </li>
-                </ul>
-              </div>
+              <h3 className="mb-4 text-xl font-bold">Apply</h3>
+              <p className="mb-6 text-blue-100">
+                Complete our simple application. We review every application
+                personally and consider more than just scores.
+              </p>
+              <Link
+                to="/admissions-form"
+                className="inline-flex items-center gap-2 px-6 py-2 font-semibold text-primary bg-white rounded-lg hover:bg-gray-100"
+              >
+                Start Application
+              </Link>
             </div>
 
-            {/* Step 3 */}
-            <div className="relative">
-              <div className="absolute top-0 w-px h-full left-6 bg-primary/20 md:left-1/2 md:-translate-x-1/2"></div>
-              <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
+            <div className="p-8 text-center bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-white rounded-full bg-white/20">
                 <span className="text-2xl font-bold">3</span>
               </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-blue-100">
-                <h3 className="mb-4 text-xl font-bold text-gray-800">
-                  Interview & Assessment
-                </h3>
-                <p className="mb-4 text-gray-600">
-                  Student and parent interview to assess compatibility with
-                  school values.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Student interview
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Academic assessment
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Values alignment
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="relative">
-              <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-6 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
-                <span className="text-2xl font-bold">4</span>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-blue-100">
-                <h3 className="mb-4 text-xl font-bold text-gray-800">
-                  Enrollment & Orientation
-                </h3>
-                <p className="mb-4 text-gray-600">
-                  Complete admission with fee payment and attend orientation
-                  program.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Fee payment
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    Uniform & book purchase
-                  </li>
-                  <li className="flex items-center">
-                    <FaCheckCircle className="mr-2 text-primary" />
-                    School orientation
-                  </li>
-                </ul>
-              </div>
+              <h3 className="mb-4 text-xl font-bold">Begin Your Journey</h3>
+              <p className="mb-6 text-blue-100">
+                Join our orientation, meet your classmates, and start writing
+                the first chapter of your success story.
+              </p>
+              <Link
+                to="/orientation"
+                className="inline-flex items-center gap-2 px-6 py-2 font-semibold text-primary bg-white rounded-lg hover:bg-gray-100"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Special Considerations */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-800">
-              Inclusive Education
-            </h2>
-            <p className="max-w-2xl mx-auto text-lg text-blue-600">
-              We welcome and support students with diverse needs and backgrounds
-            </p>
+      {/* Final CTA - The Decision */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl px-4 mx-auto text-center">
+          <div className="inline-flex items-center justify-center w-24 h-24 mb-8 text-white rounded-full bg-gradient-to-r from-primary to-primary-light shadow-xl">
+            <FaGraduationCap className="text-3xl" />
           </div>
 
-          <div className="grid max-w-6xl grid-cols-1 gap-8 mx-auto md:grid-cols-2">
-            <div className="p-8 border rounded-lg shadow-lg bg-gradient-to-br from-primary/10 to-white border-primary/20">
-              <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center mr-4 text-white rounded-full w-14 h-14 bg-gradient-to-r from-primary to-blue-500">
-                  <FaWheelchair className="text-xl" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  Students with Special Needs
-                </h3>
-              </div>
-              <p className="mb-6 text-gray-700">
-                We provide an inclusive environment with accommodations for
-                various learning needs and physical challenges. Our trained
-                staff ensures every student receives appropriate support.
-              </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Learning disabilities support
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Physical accessibility accommodations
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Individual education plans
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Specialized teaching approaches
-                </li>
-              </ul>
-            </div>
-
-            <div className="p-8 border rounded-lg shadow-lg bg-gradient-to-br from-blue-50 to-white border-blue-100">
-              <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center mr-4 text-white rounded-full w-14 h-14 bg-gradient-to-r from-primary to-blue-500">
-                  <FaHeartbeat className="text-xl" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  Medical & Health Support
-                </h3>
-              </div>
-              <p className="mb-6 text-gray-700">
-                Students with medical conditions receive proper care through
-                collaboration with parents and healthcare providers. Our school
-                clinic ensures health monitoring and emergency preparedness.
-              </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Medication management support
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Emergency action plans
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Staff training on conditions
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="mr-3 text-primary" />
-                  Regular health monitoring
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 text-white bg-gradient-to-r from-primary to-blue-600">
-        <div className="max-w-4xl px-6 mx-auto text-center">
-          <h2 className="mb-4 text-3xl font-bold">
-            Ready to Begin Your Journey?
+          <h2 className="mb-6 text-4xl font-bold text-gray-800">
+            This Could Be Your Story
           </h2>
-          <p className="max-w-2xl mx-auto mb-8 text-lg text-blue-100">
-            Join our community of learners and discover your potential. Our
-            admissions team is ready to guide you every step of the way.
+
+          <p className="mb-8 text-xl text-gray-600 max-w-3xl mx-auto">
+            Imagine walking through our halls, discovering new passions, forming
+            lifelong friendships, and building the foundation for your dreams.
+            This isn't just school—it's the beginning of everything.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
+
+          <div className="p-8 mb-10 rounded-2xl bg-gradient-to-r from-blue-50 to-white border border-blue-100 shadow-lg">
+            <p className="text-lg text-gray-700 mb-6">
+              <strong className="text-primary">Limited spots available</strong>{" "}
+              for the upcoming term. Applications are reviewed on a rolling
+              basis.
+            </p>
+            <div className="inline-flex items-center gap-4 px-6 py-3 text-sm font-semibold text-primary bg-blue-100 rounded-full">
+              <FaClock />
+              Early applications receive priority consideration
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/admissions-form"
-              className="inline-flex items-center gap-3 px-8 py-3 font-semibold transition bg-white rounded-lg text-primary hover:bg-gray-100 hover:shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center gap-3 px-10 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary to-primary-light rounded-xl hover:shadow-2xl hover:scale-105 transform"
             >
               <FaFileAlt />
-              Start Application
+              Begin Your Application Now
             </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-8 py-3 font-semibold text-white transition border-2 border-white rounded-lg hover:bg-white/10 hover:shadow-lg"
-            >
-              <FaEnvelope />
-              Contact Admissions
-            </Link>
-            <a
-              href="tel:+254712345678"
-              className="inline-flex items-center gap-3 px-8 py-3 font-semibold text-white transition border-2 border-white rounded-lg hover:bg-white/10 hover:shadow-lg"
-            >
-              <FaPhone />
-              Call +254 712 345 678
-            </a>
+
+            <div className="relative group">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-3 px-10 py-4 text-lg font-bold transition-all duration-300 border-2 border-primary rounded-xl text-primary hover:bg-primary hover:text-white group-hover:shadow-lg"
+              >
+                <FaEnvelope />
+                Talk to Our Team
+              </Link>
+              <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 px-4 py-2 text-sm text-white bg-gray-800 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Response within 24 hours
+              </div>
+            </div>
           </div>
-          <div className="mt-8 text-sm text-blue-100">
-            <p className="flex items-center justify-center gap-2">
-              <FaClock />
-              Admissions Office Hours: Mon-Fri 8:00 AM - 4:00 PM
-            </p>
+
+          <p className="mt-8 text-sm text-gray-500">
+            Still unsure?{" "}
+            <Link
+              to="/virtual-tour"
+              className="font-semibold text-primary hover:underline"
+            >
+              Take our virtual tour
+            </Link>{" "}
+            or{" "}
+            <Link
+              to="/faq"
+              className="font-semibold text-primary hover:underline"
+            >
+              read FAQs
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* Footer CTA */}
+      <section className="py-12 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div className="max-w-6xl px-4 mx-auto text-center">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-left">
+              <h3 className="mb-2 text-2xl font-bold">
+                Ready to write your story?
+              </h3>
+              <p className="text-gray-300">
+                Our admissions team is here to guide you.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="tel:+254712345678"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 font-semibold text-white transition bg-primary rounded-lg hover:bg-primary-light hover:shadow-lg"
+              >
+                <FaPhone />
+                Call Now
+              </a>
+              <a
+                href="mailto:admissions@school.edu"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 font-semibold text-gray-900 transition bg-white rounded-lg hover:bg-gray-100 hover:shadow-lg"
+              >
+                <FaEnvelope />
+                Email Us
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -21,132 +21,97 @@ import { IoTimeOutline } from "react-icons/io5";
 const About = () => {
   return (
     <div className="text-gray-600">
-      {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center h-[25vh] flex items-center justify-center text-white"
-        style={{
-          backgroundImage: `linear-gradient(
-      rgba(59, 130, 246, 0.2),
-      rgba(30, 64, 175, 0.3)
-    ),
-    url('/src/assets/images/school-bus.png')`,
-        }}
-      >
-        <div className="px-4 text-center text-gray-100">
-          <h1 className="mb-6 text-4xl font-bold md:text-5xl">
-            About Our School
-          </h1>
-          <p className="max-w-2xl mb-8 text-xl text-blue-100">
-            Discover our story, values, and commitment to excellence in
-            education
-          </p>
-          <nav className="text-sm">
-            <ol className="flex items-center justify-center space-x-2">
-              <li>
-                <a href="/" className="hover:text-white/80 flex items-center">
-                  <FaHome className="mr-1" />
-                  Home
-                </a>
-              </li>
-              <li>
-                <FaChevronRight className="mx-2 text-white/50" />
-              </li>
-              <li className="font-medium text-white">About Us</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
 
-      <section className="py-16">
-        <div className="px-4 mx-auto max-w-7xl">
-          <div className="grid grid-cols-12 gap-12">
-            {/* LEFT */}
-            <div className="col-span-12 lg:col-span-8">
-              <h2 className="mb-6 text-3xl font-bold text-gray-800">
-                Our Story
-              </h2>
+<section className="py-16 bg-gradient-to-br from-blue-50/30 via-green-50/30 to-yellow-50/30">
+      <div className="px-4 mx-auto max-w-7xl">
+        <div className="grid grid-cols-12 gap-12">
+          {/* LEFT */}
+          <div className="col-span-12 lg:col-span-8">
+            <h2 className="mb-6 text-3xl font-bold text-gray-800">
+              Our Story
+            </h2>
 
-              <div className="space-y-4">
-                <p className="text-lg text-gray-600">
-                  Founded in 2016, Kimangu Day Secondary School began its
-                  journey from modest origins, starting with just 33 students
-                  and 4 dedicated teachers. Since then, it has steadily grown to
-                  become one of the most respected and high-performing academic
-                  institutions in Rongai Sub County, Nakuru.
-                </p>
+            <div className="space-y-4">
+              <p className="text-lg text-gray-600">
+                Founded in 2016, Kimangu Day Secondary School began its
+                journey from modest origins, starting with just 33 students
+                and 4 dedicated teachers. Since then, it has steadily grown to
+                become one of the most respected and high-performing academic
+                institutions in Rongai Sub County, Nakuru.
+              </p>
 
-                <p className="text-lg text-gray-600">
-                  The school was established with a clear and compelling vision:
-                  to offer quality education to the youth of Rongai and its
-                  neighboring communities, equipping them with the knowledge,
-                  skills, and values needed to become responsible citizens and
-                  capable future leaders of our country.
-                </p>
+              <p className="text-lg text-gray-600">
+                The school was established with a clear and compelling vision:
+                to offer quality education to the youth of Rongai and its
+                neighboring communities, equipping them with the knowledge,
+                skills, and values needed to become responsible citizens and
+                capable future leaders of our country.
+              </p>
 
-                <p className="text-lg text-gray-600">
-                  Throughout the years, Kimangu Day has consistently upheld
-                  strong academic standards, while placing equal emphasis on the
-                  holistic development of each learner. We are deeply committed
-                  to fostering character, encouraging leadership potential, and
-                  nurturing the unique talents of our students.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
-                <div className="p-6 border border-blue-100 rounded-lg bg-blue-50">
-                  <h3 className="flex items-center mb-3 text-lg font-semibold text-blue-800">
-                    <FaEye className="mr-3 text-xl text-primary" />
-                    Our Vision
-                  </h3>
-                  <p className="text-blue-600">
-                    To be a center of academic excellence and moral integrity in
-                    Kenya and beyond, producing well-rounded graduates who will
-                    positively impact their communities.
-                  </p>
-                </div>
-
-                <div className="p-6 border border-blue-100 rounded-lg bg-blue-50">
-                  <h3 className="flex items-center mb-3 text-lg font-semibold text-blue-800">
-                    <FaBullseye className="mr-3 text-xl text-primary" />
-                    Our Mission
-                  </h3>
-                  <p className="text-blue-600">
-                    To nurture responsible and disciplined students through
-                    quality education, fostering critical thinking skills, and
-                    promoting holistic development to prepare them for future
-                    challenges.
-                  </p>
-                </div>
-              </div>
+              <p className="text-lg text-gray-600">
+                Throughout the years, Kimangu Day has consistently upheld
+                strong academic standards, while placing equal emphasis on the
+                holistic development of each learner. We are deeply committed
+                to fostering character, encouraging leadership potential, and
+                nurturing the unique talents of our students.
+              </p>
             </div>
 
-            {/* RIGHT */}
-            <div className="relative col-span-12 lg:col-span-4">
-              <img
-                src="/src/assets/images/growth.svg"
-                alt="Kimangu Day Secondary School"
-                className="object-contain w-full h-full rounded-lg shadow-lg"
-              />
+            <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+              <div className="p-6 border border-blue-100 rounded-lg bg-white shadow-sm">
+                <h3 className="flex items-center mb-3 text-lg font-semibold text-blue-600">
+                  <FaEye className="mr-3 text-xl text-blue-400" />
+                  Our Vision
+                </h3>
+                <p className="text-gray-700">
+                  To be a center of academic excellence and moral integrity in
+                  Kenya and beyond, producing well-rounded graduates who will
+                  positively impact their communities.
+                </p>
+              </div>
 
-              <div className="absolute bottom-0 left-0 max-w-xs p-6 -mb-8 -ml-4 bg-white rounded-lg shadow-lg border border-blue-100">
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-primary to-blue-500">
-                    <FaTrophy className="text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold tracking-widest text-primary">
-                      RECOGNIZED EXCELLENCE
-                    </p>
-                    <h3 className="text-lg font-bold text-gray-800">
-                      Top Performing School
-                    </h3>
-                  </div>
+              <div className="p-6 border border-green-100 rounded-lg bg-white shadow-sm">
+                <h3 className="flex items-center mb-3 text-lg font-semibold text-green-600">
+                  <FaBullseye className="mr-3 text-xl text-green-400" />
+                  Our Mission
+                </h3>
+                <p className="text-gray-700">
+                  To nurture responsible and disciplined students through
+                  quality education, fostering critical thinking skills, and
+                  promoting holistic development to prepare them for future
+                  challenges.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="relative col-span-12 lg:col-span-4">
+            <img
+              src="/src/assets/images/growth.svg"
+              alt="Kimangu Day Secondary School"
+              className="object-contain w-full h-full rounded-lg shadow-lg"
+            />
+
+            <div className="absolute bottom-0 left-0 max-w-xs p-6 -mb-8 -ml-4 bg-white rounded-lg shadow-lg border">
+              <div className="flex items-center">
+                <div className="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500">
+                  <FaTrophy className="text-xl" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold tracking-widest text-yellow-500">
+                    RECOGNIZED EXCELLENCE
+                  </p>
+                  <h3 className="text-lg font-bold text-gray-800">
+                    Top Performing School
+                  </h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Leadership Team */}
       <section id="leadership" className="py-16 bg-blue-50">
@@ -309,8 +274,8 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 text-white bg-gradient-to-r from-primary to-blue-600">
-        <div className="px-4 mx-auto max-w-7xl">
+      <section>
+        <div className="px-4 mx-auto max-w-7xl text-white py-12 bg-gradient-to-r from-primary to-blue-600 mb-12">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">

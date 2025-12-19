@@ -7,6 +7,8 @@ import Academics from "./pages/Academics";
 import Admissions from "./pages/Admissions";
 import ExtraCurricular from "./pages/ExtraCurricular";
 import ContactUs from "./pages/ContactUs";
+import Careers from "./pages/Careers";
+import Tenders from "./pages/Tenders";
 
 
 const App = () => {
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="admissions" element={<Admissions />} />
           <Route path="extra-curricular" element={<ExtraCurricular />} />
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="careers" element={<Careers />} />
+          <Route path="tenders" element={<Tenders />} />
         </Route>
       </Routes>
     </Router>

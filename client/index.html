@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Kimangu Day Secondary School</title>
+    <title>Kimangu Day Secondary School - Rongai, Nakuru</title>
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,289 +11,773 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-  </head>
-  <body class="font-sans text-gray-900">
-    <div id="nav-placeholder"></div>
-    <!-- Contact Hero -->
-    <section class="relative py-4 text-white bg-blue-500">
-      <div class="absolute inset-0 opacity-10">
-        <div
-          class="w-full h-full"
-          style="
-            background-image: url('data:image/svg+xml,%3Csvg width=\'24\' height=\'24\' viewBox=\'0 0 24 24\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M8 0v8h8V0H8zM0 8v8h8V8H0zm16 0v8h8V8h-8zM8 16v8h8v-8H8z\'/%3E%3C/g%3E%3C/svg%3E');
-          "
-        ></div>
-      </div>
-      <div class="relative flex flex-col items-center px-4 mx-auto max-w-7xl">
-        <h1 class="mb-4 text-3xl font-bold text-center md:text-5xl">
-          Contact Us
-        </h1>
-        <p class=" text-lg text-center text-gray-100 max-w-2xl">
-          We'd love to hear from you - Get in touch.
-        </p>
-      </div>
-    </section>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    <!-- Two Column Layout: Contact Info & Form + Map -->
-    <section class="py-12 bg-white">
-      <div class="grid grid-cols-1 gap-8 px-4 mx-auto max-w-7xl lg:grid-cols-12">
-        <!-- Left Column: Contact Info & Form -->
-        <div class="lg:col-span-8">
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <!-- Our Contacts -->
-            <div class="p-6 bg-blue-50 rounded-2xl">
-              <h2 class="mb-6 text-2xl font-bold text-gray-800">Get in Touch</h2>
-              <ul class="space-y-4 text-gray-700">
-                <li>
-                  <i class="mr-2 text-blue-500 fa-solid fa-envelope"></i> P.O. Box
-                  79, Rongai, Nakuru
-                </li>
-                <li>
-                  <i class="mr-2 text-blue-500 fas fa-phone-alt"></i>
-                  +254 721 415 851
-                </li>
-                <li>
-                  <i class="mr-2 text-blue-500 fa-regular fa-paper-plane"></i>
-                  info@kimangu.sc.ke
-                </li>
-                <li>
-                  <i class="mr-2 text-blue-500 fa-solid fa-location-dot"></i>
-                  Rongai, Nakuru County
-                </li>
-                <li class="flex items-start">
-                  <i class="mt-1 mr-2 text-blue-500 fas fa-clock"></i>
-                  <div>
-                    <ul class="ml-1 space-y-1">
-                      <li>Weekdays: 8:00 AM &ndash; 5:00 PM</li>
-                      <li>Saturday: 8:00 AM &ndash; 12:00 PM</li>
-                      <li>Sunday and Public Holidays: Closed</li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="p-6 bg-white border border-gray-200 rounded-2xl">
-              <h2 class="mb-6 text-2xl font-bold">Leave Us a Message</h2>
-              <form class="space-y-4" id="contactForm">
-                <input
-                  type="text"
-                  name="fullName"
-                  placeholder="Full Name"
-                  class="w-full px-4 py-2 transition-colors border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  required
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  class="w-full px-4 py-2 transition-colors border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  required
-                />
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  class="w-full px-4 py-2 transition-colors border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  required
-                />
-                <textarea
-                  name="message"
-                  rows="4"
-                  placeholder="Your Message"
-                  class="w-full px-4 py-2 transition-colors border border-gray-300 rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  class="px-6 py-3 font-medium text-white transition-all duration-200 bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
-                  <i class="mr-2 fas fa-paper-plane"></i>Send
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Map -->
-        <div class="lg:col-span-4">
-          <div class="p-6 bg-white border border-gray-200 rounded-2xl h-full">
-            <h2 class="mb-4 text-2xl font-bold text-gray-800">Visit Us</h2>
-            <p class="mb-6 text-gray-700">
-              We're located 7 km from Rongai town center along Rongai-Kandutura Road.
-            </p>
-            <div class="h-64 overflow-hidden border border-blue-300 rounded-lg">
-              <iframe
-                width="100%"
-                height="100%"
-                frameborder="0"
-                style="border: 0"
-                src="https://maps.google.com/maps?q=-0.150096,35.838525&z=15&output=embed"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              >
-              </iframe>
-            </div>
-            <div class="mt-4 text-sm text-gray-600">
-              <p><i class="mr-2 text-blue-500 fas fa-map-marker-alt"></i>Coordinates: -0.150096, 35.838525</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div id="footer-placeholder"></div>
-
-    <script src="/src/include.js"></script>
+    <!-- Custom Tailwind CSS Configuration -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const contactForm = document.querySelector("#contactForm");
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                800: "#1e40af",
+                900: "#1e3a8a",
+              },
+              secondary: {
+                50: "#fefce8",
+                100: "#fef9c3",
+                200: "#fef08a",
+                300: "#fde047",
+                400: "#facc15",
+                500: "#eab308",
+                600: "#ca8a04",
+                700: "#a16207",
+                800: "#854d0e",
+                900: "#713f12",
+              },
+              accent: {
+                50: "#f0fdf4",
+                100: "#dcfce7",
+                200: "#bbf7d0",
+                300: "#86efac",
+                400: "#4ade80",
+                500: "#22c55e",
+                600: "#16a34a",
+                700: "#15803d",
+                800: "#166534",
+                900: "#14532d",
+              },
+              neutral: {
+                50: "#fafafa",
+                100: "#f4f4f5",
+                200: "#e4e4e7",
+                300: "#d4d4d8",
+                400: "#a1a1aa",
+                500: "#71717a",
+                600: "#52525b",
+                700: "#3f3f46",
+                800: "#27272a",
+                900: "#18181b",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
 
-        if (!contactForm) {
-          console.error("Contact form not found");
-          return;
-        }
+  <body class="font-sans text-sm text-neutral-800 sm:text-base">
+    <div id="nav-placeholder"></div>
 
-        contactForm.addEventListener("submit", async function (event) {
-          event.preventDefault();
+    <!-- Hero section -->
+    <section
+      class="relative flex items-end justify-center text-center h-[45vh]"
+    >
+      <!-- Hero image (discoverable for LCP) -->
+      <img
+        id="heroImage"
+        src="/assets/images/hero-students.webp"
+        alt="Kimangu Students"
+        fetchpriority="high"
+        class="absolute inset-0 object-cover w-full h-full"
+        style="z-index: 1"
+      />
 
-          const submitButton = contactForm.querySelector(
-            'button[type="submit"]'
-          );
-          const originalButtonText = submitButton.innerHTML;
-
-          try {
-            submitButton.disabled = true;
-            submitButton.innerHTML =
-              '<i class="mr-2 fas fa-spinner fa-spin"></i>Sending...';
-            submitButton.classList.add("opacity-75");
-
-            const formData = new FormData(contactForm);
-            const contactData = {
-              fullName: formData.get("fullName").trim(),
-              email: formData.get("email").trim(),
-              subject: formData.get("subject").trim(),
-              message: formData.get("message").trim(),
-              submittedAt: new Date().toISOString(),
-            };
-
-            if (
-              !contactData.fullName ||
-              !contactData.email ||
-              !contactData.subject ||
-              !contactData.message
-            ) {
-              throw new Error("Please fill in all required fields");
-            }
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(contactData.email)) {
-              throw new Error("Please enter a valid email address");
-            }
-
-            const response = await fetch(
-              "https://kimangu.onrender.com/contact/form",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(contactData),
-              }
-            );
-
-            const result = await response.json();
-
-            if (response.ok) {
-              showNotification(
-                "✅ Message sent successfully! We will get back to you soon.",
-                "success"
-              );
-
-              contactForm.reset();
-            } else {
-              throw new Error(result.message || "Failed to send message");
-            }
-          } catch (error) {
-            console.error("Error sending message:", error);
-            showNotification(
-              "❌ " +
-                (error.message || "Failed to send message. Please try again."),
-              "error"
-            );
-          } finally {
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalButtonText;
-            submitButton.classList.remove("opacity-75");
-          }
-        });
-      });
-
-      function showNotification(message, type = "info") {
-        const existingNotification = document.querySelector(".notification");
-        if (existingNotification) {
-          existingNotification.remove();
-        }
-
-        const notification = document.createElement("div");
-        notification.className =
-          "notification fixed top-4 right-4 z-50 max-w-sm p-4 rounded-lg shadow-lg transition-all duration-300 transform translate-x-0";
-
-        if (type === "success") {
-          notification.classList.add(
-            "bg-green-500",
-            "text-white",
-            "border-l-4",
-            "border-green-700"
-          );
-        } else if (type === "error") {
-          notification.classList.add(
-            "bg-red-500",
-            "text-white",
-            "border-l-4",
-            "border-red-700"
-          );
-        } else {
-          notification.classList.add(
-            "bg-blue-500",
-            "text-white",
-            "border-l-4",
-            "border-blue-700"
-          );
-        }
-
-        // Add message and close button
-        notification.innerHTML = `
-        <div class="flex items-start justify-between">
-            <div class="flex-1 mr-3">
-                <p class="text-sm font-medium">${message}</p>
-            </div>
-            <button onclick="this.parentElement.parentElement.remove()" class="text-white hover:text-gray-200 focus:outline-none">
-                <i class="fas fa-times"></i>
-            </button>
+      <!-- Gradient overlay -->
+      <div
+        class="relative w-full py-4 bg-gradient-to-t from-neutral-900/70 via-neutral-900/40 via-neutral-900/10 to-transparent"
+        style="z-index: 3"
+      >
+        <div class="px-4 mx-auto max-w-7xl">
+          <h2
+            class="px-4 py-1 text-2xl font-bold text-white sm:text-3xl lg:text-5xl"
+          >
+            Kimangu Day Secondary School
+          </h2>
+          <p
+            class="px-4 py-1 mx-auto mb-2 text-sm md:text-base font-semibold text-white sm:text-lg lg:text-xl"
+          >
+            Nurturing Tomorrow's Leaders Through Excellence in Education,
+            Character Formation, and Holistic Development
+          </p>
         </div>
-    `;
+      </div>
+    </section>
 
-        document.body.appendChild(notification);
+    <!-- Highlights Section -->
+    <section class="py-12 bg-gradient-to-br from-primary-50 to-secondary-50">
+      <div class="px-4 mx-auto max-w-7xl">
+        <div class="mb-6 text-center md:mb-12">
+          <h2
+            class="text-xl font-bold text-primary-800 sm:text-2xl lg:text-3xl"
+          >
+            We Are The Best
+          </h2>
+        </div>
 
-        setTimeout(() => {
-          notification.style.transform = "translateX(0)";
-        }, 10);
+        <div class="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Item 1 -->
+          <div
+            class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <div class="flex justify-center text-primary-600">
+              <i class="text-3xl fa-solid fa-user-graduate md:text-5xl"></i>
+            </div>
+            <h3
+              class="mt-4 mb-2 text-lg font-semibold text-primary-800 sm:text-xl"
+            >
+              #1 Academic Performance
+            </h3>
+            <p class="text-sm text-neutral-700 lg:text-base">
+              Consistently ranked as the top-performing school in our region
+              with outstanding KCSE results year after year.
+            </p>
+          </div>
 
-        setTimeout(() => {
-          if (notification.parentNode) {
-            notification.style.transform = "translateX(100%)";
-            setTimeout(() => {
-              if (notification.parentNode) {
-                notification.remove();
-              }
-            }, 300);
-          }
-        }, 5000);
+          <!-- Item 2 -->
+          <div
+            class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <div class="flex justify-center text-primary-600">
+              <i class="text-3xl fa-solid fa-building-columns md:text-5xl"></i>
+            </div>
+            <h3
+              class="mt-4 mb-2 text-lg font-semibold text-primary-800 sm:text-xl"
+            >
+              State-of-the-Art Facilities
+            </h3>
+            <p class="text-sm text-neutral-700 lg:text-base">
+              Unmatched learning environment with modern labs, digital
+              resources, and premium sports facilities.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <div class="flex justify-center text-primary-600">
+              <i class="text-3xl fa-solid fa-star md:text-5xl"></i>
+            </div>
+            <h3
+              class="mt-4 mb-2 text-lg font-semibold text-primary-800 sm:text-xl"
+            >
+              Award-Winning Character Program
+            </h3>
+            <p class="text-sm text-neutral-700 lg:text-base">
+              Recognized for developing leaders with strong moral character and
+              exceptional discipline.
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div
+            class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <div class="flex justify-center text-primary-600">
+              <i class="text-3xl fa-solid fa-person-running md:text-5xl"></i>
+            </div>
+            <h3
+              class="mt-4 mb-2 text-lg font-semibold text-primary-800 sm:text-xl"
+            >
+              Championship-Level Programs
+            </h3>
+            <p class="text-sm text-neutral-700 lg:text-base">
+              Our students regularly win regional and national competitions in
+              sports, arts, and academics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission, Vision, Motto -->
+    <section class="py-8 md:py-16 bg-gradient-to-b from-white to-neutral-50">
+      <div class="px-4 mx-auto max-w-7xl">
+        <h2
+          class="mb-4 text-xl font-bold text-center text-primary-800 sm:text-2xl lg:text-3xl md:mb-12"
+        >
+          Our Guiding Principles
+        </h2>
+
+        <div
+          class="grid sm:grid-cols-2 gap-x-4 md:gap-x-8 gap-y-6 justify-items-center md:grid-cols-3"
+        >
+          <!-- Mission -->
+          <div
+            class="w-full pt-6 pb-6 overflow-hidden transition transform bg-white border rounded-lg shadow-lg border-primary-100 max-w-96 sm:w-full hover:scale-105 hover:shadow-xl"
+          >
+            <div class="flex items-center justify-center text-primary-500">
+              <i
+                class="text-3xl fa-solid fa-hands-holding-child md:text-5xl"
+              ></i>
+            </div>
+            <div class="p-2 text-center md:p-6">
+              <h3
+                class="mb-2 text-lg font-semibold text-primary-800 sm:text-xl lg:text-xl"
+              >
+                Mission
+              </h3>
+              <p class="text-sm text-neutral-600 lg:text-base">
+                To nurture responsible and disciplined students through quality
+                education, fostering critical thinking skills, and promoting
+                holistic development to prepare them for future challenges.
+              </p>
+            </div>
+          </div>
+
+          <!-- Motto -->
+          <div
+            class="w-full pt-6 pb-6 overflow-hidden transition transform bg-white border rounded-lg shadow-lg border-secondary-100 max-w-96 sm:w-full hover:scale-105 hover:shadow-xl"
+          >
+            <div class="flex items-center justify-center text-secondary-500">
+              <i class="text-3xl fa-solid fa-hand-fist md:text-5xl"></i>
+            </div>
+            <div class="p-2 text-center md:p-6">
+              <h3
+                class="mb-2 text-lg font-semibold text-secondary-800 sm:text-xl lg:text-xl"
+              >
+                Motto
+              </h3>
+              <p class="text-sm text-neutral-600 lg:text-base">Aim High!</p>
+            </div>
+          </div>
+
+          <!-- Vision -->
+          <div
+            class="w-full pt-6 pb-6 overflow-hidden transition transform bg-white border rounded-lg shadow-lg border-accent-100 max-w-96 sm:w-full hover:scale-105 hover:shadow-xl"
+          >
+            <div class="flex items-center justify-center text-accent-500">
+              <i class="text-3xl fa-duotone fas fa-binoculars md:text-5xl"></i>
+            </div>
+            <div class="p-2 text-center md:p-6">
+              <h3
+                class="mb-2 text-lg font-semibold text-accent-800 sm:text-xl lg:text-xl"
+              >
+                Vision
+              </h3>
+              <p class="text-sm text-neutral-600 lg:text-base">
+                To be a center of academic excellence and moral integrity in
+                Kenya and beyond, producing well-rounded graduates who will
+                positively impact their communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News and Events -->
+    <section class="py-16 bg-white">
+      <div class="px-4 mx-auto max-w-7xl">
+        <div class="flex items-center justify-between mb-8">
+          <h2
+            class="text-xl font-bold text-primary-800 sm:text-2xl lg:text-3xl"
+          >
+            Latest News
+          </h2>
+          <a
+            href="news-and-events.html"
+            class="font-medium transition-colors duration-300 text-primary-600 hover:text-primary-800 hover:underline"
+          >
+            View All News
+          </a>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Bursary Award -->
+          <div
+            class="overflow-hidden transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <img
+              src="/assets/images/bursary-news.webp"
+              alt="MP Bursary Award"
+              class="object-cover object-top w-full h-48"
+            />
+            <div class="p-6">
+              <p class="mb-2 text-sm font-semibold text-primary-500">
+                May 8, 2025
+              </p>
+              <h3
+                class="mb-2 text-lg font-semibold text-primary-800 sm:text-xl lg:text-xl"
+              >
+                MP Awards Bursary to Students
+              </h3>
+              <p class="mb-4 text-neutral-600">
+                Hon. Chebor Paul Kibet awards bursaries to deserving students to
+                support education and ease financial burden on families.
+              </p>
+              <a
+                href="news-and-events.html"
+                class="font-medium transition-colors duration-300 text-primary-600 hover:text-primary-800 hover:underline"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+
+          <!-- New Computer Lab -->
+          <div
+            class="overflow-hidden transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <img
+              src="/assets/images/computer-lab.webp"
+              loading="lazy"
+              alt="New Computer Lab"
+              class="object-cover object-center object-top w-full h-48"
+            />
+            <div class="p-6">
+              <p class="mb-2 text-sm font-semibold text-primary-500">
+                May 3, 2025
+              </p>
+              <h3
+                class="mb-2 text-lg font-semibold text-primary-800 sm:text-xl lg:text-xl"
+              >
+                New Computer Lab Opens
+              </h3>
+              <p class="mb-4 text-neutral-600">
+                Thanks to Vanessa Grant, we've opened a state-of-the-art
+                computer lab with 30 new computers for students.
+              </p>
+              <a
+                href="news-and-events.html"
+                class="font-medium transition-colors duration-300 text-primary-600 hover:text-primary-800 hover:underline"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+
+          <!-- Upcoming Annual General Meeting -->
+          <div
+            class="overflow-hidden transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <img
+              src="/assets/images/parents-during-agm.webp"
+              loading="lazy"
+              alt="Annual General Meeting"
+              class="object-cover w-full h-48"
+            />
+            <div class="p-6">
+              <p class="mb-2 text-sm font-semibold text-primary-500">
+                May 12, 2025
+              </p>
+              <h3
+                class="mb-2 text-lg font-semibold text-primary-800 sm:text-xl lg:text-xl"
+              >
+                Annual General Meeting
+              </h3>
+              <p class="mb-4 text-neutral-600">
+                Parents, teachers, and BOM met to discuss school progress,
+                challenges, and future plans.
+              </p>
+              <a
+                href="news-and-events.html"
+                class="font-medium transition-colors duration-300 text-primary-600 hover:text-primary-800 hover:underline"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Calendar -->
+    <section class="py-8 md:p-16 bg-neutral-50">
+      <div class="px-4 mx-auto max-w-7xl">
+        <h2
+          class="mb-8 text-xl font-bold text-primary-800 sm:text-2xl lg:text-3xl"
+        >
+          Upcoming Events
+        </h2>
+        <div class="space-y-4">
+          <!-- Event 1 -->
+          <div
+            class="flex items-start gap-4 p-4 transition-shadow duration-300 bg-white rounded-lg shadow-sm hover:shadow-md"
+          >
+            <div
+              class="flex-shrink-0 w-16 p-2 text-center text-white rounded bg-gradient-to-br from-primary-500 to-primary-600 md:w-20 md:p-3"
+            >
+              <div class="text-lg font-bold md:text-xl">15</div>
+              <div class="text-xs md:text-sm">May</div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3
+                class="text-lg font-semibold text-primary-800 sm:text-xl lg:text-xl"
+              >
+                Parents' Meeting
+              </h3>
+              <p class="text-neutral-600">
+                Annual general meeting for all parents and guardians at the
+                school grounds.
+              </p>
+              <p class="mt-1 text-sm text-primary-600">
+                <i class="mr-1 fas fa-clock"></i> 9:00 AM - 1:00 PM
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div
+            class="flex items-start gap-4 p-4 transition-shadow duration-300 bg-white rounded-lg shadow-sm hover:shadow-md"
+          >
+            <div
+              class="flex-shrink-0 w-16 p-2 text-center text-white rounded bg-gradient-to-br from-secondary-500 to-secondary-600 md:w-20 md:p-3"
+            >
+              <div class="text-lg font-bold md:text-xl">22</div>
+              <div class="text-xs md:text-sm">May</div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3
+                class="text-lg font-semibold text-secondary-800 sm:text-xl lg:text-xl"
+              >
+                Inter-House Sports Competition
+              </h3>
+              <p class="text-neutral-600">
+                Annual sports day featuring athletics, football, volleyball, and
+                basketball tournaments.
+              </p>
+              <p class="mt-1 text-sm text-secondary-600">
+                <i class="mr-1 fas fa-clock"></i> 8:00 AM - 5:00 PM
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div
+            class="flex items-start gap-4 p-4 transition-shadow duration-300 bg-white rounded-lg shadow-sm hover:shadow-md"
+          >
+            <div
+              class="flex-shrink-0 w-16 p-2 text-center text-white rounded bg-gradient-to-br from-accent-500 to-accent-600 md:w-20 md:p-3"
+            >
+              <div class="text-lg font-bold md:text-xl">05</div>
+              <div class="text-xs md:text-sm">June</div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3
+                class="text-lg font-semibold text-accent-800 sm:text-xl lg:text-xl"
+              >
+                Career Day
+              </h3>
+              <p class="text-neutral-600">
+                Professionals from various fields will visit to guide students
+                on career choices.
+              </p>
+              <p class="mt-1 text-sm text-accent-600">
+                <i class="mr-1 fas fa-clock"></i> 10:00 AM - 3:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section
+      class="py-16 text-neutral-800 bg-gradient-to-r from-primary-500 to-primary-600"
+    >
+      <div class="px-4 mx-auto max-w-7xl">
+        <h2
+          class="mb-12 text-xl font-bold text-center text-white sm:text-2xl lg:text-3xl"
+        >
+          What People Say About Us
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <div
+            class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <p class="mt-4 mb-6 text-neutral-700">
+              Kimangu Day Secondary School provided my daughter with an
+              excellent education foundation. The teachers are dedicated and the
+              school maintains high standards of discipline.
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://placehold.co/150x150/2563EB/FFF"
+                alt="Dr. Omondi - education Officer"
+                class="w-10 h-10 rounded-full"
+              />
+              <div class="ml-3">
+                <p class="text-base font-semibold text-primary-800 sm:text-lg">
+                  Peter Mwangi
+                </p>
+                <p class="text-sm text-neutral-600">Parent</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <p class="mt-4 mb-6 text-neutral-700">
+              As a former student, I can confidently say that Kimangu equipped
+              me with both academic knowledge and life skills that have been
+              crucial to my success in university.
+            </p>
+            <div class="flex items-center">
+              <img
+                src="./assets/images/dominic.webp"
+                alt="Dominic Njoroge - alumnus"
+                class="w-10 h-10 rounded-full"
+              />
+              <div class="ml-3">
+                <p class="text-base font-semibold text-primary-800 sm:text-lg">
+                  Dominic Njoroge
+                </p>
+                <p class="text-sm text-neutral-600">Alumnus</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <p class="mt-4 mb-6 text-neutral-700">
+              The holistic education approach at Kimangu Day Secondary School
+              ensures students develop not just academically but also in
+              character and leadership.
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://placehold.co/150x150/2563EB/FFF"
+                alt="Dr. Omondi - education Officer"
+                class="w-10 h-10 rounded-full"
+              />
+              <div class="ml-3">
+                <p class="text-base font-semibold text-primary-800 sm:text-lg">
+                  Dr. Omondi
+                </p>
+                <p class="text-sm text-neutral-600">Education Officer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery Preview -->
+    <section class="py-16 bg-neutral-50">
+      <div class="px-4 mx-auto max-w-7xl">
+        <div class="flex items-center justify-between mb-8">
+          <h2
+            class="text-xl font-bold text-primary-800 sm:text-2xl lg:text-3xl"
+          >
+            School Gallery
+          </h2>
+          <a
+            href="gallery.html"
+            class="font-medium transition-colors duration-300 text-primary-600 hover:text-primary-800 hover:underline"
+            >View All Photos</a
+          >
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div
+            class="relative overflow-hidden transition-shadow duration-300 rounded-lg shadow-md hover:shadow-lg aspect-w-4 aspect-h-3"
+          >
+            <img
+              src="/assets/images/top-performing-students.webp"
+              loading="lazy"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full p-2 text-sm text-white bg-gradient-to-t from-neutral-900 to-transparent"
+            >
+              Top performing students in Rongai Sub County from Kimangu
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-shadow duration-300 rounded-lg shadow-md hover:shadow-lg aspect-w-4 aspect-h-3"
+          >
+            <img
+              src="/assets/images/ksef-nationals.webp"
+              loading="lazy"
+              alt="Mr. Osore With Students Receiving Award at KSEF Nationals"
+              class="object-cover w-full h-full"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full p-2 text-sm text-white bg-gradient-to-t from-neutral-900 to-transparent"
+            >
+              Mr. Osore With Students Receiving Award at KSEF Nationals
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-shadow duration-300 rounded-lg shadow-md hover:shadow-lg aspect-w-4 aspect-h-3"
+          >
+            <img
+              src="/assets/images/students-in-computer-lab.webp"
+              loading="lazy"
+              alt="Students Studying in Computer Lab"
+              class="object-cover w-full h-full"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full p-2 text-sm text-white bg-gradient-to-t from-neutral-900 to-transparent"
+            >
+              Students Studying in Computer Lab
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-shadow duration-300 rounded-lg shadow-md hover:shadow-lg aspect-w-4 aspect-h-3"
+          >
+            <img
+              src="/assets/images/teaching-staff.webp"
+              loading="lazy"
+              alt=" Members of The Teaching Staff"
+              class="object-cover w-full h-full"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full p-2 text-sm text-white bg-gradient-to-t from-neutral-900 to-transparent"
+            >
+              Members of The Teaching Staff
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section
+      class="py-16 text-center text-white bg-gradient-to-r from-primary-500 to-primary-600"
+    >
+      <div class="max-w-3xl px-4 mx-auto">
+        <h3 class="mb-4 text-xl font-bold sm:text-2xl lg:text-3xl">
+          Join Kimangu Today
+        </h3>
+        <p class="mb-8 text-base sm:text-lg lg:text-xl">
+          Enroll your child in a school that cares for their academic excellence
+          and personal growth. Limited spaces available for the 2025 academic
+          year.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/admissions-form.html"
+            class="px-8 py-3 font-bold transition duration-300 bg-white rounded-lg text-primary-600 hover:bg-neutral-100 hover:shadow-lg"
+            >Apply Now</a
+          >
+          <a
+            href="/contact.html"
+            class="px-8 py-3 font-bold transition duration-300 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-primary-600"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="py-16 bg-neutral-50">
+      <div class="px-4 mx-auto max-w-7xl">
+        <h2
+          class="mb-8 text-xl font-bold text-center text-primary-800 sm:text-2xl lg:text-3xl"
+        >
+          Visit Us
+        </h2>
+        <div class="grid items-center gap-8 md:grid-cols-12">
+          <div class="md:col-span-4">
+            <!-- Location -->
+            <h3
+              class="mb-4 text-lg font-semibold text-primary-800 sm:text-xl lg:text-xl"
+            >
+              Location
+            </h3>
+            <p class="mb-4 text-neutral-700">
+              We are located in Rongai, Nakuru County, Kenya, approximately 7 km
+              from Rongai Town along Rongai-Kandutura Road.
+            </p>
+
+            <div class="mb-6 space-y-2">
+              <p class="text-neutral-700">
+                <i class="mr-2 text-primary-500 fas fa-map-marker-alt"></i>
+                Kimangu, Rongai, Nakuru County
+              </p>
+              <p class="text-neutral-700">
+                <i class="mr-2 text-primary-500 fas fa-phone"></i> +254 721 415
+                851
+              </p>
+              <p class="text-neutral-700">
+                <i class="mr-2 text-primary-500 fas fa-envelope"></i>
+                info@kimangu.sc.ke
+              </p>
+            </div>
+
+            <!-- Office hours -->
+            <h3
+              class="mb-2 text-lg font-semibold text-primary-800 sm:text-xl lg:text-xl"
+            >
+              Office Hours
+            </h3>
+            <p class="text-neutral-700">Monday - Friday: 8:00 AM - 5:00 PM</p>
+            <p class="text-neutral-700">Saturday: 8:00 AM - 12:00 PM</p>
+            <p class="text-neutral-700">Sunday & Public Holidays: Closed</p>
+          </div>
+
+          <!-- Google Map -->
+          <div
+            class="h-64 overflow-hidden border rounded-lg shadow-md border-primary-200 md:col-span-8 md:h-80"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              frameborder=""
+              style="border: 0"
+              src="https://maps.google.com/maps?q=-0.150096,35.838525&z=15&output=embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer-placeholder"></div>
+    <script src="/src/include.js"></script>
+
+    <script>
+      // Check if screen is small (Tailwind's sm breakpoint ~640px)
+      const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+
+      // Choose images based on screen size
+      const heroImages = isSmallScreen
+        ? [
+            "/assets/images/hero-staff-members-small.webp",
+            "/assets/images/hero-students-small.webp",
+            "/assets/images/inspecting-guard-of-honor-small.webp",
+          ]
+        : [
+            "/assets/images/hero-staff-members.webp",
+            "/assets/images/hero-students.webp",
+            "/assets/images/inspecting-guard-of-honor.webp",
+          ];
+
+      let currentImageIndex = 0;
+      const heroImg = document.getElementById("heroImage");
+
+      // Ensure the first image matches the array
+      heroImg.src = heroImages[currentImageIndex];
+
+      function changeHeroImage() {
+        currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+        heroImg.src = heroImages[currentImageIndex];
       }
+
+      setInterval(changeHeroImage, 5000);
     </script>
   </body>
 </html>

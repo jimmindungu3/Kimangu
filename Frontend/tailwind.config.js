@@ -6,18 +6,18 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: "#60a5fa", // primary-one
-          DEFAULT: "#3b82f6", // primary-two
+          light: "#60a5fa",
+          DEFAULT: "#3b82f6",
         },
 
         secondary: {
-          light: "#facc15", // secondary-one
-          DEFAULT: "#eab308", // secondary-two
+          light: "#facc15",
+          DEFAULT: "#eab308",
         },
 
         tertiary: {
-          light: "#4ade80", // tertiary-one
-          DEFAULT: "#22c55e", // tertiary-two
+          light: "#4ade80",
+          DEFAULT: "#22c55e",
         },
       },
     },
