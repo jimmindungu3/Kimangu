@@ -6,10 +6,11 @@ import {
   FaEnvelope,
   FaFacebook,
   FaTiktok,
-  FaInstagram,
   FaYoutube,
-  FaTwitter,
 } from "react-icons/fa";
+
+import logo from "../assets/images/logo.png";
+import coatOfArms from "../assets/images/Coat-of-Arms.webp";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,7 +82,7 @@ const Navigation = () => {
                 className="h-12 mr-2 md:hidden"
               />
               <img
-                src="/src/assets/images/logo.png"
+                src={logo}
                 alt="school logo"
                 className="h-12"
               />
@@ -274,7 +275,7 @@ const Navigation = () => {
               </li>
 
               <img
-                src="/src/assets/images/Coat-of-Arms.webp"
+                src={coatOfArms}
                 alt="Kenya Coat of Arms"
                 className="h-12"
               />
