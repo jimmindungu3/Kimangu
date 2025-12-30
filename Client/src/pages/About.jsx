@@ -21,6 +21,13 @@ import { GiTeacher } from "react-icons/gi";
 import { MdGroups } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
 
+// Import images
+import growthImage from "/src/assets/images/growth.svg";
+import principalImage from "/src/assets/images/principal.jpg";
+import bomChairImage from "/src/assets/images/bom-chair.jpg";
+import deputyPrincipalImage from "/src/assets/images/deputy-principal.jpg";
+import headOfStudiesImage from "/src/assets/images/head-of-studies.jpg";
+
 const About = () => {
   return (
     <div className="text-gray-600">
@@ -62,7 +69,7 @@ const About = () => {
               </div>
 
               <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
-                <div className="p-6 bg-white border border-primary-light rounded-lg shadow-sm">
+                <div className="p-6 bg-white border rounded-lg shadow-sm border-primary-light">
                   <h3 className="flex items-center mb-3 text-lg font-semibold text-primary">
                     <FaEye className="mr-3 text-xl text-primary-light" />
                     Our Vision
@@ -75,7 +82,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="p-6 bg-white border border-secondary-light rounded-lg shadow-sm">
+                <div className="p-6 bg-white border rounded-lg shadow-sm border-secondary-light">
                   <h3 className="flex items-center mb-3 text-lg font-semibold text-secondary">
                     <FaBullseye className="mr-3 text-xl text-secondary-light" />
                     Our Mission
@@ -93,7 +100,7 @@ const About = () => {
             {/* RIGHT */}
             <div className="relative col-span-12 lg:col-span-4">
               <img
-                src="/src/assets/images/growth.svg"
+                src={growthImage}
                 alt="Kimangu Day Secondary School"
                 className="object-contain w-full h-full rounded-lg shadow-lg"
               />
@@ -130,7 +137,7 @@ const About = () => {
             <div className="overflow-hidden bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:scale-[1.02] border">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src="/src/assets/images/principal.jpg"
+                  src={principalImage}
                   alt="Principal"
                   className="object-cover w-full h-full"
                 />
@@ -162,7 +169,7 @@ const About = () => {
             <div className="overflow-hidden bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:scale-[1.02] border">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src="/src/assets/images/bom-chair.jpg"
+                  src={bomChairImage}
                   alt="BOM Chair"
                   className="object-cover w-full h-full"
                 />
@@ -194,7 +201,7 @@ const About = () => {
             <div className="overflow-hidden bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:scale-[1.02] border">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src="/src/assets/images/deputy-principal.jpg"
+                  src={deputyPrincipalImage}
                   alt="Deputy Principal"
                   className="object-cover w-full h-full"
                 />
@@ -226,7 +233,7 @@ const About = () => {
             <div className="overflow-hidden bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:scale-[1.02] border">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src="/src/assets/images/head-of-studies.jpg"
+                  src={headOfStudiesImage}
                   alt="Head of Studies"
                   className="object-cover w-full h-full"
                 />
