@@ -14,22 +14,29 @@ import {
   FaFistRaised,
   FaEye,
   FaArrowRight,
-  FaQuoteLeft,
   FaChevronLeft,
   FaChevronRight,
   FaPlay,
   FaPause,
   FaUsers,
-  FaCalendarAlt,
-  FaBook,
   FaFlask,
-  FaFutbol,
-  FaMusic,
   FaChartLine,
 } from "react-icons/fa";
 import { GiTeacher, GiTrophyCup } from "react-icons/gi";
-import { MdGroups, MdSchool, MdLibraryBooks, MdComputer } from "react-icons/md";
+import { MdGroups, MdLibraryBooks, MdComputer } from "react-icons/md";
 import { IoTimeOutline, IoStatsChart } from "react-icons/io5";
+
+// Import all images
+import heroStaffMembers from "/src/assets/images/hero-staff-members.webp";
+import heroStaffMembersSmall from "/src/assets/images/hero-staff-members-small.webp";
+import heroStudents from "/src/assets/images/hero-students.webp";
+import heroStudentsSmall from "/src/assets/images/hero-students-small.webp";
+import inspectingGuard from "/src/assets/images/inspecting-guard-of-honor.webp";
+import inspectingGuardSmall from "/src/assets/images/inspecting-guard-of-honor-small.webp";
+import topPerformingStudents from "/src/assets/images/top-performing-students.webp";
+import ksefNationals from "/src/assets/images/ksef-nationals.webp";
+import computerLab from "/src/assets/images/students-in-computer-lab.webp";
+import teachingStaff from "/src/assets/images/teaching-staff.webp";
 
 const Home = () => {
   const heroImgRef = useRef(null);
@@ -83,16 +90,8 @@ const Home = () => {
   useEffect(() => {
     const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
     const heroImages = isSmallScreen
-      ? [
-          "/src/assets/images/hero-staff-members-small.webp",
-          "/src/assets/images/hero-students-small.webp",
-          "/src/assets/images/inspecting-guard-of-honor-small.webp",
-        ]
-      : [
-          "/src/assets/images/hero-staff-members.webp",
-          "/src/assets/images/hero-students.webp",
-          "/src/assets/images/inspecting-guard-of-honor.webp",
-        ];
+      ? [heroStaffMembersSmall, heroStudentsSmall, inspectingGuardSmall]
+      : [heroStaffMembers, heroStudents, inspectingGuard];
 
     let currentImageIndex = 0;
     const heroImg = heroImgRef.current;
@@ -114,16 +113,8 @@ const Home = () => {
   const handlePrevSlide = () => {
     const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
     const heroImages = isSmallScreen
-      ? [
-          "/src/assets/images/hero-staff-members-small.webp",
-          "/src/assets/images/hero-students-small.webp",
-          "/src/assets/images/inspecting-guard-of-honor-small.webp",
-        ]
-      : [
-          "/src/assets/images/hero-staff-members.webp",
-          "/src/assets/images/hero-students.webp",
-          "/src/assets/images/inspecting-guard-of-honor.webp",
-        ];
+      ? [heroStaffMembersSmall, heroStudentsSmall, inspectingGuardSmall]
+      : [heroStaffMembers, heroStudents, inspectingGuard];
 
     const newIndex =
       currentSlide === 0 ? heroImages.length - 1 : currentSlide - 1;
@@ -135,16 +126,8 @@ const Home = () => {
   const handleNextSlide = () => {
     const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
     const heroImages = isSmallScreen
-      ? [
-          "/src/assets/images/hero-staff-members-small.webp",
-          "/src/assets/images/hero-students-small.webp",
-          "/src/assets/images/inspecting-guard-of-honor-small.webp",
-        ]
-      : [
-          "/src/assets/images/hero-staff-members.webp",
-          "/src/assets/images/hero-students.webp",
-          "/src/assets/images/inspecting-guard-of-honor.webp",
-        ];
+      ? [heroStaffMembersSmall, heroStudentsSmall, inspectingGuardSmall]
+      : [heroStaffMembers, heroStudents, inspectingGuard];
 
     const newIndex = (currentSlide + 1) % heroImages.length;
     heroImgRef.current.src = heroImages[newIndex];
@@ -226,19 +209,10 @@ const Home = () => {
             <button
               key={index}
               onClick={() => {
-                const isSmallScreen =
-                  window.matchMedia("(max-width: 640px)").matches;
+                const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
                 const heroImages = isSmallScreen
-                  ? [
-                      "/src/assets/images/hero-staff-members-small.webp",
-                      "/src/assets/images/hero-students-small.webp",
-                      "/src/assets/images/inspecting-guard-of-honor-small.webp",
-                    ]
-                  : [
-                      "/src/assets/images/hero-staff-members.webp",
-                      "/src/assets/images/hero-students.webp",
-                      "/src/assets/images/inspecting-guard-of-honor.webp",
-                    ];
+                  ? [heroStaffMembersSmall, heroStudentsSmall, inspectingGuardSmall]
+                  : [heroStaffMembers, heroStudents, inspectingGuard];
                 heroImgRef.current.src = heroImages[index];
                 setCurrentSlide(index);
                 setIsPlaying(false);
@@ -684,7 +658,7 @@ const Home = () => {
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div className="relative overflow-hidden rounded-lg group">
               <img
-                src="/src/assets/images/top-performing-students.webp"
+                src={topPerformingStudents}
                 loading="lazy"
                 alt="Top performing students"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
@@ -700,7 +674,7 @@ const Home = () => {
 
             <div className="relative overflow-hidden rounded-lg group">
               <img
-                src="/src/assets/images/ksef-nationals.webp"
+                src={ksefNationals}
                 loading="lazy"
                 alt="Mr. Osore With Students Receiving Award at KSEF Nationals"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
@@ -716,7 +690,7 @@ const Home = () => {
 
             <div className="relative overflow-hidden rounded-lg group">
               <img
-                src="/src/assets/images/students-in-computer-lab.webp"
+                src={computerLab}
                 loading="lazy"
                 alt="Students Studying in Computer Lab"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
@@ -730,7 +704,7 @@ const Home = () => {
 
             <div className="relative overflow-hidden rounded-lg group">
               <img
-                src="/src/assets/images/teaching-staff.webp"
+                src={teachingStaff}
                 loading="lazy"
                 alt="Members of The Teaching Staff"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
