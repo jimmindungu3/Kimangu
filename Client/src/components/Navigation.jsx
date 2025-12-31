@@ -77,7 +77,7 @@ const Navigation = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/src/assets/images/Coat-of-Arms.webp"
+                src={coatOfArms}
                 alt="school logo"
                 className="h-12 mr-2 md:hidden"
               />
@@ -290,7 +290,7 @@ const Navigation = () => {
           <div className="px-4">
             <div className="flex flex-col items-center mb-8">
               <img
-                src="/src/assets/images/logo.png"
+                src={logo}
                 alt="school logo"
                 className="h-20 mb-2"
               />
