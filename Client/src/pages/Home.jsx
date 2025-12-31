@@ -51,7 +51,7 @@ const Home = () => {
 
   // Animated stats counter
   useEffect(() => {
-    const targetStats = { students: 580, staff: 35, years: 9, performance: 98 };
+    const targetStats = { students: 500, staff: 25, years: 9, performance: 50 };
     const duration = 2000;
     const steps = 60;
     const interval = duration / steps;

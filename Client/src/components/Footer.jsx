@@ -1,5 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebook,
+  FaTiktok,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaSignsPost } from "react-icons/fa6";
 
 // Import all images
 import coatOfArms from "/src/assets/images/coat-of-arms.png";
@@ -27,7 +36,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-blue-400"
               >
-                <i className="fab fa-facebook"></i>
+                <FaFacebook className="w-5 h-5" />
               </a>
               <a
                 href="https://www.tiktok.com/"
@@ -35,7 +44,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-blue-400"
               >
-                <i className="fa-brands fa-tiktok"></i>
+                <FaTiktok className="w-5 h-5" />
               </a>
               <a
                 href="https://www.instagram.com/"
@@ -43,7 +52,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-blue-400"
               >
-                <i className="fab fa-instagram"></i>
+                <FaInstagram className="w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/"
@@ -51,7 +60,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-blue-400"
               >
-                <i className="fab fa-youtube"></i>
+                <FaYoutube className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -124,14 +133,14 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 text-lg font-bold">Contact Us</h4>
             <ul className="space-y-2">
-              <li>
-                <i className="mr-2 text-blue-400 fas fa-phone-alt"></i>
+              <li className="flex items-center">
+                <FaPhoneAlt className="mr-2 text-blue-400" />
                 <a href="tel:+254721415851" className="hover:text-blue-400">
                   +254 721 415 851
                 </a>
               </li>
-              <li>
-                <i className="mr-2 text-blue-400 fas fa-envelope"></i>
+              <li className="flex items-center">
+                <FaEnvelope className="mr-2 text-blue-400" />
                 <a
                   href="mailto:info@kimangu.sc.ke"
                   className="hover:text-blue-400"
@@ -139,8 +148,8 @@ const Footer = () => {
                   info@kimangu.sc.ke
                 </a>
               </li>
-              <li>
-                <i className="mr-2 text-blue-400 fas fa-envelope"></i>
+              <li className="flex items-center">
+                <FaEnvelope className="mr-2 text-blue-400" />
                 <a
                   href="mailto:admissions@kimangu.sc.ke"
                   className="hover:text-blue-400"
@@ -148,9 +157,9 @@ const Footer = () => {
                   admissions@kimangu.sc.ke
                 </a>
               </li>
-              <li>
-                <i className="mr-2 text-blue-400 fa-solid fa-signs-post"></i>
-                P.O. Box 79, Rongai, Nakuru
+              <li className="flex items-center">
+                <FaSignsPost className="mr-2 text-blue-400" />
+                <span>P.O. Box 79, Rongai, Nakuru</span>
               </li>
             </ul>
           </div>
@@ -158,7 +167,7 @@ const Footer = () => {
 
         {/* Partners Section */}
         <div className="py-8 border-t border-gray-600">
-          <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start md:gap-6">
+          <div className="flex flex-wrap items-center gap-4 md:justify-start md:gap-6">
             <img
               src={coatOfArms}
               alt="GOK - Ministry of Education"

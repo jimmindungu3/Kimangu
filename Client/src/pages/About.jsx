@@ -14,6 +14,7 @@ import {
   FaBook,
   FaUserFriends,
   FaAward,
+  FaGreaterThan,
   FaGraduationCap,
   FaMicroscope,
 } from "react-icons/fa";
@@ -22,7 +23,6 @@ import { MdGroups } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
 
 // Import images
-import growthImage from "/src/assets/images/growth.svg";
 import principalImage from "/src/assets/images/principal.jpg";
 import bomChairImage from "/src/assets/images/bom-chair.jpg";
 import deputyPrincipalImage from "/src/assets/images/deputy-principal.jpg";
@@ -30,19 +30,19 @@ import headOfStudiesImage from "/src/assets/images/head-of-studies.jpg";
 
 const About = () => {
   return (
-    <div className="text-gray-600">
+    <div className="overflow-x-hidden text-gray-600 text-md md:text-base">
       {/* Our Story Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50/30 via-green-50/30 to-yellow-50/30">
-        <div className="px-4 mx-auto max-w-7xl">
-          <div className="grid grid-cols-12 gap-12">
+      <section className="py-8 px-4 bg-gradient-to-br from-blue-50/30 via-green-50/30 to-yellow-50/30">
+        <div className="mx-auto max-w-7xl">
+          <div className="">
             {/* LEFT */}
-            <div className="col-span-12 lg:col-span-8">
+            <div className="">
               <h2 className="mb-6 text-3xl font-bold text-gray-800">
                 Our Story & Heritage
               </h2>
 
               <div className="space-y-4">
-                <p className="text-lg text-gray-600">
+                <p className="text-lgtext-gray-600">
                   Founded in 2016, Kimangu Day Secondary School began its
                   journey from humble beginnings, starting with just 33 students
                   and 4 dedicated teachers. What started as a small community
@@ -51,7 +51,7 @@ const About = () => {
                   Sub County, Nakuru.
                 </p>
 
-                <p className="text-lg text-gray-600">
+                <p className="text-gray-600">
                   The school was established with a clear vision: to offer
                   quality, affordable education to the youth of Rongai and
                   neighboring communities, equipping them with knowledge,
@@ -59,7 +59,7 @@ const About = () => {
                   future leaders.
                 </p>
 
-                <p className="text-lg text-gray-600">
+                <p className="text-gray-600">
                   Over the years, Kimangu Day has consistently upheld strong
                   academic standards while emphasizing holistic development. We
                   believe education extends beyond classrooms to include
@@ -82,9 +82,9 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="p-6 bg-white border rounded-lg shadow-sm border-secondary-light">
-                  <h3 className="flex items-center mb-3 text-lg font-semibold text-secondary">
-                    <FaBullseye className="mr-3 text-xl text-secondary-light" />
+                <div className="p-6 bg-white border rounded-lg shadow-sm border-tertiary-light">
+                  <h3 className="flex items-center mb-3 text-lg font-semibold text-tertiary">
+                    <FaBullseye className="mr-3 text-xl text-tertiary-light" />
                     Our Mission
                   </h3>
                   <p className="text-gray-700">
@@ -93,32 +93,6 @@ const About = () => {
                     teaching, fostering critical thinking, and promoting
                     character development for lifelong success.
                   </p>
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT */}
-            <div className="relative col-span-12 lg:col-span-4">
-              <img
-                src={growthImage}
-                alt="Kimangu Day Secondary School"
-                className="object-contain w-full h-full rounded-lg shadow-lg"
-              />
-
-              <div className="absolute bottom-0 left-0 max-w-xs p-6 -mb-8 -ml-4 bg-white border rounded-lg shadow-lg">
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-secondary-light to-secondary">
-                    <FaTrophy className="text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold tracking-widest text-secondary">
-                      RECOGNIZED EXCELLENCE
-                    </p>
-                    <h3 className="text-lg font-bold text-gray-800">
-                      Top Performing School
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-600">Since 2018</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -334,34 +308,34 @@ const About = () => {
       {/* Stats Section */}
       <section>
         <div className="px-4 py-12 mx-auto mb-12 text-white max-w-7xl bg-gradient-to-r from-primary to-primary-light">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
             <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <MdGroups className="mr-2 text-3xl" />
-                <p className="text-4xl font-bold">580+</p>
+              <div className="flex flex-col items-center justify-center mb-2 sm:flex-row">
+                <MdGroups className="mb-2 text-3xl sm:mr-2 sm:mb-0" />
+                <p className="text-3xl font-bold sm:text-4xl">500+</p>
               </div>
-              <p className="text-lg">Students Enrolled</p>
+              <p className="text-base sm:text-lg">Student Enrollment</p>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <GiTeacher className="mr-2 text-3xl" />
-                <p className="text-4xl font-bold">35+</p>
+              <div className="flex flex-col items-center justify-center mb-2 sm:flex-row">
+                <GiTeacher className="mb-2 text-3xl sm:mr-2 sm:mb-0" />
+                <p className="text-3xl font-bold sm:text-4xl">25+</p>
               </div>
-              <p className="text-lg">Dedicated Staff</p>
+              <p className="text-base sm:text-lg">Dedicated Staff</p>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <IoTimeOutline className="mr-2 text-3xl" />
-                <p className="text-4xl font-bold">9</p>
+              <div className="flex flex-col items-center justify-center mb-2 sm:flex-row">
+                <IoTimeOutline className="mb-2 text-3xl sm:mr-2 sm:mb-0" />
+                <p className="text-3xl font-bold sm:text-4xl">10+</p>
               </div>
-              <p className="text-lg">Years of Excellence</p>
+              <p className="text-base sm:text-lg">Years of Excellence</p>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <FaAward className="mr-2 text-3xl" />
-                <p className="text-4xl font-bold">98%</p>
+              <div className="flex flex-col items-center justify-center mb-2 sm:flex-row">
+                <FaGreaterThan className="mb-2 text-3xl sm:mr-2 sm:mb-0" />
+                <p className="text-3xl font-bold sm:text-4xl"> 50%</p>
               </div>
-              <p className="text-lg">Transition Rate</p>
+              <p className="text-base sm:text-lg">Transition Rate</p>
             </div>
           </div>
         </div>
@@ -371,227 +345,328 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="px-4 mx-auto max-w-7xl">
           <h2 className="mb-4 text-3xl font-bold text-center text-gray-800">
-            Academic Programs
+            CBC-Aligned Academic Programs
           </h2>
           <p className="max-w-3xl mx-auto mb-12 text-center text-gray-600">
-            We offer a comprehensive curriculum designed to cater to diverse
-            learning needs and prepare students for future challenges
+            Following the Competency-Based Curriculum framework, we offer
+            specialized pathways that equip students with practical skills,
+            knowledge, and values for higher education and the world of work.
           </p>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {/* Lower Secondary */}
+            {/* STEM Pathway */}
             <div className="p-6 rounded-lg bg-primary/10">
               <div className="flex items-center mb-4">
-                <div className="p-3 mr-4 text-white rounded-lg bg-primary">
+                <div className="flex-shrink-0 p-3 mr-4 text-white rounded-lg bg-primary">
+                  <FaMicroscope className="text-xl" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">
+                  STEM Pathway
+                </h3>
+              </div>
+              <p className="mb-4 text-gray-600">
+                Science, Technology, Engineering & Mathematics
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-primary" />
+                  <span>Pure Sciences (Physics, Chemistry, Biology)</span>
+                </li>
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-primary" />
+                  <span>Technical & Engineering Sciences</span>
+                </li>
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-primary" />
+                  <span>Computer Studies & ICT Integration</span>
+                </li>
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-primary" />
+                  <span>Applied Mathematics & Statistics</span>
+                </li>
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-primary" />
+                  <span>Project-Based Learning & Research</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Humanities & Social Sciences Pathway */}
+            <div className="p-6 rounded-lg bg-secondary/10">
+              <div className="flex items-center mb-4">
+                <div className="flex-shrink-0 p-3 mr-4 text-white rounded-lg bg-secondary">
                   <FaBook className="text-xl" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800">
-                  Lower Secondary
+                  Humanities & Social Sciences
                 </h3>
               </div>
-              <p className="mb-4 text-gray-600">Forms 1 & 2</p>
+              <p className="mb-4 text-gray-600">
+                Languages, Arts & Social Studies
+              </p>
               <ul className="space-y-2">
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-primary" />
-                  Broad-based 14-subject curriculum
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-secondary" />
+                  <span>Languages (English, Kiswahili, Foreign)</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-primary" />
-                  Career guidance sessions
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-secondary" />
+                  <span>History & Government</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-primary" />
-                  Computer literacy training
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-secondary" />
+                  <span>Geography & Environmental Studies</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-primary" />
-                  Study skills workshops
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-secondary" />
+                  <span>Business Studies & Economics</span>
+                </li>
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-secondary" />
+                  <span>Creative Arts & Performance</span>
                 </li>
               </ul>
             </div>
 
-            {/* Upper Secondary */}
-            <div className="p-6 rounded-lg bg-secondary/10">
-              <div className="flex items-center mb-4">
-                <div className="p-3 mr-4 text-white rounded-lg bg-secondary">
-                  <FaGraduationCap className="text-xl" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  Upper Secondary
-                </h3>
-              </div>
-              <p className="mb-4 text-gray-600">Forms 3 & 4</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-secondary" />
-                  Specialized subject combinations
-                </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-secondary" />
-                  Intensive KCSE preparation
-                </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-secondary" />
-                  Mock examinations & analysis
-                </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-secondary" />
-                  University guidance
-                </li>
-              </ul>
-            </div>
-
-            {/* Co-curricular */}
+            {/* Technical & Vocational Pathway */}
             <div className="p-6 rounded-lg bg-tertiary/10">
               <div className="flex items-center mb-4">
-                <div className="p-3 mr-4 text-white rounded-lg bg-tertiary">
+                <div className="flex-shrink-0 p-3 mr-4 text-white rounded-lg bg-tertiary">
                   <FaUserFriends className="text-xl" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800">
-                  Co-curricular
+                  Technical & Vocational (TVET)
                 </h3>
               </div>
-              <p className="mb-4 text-gray-600">Beyond Classroom</p>
+              <p className="mb-4 text-gray-600">
+                Skills-Based & Career-Oriented
+              </p>
               <ul className="space-y-2">
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-tertiary" />
-                  Sports & athletics
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-tertiary" />
+                  <span>Agriculture & Environmental Technology</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-tertiary" />
-                  Clubs & societies
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-tertiary" />
+                  <span>Home Science & Hospitality</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-tertiary" />
-                  Music & drama
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-tertiary" />
+                  <span>Entrepreneurship & Business Skills</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <FaCheckCircle className="mr-2 text-sm text-tertiary" />
-                  Leadership training
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-tertiary" />
+                  <span>ICT & Digital Skills</span>
                 </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Facilities Section */}
-      <section className="py-16 bg-primary/10">
-        <div className="px-4 mx-auto max-w-7xl">
-          <h2 className="mb-4 text-3xl font-bold text-center text-gray-800">
-            Our Facilities
-          </h2>
-          <p className="max-w-3xl mx-auto mb-12 text-center">
-            We are equipped with modern facilities designed to enhance the
-            learning experience and provide a conducive environment for academic
-            and personal growth.
-          </p>
-
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Academic Facilities */}
-            <div className="p-6 bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:translate-y-[-4px]">
-              <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-primary to-primary-light">
-                  <FaChalkboardTeacher className="text-xl" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  Academic Facilities
-                </h3>
-              </div>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-primary" />
-                  <span>Modern classrooms with digital projectors</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-primary" />
-                  <span>Fully equipped science laboratories</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-primary" />
-                  <span>Computer lab with high-speed internet</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-primary" />
-                  <span>Extensive library resources</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-primary" />
-                  <span>Interactive learning materials</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Sports Facilities */}
-            <div className="p-6 bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:translate-y-[-4px]">
-              <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-secondary to-secondary-light">
-                  <FaRunning className="text-xl" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  Sports & Recreation
-                </h3>
-              </div>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-secondary" />
-                  <span>Standard football pitch</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-secondary" />
-                  <span>Basketball and volleyball courts</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-secondary" />
-                  <span>Athletics track</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-secondary" />
-                  <span>Indoor games facilities</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-secondary" />
-                  <span>Sports equipment store</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Entertainment Facilities */}
-            <div className="p-6 bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:translate-y-[-4px]">
-              <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-tertiary to-tertiary-light">
-                  <FaFilm className="text-xl" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  Entertainment & Culture
-                </h3>
-              </div>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-tertiary" />
-                  <span>Spacious hall for events and screenings</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-tertiary" />
-                  <span>Outdoor stage for performances</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-tertiary" />
-                  <span>Recreational activities area</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-tertiary" />
-                  <span>Music and PA systems</span>
-                </li>
-                <li className="flex items-start">
-                  <FaCheckCircle className="mt-1 mr-3 text-tertiary" />
-                  <span>Cultural display areas</span>
+                <li className="flex items-start text-sm">
+                  <FaCheckCircle className="flex-shrink-0 mt-1 mr-2 text-sm text-tertiary" />
+                  <span>Industrial Arts & Technical Drawing</span>
                 </li>
               </ul>
             </div>
           </div>
+
+          {/* CBC Core Competencies */}
+          <div className="p-6 mt-12 rounded-lg bg-gradient-to-r from-blue-50 to-green-50">
+            <h3 className="mb-6 text-2xl font-bold text-center text-gray-800">
+              CBC Core Competencies Development
+            </h3>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+              <div className="p-4 text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 mb-3 text-blue-600 bg-blue-100 rounded-full">
+                  <FaLightbulb className="text-lg" />
+                </div>
+                <h4 className="font-semibold text-gray-800">Communication</h4>
+              </div>
+              <div className="p-4 text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 mb-3 text-green-600 bg-green-100 rounded-full">
+                  <FaHandshake className="text-lg" />
+                </div>
+                <h4 className="font-semibold text-gray-800">Collaboration</h4>
+              </div>
+              <div className="p-4 text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 mb-3 text-purple-600 bg-purple-100 rounded-full">
+                  <FaBalanceScale className="text-lg" />
+                </div>
+                <h4 className="font-semibold text-gray-800">
+                  Critical Thinking
+                </h4>
+              </div>
+              <div className="p-4 text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 mb-3 text-red-600 bg-red-100 rounded-full">
+                  <FaRunning className="text-lg" />
+                </div>
+                <h4 className="font-semibold text-gray-800">Creativity</h4>
+              </div>
+            </div>
+            <p className="mt-6 text-center text-gray-600">
+              All pathways integrate CBC's 7 core competencies: Communication,
+              Collaboration, Critical Thinking, Creativity, Citizenship, Digital
+              Literacy, and Learning to Learn.
+            </p>
+          </div>
         </div>
       </section>
+
+{/* Facilities Section - CBC Aligned */}
+<section className="py-16 bg-primary/10">
+  <div className="px-4 mx-auto max-w-7xl">
+    <h2 className="mb-4 text-3xl font-bold text-center text-gray-800">
+      CBC-Aligned Learning Facilities
+    </h2>
+    <p className="max-w-3xl mx-auto mb-12 text-center text-gray-600">
+      Our facilities are designed to support CBC's competency-based approach, providing hands-on learning experiences, digital integration, and spaces that foster creativity, collaboration, and practical skill development.
+    </p>
+
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {/* STEM & Technical Facilities */}
+      <div className="p-6 bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:translate-y-[-4px]">
+        <div className="flex items-center mb-6">
+          <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-primary to-primary-light">
+            <FaMicroscope className="text-xl" />
+          </div>
+          <h3 className="text-xl font-bold text-gray-800">
+            STEM & Technical Facilities
+          </h3>
+        </div>
+        <ul className="space-y-3 text-gray-600">
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-primary" />
+            <span>Integrated Science Laboratories (Physics, Chemistry, Biology)</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-primary" />
+            <span>Digital STEM Lab with Robotics & Coding Equipment</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-primary" />
+            <span>Computer Labs with Programming Software</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-primary" />
+            <span>Agriculture & Environmental Science Demonstration Farm</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-primary" />
+            <span>Technical Workshop for Engineering & Construction</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-primary" />
+            <span>Home Science & Hospitality Practical Kitchen</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Digital & Collaborative Learning */}
+      <div className="p-6 bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:translate-y-[-4px]">
+        <div className="flex items-center mb-6">
+          <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-secondary to-secondary-light">
+            <FaLightbulb className="text-xl" />
+          </div>
+          <h3 className="text-xl font-bold text-gray-800">
+            Digital & Collaborative Spaces
+          </h3>
+        </div>
+        <ul className="space-y-3 text-gray-600">
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-secondary" />
+            <span>Smart Classrooms with Interactive Whiteboards</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-secondary" />
+            <span>High-Speed WiFi Campus with Digital Learning Portal</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-secondary" />
+            <span>Collaborative Learning Hubs with Flexible Seating</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-secondary" />
+            <span>Digital Resource Center with E-Learning Materials</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-secondary" />
+            <span>Project-Based Learning Studios</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-secondary" />
+            <span>Career Guidance & University Counseling Center</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Creative & Wellness Facilities */}
+      <div className="p-6 bg-white rounded-lg shadow-md transition-transform duration-300 hover:transform hover:translate-y-[-4px]">
+        <div className="flex items-center mb-6">
+          <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mr-4 text-white rounded-full bg-gradient-to-r from-tertiary to-tertiary-light">
+            <FaUserFriends className="text-xl" />
+          </div>
+          <h3 className="text-xl font-bold text-gray-800">
+            Creative & Wellness Facilities
+          </h3>
+        </div>
+        <ul className="space-y-3 text-gray-600">
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-tertiary" />
+            <span>Multipurpose Hall for Performing Arts & Exhibitions</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-tertiary" />
+            <span>Music & Drama Studio with Recording Equipment</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-tertiary" />
+            <span>Sports Complex (Football, Basketball, Volleyball, Athletics)</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-tertiary" />
+            <span>Guidance & Counseling Department</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-tertiary" />
+            <span>Green Spaces for Environmental Education</span>
+          </li>
+          <li className="flex items-start">
+            <FaCheckCircle className="flex-shrink-0 mt-1 mr-3 text-tertiary" />
+            <span>Entrepreneurship & Business Skills Incubator</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CBC Integration Note */}
+    <div className="p-6 mt-12 bg-white rounded-lg shadow-sm">
+      <div className="flex items-start">
+        <div className="flex-shrink-0 p-2 mt-1 mr-4 text-white rounded-full bg-gradient-to-r from-green-500 to-blue-500">
+          <FaBook className="text-sm" />
+        </div>
+        <div>
+          <h4 className="mb-2 text-lg font-semibold text-gray-800">
+            CBC Learning Environment Features
+          </h4>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            <div className="flex items-center">
+              <div className="flex-shrink-0 w-2 h-2 mr-3 rounded-full bg-primary"></div>
+              <span className="text-sm text-gray-600">Learner-centered classroom setups</span>
+            </div>
+            <div className="flex items-center">
+              <div className="flex-shrink-0 w-2 h-2 mr-3 rounded-full bg-secondary"></div>
+              <span className="text-sm text-gray-600">Digital literacy integration in all subjects</span>
+            </div>
+            <div className="flex items-center">
+              <div className="flex-shrink-0 w-2 h-2 mr-3 rounded-full bg-tertiary"></div>
+              <span className="text-sm text-gray-600">Practical assessment areas for CBC projects</span>
+            </div>
+            <div className="flex items-center">
+              <div className="flex-shrink-0 w-2 h-2 mr-3 rounded-full bg-green-500"></div>
+              <span className="text-sm text-gray-600">Inclusive facilities for diverse learning needs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Accreditation & Partnerships */}
       <section className="py-16 bg-white">
@@ -607,40 +682,40 @@ const About = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="p-2 mt-1 mr-3 text-white rounded bg-primary">
+                  <div className="flex-shrink-0 p-2 mt-1 mr-3 text-white rounded bg-primary">
                     <FaAward className="text-sm" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-medium text-gray-800">
                       Ministry of Education
                     </h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 break-words">
                       Fully Registered Secondary School - Code: 456789
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="p-2 mt-1 mr-3 text-white rounded bg-secondary">
+                  <div className="flex-shrink-0 p-2 mt-1 mr-3 text-white rounded bg-secondary">
                     <FaCheckCircle className="text-sm" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-medium text-gray-800">
                       KNEC Examination Center
                     </h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 break-words">
                       Approved National Examination Center - Code: 5678
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="p-2 mt-1 mr-3 text-white rounded bg-tertiary">
+                  <div className="flex-shrink-0 p-2 mt-1 mr-3 text-white rounded bg-tertiary">
                     <FaShieldAlt className="text-sm" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-medium text-gray-800">
                       Quality Assurance
                     </h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 break-words">
                       Compliant with All Education Standards & Regulations
                     </p>
                   </div>
@@ -654,31 +729,31 @@ const About = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center p-3 bg-white rounded">
-                  <div className="flex items-center justify-center w-10 h-10 mr-3 rounded bg-primary/10">
+                  <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 mr-3 rounded bg-primary/10">
                     <FaRunning className="text-primary" />
                   </div>
-                  <div>
-                    <p className="font-medium text-gray-800">
+                  <div className="min-w-0">
+                    <p className="font-medium text-gray-800 break-words">
                       Kenya Secondary Schools Sports Association
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center p-3 bg-white rounded">
-                  <div className="flex items-center justify-center w-10 h-10 mr-3 rounded bg-secondary/10">
+                  <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 mr-3 rounded bg-secondary/10">
                     <FaMicroscope className="text-secondary" />
                   </div>
-                  <div>
-                    <p className="font-medium text-gray-800">
+                  <div className="min-w-0">
+                    <p className="font-medium text-gray-800 break-words">
                       Kenya Science & Engineering Fair
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center p-3 bg-white rounded">
-                  <div className="flex items-center justify-center w-10 h-10 mr-3 rounded bg-tertiary/10">
+                  <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 mr-3 rounded bg-tertiary/10">
                     <FaHandshake className="text-tertiary" />
                   </div>
-                  <div>
-                    <p className="font-medium text-gray-800">
+                  <div className="min-w-0">
+                    <p className="font-medium text-gray-800 break-words">
                       Community Development Partners
                     </p>
                   </div>
