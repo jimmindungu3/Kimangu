@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Import all images
+import coatOfArms from "/src/assets/images/coat-of-arms.png";
+import tscImage from "/src/assets/images/tsc.jpeg";
+import knecImage from "/src/assets/images/knec.jpeg";
+import kuccpsImage from "/src/assets/images/kuccps.png";
+import kicdImage from "/src/assets/images/kicd.jpeg";
+
 const Footer = () => {
   return (
     <footer className="pt-12 pb-4 text-white bg-gray-700">
@@ -153,27 +160,27 @@ const Footer = () => {
         <div className="py-8 border-t border-gray-600">
           <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start md:gap-6">
             <img
-              src="/src/assets/images/coat-of-arms.png"
+              src={coatOfArms}
               alt="GOK - Ministry of Education"
               className="object-contain w-auto h-8 bg-white"
             />
             <img
-              src="/src/assets/images/tsc.jpeg"
+              src={tscImage}
               alt="Teachers Service Commission"
               className="object-contain w-auto h-8"
             />
             <img
-              src="/src/assets/images/knec.jpeg"
+              src={knecImage}
               alt="Kenya National Examinations Council"
               className="object-contain w-auto h-8"
             />
             <img
-              src="/src/assets/images/kuccps.png"
+              src={kuccpsImage}
               alt="Kenya Universities and Colleges Central Placement Service"
               className="object-contain w-auto h-8"
             />
             <img
-              src="/src/assets/images/kicd.jpeg"
+              src={kicdImage}
               alt="Kenya Institute of Curriculum Development"
               className="object-contain w-auto h-8"
             />

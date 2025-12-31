@@ -10,6 +10,10 @@ import {
   FaSearch,
   FaComments,
   FaRocket,
+  FaUser,
+  FaEnvelope,
+  FaPhone,
+  FaSpinner,
 } from "react-icons/fa";
 import { MdSchool, MdWork, MdGroups, MdClose } from "react-icons/md";
 
@@ -17,6 +21,12 @@ const Careers = () => {
   const [expandedJobId, setExpandedJobId] = useState(null);
   const [showApplicationModal, setShowApplicationModal] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [notification, setNotification] = useState({
+    show: false,
+    message: "",
+    type: "",
+  });
 
   const jobOpenings = [
     {
@@ -156,6 +166,13 @@ const Careers = () => {
     setShowApplicationModal(true);
   };
 
+  const showNotification = (message, type) => {
+    setNotification({ show: true, message, type });
+    setTimeout(() => {
+      setNotification({ show: false, message: "", type: "" });
+    }, 5000);
+  };
+
   const ApplicationModal = () => {
     const [formData, setFormData] = useState({
       name: "",
@@ -167,20 +184,25 @@ const Careers = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      // Handle form submission here
-      console.log("Application submitted:", {
-        ...formData,
-        job: selectedJob.title,
-      });
-      alert("Application submitted successfully!");
-      setShowApplicationModal(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        coverLetter: "",
-        resume: null,
-      });
+      setLoading(true);
+
+      // Simulate API call
+      setTimeout(() => {
+        console.log("Application submitted:", {
+          ...formData,
+          job: selectedJob.title,
+        });
+        showNotification("✅ Application submitted successfully!", "success");
+        setShowApplicationModal(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          coverLetter: "",
+          resume: null,
+        });
+        setLoading(false);
+      }, 1500);
     };
 
     const handleFileChange = (e) => {
@@ -210,14 +232,17 @@ const Careers = () => {
             </div>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="p-6">
-            <div className="space-y-6">
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block mb-2 font-medium text-gray-700">
-                    Full Name *
-                  </label>
+          {/* Form - Updated to match ContactUs styling */}
+          <form onSubmit={handleSubmit} className="p-6 space-y-6">
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <label className="block mb-2 text-sm font-medium text-gray-700">
+                  Full Name *
+                </label>
+                <div className="relative">
+                  <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
+                    <FaUser className="text-gray-400" />
+                  </div>
                   <input
                     type="text"
                     required
@@ -225,14 +250,20 @@ const Careers = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
                     placeholder="Enter your full name"
                   />
                 </div>
-                <div>
-                  <label className="block mb-2 font-medium text-gray-700">
-                    Email Address *
-                  </label>
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm font-medium text-gray-700">
+                  Email Address *
+                </label>
+                <div className="relative">
+                  <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
+                    <FaEnvelope className="text-gray-400" />
+                  </div>
                   <input
                     type="email"
                     required
@@ -240,16 +271,21 @@ const Careers = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
                     placeholder="Enter your email"
                   />
                 </div>
               </div>
+            </div>
 
-              <div>
-                <label className="block mb-2 font-medium text-gray-700">
-                  Phone Number *
-                </label>
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Phone Number *
+              </label>
+              <div className="relative">
+                <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
+                  <FaPhone className="text-gray-400" />
+                </div>
                 <input
                   type="tel"
                   required
@@ -257,76 +293,108 @@ const Careers = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
                   placeholder="Enter your phone number"
                 />
               </div>
+            </div>
 
-              <div>
-                <label className="block mb-2 font-medium text-gray-700">
-                  Cover Letter *
-                </label>
-                <textarea
-                  required
-                  value={formData.coverLetter}
-                  onChange={(e) =>
-                    setFormData({ ...formData, coverLetter: e.target.value })
-                  }
-                  rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Tell us why you're interested in this position..."
-                />
-              </div>
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Cover Letter *
+              </label>
+              <textarea
+                required
+                value={formData.coverLetter}
+                onChange={(e) =>
+                  setFormData({ ...formData, coverLetter: e.target.value })
+                }
+                rows="4"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg resize-none focus:outline-none focus:border-primary form-input"
+                placeholder="Tell us why you're interested in this position..."
+              />
+            </div>
 
-              <div>
-                <label className="block mb-2 font-medium text-gray-700">
-                  Upload Resume/CV *
-                </label>
-                <div className="flex items-center justify-center w-full">
-                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
-                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                      <FaPaperPlane className="w-8 h-8 mb-3 text-gray-400" />
-                      <p className="mb-2 text-sm text-gray-500">
-                        <span className="font-semibold">Click to upload</span>{" "}
-                        or drag and drop
-                      </p>
-                      <p className="text-xs text-gray-500">
-                        PDF, DOC, DOCX (Max. 5MB)
-                      </p>
-                    </div>
-                    <input
-                      type="file"
-                      required
-                      accept=".pdf,.doc,.docx"
-                      onChange={handleFileChange}
-                      className="hidden"
-                    />
-                  </label>
-                </div>
-                {formData.resume && (
-                  <p className="mt-2 text-sm text-gray-600">
-                    Selected: {formData.resume.name}
-                  </p>
-                )}
-              </div>
+<div>
+  <label className="block mb-2 text-sm font-medium text-gray-700">
+    Resume/CV + Other testimanials all in one PDF *
+  </label>
+  <div className="flex items-center justify-center w-full">
+    <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-colors duration-200">
+      <div className="flex flex-col items-center justify-center w-full h-full p-4">
+        {!formData.resume ? (
+          // Default state - no file selected
+          <>
+            <FaPaperPlane className="w-8 h-8 mb-3 text-gray-400" />
+            <p className="mb-2 text-sm text-gray-500">
+              <span className="font-semibold">Click to upload</span>{" "}
+              or drag and drop
+            </p>
+            <p className="text-xs text-gray-500">
+              PDF, DOC, DOCX (Max. 8MB)
+            </p>
+          </>
+        ) : (
+          // File selected state
+          <>
+            <div className="flex items-center justify-center w-12 h-12 mb-3">
+              <FaFileAlt className="w-6 h-6 text-red-700" />
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-medium text-gray-700 truncate max-w-[200px]">
+                {formData.resume.name}
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                {/* FIXED: Proper file size calculation */}
+                {formData.resume.size < 1024 * 1024 
+                  ? `${(formData.resume.size / 1024).toFixed(1)} KB`
+                  : `${(formData.resume.size / (1024 * 1024)).toFixed(2)} MB`
+                }
+              </p>
+              <p className="text-xs text-primary mt-2 font-medium">
+                Click to change file
+              </p>
+            </div>
+          </>
+        )}
+        <input
+          type="file"
+          required
+          accept=".pdf,.doc,.docx"
+          onChange={handleFileChange}
+          className="hidden"
+        />
+      </div>
+    </label>
+  </div>
+</div>
 
-              <div className="pt-4 border-t">
-                <div className="flex justify-between">
-                  <button
-                    type="button"
-                    onClick={() => setShowApplicationModal(false)}
-                    className="px-6 py-3 font-medium text-gray-700 transition-colors bg-gray-100 rounded-lg hover:bg-gray-200"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="flex items-center px-6 py-3 font-medium text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-primary to-primary-light hover:shadow-lg hover:scale-105"
-                  >
-                    <FaPaperPlane className="mr-2" />
-                    Submit Application
-                  </button>
-                </div>
+            <div className="pt-4 border-t">
+              <div className="flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => setShowApplicationModal(false)}
+                  className="px-6 py-3 font-medium text-gray-700 transition-colors bg-gray-100 rounded-lg hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="flex items-center px-6 py-3 font-medium text-white transition-all duration-200 rounded-lg bg-gradient-to-r from-primary to-primary-light hover:shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-75 disabled:cursor-not-allowed"
+                >
+                  {loading ? (
+                    <>
+                      <FaSpinner className="mr-2 animate-spin" />
+                      <span>Submitting...</span>
+                    </>
+                  ) : (
+                    <>
+                      <FaPaperPlane className="mr-2" />
+                      <span>Submit Application</span>
+                    </>
+                  )}
+                </button>
               </div>
             </div>
           </form>
@@ -337,7 +405,6 @@ const Careers = () => {
 
   return (
     <div className="text-gray-600">
-
       {/* Current Openings */}
       <section
         id="openings"
@@ -364,6 +431,7 @@ const Careers = () => {
                 <div
                   onClick={() => toggleJobExpansion(job.id)}
                   className="p-6 cursor-pointer"
+                  title="Click to expand"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
@@ -503,7 +571,7 @@ const Careers = () => {
 
                           <button
                             onClick={() => handleApplyClick(job)}
-                            className="w-full py-3 font-medium text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-primary to-primary-light hover:shadow-lg hover:scale-105 flex items-center justify-center"
+                            className="w-full py-3 font-medium text-white transition-all duration-200 rounded-lg bg-gradient-to-r from-primary to-primary-light hover:shadow-lg hover:scale-105 flex items-center justify-center focus:ring-2 focus:ring-primary focus:ring-offset-2"
                           >
                             <FaPaperPlane className="mr-2" />
                             Apply Now
@@ -560,6 +628,31 @@ const Careers = () => {
 
       {/* Application Modal */}
       <ApplicationModal />
+
+      {/* Notification */}
+      {notification.show && (
+        <div
+          className={`fixed top-4 right-4 z-50 max-w-sm p-4 rounded-lg shadow-lg transition-all duration-300 transform translate-x-0 ${
+            notification.type === "success"
+              ? "bg-tertiary text-white border-l-4 border-tertiary-dark"
+              : "bg-red-500 text-white border-l-4 border-red-700"
+          }`}
+        >
+          <div className="flex items-start justify-between">
+            <div className="flex-1 mr-3">
+              <p className="text-sm font-medium">{notification.message}</p>
+            </div>
+            <button
+              onClick={() =>
+                setNotification({ show: false, message: "", type: "" })
+              }
+              className="text-white hover:text-gray-200 focus:outline-none"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
