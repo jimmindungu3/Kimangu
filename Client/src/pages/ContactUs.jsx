@@ -1,17 +1,14 @@
 import React, { useState } from "react";
+import { IoIosSend } from "react-icons/io";
 import {
   FaPhone,
   FaEnvelope,
   FaMailBulk,
-  FaMapMarkerAlt,
   FaClock,
   FaHeadset,
   FaUser,
   FaTag,
   FaComment,
-  FaPaperPlane,
-  FaSpinner,
-  FaDirections,
   FaMapMarkedAlt,
   FaShieldAlt,
   FaQuestionCircle,
@@ -25,121 +22,73 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    phone: "", // Added phone field
     subject: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false);
-  const [notification, setNotification] = useState({
-    show: false,
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({
+    success: false,
     message: "",
-    type: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
+    setFormData({
+      ...formData,
       [name]: value,
-    }));
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validation
-    if (
-      !formData.fullName ||
-      !formData.email ||
-      !formData.subject ||
-      !formData.message
-    ) {
-      showNotification("Please fill in all required fields", "error");
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      showNotification("Please enter a valid email address", "error");
-      return;
-    }
-
-    setLoading(true);
+    setIsSubmitting(true);
+    setSubmitStatus({ success: false, message: "" });
 
     try {
-      const contactData = {
-        ...formData,
-        submittedAt: new Date().toISOString(),
-      };
+      const response = await fetch("http://localhost:5000/api/contact-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      const response = await fetch(
-        "https://kimangu.onrender.com/contact/form",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(contactData),
-        }
-      );
+      const data = await response.json();
 
-      const result = await response.json();
-
-      if (response.ok) {
-        showNotification(
-          "✅ Message sent successfully! We will get back to you soon.",
-          "success"
-        );
+      if (data.success) {
+        setSubmitStatus({
+          success: true,
+          message: "Message sent successfully! We'll get back to you soon.",
+        });
         setFormData({
           fullName: "",
           email: "",
+          phone: "", // Reset phone field
           subject: "",
           message: "",
         });
+
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus({ success: false, message: "" });
+        }, 5000);
       } else {
-        throw new Error(result.message || "Failed to send message");
+        setSubmitStatus({
+          success: false,
+          message: data.message || "Failed to send message. Please try again.",
+        });
       }
     } catch (error) {
-      console.error("Error sending message:", error);
-      showNotification(
-        `❌ ${error.message || "Failed to send message. Please try again."}`,
-        "error"
-      );
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        success: false,
+        message: "Network error. Please check your connection and try again.",
+      });
     } finally {
-      setLoading(false);
+      setIsSubmitting(false);
     }
-  };
-
-  const showNotification = (message, type) => {
-    setNotification({ show: true, message, type });
-    setTimeout(() => {
-      setNotification({ show: false, message: "", type: "" });
-    }, 5000);
-  };
-
-  const styles = {
-    floatingShapes: {
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      overflow: "hidden",
-      pointerEvents: "none",
-    },
-    shape: {
-      position: "absolute",
-      borderRadius: "50%",
-      background: "rgba(255, 255, 255, 0.1)",
-      animation: "float 6s ease-in-out infinite",
-    },
-    floatAnimation: `
-      @keyframes float {
-        0%, 100% {
-          transform: translateY(0) rotate(0deg);
-        }
-        50% {
-          transform: translateY(-20px) rotate(180deg);
-        }
-      }
-    `,
   };
 
   return (
@@ -246,6 +195,26 @@ const ContactUs = () => {
                 </p>
               </div>
 
+              {/* Status Message */}
+              {submitStatus.message && (
+                <div
+                  className={`p-4 mb-6 rounded-lg ${
+                    submitStatus.success
+                      ? "bg-green-50 text-green-800 border border-green-200"
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}
+                >
+                  <div className="flex items-center">
+                    {submitStatus.success ? (
+                      <FaCheckCircle className="mr-3 text-green-600" />
+                    ) : (
+                      <FaTimesCircle className="mr-3 text-red-600" />
+                    )}
+                    <span className="font-medium">{submitStatus.message}</span>
+                  </div>
+                </div>
+              )}
+
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
@@ -259,11 +228,12 @@ const ContactUs = () => {
                       <input
                         type="text"
                         name="fullName"
+                        value={formData.fullName}
+                        onChange={handleChange}
                         placeholder="John Doe"
                         className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
                         required
-                        value={formData.fullName}
-                        onChange={handleChange}
+                        disabled={isSubmitting}
                       />
                     </div>
                   </div>
@@ -279,33 +249,58 @@ const ContactUs = () => {
                       <input
                         type="email"
                         name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="you@example.com"
                         className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
                         required
-                        value={formData.email}
-                        onChange={handleChange}
+                        disabled={isSubmitting}
                       />
                     </div>
                   </div>
-                </div>
 
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-gray-700">
-                    Subject *
-                  </label>
-                  <div className="relative">
-                    <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
-                      <FaTag className="text-gray-400" />
+                  <div>
+                    <label className="block mb-2 text-sm font-medium text-gray-700">
+                      Phone Number
+                    </label>
+                    <div className="relative">
+                      <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
+                        <FaPhone className="text-gray-400" />
+                      </div>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+254 123 456 789"
+                        className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
+                        disabled={isSubmitting}
+                      />
                     </div>
-                    <input
-                      type="text"
-                      name="subject"
-                      placeholder="What is this regarding?"
-                      className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                    />
+                    <p className="mt-1 text-xs text-gray-500">
+                      Optional, but helpful for quicker response
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="block mb-2 text-sm font-medium text-gray-700">
+                      Subject *
+                    </label>
+                    <div className="relative">
+                      <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
+                        <FaTag className="text-gray-400" />
+                      </div>
+                      <input
+                        type="text"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="What is this regarding?"
+                        className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
+                        required
+                        disabled={isSubmitting}
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -319,35 +314,36 @@ const ContactUs = () => {
                     </div>
                     <textarea
                       name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       rows="5"
                       placeholder="How can we help you today?"
                       className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg resize-none focus:outline-none focus:border-primary form-input"
                       required
-                      value={formData.message}
-                      onChange={handleChange}
+                      disabled={isSubmitting}
                     ></textarea>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between pt-4">
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                  <div className="hidden md:flex items-center gap-2 text-sm text-gray-500">
                     <FaShieldAlt />
                     <span>Your information is safe with us</span>
                   </div>
                   <button
                     type="submit"
-                    disabled={loading}
+                    disabled={isSubmitting}
                     className="flex items-center gap-2 px-8 py-3 font-medium text-white transition-all duration-200 rounded-lg bg-primary hover:bg-primary-light hover:shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-75 disabled:cursor-not-allowed"
                   >
-                    {loading ? (
+                    {isSubmitting ? (
                       <>
-                        <FaSpinner className="animate-spin" />
-                        <span>Sending...</span>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        Sending...
                       </>
                     ) : (
                       <>
-                        <FaPaperPlane />
-                        <span>Send Message</span>
+                        <IoIosSend className="text-white text-lg" />
+                        Send Message
                       </>
                     )}
                   </button>
@@ -378,14 +374,14 @@ const ContactUs = () => {
             </div>
             <div className="px-6 py-4 bg-white">
               <div className="flex items-center justify-between">
-                <div>
+                <div className="hidden md:flex">
                   <h3 className="text-lg font-semibold">
                     Kimangu Day Secondary School
                   </h3>
                   <p className="text-gray-600">Rongai, Nakuru County</p>
                 </div>
                 <a
-                  href="https://goo.gl/maps/example"
+                  href="https://maps.google.com/maps?q=-0.150096,35.838525&z=15"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary hover:bg-primary-light"
@@ -438,31 +434,6 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-
-      {/* Notification */}
-      {notification.show && (
-        <div
-          className={`notification fixed top-4 right-4 z-50 max-w-sm p-4 rounded-lg shadow-lg transition-all duration-300 transform translate-x-0 ${
-            notification.type === "success"
-              ? "bg-tertiary text-white border-l-4 border-tertiary-dark"
-              : "bg-red-500 text-white border-l-4 border-red-700"
-          }`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1 mr-3">
-              <p className="text-sm font-medium">{notification.message}</p>
-            </div>
-            <button
-              onClick={() =>
-                setNotification({ show: false, message: "", type: "" })
-              }
-              className="text-white hover:text-gray-200 focus:outline-none"
-            >
-              <FaTimesCircle />
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
