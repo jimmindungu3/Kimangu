@@ -362,7 +362,6 @@ const ContactUs = () => {
               <iframe
                 width="100%"
                 height="400"
-                frameBorder="0"
                 style={{ border: 0 }}
                 src="https://maps.google.com/maps?q=-0.150096,35.838525&z=15&output=embed"
                 allowFullScreen
@@ -376,9 +375,8 @@ const ContactUs = () => {
               <div className="flex items-center justify-between">
                 <div className="hidden md:flex">
                   <h3 className="text-lg font-semibold">
-                    Kimangu Day Secondary School
+                    Kimangu Day Secondary School - <span className="text-base font-normal">Rongai, Nakuru County</span>
                   </h3>
-                  <p className="text-gray-600">Rongai, Nakuru County</p>
                 </div>
                 <a
                   href="https://maps.google.com/maps?q=-0.150096,35.838525&z=15"
