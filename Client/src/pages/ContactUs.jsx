@@ -56,7 +56,8 @@ const ContactUs = () => {
         },
         body: JSON.stringify(formData),
       });
-
+      
+      console.log(BASE_URL);
       const data = await response.json();
 
       if (data.success) {
