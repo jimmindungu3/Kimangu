@@ -18,11 +18,13 @@ import {
   FaTimesCircle,
 } from "react-icons/fa";
 
+const BASE_URL = import.meta.env.VITE_API_URL_BASE;
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    phone: "", // Added phone field
+    phone: "",
     subject: "",
     message: "",
   });
@@ -47,7 +49,7 @@ const ContactUs = () => {
     setSubmitStatus({ success: false, message: "" });
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact-form", {
+      const response = await fetch(`${BASE_URL}/api/contact-form`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +67,7 @@ const ContactUs = () => {
         setFormData({
           fullName: "",
           email: "",
-          phone: "", // Reset phone field
+          phone: "",
           subject: "",
           message: "",
         });
