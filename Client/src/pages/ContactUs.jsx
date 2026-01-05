@@ -56,7 +56,7 @@ const ContactUs = () => {
         },
         body: JSON.stringify(formData),
       });
-      
+
       console.log(BASE_URL);
       const data = await response.json();
 
@@ -192,9 +192,9 @@ const ContactUs = () => {
               <div className="mb-8">
                 <h2 className="mb-3 text-3xl font-bold">Send us a message</h2>
                 <p className="text-gray-600">
-                  Have questions about admissions, programs, job, tenders, or
-                  anything else? Fill out the form below and we'll get back to
-                  you as soon as possible.
+                  Have questions or comments about admissions, programs, job,
+                  tenders, or anything else? Fill out the form below and we'll
+                  get back to you as soon as possible.
                 </p>
               </div>
 
@@ -264,29 +264,6 @@ const ContactUs = () => {
 
                   <div>
                     <label className="block mb-2 text-sm font-medium text-gray-700">
-                      Phone Number
-                    </label>
-                    <div className="relative">
-                      <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
-                        <FaPhone className="text-gray-400" />
-                      </div>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+254 123 456 789"
-                        className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
-                        disabled={isSubmitting}
-                      />
-                    </div>
-                    <p className="mt-1 text-xs text-gray-500">
-                      Optional, but helpful for quicker response
-                    </p>
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 text-sm font-medium text-gray-700">
                       Subject *
                     </label>
                     <div className="relative">
@@ -301,6 +278,25 @@ const ContactUs = () => {
                         placeholder="What is this regarding?"
                         className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
                         required
+                        disabled={isSubmitting}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block mb-2 text-sm font-medium text-gray-700">
+                      Phone Number (Optional)
+                    </label>
+                    <div className="relative">
+                      <div className="absolute transform -translate-y-1/2 left-3 top-1/2">
+                        <FaPhone className="text-gray-400" />
+                      </div>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+254 123 456 789"
+                        className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:outline-none focus:border-primary form-input"
                         disabled={isSubmitting}
                       />
                     </div>
@@ -329,7 +325,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="flex items-center justify-between pt-4">
-                  <div className="hidden md:flex items-center gap-2 text-sm text-gray-500">
+                  <div className="items-center hidden gap-2 text-sm text-gray-500 md:flex">
                     <FaShieldAlt />
                     <span>Your information is safe with us</span>
                   </div>
@@ -340,12 +336,12 @@ const ContactUs = () => {
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <div className="w-4 h-4 border-2 border-white rounded-full border-t-transparent animate-spin"></div>
                         Sending...
                       </>
                     ) : (
                       <>
-                        <IoIosSend className="text-white text-lg" />
+                        <IoIosSend className="text-lg text-white" />
                         Send Message
                       </>
                     )}
@@ -378,7 +374,10 @@ const ContactUs = () => {
               <div className="flex items-center justify-between">
                 <div className="hidden md:flex">
                   <h3 className="text-lg font-semibold">
-                    Kimangu Day Secondary School - <span className="text-base font-normal">Rongai, Nakuru County</span>
+                    Kimangu Day Secondary School -{" "}
+                    <span className="text-base font-normal">
+                      Rongai, Nakuru County
+                    </span>
                   </h3>
                 </div>
                 <a
