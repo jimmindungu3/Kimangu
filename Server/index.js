@@ -125,9 +125,9 @@ app.get("/health", (req, res) => {
 // Root endpoint
 app.get("/", (req, res) => {
   res.json({
-    message: "Xirion Africa Email API is running",
+    message: "Kimangu Email API is running",
     endpoints: {
-      contact: "POST /api/contact",
+      contact: "POST /api/contact-form",
       health: "GET /health",
     },
   });
