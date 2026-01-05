@@ -14,46 +14,22 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Email configuration optimized for Render
+// Email configuration - SIMPLIFIED for better compatibility
 const createTransporter = () => {
   console.log(`📧 Creating transporter for ${process.env.NODE_ENV || 'development'} environment`);
   
-  // For Render production, use more robust settings
-  if (process.env.NODE_ENV === 'production') {
-    console.log("🔧 Using production email configuration (Render)");
-    
-    return nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false, // false for TLS
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-      // Important settings for Render
-      tls: {
-        rejectUnauthorized: false, // Allows self-signed certificates
-        ciphers: 'SSLv3'
-      },
-      // Timeout settings
-      connectionTimeout: 10000, // 10 seconds
-      greetingTimeout: 10000,
-      socketTimeout: 10000,
-      // Debug logging
-      debug: true,
-      logger: true
-    });
-  }
-  
-  // Development configuration
-  console.log("🔧 Using development email configuration");
-  
+  // Simple, reliable configuration that works on most servers
   return nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: process.env.GMAIL_USER,
       pass: process.env.GMAIL_APP_PASSWORD,
     },
+    // Add these settings for better reliability
+    pool: true,
+    maxConnections: 1,
+    rateDelta: 20000,
+    rateLimit: 5,
   });
 };
 
@@ -63,24 +39,28 @@ const transporter = createTransporter();
 transporter.verify((error, success) => {
   if (error) {
     console.error("❌ Email configuration error:", error.message);
-    console.log("\n🔧 TROUBLESHOOTING:");
-    console.log("1. Verify GMAIL_USER and GMAIL_APP_PASSWORD are set in Render");
-    console.log("2. Make sure GMAIL_APP_PASSWORD is a valid app password from https://myaccount.google.com/apppasswords");
-    console.log("3. Check if 2FA is enabled on the Gmail account");
-    console.log("4. On Render, try using port 465 with secure: true");
+    console.log("\n📧 TROUBLESHOOTING:");
+    console.log("1. Check GMAIL_USER format - should be: youremail@gmail.com (lowercase)");
+    console.log("2. Verify GMAIL_APP_PASSWORD is correct (16 characters, no spaces)");
+    console.log("3. Get app password from: https://myaccount.google.com/apppasswords");
+    console.log("4. Make sure 2FA is enabled on Gmail");
+    console.log("\n🔍 Current config:");
+    console.log("   Email:", process.env.GMAIL_USER);
+    console.log("   Password length:", process.env.GMAIL_APP_PASSWORD?.length || 0);
   } else {
     console.log("✅ Email server is ready to send messages");
+    console.log("📧 Configured email:", process.env.GMAIL_USER);
   }
 });
 
-// Simple contact form endpoint
+// Contact form endpoint
 app.post("/api/contact-form", async (req, res) => {
   console.log("📧 Received contact form submission");
   
   try {
     const { fullName, email, phone, subject, message } = req.body;
 
-    // Validate
+    // Validate required fields
     if (!fullName || !email || !subject || !message) {
       return res.status(400).json({
         success: false,
@@ -115,7 +95,8 @@ ${message}
       `,
     };
 
-    // Send admin email
+    // Send admin email with retry logic
+    console.log("📤 Sending admin notification...");
     await transporter.sendMail(adminMailOptions);
     console.log("✅ Admin notification sent");
 
@@ -135,6 +116,7 @@ ${message}
       `,
     };
 
+    console.log("📤 Sending confirmation email...");
     await transporter.sendMail(userMailOptions);
     console.log(`✅ Confirmation sent to ${email}`);
 
@@ -144,23 +126,30 @@ ${message}
     });
 
   } catch (error) {
-    console.error("❌ Email error:", error.message);
+    console.error("❌ Email error:", error);
+    console.error("Error details:", {
+      code: error.code,
+      command: error.command,
+      response: error.response
+    });
     
     res.status(500).json({
       success: false,
-      message: "Failed to send email. Please try again.",
+      message: "Failed to send email. Please try again later.",
       error: process.env.NODE_ENV === 'development' ? error.message : undefined
     });
   }
 });
 
-// Simple test endpoint
+// Test endpoint
 app.get("/api/test", (req, res) => {
   res.json({
     success: true,
     message: "API is working",
     environment: process.env.NODE_ENV || 'development',
-    emailConfigured: !!process.env.GMAIL_USER
+    emailConfigured: !!process.env.GMAIL_USER,
+    emailUser: process.env.GMAIL_USER || 'Not set',
+    passwordLength: process.env.GMAIL_APP_PASSWORD?.length || 0
   });
 });
 
