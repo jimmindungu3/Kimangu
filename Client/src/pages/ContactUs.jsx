@@ -4,8 +4,6 @@ import {
   FaPhone,
   FaEnvelope,
   FaMailBulk,
-  FaClock,
-  FaHeadset,
   FaUser,
   FaTag,
   FaComment,
@@ -49,7 +47,7 @@ const ContactUs = () => {
     setSubmitStatus({ success: false, message: "" });
 
     try {
-      const response = await fetch(`${BASE_URL}/api/contact-form`, {
+      const response = await fetch(`${BASE_URL}/api/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -104,9 +102,6 @@ const ContactUs = () => {
             {/* Contact Card 1 */}
             <div className="p-8 bg-white shadow-lg rounded-2xl">
               <div className="mb-6">
-                <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-tertiary">
-                  <FaHeadset className="text-xl text-white" />
-                </div>
                 <h3 className="mb-2 text-xl font-semibold">Quick Contact</h3>
                 <div>
                   <a
@@ -155,9 +150,6 @@ const ContactUs = () => {
             {/* Contact Card 2 */}
             <div className="p-8 bg-white shadow-lg rounded-2xl">
               <div className="mb-6">
-                <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-secondary">
-                  <FaClock className="text-xl text-white" />
-                </div>
                 <h3 className="mb-2 text-xl font-semibold">Working Hours</h3>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-center gap-3">

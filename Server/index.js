@@ -1,140 +1,181 @@
-// index.js - Simple Email API for Contact Form
 const express = require("express");
-const nodemailer = require("nodemailer");
 const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const nodemailer = require("nodemailer");
+
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Create transporter (same as sendCode.js)
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "Gmail",
   auth: {
-    user: process.env.MY_EMAIL,
-    pass: process.env.APP_PASSWORD,
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
   },
 });
 
-// Single API endpoint for contact form
-app.post("/api/contact-form", async (req, res) => {
+// Email HTML Templates (using styles from sendCode.js)
+const createAdminEmailHTML = (data) => `
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+  <h2 style="text-align: center; color: #1e40af;">KIMANGU DAY SECONDARY SCHOOL</h2>
+  
+  <div style="background: #1e40af; color: white; padding: 12px; border-radius: 6px; margin: 20px 0; text-align: center;">
+    <h3 style="margin: 0; font-size: 18px;">${data.subject}</h3>
+  </div>
+  
+  <div style="background: #f8fafc; padding: 15px; border-radius: 6px; margin: 20px 0;">
+    <p style="margin: 10px 0;"><strong>From:</strong> ${data.fullName}</p>
+    <p style="margin: 10px 0;"><strong>Email:</strong> ${data.email}</p>
+    <p style="margin: 10px 0;"><strong>Phone:</strong> ${
+      data.phone || "Not provided"
+    }</p>
+  </div>
+  
+  <div style="background: #f1f5f9; padding: 15px; border-radius: 6px; margin: 20px 0;">
+    <p style="margin: 10px 0;"><strong>Message:</strong></p>
+    <p style="margin: 10px 0; white-space: pre-wrap;">${data.message}</p>
+  </div>
+  
+  <p style="font-size: 14px; color: #888;">
+    <strong>Submitted on:</strong> ${new Date().toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    })}
+  </p>
+  
+  <hr style="margin-top: 30px; margin-bottom: 0;">
+
+  <div style="font-size: 14px; color: #888; text-align: center;">
+    <p style="margin-top: 12px;">&copy; ${new Date().getFullYear()} Kimangu Day Secondary School. All rights reserved.</p>
+  </div>
+</div>
+`;
+
+const createConfirmationEmailHTML = (data) => `
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+  <h2 style="text-align: center; color: #1e40af;">KIMANGU DAY SECONDARY SCHOOL</h2>
+  
+  <div style="background: #1e40af; color: white; padding: 12px; border-radius: 6px; margin: 20px 0; text-align: center;">
+    <h3 style="margin: 0; font-size: 18px;">${data.subject}</h3>
+  </div>
+  
+  <p style="font-size: 16px; color: #555;">Dear ${data.fullName},</p>
+  
+  <p style="font-size: 16px; color: #555;">Thank you for contacting Kimangu Day Secondary School. We have received your message and will get back to you within 24-48 hours.</p>
+  
+  <div style="background: #f8fafc; padding: 15px; border-radius: 6px; margin: 20px 0;">
+    <p style="margin: 10px 0;"><strong>Reference:</strong> KDS-${Date.now()
+      .toString()
+      .slice(-6)}</p>
+    <p style="margin: 10px 0;"><strong>Submitted:</strong> ${new Date().toLocaleDateString(
+      "en-US",
+      {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }
+    )}</p>
+  </div>
+  
+  <div style="background: #e0f2fe; padding: 15px; border-radius: 6px; margin: 20px 0;">
+    <p style="margin: 10px 0;"><strong>Your Message:</strong></p>
+    <p style="margin: 10px 0; white-space: pre-wrap; font-style: italic; color: #555;">${
+      data.message
+    }</p>
+  </div>
+  
+  <div style="background: #f0f9ff; padding: 15px; border-radius: 6px; margin: 20px 0;">
+    <p style="margin: 10px 0; font-weight: bold; color: #1e40af;">What happens next?</p>
+    <ul style="margin: 10px 0; padding-left: 20px;">
+      <li>Our team will review your message</li>
+      <li>We aim to respond within 24-48 hours on weekdays</li>
+      <li>For urgent matters, call +254 721 415 851</li>
+    </ul>
+  </div>
+  
+  <hr style="margin-top: 30px; margin-bottom: 0;">
+
+  <div style="font-size: 14px; color: #888; text-align: center;">
+    <p style="margin: 0;">School Hours</p>
+    <p style="margin: 4px 0;">Mon-Fri: 8:00 AM – 5:00 PM | Saturday: 8:00 AM – 12:00 PM</p>
+    <p style="margin-top: 12px;">This is an automated message. Please do not reply to this email.</p>
+    <p style="margin-top: 12px;">&copy; ${new Date().getFullYear()} Kimangu Day Secondary School. All rights reserved.</p>
+  </div>
+</div>
+`;
+
+// Send email route
+app.post("/api/send-email", async (req, res) => {
+  const { fullName, email, subject, phone, message } = req.body;
+
+  if (!fullName || !email || !subject || !message) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Missing required form fields" });
+  }
+
   try {
-    const { fullName, email, phone, subject, message } = req.body;
-
-    // Validate required fields
-    if (!fullName || !email || !subject || !message) {
-      return res.status(400).json({
-        success: false,
-        error: "Please fill in all required fields",
-      });
-    }
-
-    // 1. Email to Admin
+    // Send email to admin (yourself)
     const adminMailOptions = {
-      from: `Xirion Africa Contact <${process.env.MY_EMAIL}>`,
-      to: process.env.ADMIN_EMAIL || process.env.MY_EMAIL, // Send to admin
-      subject: `New Contact: ${subject}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-          <h2 style="color: #ff6600;">New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${fullName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-          <p><strong>Subject:</strong> ${subject}</p>
-          <p><strong>Message:</strong></p>
-          <p style="background: #f5f5f5; padding: 15px; border-radius: 5px;">${message}</p>
-        </div>
-      `,
+      from: `"Website Contact Form" <${process.env.EMAIL}>`,
+      to: process.env.EMAIL,
+      subject: `Contact Form: ${subject}`,
+      html: createAdminEmailHTML({ fullName, email, subject, phone, message }),
+      text: `Contact Form Submission:\n\nSubject: ${subject}\nFrom: ${fullName}\nEmail: ${email}\nPhone: ${
+        phone || "Not provided"
+      }\nMessage: ${message}`,
     };
 
-    // 2. Confirmation Email to User
-    const userMailOptions = {
-      from: `Xirion Africa <${process.env.MY_EMAIL}>`,
+    // Send confirmation email to sender
+    const confirmationMailOptions = {
+      from: `"Kimangu Day Secondary School" <${process.env.EMAIL}>`,
       to: email,
-      subject: "Thank you for contacting Xirion Africa",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-          <h2 style="text-align: center; color: #ff6600;">XIRION AFRICA</h2>
-          <p style="font-size: 16px; color: #555;">Dear <strong>${fullName}</strong>,</p>
-          <p style="font-size: 16px; color: #555;">Thank you for reaching out to us. We have received your message and our team will get back to you within 24-48 hours.</p>
-          
-          <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0;">
-            <p style="margin: 5px 0;"><strong>Subject:</strong> ${subject}</p>
-            <p style="margin: 5px 0;"><strong>Your Message:</strong></p>
-            <p style="margin: 10px 0; padding: 10px; background: white; border-left: 3px solid #ff6600;">${message}</p>
-          </div>
-          
-          <p style="font-size: 16px; color: #555;">If you need immediate assistance, please call us at: <strong>+254 XXX XXX XXX</strong></p>
-          
-          <hr style="margin-top: 30px; margin-bottom: 20px;">
-          
-          <div style="font-size: 14px; color: #888; text-align: center;">
-            <p style="margin: 0;">Why shop with us?</p>
-            <p style="margin: 4px 0;">Affordable quality. Ethical sourcing. Fast shipping. Easy returns.</p>
-            <p style="margin-top: 12px 0;">Follow Us: 
-              <a href="#" style="text-decoration: none; color: #3b5998;">Facebook</a> | 
-              <a href="#" style="text-decoration: none; color: #000;">TikTok</a> | 
-              <a href="#" style="text-decoration: none; color: #C13584;">Instagram</a> | 
-              <a href="#" style="text-decoration: none; color: #000;">Twitter</a>
-            </p>
-            <p style="margin-top: 12px;">&copy; ${new Date().getFullYear()} Xirion Africa. All rights reserved.</p>
-          </div>
-        </div>
-      `,
+      subject: `Message Received: ${subject}`,
+      html: createConfirmationEmailHTML({
+        fullName,
+        email,
+        subject,
+        phone,
+        message,
+      }),
+      text: `Dear ${fullName},\n\nThank you for contacting Kimangu Day Secondary School!\n\nSubject: ${subject}\n\nWe have received your message and will get back to you within 24-48 hours.\n\nYour message: ${message}\n\nFor urgent matters, please call us at +254 721 415 851.\n\nBest regards,\nKimangu Day Secondary School Team`,
     };
 
-    // Send both emails in parallel
-    const [adminResponse, userResponse] = await Promise.all([
-      transporter.sendMail(adminMailOptions),
-      transporter.sendMail(userMailOptions),
-    ]);
+    // Send both emails
+    const adminResult = await transporter.sendMail(adminMailOptions);
+    const confirmationResult = await transporter.sendMail(
+      confirmationMailOptions
+    );
 
-    res.json({
+    console.log("Admin email sent:", adminResult.messageId);
+    console.log("Confirmation email sent:", confirmationResult.messageId);
+
+    res.status(200).json({
       success: true,
       message:
-        "Message sent successfully! A confirmation has been sent to your email.",
-      data: {
-        adminEmailId: adminResponse.messageId,
-        userEmailId: userResponse.messageId,
-      },
+        "Message sent successfully! A confirmation email has been sent to you.",
     });
   } catch (error) {
     console.error("Error sending emails:", error);
     res.status(500).json({
       success: false,
-      error: "Failed to send message. Please try again later.",
-      details:
-        process.env.NODE_ENV === "development" ? error.message : undefined,
+      message: "Failed to send message. Please try again later.",
     });
   }
 });
 
-// Health check endpoint (Render requires this)
-app.get("/health", (req, res) => {
-  res.json({
-    status: "healthy",
-    service: "Xirion Africa Email API",
-    timestamp: new Date().toISOString(),
-  });
-});
-
-// Root endpoint
-app.get("/", (req, res) => {
-  res.json({
-    message: "Kimangu Email API is running",
-    endpoints: {
-      contact: "POST /api/contact-form",
-      health: "GET /health",
-    },
-  });
-});
-
 // Start server
 app.listen(PORT, () => {
-  console.log(`✅ Email API running on port ${PORT}`);
-  console.log(`📧 Using email: ${process.env.MY_EMAIL}`);
+  console.log(`Server is running on port ${PORT}`);
 });
