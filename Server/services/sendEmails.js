@@ -1,11 +1,29 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
+// Create transporter using configurable SMTP settings so it works on Render/other hosts.
+// Priority of configuration:
+// 1. If `SMTP_HOST` is provided, use SMTP settings (works with SendGrid/Mailgun/SMTP providers).
+// 2. Otherwise fall back to Gmail SMTP using `EMAIL` and `PASSWORD` (use an App Password if using Google accounts with 2FA).
+const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
+const smtpPort = process.env.SMTP_PORT
+  ? Number(process.env.SMTP_PORT)
+  : smtpHost === "smtp.gmail.com"
+  ? 465
+  : 587;
+const smtpSecure = smtpPort === 465;
+
 const transporter = nodemailer.createTransport({
-  service: "Gmail",
+  host: smtpHost,
+  port: smtpPort,
+  secure: smtpSecure,
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
+    user: process.env.SMTP_USER || process.env.EMAIL,
+    pass: process.env.SMTP_PASS || process.env.PASSWORD,
+  },
+  tls: {
+    // Allow self-signed certificates on some hosts — set to true for stricter validation.
+    rejectUnauthorized: process.env.NODE_TLS_REJECT_UNAUTHORIZED !== "0",
   },
 });
 
