@@ -165,7 +165,7 @@ const Home = () => {
           <div className="flex flex-col gap-4 sm:flex-row">
             <a
               href="/about"
-              className="px-8 py-3 font-bold transition duration-300 bg-transparent border-2 border-white rounded-lg text-white hover:bg-white hover:text-primary"
+              className="px-8 py-3 font-bold text-white transition duration-300 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-primary"
             >
               Learn More
             </a>
@@ -179,24 +179,24 @@ const Home = () => {
         </div>
 
         {/* Slider controls */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-4">
+        <div className="absolute z-20 flex items-center space-x-4 transform -translate-x-1/2 bottom-8 left-1/2">
           <button
             onClick={handlePrevSlide}
-            className="p-2 text-white transition-colors bg-white/20 rounded-full hover:bg-white/30"
+            className="p-2 text-white transition-colors rounded-full bg-white/20 hover:bg-white/30"
             aria-label="Previous slide"
           >
             <FaChevronLeft />
           </button>
           <button
             onClick={togglePlay}
-            className="p-2 text-white transition-colors bg-white/20 rounded-full hover:bg-white/30"
+            className="p-2 text-white transition-colors rounded-full bg-white/20 hover:bg-white/30"
             aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
           >
             {isPlaying ? <FaPause /> : <FaPlay />}
           </button>
           <button
             onClick={handleNextSlide}
-            className="p-2 text-white transition-colors bg-white/20 rounded-full hover:bg-white/30"
+            className="p-2 text-white transition-colors rounded-full bg-white/20 hover:bg-white/30"
             aria-label="Next slide"
           >
             <FaChevronRight />
@@ -204,14 +204,19 @@ const Home = () => {
         </div>
 
         {/* Slide indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+        <div className="absolute z-20 flex space-x-2 transform -translate-x-1/2 bottom-4 left-1/2">
           {[0, 1, 2].map((index) => (
             <button
               key={index}
               onClick={() => {
-                const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+                const isSmallScreen =
+                  window.matchMedia("(max-width: 640px)").matches;
                 const heroImages = isSmallScreen
-                  ? [heroStaffMembersSmall, heroStudentsSmall, inspectingGuardSmall]
+                  ? [
+                      heroStaffMembersSmall,
+                      heroStudentsSmall,
+                      inspectingGuardSmall,
+                    ]
                   : [heroStaffMembers, heroStudents, inspectingGuard];
                 heroImgRef.current.src = heroImages[index];
                 setCurrentSlide(index);
@@ -229,7 +234,7 @@ const Home = () => {
       </section>
 
       {/* Quick Stats Section */}
-      <section className="py-12 bg-gradient-to-r from-primary to-blue-600 text-white">
+      <section className="py-12 text-white bg-gradient-to-r from-primary to-blue-600">
         <div className="max-w-6xl px-4 mx-auto">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
@@ -342,9 +347,9 @@ const Home = () => {
 
           <div className="grid gap-8 md:grid-cols-3">
             {/* Mission */}
-            <div className="relative flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-white to-gray-50 rounded-xl border border-gray-100">
+            <div className="relative flex flex-col items-center justify-center p-8 text-center border border-gray-100 bg-gradient-to-b from-white to-gray-50 rounded-xl">
               <div className="absolute -top-4">
-                <div className="p-3 rounded-full bg-primary text-white">
+                <div className="p-3 text-white rounded-full bg-primary">
                   <FaHandsHelping className="text-xl" />
                 </div>
               </div>
@@ -359,25 +364,25 @@ const Home = () => {
             </div>
 
             {/* Motto */}
-            <div className="relative flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-white to-gray-50 rounded-xl border border-gray-100">
+            <div className="relative flex flex-col items-center justify-center p-8 text-center border border-gray-100 bg-gradient-to-b from-white to-gray-50 rounded-xl">
               <div className="absolute -top-4">
-                <div className="p-3 rounded-full bg-secondary text-white">
+                <div className="p-3 text-white rounded-full bg-secondary">
                   <FaFistRaised className="text-xl" />
                 </div>
               </div>
               <h3 className="mt-4 mb-4 text-2xl font-bold text-secondary">
                 Motto
               </h3>
-              <p className="text-4xl font-bold mb-4">Aim High!</p>
+              <p className="mb-4 text-4xl font-bold">Aim High!</p>
               <p className="text-sm text-gray-500">
                 Striving for excellence in all endeavors
               </p>
             </div>
 
             {/* Vision */}
-            <div className="relative flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-white to-gray-50 rounded-xl border border-gray-100">
+            <div className="relative flex flex-col items-center justify-center p-8 text-center border border-gray-100 bg-gradient-to-b from-white to-gray-50 rounded-xl">
               <div className="absolute -top-4">
-                <div className="p-3 rounded-full bg-tertiary text-white">
+                <div className="p-3 text-white rounded-full bg-tertiary">
                   <FaEye className="text-xl" />
                 </div>
               </div>
@@ -395,19 +400,19 @@ const Home = () => {
       </section>
 
       {/* Core Values Preview */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
+          <div className="mb-6 md:mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
               Our Core Values
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="max-w-3xl mx-auto text-medium md:text-lg text-gray-600">
               Principles that guide our daily operations and shape our students'
               character
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-5">
+          <div className="grid gap-2 md:gap-6 md:grid-cols-5">
             {[
               {
                 icon: <FaTrophy />,
@@ -427,15 +432,27 @@ const Home = () => {
                 desc: "Creativity",
               },
             ].map((value, index) => (
-              <div
-                key={index}
-                className="p-4 text-center transition-all duration-300 bg-white rounded-lg hover:shadow-md hover:-translate-y-1"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 mb-3 text-white rounded-full bg-primary">
+              <div>
+                <div
+                  key={value.title}
+                  className="flex align-baseline gap-2 p-4 font-medium text-white bg-primary-light mx-x md:hidden"
+                >
                   {value.icon}
+                  {value.title}
                 </div>
-                <h4 className="mb-1 font-bold text-gray-800">{value.title}</h4>
-                <p className="text-sm text-gray-600">{value.desc}</p>
+
+                <div
+                  key={index}
+                  className="flex-col items-center hidden h-full p-4 text-center transition-all duration-300 bg-white rounded-lg md:flex hover:shadow-md hover:-translate-y-1"
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 mb-3 text-white rounded-full bg-primary">
+                    {value.icon}
+                  </div>
+                  <h4 className="mb-1 font-bold text-gray-800">
+                    {value.title}
+                  </h4>
+                  <p className="text-sm text-gray-600">{value.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -455,7 +472,7 @@ const Home = () => {
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-100">
+            <div className="p-6 text-center transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-white rounded-full bg-primary">
                 <FaFlask className="text-2xl" />
               </div>
@@ -468,7 +485,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-100">
+            <div className="p-6 text-center transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-white rounded-full bg-secondary">
                 <MdComputer className="text-2xl" />
               </div>
@@ -481,7 +498,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-100">
+            <div className="p-6 text-center transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-white rounded-full bg-tertiary">
                 <MdLibraryBooks className="text-2xl" />
               </div>
@@ -502,13 +519,12 @@ const Home = () => {
         <div className="max-w-6xl px-4 mx-auto">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl font-bold sm:text-4xl">News & Events</h2>
-
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
             {/* News Column */}
             <div>
-              <h3 className="mb-6 text-2xl font-semibold border-b pb-2">
+              <h3 className="pb-2 mb-6 text-2xl font-semibold border-b">
                 Latest News
               </h3>
               <article className="pb-6 border-b border-gray-200">
@@ -523,7 +539,7 @@ const Home = () => {
 
                 {/* Bottom row */}
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 text-sm font-medium rounded-full bg-gray-200 text-gray-500">
+                  <span className="px-3 py-1 text-sm font-medium text-gray-500 bg-gray-200 rounded-full">
                     May 8, 2025
                   </span>
 
@@ -549,7 +565,7 @@ const Home = () => {
 
                 {/* Bottom row */}
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 text-sm font-medium rounded-full bg-gray-200 text-gray-500">
+                  <span className="px-3 py-1 text-sm font-medium text-gray-500 bg-gray-200 rounded-full">
                     April 28, 2025
                   </span>
 
@@ -566,13 +582,13 @@ const Home = () => {
 
             {/* Events Column */}
             <div>
-              <h3 className="mb-6 text-2xl font-semibold border-b pb-2">
+              <h3 className="pb-2 mb-6 text-2xl font-semibold border-b">
                 Upcoming Events
               </h3>
               <div className="space-y-6">
                 <div className="flex pb-6 border-b border-gray-200">
                   <div className="flex-shrink-0 mr-4">
-                    <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-primary text-white">
+                    <div className="flex flex-col items-center justify-center w-16 h-16 text-white rounded-lg bg-primary">
                       <span className="text-xl font-bold">15</span>
                       <span className="text-sm">May</span>
                     </div>
@@ -594,7 +610,7 @@ const Home = () => {
 
                 <div className="flex pb-6 border-b border-gray-200">
                   <div className="flex-shrink-0 mr-4">
-                    <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-secondary text-white">
+                    <div className="flex flex-col items-center justify-center w-16 h-16 text-white rounded-lg bg-secondary">
                       <span className="text-xl font-bold">22</span>
                       <span className="text-sm">May</span>
                     </div>
@@ -616,7 +632,7 @@ const Home = () => {
 
                 <div className="flex">
                   <div className="flex-shrink-0 mr-4">
-                    <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-tertiary text-white">
+                    <div className="flex flex-col items-center justify-center w-16 h-16 text-white rounded-lg bg-tertiary">
                       <span className="text-xl font-bold">05</span>
                       <span className="text-sm">June</span>
                     </div>
@@ -663,7 +679,7 @@ const Home = () => {
                 alt="Top performing students"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/70 via-transparent to-transparent group-hover:opacity-100">
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <p className="text-sm">
                     Top performing students in Rongai Sub County
@@ -679,7 +695,7 @@ const Home = () => {
                 alt="Mr. Osore With Students Receiving Award at KSEF Nationals"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/70 via-transparent to-transparent group-hover:opacity-100">
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <p className="text-sm">
                     Mr. Osore With Students Receiving Award at KSEF Nationals
@@ -695,7 +711,7 @@ const Home = () => {
                 alt="Students Studying in Computer Lab"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/70 via-transparent to-transparent group-hover:opacity-100">
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <p className="text-sm">Students Studying in Computer Lab</p>
                 </div>
@@ -709,7 +725,7 @@ const Home = () => {
                 alt="Members of The Teaching Staff"
                 className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/70 via-transparent to-transparent group-hover:opacity-100">
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <p className="text-sm">Members of The Teaching Staff</p>
                 </div>
