@@ -439,7 +439,7 @@ const Admissions = () => {
                 <p className="mb-2 text-gray-600">Admissions Hotline</p>
                 <a
                   href="tel:+254712345678"
-                  className="text-lg font-medium text-primary hover:underline"
+                  className="font-medium text-gray-600 hover:underline"
                 >
                   +254 712 345 678
                 </a>
@@ -455,7 +455,7 @@ const Admissions = () => {
                 <p className="mb-2 text-gray-600">Send us your inquiries</p>
                 <a
                   href="mailto:admissions@kimanguday.sc.ke"
-                  className="text-lg font-medium text-secondary hover:underline"
+                  className="font-medium text-gray-600 hover:underline"
                 >
                   admissions@kimanguday.sc.ke
                 </a>
@@ -469,7 +469,7 @@ const Admissions = () => {
                   Visit Us
                 </h3>
                 <p className="mb-2 text-gray-600">Office Hours</p>
-                <p className="font-medium text-gray-900">
+                <p className="font-medium text-gray-600">
                   Mon-Fri: 8:00 AM - 4:00 PM
                 </p>
               </div>
@@ -477,7 +477,7 @@ const Admissions = () => {
 
             <div className="mt-10">
               <Link
-                to="/contact"
+                to="/contact-us"
                 className="inline-flex items-center px-8 py-3 text-lg font-semibold text-white rounded-lg bg-primary hover:bg-primary/90"
               >
                 <FaEnvelope className="mr-2" /> Contact Admissions Office

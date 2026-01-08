@@ -149,32 +149,30 @@ const ContactUs = () => {
 
             {/* Contact Card 2 */}
             <div className="p-8 bg-white shadow-lg rounded-2xl">
-              <div className="mb-6">
-                <h3 className="mb-2 text-xl font-semibold">Working Hours</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-center gap-3">
-                    <FaCheckCircle className="text-xl text-tertiary" />
-                    <div>
-                      <span className="font-medium">Mon-Fri:</span>
-                      <span className="ml-2">8:00 AM – 5:00 PM</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <FaCheckCircle className="text-xl text-tertiary" />
-                    <div>
-                      <span className="font-medium">Saturday:</span>
-                      <span className="ml-2">8:00 AM – 12:00 PM</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <FaTimesCircle className="text-xl text-red-500" />
-                    <div>
-                      <span className="font-medium">Sunday & Holidays:</span>
-                      <span className="ml-2 text-red-600">Closed</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <h3 className="mb-6 text-xl font-semibold">Working Hours</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center gap-3">
+                  <FaCheckCircle className="text-xl text-tertiary" />
+                  <div>
+                    <span className="font-medium">Mon-Fri:</span>
+                    <span className="ml-2">8:00 AM - 5:00 PM</span>
+                  </div>
+                </li>
+                <li className="flex items-center gap-3">
+                  <FaCheckCircle className="text-xl text-tertiary" />
+                  <div>
+                    <span className="font-medium">Saturday:</span>
+                    <span className="ml-2">8:00 AM - 12:00 PM</span>
+                  </div>
+                </li>
+                <li className="flex items-center gap-3">
+                  <FaTimesCircle className="text-xl text-red-500" />
+                  <div>
+                    <span className="font-medium">Sunday & Holidays:</span>
+                    <span className="ml-2 text-red-600">Closed</span>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
 

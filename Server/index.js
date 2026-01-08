@@ -33,8 +33,10 @@ app.post("/api/send-email", async (req, res) => {
   }
 });
 
+// Health check route
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Server is running" });
+  console.log("Health check endpoint hit");
+  res.status(200).json({success: true, message: "Server is running" });
 });
 
 // Start server
