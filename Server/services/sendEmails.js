@@ -1,13 +1,23 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
+// In sendEmails.js, replace the transporter configuration:
 const transporter = nodemailer.createTransport({
-  service: "Gmail",
+  host: "smtp.gmail.com",
+  port: 587, // Try 465 if 587 doesn't work
+  secure: false, // true for 465, false for other ports
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSWORD,
   },
+  tls: {
+    rejectUnauthorized: false, // Add this for Render
+    ciphers: "SSLv3",
+  },
+  connectionTimeout: 10000, // 10 seconds timeout
 });
+
+console.log("Email transporter configured:", transporter.options);
 
 // Email HTML Templates (using styles from sendCode.js)
 const createAdminEmailHTML = (data) => `
@@ -107,14 +117,43 @@ const createConfirmationEmailHTML = (data) => `
 
 // Main email sending function
 const sendContactEmail = async (emailData) => {
+  console.log("=== EMAIL SENDING PROCESS START ===");
+  console.log("Email data received:", JSON.stringify(emailData, null, 2));
+  
   const { fullName, email, subject, phone, message } = emailData;
 
+  // Enhanced environment check
+  console.log("=== ENVIRONMENT CHECK ===");
+  console.log("EMAIL env var exists:", !!process.env.EMAIL);
+  console.log("PASSWORD env var exists:", !!process.env.PASSWORD);
+  console.log("EMAIL value (first/last 3 chars):", 
+    process.env.EMAIL ? 
+    `${process.env.EMAIL.substring(0, 3)}...${process.env.EMAIL.substring(process.env.EMAIL.length - 3)}` : 
+    "NOT SET"
+  );
+  console.log("PASSWORD length:", process.env.PASSWORD?.length || 0);
+  console.log("Node environment:", process.env.NODE_ENV);
+
   if (!fullName || !email || !subject || !message) {
+    console.error("Validation failed - missing fields");
     throw new Error("Missing required form fields");
   }
 
   try {
-    // Send email to admin (yourself)
+    // Test transporter connection with timeout
+    console.log("=== TESTING TRANSPORTER ===");
+    console.log("Transporter config:", {
+      service: transporter.options.service,
+      user: transporter.options.auth.user,
+      passLength: transporter.options.auth.pass?.length || 0
+    });
+    
+    await transporter.verify();
+    console.log("✓ Transporter verified successfully");
+    
+    // Send emails
+    console.log("=== SENDING EMAILS ===");
+    
     const adminMailOptions = {
       from: `"Website Contact Form" <${process.env.EMAIL}>`,
       to: process.env.EMAIL,
@@ -125,7 +164,6 @@ const sendContactEmail = async (emailData) => {
       }\nMessage: ${message}`,
     };
 
-    // Send confirmation email to sender
     const confirmationMailOptions = {
       from: `"Kimangu Day Secondary School" <${process.env.EMAIL}>`,
       to: email,
@@ -140,22 +178,41 @@ const sendContactEmail = async (emailData) => {
       text: `Dear ${fullName},\n\nThank you for contacting Kimangu Day Secondary School!\n\nSubject: ${subject}\n\nWe have received your message and will get back to you within 24-48 hours.\n\nYour message: ${message}\n\nFor urgent matters, please call us at +254 721 415 851.\n\nBest regards,\nKimangu Day Secondary School Team`,
     };
 
-    // Send both emails
+    console.log("Sending admin email...");
     const adminResult = await transporter.sendMail(adminMailOptions);
-    const confirmationResult = await transporter.sendMail(
-      confirmationMailOptions
-    );
+    console.log("✓ Admin email sent:", adminResult.messageId);
+    
+    console.log("Sending confirmation email...");
+    const confirmationResult = await transporter.sendMail(confirmationMailOptions);
+    console.log("✓ Confirmation email sent:", confirmationResult.messageId);
 
-    console.log("Admin email sent:", adminResult.messageId);
-    console.log("Confirmation email sent:", confirmationResult.messageId);
-
+    console.log("=== EMAIL SENDING PROCESS COMPLETE ===");
+    
     return {
       success: true,
-      message:
-        "Message sent successfully! A confirmation email has been sent to you.",
+      message: "Message sent successfully! A confirmation email has been sent to you.",
     };
   } catch (error) {
-    console.error("Error sending emails:", error);
+    console.error("=== EMAIL SENDING ERROR ===");
+    console.error("Error name:", error.name);
+    console.error("Error message:", error.message);
+    console.error("Error code:", error.code);
+    console.error("Error response:", error.response);
+    console.error("Error stack:", error.stack);
+    
+    // Check for specific Gmail errors
+    if (error.code === 'EAUTH') {
+      console.error("AUTHENTICATION ERROR - Check your email credentials");
+      console.error("This usually means:");
+      console.error("1. Wrong password");
+      console.error("2. Using regular password instead of app password");
+      console.error("3. 2FA not enabled but required");
+    }
+    
+    if (error.code === 'EENVELOPE') {
+      console.error("ENVELOPE ERROR - Check recipient/sender addresses");
+    }
+    
     throw new Error("Failed to send message. Please try again later.");
   }
 };
