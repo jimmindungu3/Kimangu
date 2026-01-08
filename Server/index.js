@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Send contact form emails
 app.post("/api/send-email", async (req, res) => {
+  console.log("Received email send request:", req.body);
   try {
     const result = await sendContactEmail(req.body);
     res.status(200).json(result);
