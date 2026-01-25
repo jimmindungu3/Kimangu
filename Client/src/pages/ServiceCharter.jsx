@@ -240,7 +240,7 @@ const ServiceCharter = () => {
                 services we offer, timelines for delivery, costs where
                 applicable, and responsible officers.
               </p>
-              <div className="p-6 rounded-lg bg-primary/5 border border-primary/10">
+              <div className="p-6 border rounded-lg bg-primary/5 border-primary/10">
                 <h3 className="mb-3 text-xl font-semibold text-primary">
                   Our Pledge
                 </h3>
@@ -252,14 +252,14 @@ const ServiceCharter = () => {
                 </p>
               </div>
             </div>
-            <div className="p-6 bg-gray-50 rounded-lg border border-gray-200">
+            <div className="p-6 border border-gray-200 rounded-lg bg-gray-50">
               <h3 className="mb-4 text-xl font-semibold text-primary">
                 Service Principles
               </h3>
               <ul className="space-y-4">
                 {servicePrinciples.map((principle, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="flex items-center justify-center w-8 h-8 mr-3 text-white rounded-full bg-primary flex-shrink-0">
+                    <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 text-white rounded-full bg-primary">
                       {principle.icon}
                     </div>
                     <div>
@@ -279,8 +279,8 @@ const ServiceCharter = () => {
       </section>
 
       {/* Service Tables */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl px-4 mx-auto">
+      <section className="bg-gray-50">
+        <div className="max-w-6xl px-4 mx-auto py-12">
           <div className="mb-8 text-center">
             <h2 className="mb-2 text-3xl font-bold text-primary">
               Service Standards Table
@@ -303,7 +303,7 @@ const ServiceCharter = () => {
 
               <div className="overflow-x-auto rounded-lg shadow">
                 <table className="min-w-full bg-white border border-gray-200">
-                  <thead className="bg-primary text-white">
+                  <thead className="text-white bg-primary">
                     <tr>
                       <th className="px-6 py-4 text-left">Service</th>
                       <th className="px-6 py-4 text-left">Description</th>
@@ -312,7 +312,9 @@ const ServiceCharter = () => {
                       <th className="px-6 py-4 text-left">
                         Responsible Officer
                       </th>
-                      <th className="px-6 py-4 text-left">Notes/Requirements</th>
+                      <th className="px-6 py-4 text-left">
+                        Notes/Requirements
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
@@ -427,9 +429,9 @@ const ServiceCharter = () => {
 
       {/* Feedback & Complaints */}
       <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl px-4 mx-auto">
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="p-8 bg-white rounded-lg shadow-sm border border-gray-200">
+        <div className="max-w-6xl mx-auto">
+          <div className=" grid gap-8 md:grid-cols-2">
+            <div className="p-8 bg-white border border-gray-200 rounded-lg shadow-sm">
               <h3 className="mb-6 text-2xl font-bold text-primary">
                 Feedback & Complaints
               </h3>
@@ -472,7 +474,7 @@ const ServiceCharter = () => {
               </div>
             </div>
 
-            <div className="p-8 bg-gradient-to-br from-primary to-blue-700 text-white rounded-lg">
+            <div className="p-8 text-white rounded-lg bg-gradient-to-br from-primary to-blue-700">
               <h3 className="mb-6 text-2xl font-bold">Download Charter</h3>
               <p className="mb-6">
                 Download the complete Service Delivery Charter document for
@@ -481,13 +483,13 @@ const ServiceCharter = () => {
               <a
                 href="/documents/Service_Delivery_Charter.pdf"
                 download="Service_Delivery_Charter.pdf"
-                className="inline-flex items-center px-6 py-3 font-bold text-primary bg-white rounded-lg hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center px-6 py-3 font-bold transition-colors bg-white rounded-lg text-primary hover:bg-gray-100"
               >
                 <FaDownload className="mr-3" />
                 Download Full Charter (PDF)
               </a>
 
-              <div className="mt-8 pt-6 border-t border-white/30">
+              <div className="pt-6 mt-8 border-t border-white/30">
                 <h4 className="mb-3 text-lg font-semibold">
                   Contact Information
                 </h4>
