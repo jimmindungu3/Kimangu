@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Admissions from "./pages/Admissions";
 import ContactUs from "./pages/ContactUs";
+import ServiceCharter from "./pages/ServiceCharter";
 import Careers from "./pages/Careers";
 import Tenders from "./pages/Tenders";
 import Departments from "./pages/Departments";
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="careers" element={<Careers />} />
           <Route path="tenders" element={<Tenders />} />
+          <Route path="service-charter" element={<ServiceCharter />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="news-and-events" element={<NewsEvents />} />
         </Route>

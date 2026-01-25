@@ -14,6 +14,7 @@ import {
   FaFileSignature,
   FaCamera,
   FaNewspaper,
+  FaFileContract,
 } from "react-icons/fa";
 import { MdExpandMore, MdClose } from "react-icons/md";
 
@@ -289,6 +290,16 @@ const Navigation = () => {
                       News & Events
                     </Link>
                   </li>
+                  {/* Service Charter Link */}
+                  <li>
+                    <Link
+                      to="/service-charter"
+                      className="flex items-center px-4 py-2 hover:bg-primary/10"
+                    >
+                      <FaFileContract className="mr-2 text-primary" />
+                      Service Charter
+                    </Link>
+                  </li>
                 </ul>
               </li>
 
@@ -525,6 +536,20 @@ const Navigation = () => {
                         >
                           <FaNewspaper className="mr-2 text-primary" />
                           News & Events
+                        </Link>
+                      </li>
+                      {/* Service Charter Link in Mobile */}
+                      <li>
+                        <Link
+                          to="/service-charter"
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setMobileMoreOpen(false);
+                          }}
+                          className="flex items-center py-2 hover:text-primary"
+                        >
+                          <FaFileContract className="mr-2 text-primary" />
+                          Service Charter
                         </Link>
                       </li>
                     </ul>

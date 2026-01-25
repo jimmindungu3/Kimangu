@@ -47,7 +47,7 @@ const ContactUs = () => {
     setSubmitStatus({ success: false, message: "" });
 
     try {
-      const response = await fetch("https://kimangu.onrender.com/api/send-email", {
+      const response = await fetch(`${BASE_URL}/api/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
