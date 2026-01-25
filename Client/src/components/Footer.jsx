@@ -5,7 +5,6 @@ import {
   FaEnvelope,
   FaFacebook,
   FaTiktok,
-  FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
 import { FaSignsPost } from "react-icons/fa6";
@@ -45,14 +44,6 @@ const Footer = () => {
                 className="hover:text-blue-400"
               >
                 <FaTiktok className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400"
-              >
-                <FaInstagram className="w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/"
@@ -106,14 +97,10 @@ const Footer = () => {
                   Academic Calendar
                 </Link>
               </li>
+
               <li>
-                <Link to="/staff" className="hover:text-blue-400">
-                  Our Staff
-                </Link>
-              </li>
-              <li>
-                <Link to="/resources" className="hover:text-blue-400">
-                  Student Resources
+                <Link to="/service-charter" className="hover:text-blue-400">
+                  Service Delivery Charter
                 </Link>
               </li>
               <li>

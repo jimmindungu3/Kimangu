@@ -488,22 +488,6 @@ const ServiceCharter = () => {
                 <FaDownload className="mr-3" />
                 Download Full Charter (PDF)
               </a>
-
-              <div className="pt-6 mt-8 border-t border-white/30">
-                <h4 className="mb-3 text-lg font-semibold">
-                  Contact Information
-                </h4>
-                <div className="space-y-2">
-                  <p className="flex items-center">
-                    <FaPhone className="mr-3" />
-                    Main Office: +254 721 415 851
-                  </p>
-                  <p className="flex items-center">
-                    <FaEnvelope className="mr-3" />
-                    Email: info@kimangusecondary.sc.ke
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
