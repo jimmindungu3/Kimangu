@@ -1,248 +1,104 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   FaGraduationCap,
-  FaTrophy,
   FaBook,
   FaUsers,
   FaChevronDown,
   FaChevronUp,
   FaCheckCircle,
   FaUser,
-  FaUniversity,
   FaLightbulb,
   FaBriefcase,
   FaHandsHelping,
-  FaAtom,
-  FaCalculator,
   FaLanguage,
-  FaHistory,
-  FaCogs,
   FaPalette,
-  FaFutbol,
-  FaMusic,
-  FaBookOpen,
   FaMicroscope,
-  FaCode,
-  FaRobot,
   FaIndustry,
-  FaHeartbeat,
-  FaLandmark,
-  FaBalanceScale,
-  FaPaintBrush,
   FaChartLine,
-  FaShieldAlt,
 } from "react-icons/fa";
-import { GiMechanicGarage, GiChefToque, GiFarmTractor } from "react-icons/gi";
+import { GiMechanicGarage } from "react-icons/gi";
+
+// Icon mapping object
+const iconComponents = {
+  FaGraduationCap,
+  FaBook,
+  FaUsers,
+  FaChevronDown,
+  FaChevronUp,
+  FaCheckCircle,
+  FaUser,
+  FaLightbulb,
+  FaBriefcase,
+  FaHandsHelping,
+  FaLanguage,
+  FaPalette,
+  FaMicroscope,
+  FaIndustry,
+  FaChartLine,
+  GiMechanicGarage,
+};
 
 const Departments = () => {
   const [activeTab, setActiveTab] = useState("stem");
   const [expandedDepartmentId, setExpandedDepartmentId] = useState(null);
+  const [departmentsData, setDepartmentsData] = useState({
+    stemDepartments: [],
+    socialSciencesDepartments: [],
+    technicalDepartments: [],
+    careerDepartments: [],
+  });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const stemDepartments = [
-    {
-      id: 1,
-      title: "PURE SCIENCES",
-      icon: <FaMicroscope className="text-2xl" />,
-      head: {
-        name: "Dr. James Mwangi",
-        qualification: "PhD in Chemical Engineering",
-        experience: "18 years teaching experience",
-      },
-      description:
-        "Building scientific thinkers for medical, research, and environmental careers.",
-      subjects: ["Physics", "Chemistry", "Biology", "Mathematics"],
-      pathways: ["Medical Sciences", "Engineering", "Research & Development", "Environmental Science"],
-      coreCompetencies: [
-        "Scientific Inquiry & Investigation",
-        "Critical Thinking & Problem Solving",
-        "Laboratory Skills & Safety",
-        "Data Analysis & Interpretation"
-      ],
-      lifeAfterSchool:
-        "Prepares students for university programs in Medicine, Pharmacy, Engineering, Pure Sciences, and Research. Leads to careers as doctors, engineers, scientists, and researchers.",
-    },
-    {
-      id: 2,
-      title: "APPLIED SCIENCES",
-      icon: <FaIndustry className="text-2xl" />,
-      head: {
-        name: "Prof. John Kamau",
-        qualification: "PhD in Applied Physics",
-        experience: "15 years teaching experience",
-      },
-      description:
-        "Practical application of scientific principles to solve real-world problems.",
-      subjects: ["Applied Physics", "Applied Chemistry", "Agriculture", "Computer Science"],
-      pathways: ["Agricultural Technology", "Food Science", "Materials Science", "Computer Technology"],
-      coreCompetencies: [
-        "Practical Application of Concepts",
-        "Technical Problem Solving",
-        "Innovation & Design Thinking",
-        "Project Management"
-      ],
-      lifeAfterSchool:
-        "Leads to technical institutes, polytechnics, and university programs in Agriculture, Food Science, Materials Engineering, and Computer Technology. Careers include agricultural officers, food technologists, and IT specialists.",
-    },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/data/departmentsData.json");
+        setDepartmentsData(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to load departments data");
+        setLoading(false);
+        console.error("Error fetching data:", err);
+      }
+    };
 
-  const socialSciencesDepartments = [
-    {
-      id: 3,
-      title: "HUMANITIES & LANGUAGES",
-      icon: <FaLanguage className="text-2xl" />,
-      head: {
-        name: "Dr. Grace Wambui",
-        qualification: "PhD in Linguistics",
-        experience: "15 years teaching experience",
-      },
-      description:
-        "Mastering communication and understanding human societies across cultures.",
-      subjects: ["English", "Kiswahili", "French", "History & Government"],
-      pathways: ["Journalism", "Law", "International Relations", "Education"],
-      coreCompetencies: [
-        "Effective Communication",
-        "Critical Analysis",
-        "Cultural Awareness",
-        "Research & Documentation"
-      ],
-      lifeAfterSchool:
-        "Prepares for careers in law, journalism, diplomacy, education, and public administration. University pathways include Law, International Relations, Education, and Communications.",
-    },
-    {
-      id: 4,
-      title: "ARTS & SPORTS",
-      icon: <FaPalette className="text-2xl" />,
-      head: {
-        name: "Ms. Angela Mbeki",
-        qualification: "MFA in Fine Arts",
-        experience: "12 years teaching experience",
-      },
-      description:
-        "Nurturing creativity, artistic expression, and athletic excellence.",
-      subjects: ["Art & Design", "Music", "Physical Education", "Drama"],
-      pathways: ["Creative Arts", "Sports Science", "Performing Arts", "Design"],
-      coreCompetencies: [
-        "Creative Expression",
-        "Performance Skills",
-        "Physical Fitness",
-        "Team Collaboration"
-      ],
-      lifeAfterSchool:
-        "Leads to careers in creative industries, sports management, entertainment, and design. Further studies in Fine Arts, Sports Science, Music, and Media Studies.",
-    },
-  ];
-
-  const technicalDepartments = [
-    {
-      id: 5,
-      title: "TECHNICAL STUDIES",
-      icon: <GiMechanicGarage className="text-2xl" />,
-      head: {
-        name: "Mr. Victor Omondi",
-        qualification: "MSc in Technical Education",
-        experience: "10 years technical training",
-      },
-      description:
-        "Hands-on technical skills for industrial and technological careers.",
-      subjects: ["Engineering Drawing", "Workshop Technology", "Electricity", "Metalwork"],
-      pathways: ["Mechanical Engineering", "Electrical Engineering", "Automotive Technology", "Construction"],
-      coreCompetencies: [
-        "Technical Drawing",
-        "Workshop Safety",
-        "Equipment Operation",
-        "Repair & Maintenance"
-      ],
-      lifeAfterSchool:
-        "Direct entry to technical institutes, TVET colleges, or apprenticeships. Careers as technicians, mechanics, electricians, and engineering assistants.",
-    },
-    {
-      id: 6,
-      title: "BUSINESS STUDIES",
-      icon: <FaChartLine className="text-2xl" />,
-      head: {
-        name: "Ms. Jane Wanjiru",
-        qualification: "MBA in Finance",
-        experience: "10 years business education",
-      },
-      description:
-        "Developing entrepreneurial minds and business management skills.",
-      subjects: ["Business Studies", "Economics", "Accounting", "Entrepreneurship"],
-      pathways: ["Business Management", "Finance", "Marketing", "Entrepreneurship"],
-      coreCompetencies: [
-        "Financial Literacy",
-        "Business Planning",
-        "Marketing Strategies",
-        "Entrepreneurial Thinking"
-      ],
-      lifeAfterSchool:
-        "Prepares for careers in banking, finance, marketing, and entrepreneurship. University pathways include Business Administration, Economics, and Commerce.",
-    },
-  ];
-
-  const careerDepartments = [
-    {
-      id: 7,
-      title: "TVET & CAREER PATHWAYS",
-      icon: <FaBriefcase className="text-2xl" />,
-      head: {
-        name: "Mr. David Odhiambo",
-        qualification: "PhD in Career Guidance",
-        experience: "14 years career counseling",
-      },
-      description:
-        "Guiding students toward vocational training and career readiness.",
-      programs: [
-        "Career Assessment & Guidance",
-        "TVET Program Selection",
-        "Apprenticeship Preparation",
-        "Job Readiness Skills"
-      ],
-      pathways: ["Hospitality", "ICT", "Agriculture", "Beauty & Cosmetology"],
-      coreCompetencies: [
-        "Career Exploration",
-        "Skill Assessment",
-        "Workplace Readiness",
-        "Vocational Training Preparation"
-      ],
-      lifeAfterSchool:
-        "Direct placement into TVET institutions, polytechnics, or apprenticeships in various trades. Leads to skilled careers with certification.",
-    },
-    {
-      id: 8,
-      title: "GUIDANCE & COUNSELING",
-      icon: <FaHandsHelping className="text-2xl" />,
-      head: {
-        name: "Dr. Faith Muthoni",
-        qualification: "PhD in Counseling Psychology",
-        experience: "15 years counseling experience",
-      },
-      description:
-        "Supporting holistic development and personal growth for future success.",
-      services: [
-        "Academic Counseling",
-        "Personal Development",
-        "University Placement",
-        "Psychosocial Support"
-      ],
-      coreCompetencies: [
-        "Emotional Intelligence",
-        "Decision Making",
-        "Goal Setting",
-        "Stress Management"
-      ],
-      lifeAfterSchool:
-        "Provides essential life skills, emotional intelligence, and career planning tools that help students make informed decisions and navigate professional challenges effectively.",
-    },
-  ];
+    fetchData();
+  }, []);
 
   const toggleDepartmentExpansion = (departmentId) => {
     setExpandedDepartmentId(
-      expandedDepartmentId === departmentId ? null : departmentId
+      expandedDepartmentId === departmentId ? null : departmentId,
     );
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-xl text-primary">Loading Departments...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="p-4 text-red-600 bg-red-100 rounded-lg">{error}</div>
+      </div>
+    );
+  }
+
+  const {
+    stemDepartments,
+    socialSciencesDepartments,
+    technicalDepartments,
+    careerDepartments,
+  } = departmentsData;
+
   const renderDepartmentCard = (dept, pathwayType) => {
     const isExpanded = expandedDepartmentId === dept.id;
+    const DeptIcon = iconComponents[dept.icon];
 
     return (
       <div
@@ -256,12 +112,18 @@ const Departments = () => {
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className={`flex items-center justify-center w-12 h-12 rounded-lg text-white ${
-                pathwayType === "stem" ? "bg-primary" :
-                pathwayType === "social" ? "bg-secondary" :
-                pathwayType === "technical" ? "bg-tertiary" : "bg-primary"
-              }`}>
-                {dept.icon}
+              <div
+                className={`flex items-center justify-center w-12 h-12 rounded-lg text-white ${
+                  pathwayType === "stem"
+                    ? "bg-primary"
+                    : pathwayType === "social"
+                      ? "bg-secondary"
+                      : pathwayType === "technical"
+                        ? "bg-tertiary"
+                        : "bg-primary"
+                }`}
+              >
+                <DeptIcon className="text-2xl" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-gray-800">
@@ -435,7 +297,7 @@ const Departments = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="bg-gray-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-white">
         <div className="px-4 py-16 mx-auto max-w-7xl">
@@ -444,8 +306,8 @@ const Departments = () => {
               Departments
             </h1>
             <p className="max-w-2xl mx-auto mb-6 text-lg text-gray-600">
-              Aligned with Kenya's Competency-Based Curriculum: STEM, Social Sciences, 
-              Arts & Sports, and Career Pathways
+              Aligned with Kenya's Competency-Based Curriculum: STEM, Social
+              Sciences, Arts & Sports, and Career Pathways
             </p>
             <div className="inline-flex items-center px-4 py-2 text-sm font-medium text-white rounded-full bg-primary">
               Preparing Learners for University, TVET, and Workplace
@@ -512,61 +374,17 @@ const Departments = () => {
             {activeTab === "career" && "Career Guidance Departments"}
           </h2>
           <p className="text-gray-600">
-            Click on any department to explore learning areas, competencies, and career pathways
+            Click on any department to explore learning areas, competencies, and
+            career pathways
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-6">
           {getCurrentDepartments().map((dept) =>
-            renderDepartmentCard(dept, getPathwayType())
+            renderDepartmentCard(dept, getPathwayType()),
           )}
         </div>
       </div>
-
-      {/* CBC Pathways Information */}
-      <div className="px-4 py-12 mx-auto max-w-6xl">
-        <div className="p-4">
-          <div className="text-center mb-8">
-            <h2 className="mb-4 text-3xl font-bold text-gray-800">
-              CBC Senior School Pathways
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              The Competency-Based Curriculum organizes Senior School into three main pathways
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 border-l-4 border-primary bg-primary/5 rounded-r-lg">
-              <h3 className="mb-3 text-xl font-bold text-gray-800">
-                STEM Pathway
-              </h3>
-              <p className="text-gray-700">
-                Science, Technology, Engineering & Mathematics. Prepares students for 
-                university programs in medicine, engineering, and pure sciences.
-              </p>
-            </div>
-            <div className="p-6 border-l-4 border-secondary bg-secondary/5 rounded-r-lg">
-              <h3 className="mb-3 text-xl font-bold text-gray-800">
-                Social Sciences Pathway
-              </h3>
-              <p className="text-gray-700">
-                Languages, Humanities, Arts & Sports. Develops communicators, 
-                artists, and social scientists for diverse careers.
-              </p>
-            </div>
-            <div className="p-6 border-l-4 border-tertiary bg-tertiary/5 rounded-r-lg">
-              <h3 className="mb-3 text-xl font-bold text-gray-800">
-                Technical Pathway
-              </h3>
-              <p className="text-gray-700">
-                Technical skills and Business studies. Leads to TVET institutions, 
-                polytechnics, or direct entry into skilled trades.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   );
 };

@@ -1,0 +1,219 @@
+{
+  "stemDepartments": [
+    {
+      "id": 1,
+      "title": "PURE SCIENCES",
+      "icon": "FaMicroscope",
+      "head": {
+        "name": "Dr. James Mwangi",
+        "qualification": "PhD in Chemical Engineering",
+        "experience": "18 years teaching experience"
+      },
+      "description": "Building scientific thinkers for medical, research, and environmental careers.",
+      "subjects": ["Physics", "Chemistry", "Biology", "Mathematics"],
+      "pathways": [
+        "Medical Sciences",
+        "Engineering",
+        "Research & Development",
+        "Environmental Science"
+      ],
+      "coreCompetencies": [
+        "Scientific Inquiry & Investigation",
+        "Critical Thinking & Problem Solving",
+        "Laboratory Skills & Safety",
+        "Data Analysis & Interpretation"
+      ],
+      "lifeAfterSchool": "Prepares students for university programs in Medicine, Pharmacy, Engineering, Pure Sciences, and Research. Leads to careers as doctors, engineers, scientists, and researchers."
+    },
+    {
+      "id": 2,
+      "title": "APPLIED SCIENCES",
+      "icon": "FaIndustry",
+      "head": {
+        "name": "Prof. John Kamau",
+        "qualification": "PhD in Applied Physics",
+        "experience": "15 years teaching experience"
+      },
+      "description": "Practical application of scientific principles to solve real-world problems.",
+      "subjects": [
+        "Applied Physics",
+        "Applied Chemistry",
+        "Agriculture",
+        "Computer Science"
+      ],
+      "pathways": [
+        "Agricultural Technology",
+        "Food Science",
+        "Materials Science",
+        "Computer Technology"
+      ],
+      "coreCompetencies": [
+        "Practical Application of Concepts",
+        "Technical Problem Solving",
+        "Innovation & Design Thinking",
+        "Project Management"
+      ],
+      "lifeAfterSchool": "Leads to technical institutes, polytechnics, and university programs in Agriculture, Food Science, Materials Engineering, and Computer Technology. Careers include agricultural officers, food technologists, and IT specialists."
+    }
+  ],
+  "socialSciencesDepartments": [
+    {
+      "id": 3,
+      "title": "HUMANITIES & LANGUAGES",
+      "icon": "FaLanguage",
+      "head": {
+        "name": "Dr. Grace Wambui",
+        "qualification": "PhD in Linguistics",
+        "experience": "15 years teaching experience"
+      },
+      "description": "Mastering communication and understanding human societies across cultures.",
+      "subjects": ["English", "Kiswahili", "French", "History & Government"],
+      "pathways": ["Journalism", "Law", "International Relations", "Education"],
+      "coreCompetencies": [
+        "Effective Communication",
+        "Critical Analysis",
+        "Cultural Awareness",
+        "Research & Documentation"
+      ],
+      "lifeAfterSchool": "Prepares for careers in law, journalism, diplomacy, education, and public administration. University pathways include Law, International Relations, Education, and Communications."
+    },
+    {
+      "id": 4,
+      "title": "ARTS & SPORTS",
+      "icon": "FaPalette",
+      "head": {
+        "name": "Ms. Angela Mbeki",
+        "qualification": "MFA in Fine Arts",
+        "experience": "12 years teaching experience"
+      },
+      "description": "Nurturing creativity, artistic expression, and athletic excellence.",
+      "subjects": ["Art & Design", "Music", "Physical Education", "Drama"],
+      "pathways": [
+        "Creative Arts",
+        "Sports Science",
+        "Performing Arts",
+        "Design"
+      ],
+      "coreCompetencies": [
+        "Creative Expression",
+        "Performance Skills",
+        "Physical Fitness",
+        "Team Collaboration"
+      ],
+      "lifeAfterSchool": "Leads to careers in creative industries, sports management, entertainment, and design. Further studies in Fine Arts, Sports Science, Music, and Media Studies."
+    }
+  ],
+  "technicalDepartments": [
+    {
+      "id": 5,
+      "title": "TECHNICAL STUDIES",
+      "icon": "GiMechanicGarage",
+      "head": {
+        "name": "Mr. Victor Omondi",
+        "qualification": "MSc in Technical Education",
+        "experience": "10 years technical training"
+      },
+      "description": "Hands-on technical skills for industrial and technological careers.",
+      "subjects": [
+        "Engineering Drawing",
+        "Workshop Technology",
+        "Electricity",
+        "Metalwork"
+      ],
+      "pathways": [
+        "Mechanical Engineering",
+        "Electrical Engineering",
+        "Automotive Technology",
+        "Construction"
+      ],
+      "coreCompetencies": [
+        "Technical Drawing",
+        "Workshop Safety",
+        "Equipment Operation",
+        "Repair & Maintenance"
+      ],
+      "lifeAfterSchool": "Direct entry to technical institutes, TVET colleges, or apprenticeships. Careers as technicians, mechanics, electricians, and engineering assistants."
+    },
+    {
+      "id": 6,
+      "title": "BUSINESS STUDIES",
+      "icon": "FaChartLine",
+      "head": {
+        "name": "Ms. Jane Wanjiru",
+        "qualification": "MBA in Finance",
+        "experience": "10 years business education"
+      },
+      "description": "Developing entrepreneurial minds and business management skills.",
+      "subjects": [
+        "Business Studies",
+        "Economics",
+        "Accounting",
+        "Entrepreneurship"
+      ],
+      "pathways": [
+        "Business Management",
+        "Finance",
+        "Marketing",
+        "Entrepreneurship"
+      ],
+      "coreCompetencies": [
+        "Financial Literacy",
+        "Business Planning",
+        "Marketing Strategies",
+        "Entrepreneurial Thinking"
+      ],
+      "lifeAfterSchool": "Prepares for careers in banking, finance, marketing, and entrepreneurship. University pathways include Business Administration, Economics, and Commerce."
+    }
+  ],
+  "careerDepartments": [
+    {
+      "id": 7,
+      "title": "TVET & CAREER PATHWAYS",
+      "icon": "FaBriefcase",
+      "head": {
+        "name": "Mr. David Odhiambo",
+        "qualification": "PhD in Career Guidance",
+        "experience": "14 years career counseling"
+      },
+      "description": "Guiding students toward vocational training and career readiness.",
+      "programs": [
+        "Career Assessment & Guidance",
+        "TVET Program Selection",
+        "Apprenticeship Preparation",
+        "Job Readiness Skills"
+      ],
+      "pathways": ["Hospitality", "ICT", "Agriculture", "Beauty & Cosmetology"],
+      "coreCompetencies": [
+        "Career Exploration",
+        "Skill Assessment",
+        "Workplace Readiness",
+        "Vocational Training Preparation"
+      ],
+      "lifeAfterSchool": "Direct placement into TVET institutions, polytechnics, or apprenticeships in various trades. Leads to skilled careers with certification."
+    },
+    {
+      "id": 8,
+      "title": "GUIDANCE & COUNSELING",
+      "icon": "FaHandsHelping",
+      "head": {
+        "name": "Dr. Faith Muthoni",
+        "qualification": "PhD in Counseling Psychology",
+        "experience": "15 years counseling experience"
+      },
+      "description": "Supporting holistic development and personal growth for future success.",
+      "services": [
+        "Academic Counseling",
+        "Personal Development",
+        "University Placement",
+        "Psychosocial Support"
+      ],
+      "coreCompetencies": [
+        "Emotional Intelligence",
+        "Decision Making",
+        "Goal Setting",
+        "Stress Management"
+      ],
+      "lifeAfterSchool": "Provides essential life skills, emotional intelligence, and career planning tools that help students make informed decisions and navigate professional challenges effectively."
+    }
+  ]
+}

@@ -460,10 +460,7 @@ const NewsEvents = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative py-8 bg-gradient-to-br from-blue-50/30 via-green-50/30 to-yellow-50/30">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 translate-x-1/2 translate-y-1/2 rounded-full bg-secondary"></div>
-        </div>
+
         <div className="relative px-4 mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="mb-4 text-4xl font-bold text-gray-800 md:text-5xl">

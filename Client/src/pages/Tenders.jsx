@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   FaDownload,
   FaCalendarAlt,
   FaDollarSign,
   FaFileAlt,
-  FaUsers,
-  FaHandshake,
   FaCheckCircle,
-  FaFileSignature,
   FaBalanceScale,
   FaQuestionCircle,
   FaChevronDown,
   FaChevronUp,
   FaBuilding,
-  FaCertificate,
   FaChartLine,
   FaShieldAlt,
   FaClock,
@@ -34,308 +31,65 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
+// Icon mapping object
+const iconComponents = {
+  FaDownload,
+  FaCalendarAlt,
+  FaDollarSign,
+  FaFileAlt,
+  FaCheckCircle,
+  FaBalanceScale,
+  FaQuestionCircle,
+  FaChevronDown,
+  FaChevronUp,
+  FaBuilding,
+  FaChartLine,
+  FaShieldAlt,
+  FaClock,
+  FaExclamationTriangle,
+  FaBullhorn,
+  FaShoppingCart,
+  FaPenFancy,
+  FaBoxOpen,
+  FaLockOpen,
+  FaChartBar,
+  FaTrophy,
+  FaFileContract,
+  FaTag,
+  FaFile,
+  FaCircle,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+};
+
 const Tenders = () => {
   const [expandedTenderId, setExpandedTenderId] = useState(null);
   const [expandedFaqId, setExpandedFaqId] = useState(null);
+  const [tendersData, setTendersData] = useState({
+    tenders: [],
+    processSteps: [],
+    requiredDocuments: [],
+    faqs: [],
+  });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const tenders = [
-    {
-      id: 1,
-      ref: "KIM/T/2025/001",
-      status: "Open",
-      statusColor: "bg-green-100 text-green-800",
-      title: "Supply of Kitchen Supplies - Cooking Oil, salt, wheat flour etc.",
-      description:
-        "Provision of kitchen supplies including cooking oil for the academic year 2025-2026.",
-      closingDate: "June 15, 2025",
-      fee: "KES 2,500",
-      fileUrl: "/assets/forms/KIM_T_2025_001_Tender.pdf",
-      details: {
-        scope:
-          "Supply of cooking oil, salt, wheat flour, and other kitchen essentials for one academic year",
-        deliverySchedule: "Monthly deliveries as per school calendar",
-        contractDuration: "1 academic year (2025-2026)",
-        evaluationCriteria:
-          "Price (40%), Quality (30%), Delivery capability (20%), Experience (10%)",
-        specifications: [
-          "Cooking oil: Must be sealed, branded, and from registered manufacturers",
-          "Salt: Packaged iodized salt with KEBs certification",
-          "Wheat flour: Fortified with required vitamins and minerals",
-          "All products must have at least 6 months shelf life at delivery",
-        ],
-        submissionRequirements: [
-          "Original and copy of bid document",
-          "Valid business registration certificate",
-          "Tax compliance certificate",
-          "Sample products for testing",
-        ],
-      },
-    },
-    {
-      id: 2,
-      ref: "KIM/T/2025/002",
-      status: "Open",
-      statusColor: "bg-green-100 text-green-800",
-      title: "Supply of Dry Cereals - Maize, Beans, Sorghum etc.",
-      description:
-        "Provision of dry cereals including maize, beans, and sorghum for the academic year 2025-2026.",
-      closingDate: "May 25, 2025",
-      fee: "KES 3,000",
-      fileUrl: "/assets/forms/KIM_T_2025_002_Tender.pdf",
-      details: {
-        scope:
-          "Supply of maize, beans, sorghum, and other dry cereals for school feeding program",
-        deliverySchedule: "Quarterly deliveries",
-        contractDuration: "1 academic year (2025-2026)",
-        evaluationCriteria:
-          "Price (35%), Quality (35%), Storage capacity (15%), Experience (15%)",
-        specifications: [
-          "Maize: Grade 1, moisture content not exceeding 13%",
-          "Beans: Clean, sorted, with minimum foreign matter",
-          "Sorghum: Grade 1, properly cleaned and packaged",
-          "All cereals must be free from pests and contamination",
-        ],
-        submissionRequirements: [
-          "Complete bid document",
-          "Proof of storage facilities",
-          "Quality assurance certificates",
-          "List of previous similar contracts",
-        ],
-      },
-    },
-    {
-      id: 3,
-      ref: "KIM/T/2025/003",
-      status: "Open",
-      statusColor: "bg-green-100 text-green-800",
-      title: "Supply of Firewood",
-      description: "Supply of firewood for the academic year 2025-2026.",
-      closingDate: "May 20, 2025",
-      fee: "KES 5,000",
-      fileUrl: "/assets/forms/KIM_T_2025_003_Tender.pdf",
-      details: {
-        scope: "Regular supply of quality firewood for school kitchen",
-        deliverySchedule: "Weekly deliveries",
-        contractDuration: "1 academic year (2025-2026)",
-        evaluationCriteria: "Price (30%), Quality (40%), Reliability (30%)",
-        specifications: [
-          "Dry, well-seasoned firewood",
-          "Preferred wood types: hardwood species",
-          "Properly split and sized for school stoves",
-          "Moisture content not exceeding 20%",
-        ],
-        submissionRequirements: [
-          "Bid document",
-          "Proof of sustainable sourcing",
-          "Delivery vehicle details",
-          "References from previous clients",
-        ],
-      },
-    },
-    {
-      id: 4,
-      ref: "KIM/T/2025/004",
-      status: "Open",
-      statusColor: "bg-green-100 text-green-800",
-      title: "Supply of Insurance Cover",
-      description:
-        "Provision of comprehensive insurance cover for the institution.",
-      closingDate: "June 5, 2025",
-      fee: "KES 3,500",
-      fileUrl: "/assets/forms/KIM_T_2025_004_Tender.pdf",
-      details: {
-        scope:
-          "Comprehensive insurance cover for school property, vehicles, and liability",
-        deliverySchedule: "Annual policy",
-        contractDuration: "2 years",
-        evaluationCriteria:
-          "Coverage (40%), Premium (30%), Service (20%), Reputation (10%)",
-        specifications: [
-          "Property insurance: Buildings, equipment, furniture",
-          "Motor vehicle insurance: School buses and vehicles",
-          "Public liability insurance",
-          "Fidelity guarantee for staff",
-        ],
-        submissionRequirements: [
-          "Insurance company license",
-          "Commission rates disclosure",
-          "Claims settlement history",
-          "Financial statements",
-        ],
-      },
-    },
-    {
-      id: 5,
-      ref: "KIM/T/2025/005",
-      status: "Open",
-      statusColor: "bg-green-100 text-green-800",
-      title: "Supply of Laboratory Equipment",
-      description:
-        "Provision of laboratory equipment including chemistry, biology, and physics tools for the academic year 2025-2026.",
-      closingDate: "June 12, 2025",
-      fee: "KES 5,000",
-      fileUrl: "/assets/forms/KIM_T_2025_005_Tender.pdf",
-      details: {
-        scope:
-          "Supply of science laboratory equipment for Chemistry, Biology, and Physics departments",
-        deliverySchedule: "One-time delivery before term begins",
-        contractDuration: "Supply contract with 1-year warranty",
-        evaluationCriteria:
-          "Technical specifications (40%), Price (30%), Warranty (20%), Training (10%)",
-        specifications: [
-          "Chemistry: Glassware, chemicals, safety equipment",
-          "Biology: Microscopes, specimens, dissection kits",
-          "Physics: Measuring instruments, electrical equipment",
-          "All equipment must meet KNEC standards",
-        ],
-        submissionRequirements: [
-          "Detailed technical specifications",
-          "Equipment catalogs and brochures",
-          "Warranty terms",
-          "Installation and training plan",
-        ],
-      },
-    },
-    {
-      id: 6,
-      ref: "KIM/T/2025/006",
-      status: "Open",
-      statusColor: "bg-green-100 text-green-800",
-      title: "Supply of Stationery",
-      description:
-        "Provision of office and educational stationery for the academic year 2025-2026.",
-      closingDate: "June 10, 2025",
-      fee: "KES 1,500",
-      fileUrl: "/assets/forms/KIM_T_2025_006_Tender.pdf",
-      details: {
-        scope: "Supply of office and educational stationery for entire school",
-        deliverySchedule: "Monthly deliveries as per requirements",
-        contractDuration: "1 academic year (2025-2026)",
-        evaluationCriteria:
-          "Price (35%), Quality (35%), Delivery time (20%), Variety (10%)",
-        specifications: [
-          "Exercise books: Various sizes and page counts",
-          "Writing materials: Pens, pencils, markers",
-          "Office supplies: Files, folders, envelopes",
-          "Art materials: Drawing papers, colors",
-        ],
-        submissionRequirements: [
-          "Sample products",
-          "Price list for all items",
-          "Minimum order quantities",
-          "Return policy for defective goods",
-        ],
-      },
-    },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/data/tendersData.json");
+        setTendersData(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to load tender data");
+        setLoading(false);
+        console.error("Error fetching data:", err);
+      }
+    };
 
-  const processSteps = [
-    {
-      step: 1,
-      title: "Tender Advertisement",
-      icon: <FaBullhorn className="text-2xl" />,
-      description:
-        "All our tenders are advertised on this website, our social media and our notice board.",
-    },
-    {
-      step: 2,
-      title: "Purchase of Tender Documents",
-      icon: <FaShoppingCart className="text-2xl" />,
-      description:
-        "Interested bidders can purchase tender documents by paying the prescribed fee.",
-    },
-    {
-      step: 3,
-      title: "Tender Preparation",
-      icon: <FaPenFancy className="text-2xl" />,
-      description:
-        "Bidders prepare their bids according to the specifications and requirements outlined in the tender documents.",
-    },
-    {
-      step: 4,
-      title: "Bid Submission",
-      icon: <FaBoxOpen className="text-2xl" />,
-      description:
-        "Completed bids should be submitted in sealed envelopes by the specified deadline.",
-    },
-    {
-      step: 5,
-      title: "Tender Opening",
-      icon: <FaLockOpen className="text-2xl" />,
-      description:
-        "All bids are opened publicly on the specified date and time.",
-    },
-    {
-      step: 6,
-      title: "Evaluation",
-      icon: <FaChartBar className="text-2xl" />,
-      description:
-        "Bids are evaluated based on technical specifications, pricing, supplier qualifications, and other criteria.",
-    },
-    {
-      step: 7,
-      title: "Award",
-      icon: <FaTrophy className="text-2xl" />,
-      description:
-        "The tender is awarded to the most qualified bidder who meets all requirements.",
-    },
-    {
-      step: 8,
-      title: "Contract Signing",
-      icon: <FaFileContract className="text-2xl" />,
-      description: "A formal contract is signed with the successful bidder.",
-    },
-  ];
-
-  const requiredDocuments = [
-    "Business Registration Certificate",
-    "Tax Compliance Certificate",
-    "PIN Certificate",
-    "VAT Registration Certificate (if applicable)",
-    "Proof of Financial Capacity",
-    "Proof of Relevant Experience and References",
-    "Qualification of Key Personnel",
-    "Company Profile",
-  ];
-
-  const faqs = [
-    {
-      id: 1,
-      question: "How do I purchase tender documents?",
-      answer:
-        "Tender documents can be purchased from the school's procurement office during working hours (Mon–Fri, 8:00 AM – 5:00 PM). Payment is via the official bank account and a receipt must be presented. You can also download forms online and pay during submission.",
-    },
-    {
-      id: 2,
-      question: "Is the tender fee refundable?",
-      answer:
-        "No. Tender fees are strictly non-refundable. They cover administrative and evaluation costs.",
-    },
-    {
-      id: 3,
-      question: "How are winning bids selected?",
-      answer:
-        "We evaluate bids based on technical compliance, price, supplier capability, previous performance, and financial stability. Details are in each tender's documentation.",
-    },
-    {
-      id: 4,
-      question: "Can I submit a bid for multiple tenders?",
-      answer:
-        "Yes. You may apply for multiple tenders if you meet each one's criteria. Each tender must be submitted separately with its own payment and documents.",
-    },
-    {
-      id: 5,
-      question: "Where can I get updates on new tenders?",
-      answer:
-        "All tenders are published on our website's Tender section. You can also follow our social media or sign up for our email alerts for real-time notifications.",
-    },
-    {
-      id: 6,
-      question: "What happens if I miss the submission deadline?",
-      answer:
-        "Late submissions are not accepted under any circumstances. Bids received after the deadline will be returned unopened.",
-    },
-  ];
+    fetchData();
+  }, []);
 
   const toggleTenderExpansion = (tenderId) => {
     setExpandedTenderId(expandedTenderId === tenderId ? null : tenderId);
@@ -345,26 +99,43 @@ const Tenders = () => {
     setExpandedFaqId(expandedFaqId === faqId ? null : faqId);
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-xl text-primary">Loading Tenders...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="p-4 text-red-600 bg-red-100 rounded-lg">{error}</div>
+      </div>
+    );
+  }
+
+  const { tenders, processSteps, requiredDocuments, faqs } = tendersData;
+
   return (
     <div className="font-sans text-gray-900 bg-gray-50">
       {/* Subtle Hero Section */}
       <section className="relative py-12 bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-primary rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500 rounded-full translate-x-1/2 translate-y-1/2"></div>
-        </div>
         <div className="relative px-4 mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="mb-4 text-4xl font-bold text-gray-800 md:text-5xl">
               Procurement & <span className="text-primary">Tenders</span>
             </h1>
             <p className="max-w-3xl mx-auto mb-6 text-lg text-gray-600 md:text-xl">
-              Transparent, fair, and competitive procurement opportunities at Kimangu Day Secondary School
+              Transparent, fair, and competitive procurement opportunities at
+              Kimangu Day Secondary School
             </p>
             <div className="inline-flex items-center px-6 py-3 space-x-4 text-gray-700 bg-white rounded-full shadow-sm">
               <div className="flex items-center">
                 <FaCalendarAlt className="mr-2 text-primary" />
-                <span className="font-medium">{tenders.length} Active Tenders</span>
+                <span className="font-medium">
+                  {tenders.length} Active Tenders
+                </span>
               </div>
               <div className="w-px h-6 bg-gray-300"></div>
               <div className="flex items-center">
@@ -383,10 +154,6 @@ const Tenders = () => {
             <h2 className="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
               Current <span className="text-primary">Tenders</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-lg text-gray-600">
-              Explore procurement opportunities and partner with us for quality
-              supplies and services
-            </p>
           </div>
 
           <div className="space-y-6">
@@ -408,13 +175,6 @@ const Tenders = () => {
                       </div>
                       <div className="px-3 py-1 text-primary bg-primary/10 rounded-full">
                         <span className="font-semibold">{tender.ref}</span>
-                      </div>
-                      {/* Status with "Status: " label */}
-                      <div className="flex items-center px-3 py-1 rounded-full bg-green-100">
-                        <FaCircle className="mr-2 text-xs text-green-500" />
-                        <span className="text-sm font-medium text-green-800">
-                          Status: {tender.status}
-                        </span>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
@@ -513,7 +273,7 @@ const Tenders = () => {
                                   <FaFileAlt className="flex-shrink-0 mt-1 mr-3 text-primary" />
                                   <span className="text-gray-600">{req}</span>
                                 </li>
-                              )
+                              ),
                             )}
                           </ul>
                         </div>
@@ -611,23 +371,26 @@ const Tenders = () => {
                   Steps to Apply for Tenders
                 </h3>
                 <ol className="space-y-4 list-decimal list-inside">
-                  {processSteps.map((step) => (
-                    <li key={step.step} className="p-4 bg-white rounded-lg">
-                      <div className="flex items-start">
-                        <div className="flex-shrink-0 mt-1 mr-3 text-primary">
-                          {step.icon}
+                  {processSteps.map((step) => {
+                    const StepIcon = iconComponents[step.icon];
+                    return (
+                      <li key={step.step} className="p-4 bg-white rounded-lg">
+                        <div className="flex items-start">
+                          <div className="flex-shrink-0 mt-1 mr-3 text-primary">
+                            <StepIcon className="text-2xl" />
+                          </div>
+                          <div>
+                            <span className="font-semibold text-gray-800">
+                              {step.title}:
+                            </span>
+                            <p className="mt-1 text-gray-600">
+                              {step.description}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <span className="font-semibold text-gray-800">
-                            {step.title}:
-                          </span>
-                          <p className="mt-1 text-gray-600">
-                            {step.description}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </ol>
               </div>
 
@@ -860,10 +623,10 @@ const Tenders = () => {
               Ready to Partner With Us?
             </h2>
             <p className="max-w-2xl mx-auto mb-8 text-lg text-gray-600">
-              Contact our procurement team for inquiries about tender submissions,
-              process clarification, or partnership opportunities
+              Contact our procurement team for inquiries about tender
+              submissions, process clarification, or partnership opportunities
             </p>
-            
+
             <div className="grid max-w-4xl gap-6 mx-auto md:grid-cols-3">
               <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-200">
                 <div className="flex flex-col items-center">
@@ -872,10 +635,12 @@ const Tenders = () => {
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">Email</h3>
                   <p className="text-gray-600">procurement@kimangu.ac.ke</p>
-                  <p className="text-sm text-gray-500">Response within 24 hours</p>
+                  <p className="text-sm text-gray-500">
+                    Response within 24 hours
+                  </p>
                 </div>
               </div>
-              
+
               <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-200">
                 <div className="flex flex-col items-center">
                   <div className="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-full bg-primary">
@@ -883,29 +648,26 @@ const Tenders = () => {
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">Phone</h3>
                   <p className="text-gray-600">+254 723 456 789</p>
-                  <p className="text-sm text-gray-500">Mon-Fri, 8:00 AM - 5:00 PM</p>
+                  <p className="text-sm text-gray-500">
+                    Mon-Fri, 8:00 AM - 5:00 PM
+                  </p>
                 </div>
               </div>
-              
+
               <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-200">
                 <div className="flex flex-col items-center">
                   <div className="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-full bg-primary">
                     <FaMapMarkerAlt className="text-xl" />
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">Address</h3>
-                  <p className="text-gray-600">The Chairperson, Tender Committee</p>
-                  <p className="text-sm text-gray-500">Kimangu Day Secondary School</p>
+                  <p className="text-gray-600">
+                    The Chairperson, Tender Committee
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Kimangu Day Secondary School
+                  </p>
                 </div>
               </div>
-            </div>
-            
-            <div className="max-w-2xl p-6 mx-auto mt-8 text-left bg-gray-50 rounded-lg">
-              <h4 className="mb-3 text-lg font-semibold text-gray-800">Submission Note:</h4>
-              <p className="text-gray-600">
-                All tender bids must be submitted in sealed envelopes clearly marked with the tender reference number. 
-                Address to: <span className="font-semibold">The Chairperson, Tender Committee</span>, Kimangu Day Secondary School, 
-                P.O. Box 12345, Nairobi. Late submissions will not be accepted.
-              </p>
             </div>
           </div>
         </div>

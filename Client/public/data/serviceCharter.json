@@ -1,0 +1,194 @@
+{
+  "serviceCategories": [
+    {
+      "title": "Academic Services",
+      "icon": "FaBook",
+      "services": [
+        {
+          "service": "Admission Processing",
+          "description": "New student registration and admission",
+          "timeline": "Within 7 working days",
+          "cost": "Free upon fee clearance",
+          "officer": "Admissions Officer",
+          "contact": "admissions@kimangusecondary.sc.ke",
+          "notes": "Requires original KCPE certificate"
+        },
+        {
+          "service": "Issue of Academic Transcripts",
+          "description": "Official academic records",
+          "timeline": "Within 3 working days",
+          "cost": "Free for current students",
+          "officer": "Academic Registrar",
+          "contact": "academics@kimangusecondary.sc.ke",
+          "notes": "Former students require written request"
+        },
+        {
+          "service": "KCSE Registration",
+          "description": "Registration for national examinations",
+          "timeline": "As per KNEC calendar",
+          "cost": "KNEC fees apply",
+          "officer": "Examinations Officer",
+          "contact": "exams@kimangusecondary.sc.ke",
+          "notes": "Deadlines strictly observed"
+        },
+        {
+          "service": "Learning Material Distribution",
+          "description": "Textbooks and learning resources",
+          "timeline": "First week of term",
+          "cost": "Govt issued books free",
+          "officer": "Librarian",
+          "contact": "library@kimangusecondary.sc.ke",
+          "notes": "Issued against textbook card"
+        }
+      ]
+    },
+    {
+      "title": "Administrative Services",
+      "icon": "FaUniversity",
+      "services": [
+        {
+          "service": "Fee Payment & Receipting",
+          "description": "School fees payment and receipt issuance",
+          "timeline": "Immediate during working hours",
+          "cost": "As per fee structure",
+          "officer": "Bursar",
+          "contact": "bursar@kimangusecondary.sc.ke",
+          "notes": "Bank deposits require 24 hours processing"
+        },
+        {
+          "service": "Student ID Card Issuance",
+          "description": "Issuance of school identification cards",
+          "timeline": "Within 14 days of admission",
+          "cost": "Free for new students",
+          "officer": "Dean of Students",
+          "contact": "dean@kimangusecondary.sc.ke",
+          "notes": "Lost cards reported to security"
+        },
+        {
+          "service": "Clearance Certificate",
+          "description": "School leaving/clearance certificate",
+          "timeline": "Within 5 working days",
+          "cost": "Free",
+          "officer": "Deputy Principal",
+          "contact": "deputy@kimangusecondary.sc.ke",
+          "notes": "Requires full fee payment clearance"
+        },
+        {
+          "service": "Parent Meeting Scheduling",
+          "description": "Booking appointments with teachers",
+          "timeline": "48 hours notice required",
+          "cost": "Free",
+          "officer": "Class Teacher",
+          "contact": "Class teacher via office",
+          "notes": "Meetings during consultation hours"
+        }
+      ]
+    },
+    {
+      "title": "Student Welfare Services",
+      "icon": "FaUserFriends",
+      "services": [
+        {
+          "service": "Guidance & Counseling",
+          "description": "Personal and academic counseling",
+          "timeline": "By appointment (within 2 days)",
+          "cost": "Free",
+          "officer": "Guidance & Counseling Teacher",
+          "contact": "counseling@kimangusecondary.sc.ke",
+          "notes": "Confidential services available"
+        },
+        {
+          "service": "Medical Services",
+          "description": "Sick bay treatment and first aid",
+          "timeline": "Immediate for emergencies",
+          "cost": "Govt medical cover",
+          "officer": "School Nurse",
+          "contact": "nurse@kimangusecondary.sc.ke",
+          "notes": "Referrals to hospital at parent cost"
+        },
+        {
+          "service": "Disciplinary Hearing",
+          "description": "Student disciplinary proceedings",
+          "timeline": "Within 72 hours of incident",
+          "cost": "Free",
+          "officer": "Disciplinary Committee",
+          "contact": "discipline@kimangusecondary.sc.ke",
+          "notes": "Parents/guardians must attend"
+        },
+        {
+          "service": "Co-curricular Activities",
+          "description": "Clubs, sports, and games registration",
+          "timeline": "First 2 weeks of term",
+          "cost": "Free",
+          "officer": "Games Teacher",
+          "contact": "games@kimangusecondary.sc.ke",
+          "notes": "Medical clearance required for sports"
+        }
+      ]
+    },
+    {
+      "title": "Support Services",
+      "icon": "FaShieldAlt",
+      "services": [
+        {
+          "service": "Library Services",
+          "description": "Book borrowing and reading space",
+          "timeline": "During library hours",
+          "cost": "Free",
+          "officer": "Librarian",
+          "contact": "library@kimangusecondary.sc.ke",
+          "notes": "Maximum 2 books for 2 weeks"
+        },
+        {
+          "service": "Laboratory Access",
+          "description": "Science practical sessions",
+          "timeline": "As per timetable",
+          "cost": "Free",
+          "officer": "Lab Technician",
+          "contact": "lab@kimangusecondary.sc.ke",
+          "notes": "Safety gear mandatory"
+        },
+        {
+          "service": "ICT Services",
+          "description": "Computer lab access and internet",
+          "timeline": "As per timetable",
+          "cost": "Free",
+          "officer": "ICT Teacher",
+          "contact": "ict@kimangusecondary.sc.ke",
+          "notes": "Supervised sessions only"
+        },
+        {
+          "service": "Transport Services",
+          "description": "School bus transportation",
+          "timeline": "As per bus schedule",
+          "cost": "Free",
+          "officer": "Transport Officer",
+          "contact": "transport@kimangusecondary.sc.ke",
+          "notes": "Routes subject to demand"
+        }
+      ]
+    }
+  ],
+  "servicePrinciples": [
+    {
+      "icon": "FaClock",
+      "title": "Timeliness",
+      "description": "All services delivered within stipulated timelines"
+    },
+    {
+      "icon": "FaBalanceScale",
+      "title": "Fairness",
+      "description": "Equal access to services for all stakeholders"
+    },
+    {
+      "icon": "FaChartLine",
+      "title": "Quality",
+      "description": "High standard services meeting educational needs"
+    },
+    {
+      "icon": "FaShieldAlt",
+      "title": "Transparency",
+      "description": "Clear information on costs and procedures"
+    }
+  ]
+}

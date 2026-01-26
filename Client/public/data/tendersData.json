@@ -1,0 +1,270 @@
+{
+  "tenders": [
+    {
+      "id": 1,
+      "ref": "KIM/T/2025/001",
+      "status": "Open",
+      "statusColor": "bg-green-100 text-green-800",
+      "title": "Supply of Kitchen Supplies - Cooking Oil, salt, wheat flour etc.",
+      "description": "Provision of kitchen supplies including cooking oil for the academic year 2025-2026.",
+      "closingDate": "June 15, 2025",
+      "fee": "KES 2,500",
+      "fileUrl": "/assets/forms/KIM_T_2025_001_Tender.pdf",
+      "details": {
+        "scope": "Supply of cooking oil, salt, wheat flour, and other kitchen essentials for one academic year",
+        "deliverySchedule": "Monthly deliveries as per school calendar",
+        "contractDuration": "1 academic year (2025-2026)",
+        "evaluationCriteria": "Price (40%), Quality (30%), Delivery capability (20%), Experience (10%)",
+        "specifications": [
+          "Cooking oil: Must be sealed, branded, and from registered manufacturers",
+          "Salt: Packaged iodized salt with KEBs certification",
+          "Wheat flour: Fortified with required vitamins and minerals",
+          "All products must have at least 6 months shelf life at delivery"
+        ],
+        "submissionRequirements": [
+          "Original and copy of bid document",
+          "Valid business registration certificate",
+          "Tax compliance certificate",
+          "Sample products for testing"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "ref": "KIM/T/2025/002",
+      "status": "Open",
+      "statusColor": "bg-green-100 text-green-800",
+      "title": "Supply of Dry Cereals - Maize, Beans, Sorghum etc.",
+      "description": "Provision of dry cereals including maize, beans, and sorghum for the academic year 2025-2026.",
+      "closingDate": "May 25, 2025",
+      "fee": "KES 3,000",
+      "fileUrl": "/assets/forms/KIM_T_2025_002_Tender.pdf",
+      "details": {
+        "scope": "Supply of maize, beans, sorghum, and other dry cereals for school feeding program",
+        "deliverySchedule": "Quarterly deliveries",
+        "contractDuration": "1 academic year (2025-2026)",
+        "evaluationCriteria": "Price (35%), Quality (35%), Storage capacity (15%), Experience (15%)",
+        "specifications": [
+          "Maize: Grade 1, moisture content not exceeding 13%",
+          "Beans: Clean, sorted, with minimum foreign matter",
+          "Sorghum: Grade 1, properly cleaned and packaged",
+          "All cereals must be free from pests and contamination"
+        ],
+        "submissionRequirements": [
+          "Complete bid document",
+          "Proof of storage facilities",
+          "Quality assurance certificates",
+          "List of previous similar contracts"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "ref": "KIM/T/2025/003",
+      "status": "Open",
+      "statusColor": "bg-green-100 text-green-800",
+      "title": "Supply of Firewood",
+      "description": "Supply of firewood for the academic year 2025-2026.",
+      "closingDate": "May 20, 2025",
+      "fee": "KES 5,000",
+      "fileUrl": "/assets/forms/KIM_T_2025_003_Tender.pdf",
+      "details": {
+        "scope": "Regular supply of quality firewood for school kitchen",
+        "deliverySchedule": "Weekly deliveries",
+        "contractDuration": "1 academic year (2025-2026)",
+        "evaluationCriteria": "Price (30%), Quality (40%), Reliability (30%)",
+        "specifications": [
+          "Dry, well-seasoned firewood",
+          "Preferred wood types: hardwood species",
+          "Properly split and sized for school stoves",
+          "Moisture content not exceeding 20%"
+        ],
+        "submissionRequirements": [
+          "Bid document",
+          "Proof of sustainable sourcing",
+          "Delivery vehicle details",
+          "References from previous clients"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "ref": "KIM/T/2025/004",
+      "status": "Open",
+      "statusColor": "bg-green-100 text-green-800",
+      "title": "Supply of Insurance Cover",
+      "description": "Provision of comprehensive insurance cover for the institution.",
+      "closingDate": "June 5, 2025",
+      "fee": "KES 3,500",
+      "fileUrl": "/assets/forms/KIM_T_2025_004_Tender.pdf",
+      "details": {
+        "scope": "Comprehensive insurance cover for school property, vehicles, and liability",
+        "deliverySchedule": "Annual policy",
+        "contractDuration": "2 years",
+        "evaluationCriteria": "Coverage (40%), Premium (30%), Service (20%), Reputation (10%)",
+        "specifications": [
+          "Property insurance: Buildings, equipment, furniture",
+          "Motor vehicle insurance: School buses and vehicles",
+          "Public liability insurance",
+          "Fidelity guarantee for staff"
+        ],
+        "submissionRequirements": [
+          "Insurance company license",
+          "Commission rates disclosure",
+          "Claims settlement history",
+          "Financial statements"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "ref": "KIM/T/2025/005",
+      "status": "Open",
+      "statusColor": "bg-green-100 text-green-800",
+      "title": "Supply of Laboratory Equipment",
+      "description": "Provision of laboratory equipment including chemistry, biology, and physics tools for the academic year 2025-2026.",
+      "closingDate": "June 12, 2025",
+      "fee": "KES 5,000",
+      "fileUrl": "/assets/forms/KIM_T_2025_005_Tender.pdf",
+      "details": {
+        "scope": "Supply of science laboratory equipment for Chemistry, Biology, and Physics departments",
+        "deliverySchedule": "One-time delivery before term begins",
+        "contractDuration": "Supply contract with 1-year warranty",
+        "evaluationCriteria": "Technical specifications (40%), Price (30%), Warranty (20%), Training (10%)",
+        "specifications": [
+          "Chemistry: Glassware, chemicals, safety equipment",
+          "Biology: Microscopes, specimens, dissection kits",
+          "Physics: Measuring instruments, electrical equipment",
+          "All equipment must meet KNEC standards"
+        ],
+        "submissionRequirements": [
+          "Detailed technical specifications",
+          "Equipment catalogs and brochures",
+          "Warranty terms",
+          "Installation and training plan"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "ref": "KIM/T/2025/006",
+      "status": "Open",
+      "statusColor": "bg-green-100 text-green-800",
+      "title": "Supply of Stationery",
+      "description": "Provision of office and educational stationery for the academic year 2025-2026.",
+      "closingDate": "June 10, 2025",
+      "fee": "KES 1,500",
+      "fileUrl": "/assets/forms/KIM_T_2025_006_Tender.pdf",
+      "details": {
+        "scope": "Supply of office and educational stationery for entire school",
+        "deliverySchedule": "Monthly deliveries as per requirements",
+        "contractDuration": "1 academic year (2025-2026)",
+        "evaluationCriteria": "Price (35%), Quality (35%), Delivery time (20%), Variety (10%)",
+        "specifications": [
+          "Exercise books: Various sizes and page counts",
+          "Writing materials: Pens, pencils, markers",
+          "Office supplies: Files, folders, envelopes",
+          "Art materials: Drawing papers, colors"
+        ],
+        "submissionRequirements": [
+          "Sample products",
+          "Price list for all items",
+          "Minimum order quantities",
+          "Return policy for defective goods"
+        ]
+      }
+    }
+  ],
+  "processSteps": [
+    {
+      "step": 1,
+      "title": "Tender Advertisement",
+      "icon": "FaBullhorn",
+      "description": "All our tenders are advertised on this website, our social media and our notice board."
+    },
+    {
+      "step": 2,
+      "title": "Purchase of Tender Documents",
+      "icon": "FaShoppingCart",
+      "description": "Interested bidders can purchase tender documents by paying the prescribed fee."
+    },
+    {
+      "step": 3,
+      "title": "Tender Preparation",
+      "icon": "FaPenFancy",
+      "description": "Bidders prepare their bids according to the specifications and requirements outlined in the tender documents."
+    },
+    {
+      "step": 4,
+      "title": "Bid Submission",
+      "icon": "FaBoxOpen",
+      "description": "Completed bids should be submitted in sealed envelopes by the specified deadline."
+    },
+    {
+      "step": 5,
+      "title": "Tender Opening",
+      "icon": "FaLockOpen",
+      "description": "All bids are opened publicly on the specified date and time."
+    },
+    {
+      "step": 6,
+      "title": "Evaluation",
+      "icon": "FaChartBar",
+      "description": "Bids are evaluated based on technical specifications, pricing, supplier qualifications, and other criteria."
+    },
+    {
+      "step": 7,
+      "title": "Award",
+      "icon": "FaTrophy",
+      "description": "The tender is awarded to the most qualified bidder who meets all requirements."
+    },
+    {
+      "step": 8,
+      "title": "Contract Signing",
+      "icon": "FaFileContract",
+      "description": "A formal contract is signed with the successful bidder."
+    }
+  ],
+  "requiredDocuments": [
+    "Business Registration Certificate",
+    "Tax Compliance Certificate",
+    "PIN Certificate",
+    "VAT Registration Certificate (if applicable)",
+    "Proof of Financial Capacity",
+    "Proof of Relevant Experience and References",
+    "Qualification of Key Personnel",
+    "Company Profile"
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How do I purchase tender documents?",
+      "answer": "Tender documents can be purchased from the school's procurement office during working hours (Mon–Fri, 8:00 AM – 5:00 PM). Payment is via the official bank account and a receipt must be presented. You can also download forms online and pay during submission."
+    },
+    {
+      "id": 2,
+      "question": "Is the tender fee refundable?",
+      "answer": "No. Tender fees are strictly non-refundable. They cover administrative and evaluation costs."
+    },
+    {
+      "id": 3,
+      "question": "How are winning bids selected?",
+      "answer": "We evaluate bids based on technical compliance, price, supplier capability, previous performance, and financial stability. Details are in each tender's documentation."
+    },
+    {
+      "id": 4,
+      "question": "Can I submit a bid for multiple tenders?",
+      "answer": "Yes. You may apply for multiple tenders if you meet each one's criteria. Each tender must be submitted separately with its own payment and documents."
+    },
+    {
+      "id": 5,
+      "question": "Where can I get updates on new tenders?",
+      "answer": "All tenders are published on our website's Tender section. You can also follow our social media or sign up for our email alerts for real-time notifications."
+    },
+    {
+      "id": 6,
+      "question": "What happens if I miss the submission deadline?",
+      "answer": "Late submissions are not accepted under any circumstances. Bids received after the deadline will be returned unopened."
+    }
+  ]
+}

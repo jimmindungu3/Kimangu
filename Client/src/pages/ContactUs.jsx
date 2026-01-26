@@ -346,7 +346,7 @@ const ContactUs = () => {
       {/* Map Section */}
       <section className="px-4 pb-16">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden shadow-xl rounded-2xl">
+          <div className="overflow-hidden shadow-xl rounded-2xl border">
             <div className="aspect-w-16 aspect-h-7">
               <iframe
                 width="100%"
@@ -385,45 +385,7 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* FAQ/Quick Help */}
-      <section className="px-4 py-16 bg-gray-50">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">
-              Frequently Asked Questions
-            </h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              Quick answers to common questions about our school
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="p-6 bg-white shadow-sm rounded-xl">
-              <FaQuestionCircle className="mb-4 text-2xl text-primary" />
-              <h4 className="mb-2 text-lg font-semibold">Admission Process</h4>
-              <p className="text-gray-600">
-                Learn about our admission requirements and application timeline
-                for new students.
-              </p>
-            </div>
-            <div className="p-6 bg-white shadow-sm rounded-xl">
-              <FaCalendarAlt className="mb-4 text-2xl text-secondary" />
-              <h4 className="mb-2 text-lg font-semibold">School Calendar</h4>
-              <p className="text-gray-600">
-                View our academic calendar, holidays, and important dates for
-                the current year.
-              </p>
-            </div>
-            <div className="p-6 bg-white shadow-sm rounded-xl">
-              <FaGraduationCap className="mb-4 text-2xl text-tertiary" />
-              <h4 className="mb-2 text-lg font-semibold">Academic Programs</h4>
-              <p className="text-gray-600">
-                Discover our curriculum, extracurricular activities, and
-                academic support services.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };

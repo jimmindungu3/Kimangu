@@ -1,0 +1,119 @@
+{
+  "jobOpenings": [
+    {
+      "id": 1,
+      "title": "Mathematics/Business Teacher",
+      "department": "Academic",
+      "type": "Full-time",
+      "experience": "2+ years",
+      "icon": "MdSchool",
+      "gradient": "from-primary to-primary-light",
+      "requirements": [
+        "Bachelor's degree in Education (Mathematics/Business)",
+        "TSC registration mandatory",
+        "2+ years teaching experience",
+        "Strong classroom management skills"
+      ],
+      "description": "Teach mathematics and business studies to form 1-4 students, develop lesson plans, and contribute to academic excellence.",
+      "responsibilities": [
+        "Prepare and deliver engaging lessons in Mathematics and Business Studies",
+        "Develop curriculum materials and assessment tools",
+        "Monitor and evaluate student progress",
+        "Participate in departmental meetings and professional development",
+        "Provide academic guidance and support to students"
+      ],
+      "qualifications": [
+        "Bachelor's degree in Education with specialization in Mathematics and Business Studies",
+        "Valid TSC registration",
+        "Minimum 2 years teaching experience in a secondary school",
+        "Strong knowledge of CBC curriculum",
+        "Excellent communication and interpersonal skills"
+      ],
+      "additionalInfo": "We are looking for a passionate educator who can inspire students and contribute to our academic excellence culture."
+    },
+    {
+      "id": 2,
+      "title": "Administrative Assistant",
+      "department": "Administration",
+      "type": "Full-time",
+      "experience": "1+ years",
+      "icon": "MdWork",
+      "gradient": "from-secondary to-secondary-light",
+      "requirements": [
+        "Diploma in Business Administration",
+        "Proficient in MS Office Suite",
+        "Excellent communication skills",
+        "Attention to detail"
+      ],
+      "description": "Support administrative operations, manage records, and assist in daily school activities.",
+      "responsibilities": [
+        "Manage front office operations and reception",
+        "Handle correspondence and documentation",
+        "Maintain student and staff records",
+        "Assist in scheduling and calendar management",
+        "Support event planning and coordination"
+      ],
+      "qualifications": [
+        "Diploma in Business Administration or related field",
+        "Proficiency in Microsoft Office Suite",
+        "Excellent organizational and multitasking skills",
+        "Strong written and verbal communication",
+        "Ability to maintain confidentiality"
+      ],
+      "additionalInfo": "Ideal candidate should be organized, proactive, and able to work in a fast-paced educational environment."
+    },
+    {
+      "id": 3,
+      "title": "School Counselor",
+      "department": "Student Welfare",
+      "type": "Full-time",
+      "experience": "3+ years",
+      "icon": "MdGroups",
+      "gradient": "from-tertiary to-tertiary-light",
+      "requirements": [
+        "Degree in Psychology/Counseling",
+        "Experience working with teenagers",
+        "Strong empathy skills",
+        "Crisis intervention training"
+      ],
+      "description": "Provide guidance to students on academic and personal matters, promoting mental health and wellbeing.",
+      "responsibilities": [
+        "Provide individual and group counseling sessions",
+        "Develop and implement student wellness programs",
+        "Collaborate with teachers and parents on student support",
+        "Conduct career guidance and academic advising",
+        "Maintain confidential student counseling records"
+      ],
+      "qualifications": [
+        "Bachelor's degree in Psychology, Counseling, or related field",
+        "Professional counseling certification",
+        "Minimum 3 years experience working with adolescents",
+        "Knowledge of child development and adolescent psychology",
+        "Excellent listening and empathy skills"
+      ],
+      "additionalInfo": "This role requires compassion, discretion, and a genuine interest in supporting student development."
+    }
+  ],
+  "applicationSteps": [
+    {
+      "step": 1,
+      "title": "Apply Online",
+      "desc": "Submit your application with resume and cover letter"
+    },
+    {
+      "step": 2,
+      "title": "Screening",
+      "desc": "Initial review by our HR team"
+    },
+    {
+      "step": 3,
+      "title": "Interview",
+      "desc": "Meet with department heads and leadership"
+    },
+    {
+      "step": 4,
+      "title": "Onboarding",
+      "desc": "Welcome to the Kimangu family!"
+    }
+  ]
+}

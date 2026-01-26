@@ -142,10 +142,6 @@ const Gallery = () => {
     <div className="font-sans text-gray-900">
       {/* Hero Section */}
       <section className="relative py-12 bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-primary rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-secondary rounded-full translate-x-1/2 translate-y-1/2"></div>
-        </div>
         <div className="relative px-4 mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="mb-4 text-4xl font-bold text-gray-800 md:text-5xl">
@@ -208,13 +204,8 @@ const Gallery = () => {
                     alt={image.caption}
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute top-2 right-2">
-                    <span className="px-2 py-1 text-xs font-semibold text-white bg-primary rounded-full">
-                      {image.category}
-                    </span>
-                  </div>
                   <div className="absolute top-2 left-2">
-                    <span className="px-2 py-1 text-xs text-white bg-black bg-opacity-50 rounded">
+                    <span className="px-2 py-1 text-xs text-white bg-black bg-opacity-60 rounded">
                       {image.date}
                     </span>
                   </div>
@@ -288,8 +279,7 @@ const Gallery = () => {
         <div className="px-4 mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-800">
-              <span className="text-primary">Kimangu's Got</span>{" "}
-              <span className="text-secondary">Talent</span>
+              <span className="text-primary">Kimangu's Got Talent</span>
             </h2>
             <p className="text-gray-600">
               Watch our students shine in these special moments

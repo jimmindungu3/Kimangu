@@ -108,7 +108,7 @@ const Navigation = () => {
 
               <div>
                 <h1 className="hidden font-bold text-primary lg:block sm:text-2xl">
-                  Kimangu Day Sec. School
+                  Kimangu Day Sec
                 </h1>
                 <h1 className="hidden font-bold text-primary md:block lg:hidden sm:text-2xl">
                   K.D.S.S

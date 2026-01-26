@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaGraduationCap,
   FaFileAlt,
   FaClipboardCheck,
-  FaSchool,
   FaMoneyBillWave,
-  FaHandshake,
   FaPhone,
   FaEnvelope,
   FaRegIdCard,
@@ -14,8 +11,9 @@ import {
   FaTasks,
   FaRegCalendarAlt,
   FaChartLine,
-  FaBalanceScale,
+  FaHandshake,
 } from "react-icons/fa";
+import { MdOutlineNotificationImportant } from "react-icons/md";
 import { GiPathDistance } from "react-icons/gi";
 
 const Admissions = () => {
@@ -48,95 +46,22 @@ const Admissions = () => {
   return (
     <div className="text-gray-800">
       {/* Hero Section */}
-      <section className="py-16 bg-white">
+      <section className="pt-12 pb-6 bg-white">
         <div className="max-w-6xl px-4 mx-auto">
           <div className="text-center">
             <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
               Senior School Admissions
             </h1>
-            <p className="max-w-3xl mx-auto mb-6 text-xl text-primary">
+            <p className="max-w-3xl mx-auto text-lg text-gray-700 mb-8">
               Following Government of Kenya Guidelines for Grade 9 to Senior
-              School Transition
+              School Transition and guided by the Ministry of Education's
+              Competency-Based Curriculum framework, our admission process
+              ensures fair, transparent, and merit-based placement into Senior
+              School pathways.
             </p>
             <div className="inline-flex items-center px-4 py-2 mb-8 text-sm font-medium text-white rounded-full bg-primary">
               <FaRegCalendarAlt className="mr-2" />
               Admissions Open: January - February Annually
-            </div>
-            <p className="max-w-3xl mx-auto text-lg text-gray-700">
-              Guided by the Ministry of Education's Competency-Based Curriculum
-              framework, our admission process ensures fair, transparent, and
-              merit-based placement into Senior School pathways.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* GOK Admission Framework */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">
-              GOK Senior School Admission Framework
-            </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-700">
-              The Ministry of Education has established a structured framework
-              for Grade 9 graduates transitioning to Senior School (Grade 10)
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="p-6 bg-white border rounded-xl border-gray-200 shadow-sm">
-              <div className="flex items-center justify-center w-14 h-14 mb-6 text-white rounded-xl bg-primary">
-                <FaChartLine className="text-xl" />
-              </div>
-              <h3 className="mb-3 text-xl font-bold text-gray-900">
-                KPSEA Assessment
-              </h3>
-              <p className="text-gray-700">
-                All learners must have completed the Kenya Primary School
-                Education Assessment (KPSEA) at Grade 9 level.
-              </p>
-              <div className="mt-4 p-3 bg-primary/10 rounded-lg border border-primary/20">
-                <p className="text-sm font-medium text-primary">
-                  Weight: 40% of placement score
-                </p>
-              </div>
-            </div>
-
-            <div className="p-6 bg-white border rounded-xl border-gray-200 shadow-sm">
-              <div className="flex items-center justify-center w-14 h-14 mb-6 text-white rounded-xl bg-tertiary">
-                <FaTasks className="text-xl" />
-              </div>
-              <h3 className="mb-3 text-xl font-bold text-gray-900">
-                School-Based Assessment
-              </h3>
-              <p className="text-gray-700">
-                Continuous assessment records from Grade 7-9 contribute to the
-                overall placement score.
-              </p>
-              <div className="mt-4 p-3 bg-tertiary/10 rounded-lg border border-tertiary/20">
-                <p className="text-sm font-medium text-tertiary">
-                  Weight: 60% of placement score
-                </p>
-              </div>
-            </div>
-
-            <div className="p-6 bg-white border rounded-xl border-gray-200 shadow-sm">
-              <div className="flex items-center justify-center w-14 h-14 mb-6 text-white rounded-xl bg-secondary">
-                <GiPathDistance className="text-xl" />
-              </div>
-              <h3 className="mb-3 text-xl font-bold text-gray-900">
-                Pathway Placement
-              </h3>
-              <p className="text-gray-700">
-                Learners placed into STEM, Humanities, or Technical pathways
-                based on performance, interest, and school capacity.
-              </p>
-              <div className="mt-4 p-3 bg-secondary/10 rounded-lg border border-secondary/20">
-                <p className="text-sm font-medium text-secondary">
-                  Guided by NEMIS Portal
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -186,8 +111,8 @@ const Admissions = () => {
                     <FaClipboardCheck className="w-full h-full" />
                   </div>
                   <span className="text-gray-800">
-                    Registered on NEMIS (National Education Management
-                    Information System)
+                    Registered on National Education Management Information
+                    System (NEMIS)
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -195,7 +120,7 @@ const Admissions = () => {
                     <FaClipboardCheck className="w-full h-full" />
                   </div>
                   <span className="text-gray-800">
-                    Age-appropriate for Grade 10 (typically 15-17 years)
+                    Age-appropriate for Grade 10
                   </span>
                 </li>
               </ul>
@@ -298,8 +223,8 @@ const Admissions = () => {
 
           <div className="mt-12 p-6 bg-white/10 backdrop-blur rounded-xl border border-white/20">
             <div className="flex items-center">
-              <div className="flex-shrink-0 p-3 mr-4 text-primary rounded-lg bg-white">
-                <FaHandshake className="text-xl" />
+              <div className="flex-shrink-0 p-3 mr-4 text-white rounded-lg">
+                <MdOutlineNotificationImportant className="text-xl md:text-5xl" />
               </div>
               <div>
                 <h4 className="text-lg font-bold">Important Notice</h4>
@@ -309,106 +234,6 @@ const Admissions = () => {
                   announcements on national media and the MOE website for
                   admission timelines and procedures.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Fee Structure & Financial Information */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">
-              Fee Structure & Financial Information
-            </h2>
-            <p className="text-lg text-gray-700">
-              As per Government of Kenya regulations for public secondary
-              schools
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-              <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 text-white rounded-lg bg-tertiary">
-                  <FaMoneyBillWave className="text-sm" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Government Capitation
-                </h3>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="font-medium text-gray-900">
-                    Tuition Fee Waiver
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Fully covered by government capitation
-                  </p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="font-medium text-gray-900">
-                    Textbooks & Learning Materials
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Provided through government funding
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-              <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 text-white rounded-lg bg-primary">
-                  <FaMoneyBillWave className="text-sm" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Parent Contributions
-                </h3>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="font-medium text-gray-900">Activity Fees</p>
-                  <p className="text-sm text-gray-600">
-                    Co-curricular and practical activities
-                  </p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="font-medium text-gray-900">
-                    School Uniform & PE Kit
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    As per school specifications
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-              <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 mr-3 text-white rounded-lg bg-secondary">
-                  <FaHandshake className="text-sm" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Financial Support
-                </h3>
-              </div>
-              <div className="space-y-3">
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="font-medium text-gray-900">
-                    Bursaries & Scholarships
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Available for needy students
-                  </p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="font-medium text-gray-900">Payment Plans</p>
-                  <p className="text-sm text-gray-600">
-                    Flexible arrangements available
-                  </p>
-                </div>
               </div>
             </div>
           </div>
