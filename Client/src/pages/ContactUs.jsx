@@ -9,9 +9,6 @@ import {
   FaComment,
   FaMapMarkedAlt,
   FaShieldAlt,
-  FaQuestionCircle,
-  FaCalendarAlt,
-  FaGraduationCap,
   FaCheckCircle,
   FaTimesCircle,
 } from "react-icons/fa";
