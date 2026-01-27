@@ -83,7 +83,7 @@ const ServiceCharter = () => {
     <div className="font-sans text-gray-800">
       {/* Hero Section */}
       <section className="py-12 text-white bg-gradient-to-r from-primary to-blue-700">
-        <div className="max-w-6xl px-4 mx-auto">
+        <div className="max-w-7xl px-4 mx-auto">
           <div className="text-center">
             <h1 className="mb-4 text-4xl font-bold md:text-5xl">
               Service Delivery Charter
