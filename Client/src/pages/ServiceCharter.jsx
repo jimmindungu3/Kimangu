@@ -150,7 +150,7 @@ const ServiceCharter = () => {
 
       {/* Service Tables */}
       <section className="bg-gray-50">
-        <div className="max-w-6xl px-4 py-12 mx-auto">
+        <div className="max-w-7xl px-4 py-12 mx-auto">
           <div className="mb-8 text-center">
             <h2 className="mb-2 text-3xl font-bold text-primary">
               Service Standards Table
