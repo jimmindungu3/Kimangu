@@ -94,7 +94,7 @@ const ServiceCharter = () => {
 
       {/* Introduction */}
       <section className="py-12 bg-white">
-        <div className="max-w-6xl px-4 mx-auto">
+        <div className="max-w-7xl px-4 mx-auto">
           <div className="grid gap-8 md:grid-cols-3">
             <div className="md:col-span-2">
               <h2 className="mb-4 text-3xl font-bold text-primary">
@@ -308,7 +308,7 @@ const ServiceCharter = () => {
 
       {/* Footer Note */}
       <section className="py-8 bg-white border-t border-gray-200">
-        <div className="max-w-6xl px-4 mx-auto text-center">
+        <div className="max-w-7xl px-4 mx-auto text-center">
           <p className="text-gray-600">
             This Service Delivery Charter is reviewed annually. Last updated:
             January 2025
