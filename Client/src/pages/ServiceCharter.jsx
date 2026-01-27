@@ -240,63 +240,6 @@ const ServiceCharter = () => {
         </div>
       </section>
 
-      {/* Key Performance Indicators */}
-      <section className="py-12 bg-white">
-        <div className="max-w-6xl px-4 mx-auto">
-          <h2 className="mb-8 text-3xl font-bold text-center text-primary">
-            Performance Standards
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="p-6 text-center border border-gray-200 rounded-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 mb-4 text-white bg-green-500 rounded-full">
-                <FaCheckCircle className="text-xl" />
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">Service Timeliness</h3>
-              <p className="text-gray-600">
-                95% of services delivered within stipulated timelines
-              </p>
-            </div>
-
-            <div className="p-6 text-center border border-gray-200 rounded-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-full">
-                <FaUserFriends className="text-xl" />
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">
-                Stakeholder Satisfaction
-              </h3>
-              <p className="text-gray-600">
-                90% satisfaction rate in quarterly surveys
-              </p>
-            </div>
-
-            <div className="p-6 text-center border border-gray-200 rounded-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 mb-4 text-white bg-purple-500 rounded-full">
-                <FaExclamationCircle className="text-xl" />
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">
-                Complaint Resolution
-              </h3>
-              <p className="text-gray-600">
-                100% of complaints addressed within 7 days
-              </p>
-            </div>
-
-            <div className="p-6 text-center border border-gray-200 rounded-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 mb-4 text-white bg-orange-500 rounded-full">
-                <FaChartLine className="text-xl" />
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">
-                Continuous Improvement
-              </h3>
-              <p className="text-gray-600">
-                Annual review and update of service standards
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Feedback & Complaints */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto">
