@@ -242,7 +242,7 @@ const ServiceCharter = () => {
 
       {/* Feedback & Complaints */}
       <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="p-8 bg-white border border-gray-200 rounded-lg shadow-sm">
               <h3 className="mb-6 text-2xl font-bold text-primary">
